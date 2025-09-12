@@ -18,6 +18,7 @@ LOG_FILE = "./esp_data/core_data.log"
 log_board = logging.getLogger(__name__ + ".board")
 log_board.setLevel(logging.ERROR)
 log_partition = logging.getLogger(__name__ + ".partition")
+#log_partition.setLevel(logging.ERROR)
 logging.basicConfig(filename=LOG_FILE, filemode='w', level=logging.INFO)
 
 
@@ -151,7 +152,54 @@ class CoreData:
                                 boards[name]["flash_size"].append(flash_size)
                     else:
                         boards[name]["flash_size"] = [flash_size]
+        self.__check_partitions(partitions)
         return boards, partitions
+
+    def __partition_scheme_exists(self, name: str) -> bool:
+        """
+        Check if the partition scheme exists in the partitions directory.
+        :param name: The name of the partition scheme to check.
+        :return: True if the partition scheme exists, False otherwise.
+        """
+        partition_scheme_path = f"{self.core_path}/tools/partitions/{name}.csv"
+        return os.path.exists(partition_scheme_path)
+
+    def __check_partitions(self, partitions: dict):
+        """
+        Check if the partitions have a default partition and at least one scheme.
+        :param partitions: The partitions dictionary to check.
+        :return: None
+        """
+        boards_without_partition = []
+        for board_name in partitions.keys():
+            if "schemes" not in partitions[board_name]:
+                if "default" not in partitions[board_name]:
+                    log_partition.error("No default partition and no schemes found for %s",
+                                        board_name)
+                    boards_without_partition.append(board_name)
+                else:
+                    default_partition = partitions[board_name]["default"]
+                    if not self.__partition_scheme_exists(default_partition):
+                        log_partition.error("Default partition %s for %s does not exist",
+                                            default_partition, board_name)
+                        boards_without_partition.append(board_name)
+                    else:
+                        log_partition.warning("Only default partition %s for %s exists",
+                                           default_partition, board_name)
+            else:
+                scheme_without_build = []
+                for scheme_name in partitions[board_name]["schemes"].keys():
+                    if "build" not in partitions[board_name]["schemes"][scheme_name]:
+                        log_partition.warning("No build partition found for %s in scheme %s",
+                                            board_name, scheme_name)
+                        scheme_without_build.append(scheme_name)
+                if scheme_without_build:
+                    for scheme_name in scheme_without_build:
+                        del partitions[board_name]["schemes"][scheme_name]
+        log_partition.error("Removing %s boards without partition: %s",
+                            len(boards_without_partition), ", ".join(boards_without_partition))
+        for board_name in boards_without_partition:
+            del partitions[board_name]
 
     def __set_boars_without_led(self):
         boards_names = self.boards.keys()
