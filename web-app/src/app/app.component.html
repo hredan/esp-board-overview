@@ -6,6 +6,7 @@
         <a mat-tab-link (click)="activeLink = links[0]" [active]="activeLink === links[0]" routerLink="/">{{links[0]}}</a>
         <a mat-tab-link (click)="activeLink = links[1]" [active]="activeLink === links[1]" routerLink="/esp8266">{{links[1]}}</a>
         <a mat-tab-link (click)="activeLink = links[2]" [active]="activeLink === links[2]" routerLink="/esp32">{{links[2]}}</a>
+        <a mat-tab-link (click)="activeLink = links[3]" [active]="activeLink === links[3]" routerLink="/esp32-partitions">{{links[3]}}</a>
       </nav>
       <mat-tab-nav-panel #tabPanel>
         <router-outlet (activate)="onActivate($event)"></router-outlet>

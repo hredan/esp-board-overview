@@ -1,0 +1,51 @@
+<mat-form-field>
+    <mat-label>Select a board</mat-label>
+    <mat-select [(value)]="selectedBoard" (selectionChange)="onBoardChange($event.value)">
+        @for (boardName of boardNames; track boardName) {
+        <mat-option [value]="boardName">
+            {{boardName}}
+        </mat-option>
+    }
+    </mat-select>
+</mat-form-field>
+<mat-form-field>
+    <mat-label>Select a scheme</mat-label>
+    <mat-select [(value)]="selectedScheme" (selectionChange)="onSchemeChange($event.value)">
+        @for (scheme of schemes; track scheme) {
+        <mat-option [value]="scheme">
+            {{scheme}}
+        </mat-option>
+    }
+    </mat-select>
+</mat-form-field>
+<div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource">
+    <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="type">
+        <th mat-header-cell *matHeaderCellDef> Type </th>
+        <td mat-cell *matCellDef="let element"> {{element.type}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="subtype">
+        <th mat-header-cell *matHeaderCellDef> Subtype </th>
+        <td mat-cell *matCellDef="let element"> {{element.subtype}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="offset">
+        <th mat-header-cell *matHeaderCellDef> Offset </th>
+        <td mat-cell *matCellDef="let element"> {{element.offset}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="size">
+        <th mat-header-cell *matHeaderCellDef> Size </th>
+        <td mat-cell *matCellDef="let element"> {{element.size}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+</div>

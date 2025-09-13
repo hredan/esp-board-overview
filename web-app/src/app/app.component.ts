@@ -16,7 +16,7 @@ import { Esp32BoardOverviewComponent } from "./esp32-board-overview/esp32-board-
 
 export class AppComponent {
   title = 'ESP Board Overview';
-  links = ['Info', 'ESP8266', 'ESP32'];
+  links = ['Info', 'ESP8266', 'ESP32', "ESP32-Partitions"];
   activeLink = this.links[0];
 
   onActivate(event: object) {

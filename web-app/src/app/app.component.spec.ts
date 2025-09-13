@@ -45,7 +45,7 @@ describe('AppComponent', () => {
   it('should initialize links and activeLink', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.links).toEqual(['Info', 'ESP8266', 'ESP32']);
+    expect(app.links).toEqual(['Info', 'ESP8266', 'ESP32', 'ESP32-Partitions']);
     expect(app.activeLink).toEqual('Info');
   });
   it('should update activeLink and title on route activation', () => {
