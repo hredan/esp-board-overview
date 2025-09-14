@@ -17,19 +17,19 @@ def load_scheme(scheme_name: str) -> dict:
             #print (f"Line {index}: {line}")
             if line.startswith('#') or not line.strip():
                 continue
-            else:
-                parts = line.split(',')
-                if len(parts) < 5:
-                    print(f"Invalid line in {scheme_name}.csv: {line}")
-                    continue
-                name, type_, subtype, offset_, size_ = parts[:5]
-                partition_sheme.append({
-                    "name": name.strip(),
-                    "type": type_.strip(),
-                    "subtype": subtype.strip(),
-                    "offset": offset_.strip(),
-                    "size": size_.strip()
-                })
+
+            parts = line.split(',')
+            if len(parts) < 5:
+                print(f"Invalid line in {scheme_name}.csv: {line}")
+                continue
+            name, type_, subtype, offset_, size_ = parts[:5]
+            partition_sheme.append({
+                "name": name.strip(),
+                "type": type_.strip(),
+                "subtype": subtype.strip(),
+                "offset": offset_.strip(),
+                "size": size_.strip()
+            })
         if not partition_sheme:
             print(f"No valid partition data found in {scheme_name}.csv")
             return []
@@ -38,7 +38,8 @@ def load_scheme(scheme_name: str) -> dict:
 
 if __name__ == "__main__":
     schemes = {}
-    with open(f"{ESP_DATA_PATH}/esp32_partitions.json", 'r', encoding='utf-8') as file_board_partions:
+    with open(f"{ESP_DATA_PATH}/esp32_partitions.json", 'r', encoding='utf-8') \
+        as file_board_partions:
         board_partition = json.load(file_board_partions)
 
     for board, scheme_data in board_partition.items():

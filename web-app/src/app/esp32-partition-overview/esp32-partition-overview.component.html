@@ -35,14 +35,29 @@
         <td mat-cell *matCellDef="let element"> {{element.subtype}} </td>
     </ng-container>
 
-    <ng-container matColumnDef="offset">
-        <th mat-header-cell *matHeaderCellDef> Offset </th>
-        <td mat-cell *matCellDef="let element"> {{element.offset}} </td>
+    <ng-container matColumnDef="offset_hex">
+        <th mat-header-cell *matHeaderCellDef> Offset hex</th>
+        <td mat-cell *matCellDef="let element"> {{element.offset_hex}} </td>
     </ng-container>
 
-    <ng-container matColumnDef="size">
-        <th mat-header-cell *matHeaderCellDef> Size </th>
-        <td mat-cell *matCellDef="let element"> {{element.size}} </td>
+    <ng-container matColumnDef="offset_dec">
+        <th mat-header-cell *matHeaderCellDef class="text-align-right"> Offset dec</th>
+        <td mat-cell *matCellDef="let element" class="text-align-right"> {{element.offset_dec}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="size_hex">
+        <th mat-header-cell *matHeaderCellDef> Size hex</th>
+        <td mat-cell *matCellDef="let element"> {{element.size_hex}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="size_dec">
+        <th mat-header-cell *matHeaderCellDef class="text-align-right"> Size dec</th>
+        <td mat-cell *matCellDef="let element" class="text-align-right"> {{element.size_dec}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="offset_size">
+        <th mat-header-cell *matHeaderCellDef class="text-align-right"> Offset + Size</th>
+        <td mat-cell *matCellDef="let element" class="text-align-right"> {{element.offset_size}} </td>
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
