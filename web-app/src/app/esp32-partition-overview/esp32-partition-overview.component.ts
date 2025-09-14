@@ -12,7 +12,7 @@ import {MatTableDataSource, MatTableModule} from '@angular/material/table';
   templateUrl: './esp32-partition-overview.component.html',
   styleUrl: './esp32-partition-overview.component.css'
 })
-export class Esp32PartitionOverviewComponent {
+export class Esp32PartitionOverviewComponent implements OnInit {
   partitionsData: BoardPartitionsInfo = esp32_partitions as BoardPartitionsInfo;
   defaultSchemes: DefaultSchemes = esp32_schemes as DefaultSchemes;
   boardNames = Object.keys(this.partitionsData);
@@ -40,9 +40,9 @@ export class Esp32PartitionOverviewComponent {
     }
     else {
       // schemes are defined, use default to select scheme
-      let defaultScheme = this.partitionsData[event].default;
+      const defaultScheme = this.partitionsData[event].default;
       this.schemes = Object.keys(this.partitionsData[event].schemes);
-      let selectedScheme = this.partitionsData[event].schemes[defaultScheme];
+      const selectedScheme = this.partitionsData[event].schemes[defaultScheme];
       // if default scheme is not found, use first scheme
       if (selectedScheme === undefined) {
         this.selectedScheme = Object.keys(this.partitionsData[event].schemes)[0]
@@ -52,7 +52,7 @@ export class Esp32PartitionOverviewComponent {
       }
     }
     if (this.selectedScheme !== undefined) {
-      let build_name = this.partitionsData[event].schemes?.[this.selectedScheme]?.build || undefined;
+      const build_name = this.partitionsData[event].schemes?.[this.selectedScheme]?.build || undefined;
       if (build_name !== undefined) {
         this.selectedSchemeData = this.defaultSchemes[build_name];
       }
@@ -67,7 +67,7 @@ export class Esp32PartitionOverviewComponent {
 
   onSchemeChange(event: string) {
     console.log(event);
-    let selectedScheme = this.partitionsData[this.selectedBoard].schemes?.[event];
+    const selectedScheme = this.partitionsData[this.selectedBoard].schemes?.[event];
     if (selectedScheme !== undefined) {
       this.selectedSchemeData = this.defaultSchemes[selectedScheme.build] || [];
     }
@@ -80,11 +80,11 @@ export class Esp32PartitionOverviewComponent {
   }
 
   setTableData(){
-    let data = this.selectedSchemeData;
-    let newData: PartitionEntryExtended[] = [];
-    for (let entry of data) {
-      const offset_dec: number = Number(entry.offset);
-      const size_dec: number = Number(entry.size);
+    const data = this.selectedSchemeData;
+    const newData: PartitionEntryExtended[] = [];
+    for (const entry of data) {
+      const offset_dec = Number(entry.offset);
+      const size_dec = Number(entry.size);
       newData.push({
         name: entry.name,
         type: entry.type,
@@ -105,18 +105,15 @@ interface BoardSchemeInfo {
   build: string;
 }
 
-interface BoardPartitionScheme {
-  [key: string]: BoardSchemeInfo;
-}
+type BoardPartitionScheme = Record<string, BoardSchemeInfo>;
+
 
 interface BoardPartitions {
   default: string;
   schemes?: BoardPartitionScheme | undefined;
 }
 
-interface BoardPartitionsInfo {
-  [key: string]: BoardPartitions;
-}
+type BoardPartitionsInfo = Record<string, BoardPartitions>;
 
 interface PartitionEntry {
   name: string;
@@ -125,6 +122,7 @@ interface PartitionEntry {
   offset: string;
   size: string;
 }
+
 
 interface PartitionEntryExtended {
   name: string;
@@ -137,7 +135,4 @@ interface PartitionEntryExtended {
   offset_size: number;
 }
 
-
-interface DefaultSchemes {
-  [key: string]: PartitionEntry[];
-}
+type DefaultSchemes = Record<string, PartitionEntry[]>;
