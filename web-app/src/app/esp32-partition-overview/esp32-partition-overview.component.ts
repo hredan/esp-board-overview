@@ -25,7 +25,15 @@ export class Esp32PartitionOverviewComponent implements OnInit {
   selectedSchemeData: PartitionEntry[] = this.defaultSchemes[this.selectedScheme] || [];
   dataSource = new MatTableDataSource<PartitionEntryExtended>([]);
 
+  partitionGraph: Partition[] = [];
+  partitionGraphTotalSize = 0;
+  viewBox = '0 0 0 0';
+
   displayedColumns: string[] = ['name', 'type','subtype', 'offset_dec', 'offset_hex', 'size_dec', 'size_hex', 'offset_size'];
+
+  fillColor = 'rgb(255, 0, 0)';
+
+  innerWidth: number | undefined;
 
   ngOnInit(){
     this.setTableData();
@@ -82,6 +90,9 @@ export class Esp32PartitionOverviewComponent implements OnInit {
   setTableData(){
     const data = this.selectedSchemeData;
     const newData: PartitionEntryExtended[] = [];
+    const partitions: Partition[] = [];
+    let collorIndex = 0;
+    const colors = ['#4caf50', '#2196f3', '#ff9800', '#9c27b0', '#f44336', '#00bcd4', '#8bc34a', '#ffc107'];
     for (const entry of data) {
       const offset_dec = Number(entry.offset);
       const size_dec = Number(entry.size);
@@ -95,7 +106,20 @@ export class Esp32PartitionOverviewComponent implements OnInit {
         size_dec: size_dec,
         offset_size: offset_dec + size_dec
       });
+      partitions.push({
+        color: colors[collorIndex],
+        offset: Math.floor(offset_dec/1000),
+        size: Math.floor(size_dec/1000)
+      });
+      collorIndex += 1;
     }
+    
+    const lastEntry = partitions[partitions.length - 1];
+    const totalSize = lastEntry.offset + lastEntry.size;
+    console.log("Total Size:", totalSize);
+    this.viewBox = `0 0 ${totalSize} 100`;
+    this.partitionGraphTotalSize = totalSize;
+    this.partitionGraph = partitions;
     this.dataSource = new MatTableDataSource<PartitionEntryExtended>(newData)
   }
 }
@@ -136,3 +160,9 @@ interface PartitionEntryExtended {
 }
 
 type DefaultSchemes = Record<string, PartitionEntry[]>;
+
+interface Partition{
+  color: string;
+  offset: number;
+  size: number;
+}

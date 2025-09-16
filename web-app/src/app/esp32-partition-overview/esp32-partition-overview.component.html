@@ -12,12 +12,23 @@
     <mat-label>Select a scheme</mat-label>
     <mat-select [(value)]="selectedScheme" (selectionChange)="onSchemeChange($event.value)">
         @for (scheme of schemes; track scheme) {
-        <mat-option [value]="scheme">
-            {{scheme}}
-        </mat-option>
-    }
+            <mat-option [value]="scheme">
+                {{scheme}}
+            </mat-option>
+        }
     </mat-select>
 </mat-form-field>
+<div class="svg-container">
+    <svg [attr.viewBox]="viewBox" preserveAspectRatio="none">
+        <g>
+            <rect x="0" y="0" [attr.width]="partitionGraphTotalSize" height="100" stroke-width="3" stroke="black" fill="white"/>
+            @for (partition of partitionGraph; track partition.offset) {
+                <rect [attr.x]="partition.offset" y="3" [attr.width]="partition.size" height="94" [attr.fill]="partition.color"/>
+            }
+        </g>
+    </svg>
+</div>
+
 <div class="mat-elevation-z8">
     <table mat-table [dataSource]="dataSource">
     <ng-container matColumnDef="name">
