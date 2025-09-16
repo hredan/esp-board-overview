@@ -29,7 +29,7 @@ export class Esp32PartitionOverviewComponent implements OnInit {
   partitionGraphTotalSize = 0;
   viewBox = '0 0 0 0';
 
-  displayedColumns: string[] = ['name', 'type','subtype', 'offset_dec', 'offset_hex', 'size_dec', 'size_hex', 'offset_size'];
+  displayedColumns: string[] = ['color','name', 'type','subtype', 'offset_dec', 'offset_hex', 'size_dec', 'size_hex', 'offset_size'];
 
   fillColor = 'rgb(255, 0, 0)';
 
@@ -97,6 +97,7 @@ export class Esp32PartitionOverviewComponent implements OnInit {
       const offset_dec = Number(entry.offset);
       const size_dec = Number(entry.size);
       newData.push({
+        color: colors[collorIndex],
         name: entry.name,
         type: entry.type,
         subtype: entry.subtype,
@@ -149,6 +150,7 @@ interface PartitionEntry {
 
 
 interface PartitionEntryExtended {
+  color: string;
   name: string;
   type: string;
   subtype: string;
