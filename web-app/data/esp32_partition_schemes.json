@@ -1,0 +1,1718 @@
+{
+    "minimal": [
+        {
+            "name": "nvs",
+            "type": "data",
+            "subtype": "nvs",
+            "offset": "0x9000",
+            "size": "0x5000"
+        },
+        {
+            "name": "otadata",
+            "type": "data",
+            "subtype": "ota",
+            "offset": "0xe000",
+            "size": "0x2000"
+        },
+        {
+            "name": "app0",
+            "type": "app",
+            "subtype": "ota_0",
+            "offset": "0x10000",
+            "size": "0x140000"
+        },
+        {
+            "name": "spiffs",
+            "type": "data",
+            "subtype": "spiffs",
+            "offset": "0x150000",
+            "size": "0xA0000"
+        },
+        {
+            "name": "coredump",
+            "type": "data",
+            "subtype": "coredump",
+            "offset": "0x1F0000",
+            "size": "0x10000"
+        }
+    ],
+    "default": [
+        {
+            "name": "nvs",
+            "type": "data",
+            "subtype": "nvs",
+            "offset": "0x9000",
+            "size": "0x5000"
+        },
+        {
+            "name": "otadata",
+            "type": "data",
+            "subtype": "ota",
+            "offset": "0xe000",
+            "size": "0x2000"
+        },
+        {
+            "name": "app0",
+            "type": "app",
+            "subtype": "ota_0",
+            "offset": "0x10000",
+            "size": "0x140000"
+        },
+        {
+            "name": "app1",
+            "type": "app",
+            "subtype": "ota_1",
+            "offset": "0x150000",
+            "size": "0x140000"
+        },
+        {
+            "name": "spiffs",
+            "type": "data",
+            "subtype": "spiffs",
+            "offset": "0x290000",
+            "size": "0x160000"
+        },
+        {
+            "name": "coredump",
+            "type": "data",
+            "subtype": "coredump",
+            "offset": "0x3F0000",
+            "size": "0x10000"
+        }
+    ],
+    "default_ffat": [
+        {
+            "name": "nvs",
+            "type": "data",
+            "subtype": "nvs",
+            "offset": "0x9000",
+            "size": "0x5000"
+        },
+        {
+            "name": "otadata",
+            "type": "data",
+            "subtype": "ota",
+            "offset": "0xe000",
+            "size": "0x2000"
+        },
+        {
+            "name": "app0",
+            "type": "app",
+            "subtype": "ota_0",
+            "offset": "0x10000",
+            "size": "0x140000"
+        },
+        {
+            "name": "app1",
+            "type": "app",
+            "subtype": "ota_1",
+            "offset": "0x150000",
+            "size": "0x140000"
+        },
+        {
+            "name": "ffat",
+            "type": "data",
+            "subtype": "fat",
+            "offset": "0x290000",
+            "size": "0x160000"
+        },
+        {
+            "name": "coredump",
+            "type": "data",
+            "subtype": "coredump",
+            "offset": "0x3F0000",
+            "size": "0x10000"
+        }
+    ],
+    "no_fs": [
+        {
+            "name": "nvs",
+            "type": "data",
+            "subtype": "nvs",
+            "offset": "0x9000",
+            "size": "0x5000"
+        },
+        {
+            "name": "otadata",
+            "type": "data",
+            "subtype": "ota",
+            "offset": "0xe000",
+            "size": "0x2000"
+        },
+        {
+            "name": "app0",
+            "type": "app",
+            "subtype": "ota_0",
+            "offset": "0x10000",
+            "size": "0x1F0000"
+        },
+        {
+            "name": "app1",
+            "type": "app",
+            "subtype": "ota_1",
+            "offset": "0x200000",
+            "size": "0x1F0000"
+        },
+        {
+            "name": "coredump",
+            "type": "data",
+            "subtype": "coredump",
+            "offset": "0x3F0000",
+            "size": "0x10000"
+        }
+    ],
+    "no_ota": [
+        {
+            "name": "nvs",
+            "type": "data",
+            "subtype": "nvs",
+            "offset": "0x9000",
+            "size": "0x5000"
+        },
+        {
+            "name": "otadata",
+            "type": "data",
+            "subtype": "ota",
+            "offset": "0xe000",
+            "size": "0x2000"
+        },
+        {
+            "name": "app0",
+            "type": "app",
+            "subtype": "ota_0",
+            "offset": "0x10000",
+            "size": "0x200000"
+        },
+        {
+            "name": "spiffs",
+            "type": "data",
+            "subtype": "spiffs",
+            "offset": "0x210000",
+            "size": "0x1E0000"
+        },
+        {
+            "name": "coredump",
+            "type": "data",
+            "subtype": "coredump",
+            "offset": "0x3F0000",
+            "size": "0x10000"
+        }
+    ],
+    "noota_3g": [
+        {
+            "name": "nvs",
+            "type": "data",
+            "subtype": "nvs",
+            "offset": "0x9000",
+            "size": "0x5000"
+        },
+        {
+            "name": "otadata",
+            "type": "data",
+            "subtype": "ota",
+            "offset": "0xe000",
+            "size": "0x2000"
+        },
+        {
+            "name": "app0",
+            "type": "app",
+            "subtype": "ota_0",
+            "offset": "0x10000",
+            "size": "0x100000"
+        },
+        {
+            "name": "spiffs",
+            "type": "data",
+            "subtype": "spiffs",
+            "offset": "0x110000",
+            "size": "0x2E0000"
+        },
+        {
+            "name": "coredump",
+            "type": "data",
+            "subtype": "coredump",
+            "offset": "0x3F0000",
+            "size": "0x10000"
+        }
+    ],
+    "noota_ffat": [
+        {
+            "name": "nvs",
+            "type": "data",
+            "subtype": "nvs",
+            "offset": "0x9000",
+            "size": "0x5000"
+        },
+        {
+            "name": "otadata",
+            "type": "data",
+            "subtype": "ota",
+            "offset": "0xe000",
+            "size": "0x2000"
+        },
+        {
+            "name": "app0",
+            "type": "app",
+            "subtype": "ota_0",
+            "offset": "0x10000",
+            "size": "0x200000"
+        },
+        {
+            "name": "ffat",
+            "type": "data",
+            "subtype": "fat",
+            "offset": "0x210000",
+            "size": "0x1E0000"
+        },
+        {
+            "name": "coredump",
+            "type": "data",
+            "subtype": "coredump",
+            "offset": "0x3F0000",
+            "size": "0x10000"
+        }
+    ],
+    "noota_3gffat": [
+        {
+            "name": "nvs",
+            "type": "data",
+            "subtype": "nvs",
+            "offset": "0x9000",
+            "size": "0x5000"
+        },
+        {
+            "name": "otadata",
+            "type": "data",
+            "subtype": "ota",
+            "offset": "0xe000",
+            "size": "0x2000"
+        },
+        {
+            "name": "app0",
+            "type": "app",
+            "subtype": "ota_0",
+            "offset": "0x10000",
+            "size": "0x100000"
+        },
+        {
+            "name": "ffat",
+            "type": "data",
+            "subtype": "fat",
+            "offset": "0x110000",
+            "size": "0x2E0000"
+        },
+        {
+            "name": "coredump",
+            "type": "data",
+            "subtype": "coredump",
+            "offset": "0x3F0000",
+            "size": "0x10000"
+        }
+    ],
+    "huge_app": [
+        {
+            "name": "nvs",
+            "type": "data",
+            "subtype": "nvs",
+            "offset": "0x9000",
+            "size": "0x5000"
+        },
+        {
+            "name": "otadata",
+            "type": "data",
+            "subtype": "ota",
+            "offset": "0xe000",
+            "size": "0x2000"
+        },
+        {
+            "name": "app0",
+            "type": "app",
+            "subtype": "ota_0",
+            "offset": "0x10000",
+            "size": "0x300000"
+        },
+        {
+            "name": "spiffs",
+            "type": "data",
+            "subtype": "spiffs",
+            "offset": "0x310000",
+            "size": "0xE0000"
+        },
+        {
+            "name": "coredump",
+            "type": "data",
+            "subtype": "coredump",
+            "offset": "0x3F0000",
+            "size": "0x10000"
+        }
+    ],
+    "min_spiffs": [
+        {
+            "name": "nvs",
+            "type": "data",
+            "subtype": "nvs",
+            "offset": "0x9000",
+            "size": "0x5000"
+        },
+        {
+            "name": "otadata",
+            "type": "data",
+            "subtype": "ota",
+            "offset": "0xe000",
+            "size": "0x2000"
+        },
+        {
+            "name": "app0",
+            "type": "app",
+            "subtype": "ota_0",
+            "offset": "0x10000",
+            "size": "0x1E0000"
+        },
+        {
+            "name": "app1",
+            "type": "app",
+            "subtype": "ota_1",
+            "offset": "0x1F0000",
+            "size": "0x1E0000"
+        },
+        {
+            "name": "spiffs",
+            "type": "data",
+            "subtype": "spiffs",
+            "offset": "0x3D0000",
+            "size": "0x20000"
+        },
+        {
+            "name": "coredump",
+            "type": "data",
+            "subtype": "coredump",
+            "offset": "0x3F0000",
+            "size": "0x10000"
+        }
+    ],
+    "default_8MB": [
+        {
+            "name": "nvs",
+            "type": "data",
+            "subtype": "nvs",
+            "offset": "0x9000",
+            "size": "0x5000"
+        },
+        {
+            "name": "otadata",
+            "type": "data",
+            "subtype": "ota",
+            "offset": "0xe000",
+            "size": "0x2000"
+        },
+        {
+            "name": "app0",
+            "type": "app",
+            "subtype": "ota_0",
+            "offset": "0x10000",
+            "size": "0x330000"
+        },
+        {
+            "name": "app1",
+            "type": "app",
+            "subtype": "ota_1",
+            "offset": "0x340000",
+            "size": "0x330000"
+        },
+        {
+            "name": "spiffs",
+            "type": "data",
+            "subtype": "spiffs",
+            "offset": "0x670000",
+            "size": "0x180000"
+        },
+        {
+            "name": "coredump",
+            "type": "data",
+            "subtype": "coredump",
+            "offset": "0x7F0000",
+            "size": "0x10000"
+        }
+    ],
+    "ffat": [
+        {
+            "name": "nvs",
+            "type": "data",
+            "subtype": "nvs",
+            "offset": "0x9000",
+            "size": "0x5000"
+        },
+        {
+            "name": "otadata",
+            "type": "data",
+            "subtype": "ota",
+            "offset": "0xe000",
+            "size": "0x2000"
+        },
+        {
+            "name": "app0",
+            "type": "app",
+            "subtype": "ota_0",
+            "offset": "0x10000",
+            "size": "0x200000"
+        },
+        {
+            "name": "app1",
+            "type": "app",
+            "subtype": "ota_1",
+            "offset": "0x210000",
+            "size": "0x200000"
+        },
+        {
+            "name": "ffat",
+            "type": "data",
+            "subtype": "fat",
+            "offset": "0x410000",
+            "size": "0xBE0000"
+        },
+        {
+            "name": "coredump",
+            "type": "data",
+            "subtype": "coredump",
+            "offset": "0xFF0000",
+            "size": "0x10000"
+        }
+    ],
+    "app3M_fat9M_16MB": [
+        {
+            "name": "nvs",
+            "type": "data",
+            "subtype": "nvs",
+            "offset": "0x9000",
+            "size": "0x5000"
+        },
+        {
+            "name": "otadata",
+            "type": "data",
+            "subtype": "ota",
+            "offset": "0xe000",
+            "size": "0x2000"
+        },
+        {
+            "name": "app0",
+            "type": "app",
+            "subtype": "ota_0",
+            "offset": "0x10000",
+            "size": "0x300000"
+        },
+        {
+            "name": "app1",
+            "type": "app",
+            "subtype": "ota_1",
+            "offset": "0x310000",
+            "size": "0x300000"
+        },
+        {
+            "name": "ffat",
+            "type": "data",
+            "subtype": "fat",
+            "offset": "0x610000",
+            "size": "0x9E0000"
+        },
+        {
+            "name": "coredump",
+            "type": "data",
+            "subtype": "coredump",
+            "offset": "0xFF0000",
+            "size": "0x10000"
+        }
+    ],
+    "large_fat_32MB": [
+        {
+            "name": "nvs",
+            "type": "data",
+            "subtype": "nvs",
+            "offset": "0x9000",
+            "size": "0x5000"
+        },
+        {
+            "name": "otadata",
+            "type": "data",
+            "subtype": "ota",
+            "offset": "0xe000",
+            "size": "0x2000"
+        },
+        {
+            "name": "app0",
+            "type": "app",
+            "subtype": "ota_0",
+            "offset": "0x10000",
+            "size": "0x480000"
+        },
+        {
+            "name": "app1",
+            "type": "app",
+            "subtype": "ota_1",
+            "offset": "0x490000",
+            "size": "0x480000"
+        },
+        {
+            "name": "ffat",
+            "type": "data",
+            "subtype": "fat",
+            "offset": "0x910000",
+            "size": "0x16E0000"
+        },
+        {
+            "name": "coredump",
+            "type": "data",
+            "subtype": "coredump",
+            "offset": "0x1FF0000",
+            "size": "0x10000"
+        }
+    ],
+    "large_littlefs_32MB": [
+        {
+            "name": "nvs",
+            "type": "data",
+            "subtype": "nvs",
+            "offset": "0x9000",
+            "size": "0x5000"
+        },
+        {
+            "name": "otadata",
+            "type": "data",
+            "subtype": "ota",
+            "offset": "0xe000",
+            "size": "0x2000"
+        },
+        {
+            "name": "app0",
+            "type": "app",
+            "subtype": "ota_0",
+            "offset": "0x10000",
+            "size": "0x480000"
+        },
+        {
+            "name": "app1",
+            "type": "app",
+            "subtype": "ota_1",
+            "offset": "0x490000",
+            "size": "0x480000"
+        },
+        {
+            "name": "spiffs",
+            "type": "data",
+            "subtype": "spiffs",
+            "offset": "0x910000",
+            "size": "0x16E0000"
+        },
+        {
+            "name": "coredump",
+            "type": "data",
+            "subtype": "coredump",
+            "offset": "0x1FF0000",
+            "size": "0x10000"
+        }
+    ],
+    "default_32MB": [
+        {
+            "name": "nvs",
+            "type": "data",
+            "subtype": "nvs",
+            "offset": "0x9000",
+            "size": "0x5000"
+        },
+        {
+            "name": "otadata",
+            "type": "data",
+            "subtype": "ota",
+            "offset": "0xe000",
+            "size": "0x2000"
+        },
+        {
+            "name": "app0",
+            "type": "app",
+            "subtype": "ota_0",
+            "offset": "0x10000",
+            "size": "0xC80000"
+        },
+        {
+            "name": "app1",
+            "type": "app",
+            "subtype": "ota_1",
+            "offset": "0xC90000",
+            "size": "0xC80000"
+        },
+        {
+            "name": "spiffs",
+            "type": "data",
+            "subtype": "spiffs",
+            "offset": "0x1910000",
+            "size": "0x6C0000"
+        },
+        {
+            "name": "coredump",
+            "type": "data",
+            "subtype": "coredump",
+            "offset": "0x1FF0000",
+            "size": "0x10000"
+        }
+    ],
+    "zigbee_2MB": [
+        {
+            "name": "nvs",
+            "type": "data",
+            "subtype": "nvs",
+            "offset": "0x9000",
+            "size": "0x5000"
+        },
+        {
+            "name": "factory",
+            "type": "app",
+            "subtype": "factory",
+            "offset": "0x10000",
+            "size": "0x140000"
+        },
+        {
+            "name": "spiffs",
+            "type": "data",
+            "subtype": "spiffs",
+            "offset": "0x150000",
+            "size": "0x9B000"
+        },
+        {
+            "name": "zb_storage",
+            "type": "data",
+            "subtype": "fat",
+            "offset": "0x1EB000",
+            "size": "0x4000"
+        },
+        {
+            "name": "zb_fct",
+            "type": "data",
+            "subtype": "fat",
+            "offset": "0x1EF000",
+            "size": "0x1000"
+        },
+        {
+            "name": "coredump",
+            "type": "data",
+            "subtype": "coredump",
+            "offset": "0x1F0000",
+            "size": "0x10000"
+        }
+    ],
+    "zigbee": [
+        {
+            "name": "nvs",
+            "type": "data",
+            "subtype": "nvs",
+            "offset": "0x9000",
+            "size": "0x5000"
+        },
+        {
+            "name": "otadata",
+            "type": "data",
+            "subtype": "ota",
+            "offset": "0xe000",
+            "size": "0x2000"
+        },
+        {
+            "name": "app0",
+            "type": "app",
+            "subtype": "ota_0",
+            "offset": "0x10000",
+            "size": "0x140000"
+        },
+        {
+            "name": "app1",
+            "type": "app",
+            "subtype": "ota_1",
+            "offset": "0x150000",
+            "size": "0x140000"
+        },
+        {
+            "name": "spiffs",
+            "type": "data",
+            "subtype": "spiffs",
+            "offset": "0x290000",
+            "size": "0x15B000"
+        },
+        {
+            "name": "zb_storage",
+            "type": "data",
+            "subtype": "fat",
+            "offset": "0x3EB000",
+            "size": "0x4000"
+        },
+        {
+            "name": "zb_fct",
+            "type": "data",
+            "subtype": "fat",
+            "offset": "0x3EF000",
+            "size": "0x1000"
+        },
+        {
+            "name": "coredump",
+            "type": "data",
+            "subtype": "coredump",
+            "offset": "0x3F0000",
+            "size": "0x10000"
+        }
+    ],
+    "zigbee_8MB": [
+        {
+            "name": "nvs",
+            "type": "data",
+            "subtype": "nvs",
+            "offset": "0x9000",
+            "size": "0x5000"
+        },
+        {
+            "name": "otadata",
+            "type": "data",
+            "subtype": "ota",
+            "offset": "0xe000",
+            "size": "0x2000"
+        },
+        {
+            "name": "app0",
+            "type": "app",
+            "subtype": "ota_0",
+            "offset": "0x10000",
+            "size": "0x340000"
+        },
+        {
+            "name": "app1",
+            "type": "app",
+            "subtype": "ota_1",
+            "offset": "0x350000",
+            "size": "0x340000"
+        },
+        {
+            "name": "spiffs",
+            "type": "data",
+            "subtype": "spiffs",
+            "offset": "0x690000",
+            "size": "0x15B000"
+        },
+        {
+            "name": "zb_storage",
+            "type": "data",
+            "subtype": "fat",
+            "offset": "0x7EB000",
+            "size": "0x4000"
+        },
+        {
+            "name": "zb_fct",
+            "type": "data",
+            "subtype": "fat",
+            "offset": "0x7EF000",
+            "size": "0x1000"
+        },
+        {
+            "name": "coredump",
+            "type": "data",
+            "subtype": "coredump",
+            "offset": "0x7F0000",
+            "size": "0x10000"
+        }
+    ],
+    "zigbee_zczr_2MB": [
+        {
+            "name": "nvs",
+            "type": "data",
+            "subtype": "nvs",
+            "offset": "0x9000",
+            "size": "0x5000"
+        },
+        {
+            "name": "factory",
+            "type": "app",
+            "subtype": "factory",
+            "offset": "0x10000",
+            "size": "0x140000"
+        },
+        {
+            "name": "spiffs",
+            "type": "data",
+            "subtype": "spiffs",
+            "offset": "0x150000",
+            "size": "0x9A000"
+        },
+        {
+            "name": "zb_storage",
+            "type": "data",
+            "subtype": "fat",
+            "offset": "0x1EA000",
+            "size": "0x4000"
+        },
+        {
+            "name": "zb_fct",
+            "type": "data",
+            "subtype": "fat",
+            "offset": "0x1EE000",
+            "size": "0x1000"
+        },
+        {
+            "name": "rcp_fw",
+            "type": "data",
+            "subtype": "spiffs",
+            "offset": "0x1EF000",
+            "size": "0x1000"
+        },
+        {
+            "name": "coredump",
+            "type": "data",
+            "subtype": "coredump",
+            "offset": "0x1F0000",
+            "size": "0x10000"
+        }
+    ],
+    "zigbee_zczr": [
+        {
+            "name": "nvs",
+            "type": "data",
+            "subtype": "nvs",
+            "offset": "0x9000",
+            "size": "0x5000"
+        },
+        {
+            "name": "otadata",
+            "type": "data",
+            "subtype": "ota",
+            "offset": "0xe000",
+            "size": "0x2000"
+        },
+        {
+            "name": "app0",
+            "type": "app",
+            "subtype": "ota_0",
+            "offset": "0x10000",
+            "size": "0x140000"
+        },
+        {
+            "name": "app1",
+            "type": "app",
+            "subtype": "ota_1",
+            "offset": "0x150000",
+            "size": "0x140000"
+        },
+        {
+            "name": "spiffs",
+            "type": "data",
+            "subtype": "spiffs",
+            "offset": "0x290000",
+            "size": "0x15A000"
+        },
+        {
+            "name": "zb_storage",
+            "type": "data",
+            "subtype": "fat",
+            "offset": "0x3EA000",
+            "size": "0x4000"
+        },
+        {
+            "name": "zb_fct",
+            "type": "data",
+            "subtype": "fat",
+            "offset": "0x3EE000",
+            "size": "0x1000"
+        },
+        {
+            "name": "rcp_fw",
+            "type": "data",
+            "subtype": "spiffs",
+            "offset": "0x3EF000",
+            "size": "0x1000"
+        },
+        {
+            "name": "coredump",
+            "type": "data",
+            "subtype": "coredump",
+            "offset": "0x3F0000",
+            "size": "0x10000"
+        }
+    ],
+    "zigbee_zczr_8MB": [
+        {
+            "name": "nvs",
+            "type": "data",
+            "subtype": "nvs",
+            "offset": "0x9000",
+            "size": "0x5000"
+        },
+        {
+            "name": "otadata",
+            "type": "data",
+            "subtype": "ota",
+            "offset": "0xe000",
+            "size": "0x2000"
+        },
+        {
+            "name": "app0",
+            "type": "app",
+            "subtype": "ota_0",
+            "offset": "0x10000",
+            "size": "0x340000"
+        },
+        {
+            "name": "app1",
+            "type": "app",
+            "subtype": "ota_1",
+            "offset": "0x350000",
+            "size": "0x340000"
+        },
+        {
+            "name": "spiffs",
+            "type": "data",
+            "subtype": "spiffs",
+            "offset": "0x690000",
+            "size": "0x15A000"
+        },
+        {
+            "name": "zb_storage",
+            "type": "data",
+            "subtype": "fat",
+            "offset": "0x7EA000",
+            "size": "0x4000"
+        },
+        {
+            "name": "zb_fct",
+            "type": "data",
+            "subtype": "fat",
+            "offset": "0x7EE000",
+            "size": "0x1000"
+        },
+        {
+            "name": "rcp_fw",
+            "type": "data",
+            "subtype": "spiffs",
+            "offset": "0x7EF000",
+            "size": "0x1000"
+        },
+        {
+            "name": "coredump",
+            "type": "data",
+            "subtype": "coredump",
+            "offset": "0x7F0000",
+            "size": "0x10000"
+        }
+    ],
+    "rainmaker": [
+        {
+            "name": "nvs",
+            "type": "data",
+            "subtype": "nvs",
+            "offset": "0x9000",
+            "size": "0x5000"
+        },
+        {
+            "name": "otadata",
+            "type": "data",
+            "subtype": "ota",
+            "offset": "0xe000",
+            "size": "0x2000"
+        },
+        {
+            "name": "ota_0",
+            "type": "app",
+            "subtype": "ota_0",
+            "offset": "0x10000",
+            "size": "0x1E0000"
+        },
+        {
+            "name": "ota_1",
+            "type": "app",
+            "subtype": "ota_1",
+            "offset": "0x1F0000",
+            "size": "0x1E0000"
+        },
+        {
+            "name": "fctry",
+            "type": "data",
+            "subtype": "nvs",
+            "offset": "0x3D0000",
+            "size": "0x6000"
+        },
+        {
+            "name": "coredump",
+            "type": "data",
+            "subtype": "coredump",
+            "offset": "0x3F0000",
+            "size": "0x10000"
+        }
+    ],
+    "rainmaker_4MB_no_ota": [
+        {
+            "name": "nvs",
+            "type": "data",
+            "subtype": "nvs",
+            "offset": "0x9000",
+            "size": "0x5000"
+        },
+        {
+            "name": "otadata",
+            "type": "data",
+            "subtype": "ota",
+            "offset": "0xe000",
+            "size": "0x2000"
+        },
+        {
+            "name": "ota_0",
+            "type": "app",
+            "subtype": "ota_0",
+            "offset": "0x10000",
+            "size": "0x3DA000"
+        },
+        {
+            "name": "fctry",
+            "type": "data",
+            "subtype": "nvs",
+            "offset": "0x3EA000",
+            "size": "0x6000"
+        },
+        {
+            "name": "coredump",
+            "type": "data",
+            "subtype": "coredump",
+            "offset": "0x3F0000",
+            "size": "0x10000"
+        }
+    ],
+    "rainmaker_8MB": [
+        {
+            "name": "nvs",
+            "type": "data",
+            "subtype": "nvs",
+            "offset": "0x9000",
+            "size": "0x5000"
+        },
+        {
+            "name": "otadata",
+            "type": "data",
+            "subtype": "ota",
+            "offset": "0xe000",
+            "size": "0x2000"
+        },
+        {
+            "name": "ota_0",
+            "type": "app",
+            "subtype": "ota_0",
+            "offset": "0x10000",
+            "size": "0x3EA000"
+        },
+        {
+            "name": "ota_1",
+            "type": "app",
+            "subtype": "ota_1",
+            "offset": "0x400000",
+            "size": "0x3EA000"
+        },
+        {
+            "name": "fctry",
+            "type": "data",
+            "subtype": "nvs",
+            "offset": "0x7EA000",
+            "size": "0x6000"
+        },
+        {
+            "name": "coredump",
+            "type": "data",
+            "subtype": "coredump",
+            "offset": "0x7F0000",
+            "size": "0x10000"
+        }
+    ],
+    "esp_sr_16": [
+        {
+            "name": "nvs",
+            "type": "data",
+            "subtype": "nvs",
+            "offset": "0x9000",
+            "size": "0x5000"
+        },
+        {
+            "name": "otadata",
+            "type": "data",
+            "subtype": "ota",
+            "offset": "0xe000",
+            "size": "0x2000"
+        },
+        {
+            "name": "app0",
+            "type": "app",
+            "subtype": "ota_0",
+            "offset": "0x10000",
+            "size": "0x300000"
+        },
+        {
+            "name": "app1",
+            "type": "app",
+            "subtype": "ota_1",
+            "offset": "0x310000",
+            "size": "0x300000"
+        },
+        {
+            "name": "spiffs",
+            "type": "data",
+            "subtype": "spiffs",
+            "offset": "0x610000",
+            "size": "0x700000"
+        },
+        {
+            "name": "model",
+            "type": "data",
+            "subtype": "spiffs",
+            "offset": "0xD10000",
+            "size": "0x2E0000"
+        },
+        {
+            "name": "coredump",
+            "type": "data",
+            "subtype": "coredump",
+            "offset": "0xFF0000",
+            "size": "0x10000"
+        }
+    ],
+    "default_16MB": [
+        {
+            "name": "nvs",
+            "type": "data",
+            "subtype": "nvs",
+            "offset": "0x9000",
+            "size": "0x5000"
+        },
+        {
+            "name": "otadata",
+            "type": "data",
+            "subtype": "ota",
+            "offset": "0xe000",
+            "size": "0x2000"
+        },
+        {
+            "name": "app0",
+            "type": "app",
+            "subtype": "ota_0",
+            "offset": "0x10000",
+            "size": "0x640000"
+        },
+        {
+            "name": "app1",
+            "type": "app",
+            "subtype": "ota_1",
+            "offset": "0x650000",
+            "size": "0x640000"
+        },
+        {
+            "name": "spiffs",
+            "type": "data",
+            "subtype": "spiffs",
+            "offset": "0xc90000",
+            "size": "0x360000"
+        },
+        {
+            "name": "coredump",
+            "type": "data",
+            "subtype": "coredump",
+            "offset": "0xFF0000",
+            "size": "0x10000"
+        }
+    ],
+    "large_spiffs_16MB": [
+        {
+            "name": "nvs",
+            "type": "data",
+            "subtype": "nvs",
+            "offset": "0x9000",
+            "size": "0x5000"
+        },
+        {
+            "name": "otadata",
+            "type": "data",
+            "subtype": "ota",
+            "offset": "0xe000",
+            "size": "0x2000"
+        },
+        {
+            "name": "app0",
+            "type": "app",
+            "subtype": "ota_0",
+            "offset": "0x10000",
+            "size": "0x480000"
+        },
+        {
+            "name": "app1",
+            "type": "app",
+            "subtype": "ota_1",
+            "offset": "0x490000",
+            "size": "0x480000"
+        },
+        {
+            "name": "spiffs",
+            "type": "data",
+            "subtype": "spiffs",
+            "offset": "0x910000",
+            "size": "0x6E0000"
+        },
+        {
+            "name": "coredump",
+            "type": "data",
+            "subtype": "coredump",
+            "offset": "0xFF0000",
+            "size": "0x10000"
+        }
+    ],
+    "tinyuf2-partitions-4MB": [
+        {
+            "name": "nvs",
+            "type": "data",
+            "subtype": "nvs",
+            "offset": "0x9000",
+            "size": "20K"
+        },
+        {
+            "name": "otadata",
+            "type": "data",
+            "subtype": "ota",
+            "offset": "0xe000",
+            "size": "8K"
+        },
+        {
+            "name": "ota_0",
+            "type": "app",
+            "subtype": "ota_0",
+            "offset": "0x10000",
+            "size": "1408K"
+        },
+        {
+            "name": "ota_1",
+            "type": "app",
+            "subtype": "ota_1",
+            "offset": "0x170000",
+            "size": "1408K"
+        },
+        {
+            "name": "uf2",
+            "type": "app",
+            "subtype": "factory",
+            "offset": "0x2d0000",
+            "size": "256K"
+        },
+        {
+            "name": "ffat",
+            "type": "data",
+            "subtype": "fat",
+            "offset": "0x310000",
+            "size": "960K"
+        }
+    ],
+    "tinyuf2-partitions-4MB-noota": [
+        {
+            "name": "nvs",
+            "type": "data",
+            "subtype": "nvs",
+            "offset": "0x9000",
+            "size": "20K"
+        },
+        {
+            "name": "otadata",
+            "type": "data",
+            "subtype": "ota",
+            "offset": "0xe000",
+            "size": "8K"
+        },
+        {
+            "name": "ota_0",
+            "type": "app",
+            "subtype": "ota_0",
+            "offset": "0x10000",
+            "size": "2816K"
+        },
+        {
+            "name": "uf2",
+            "type": "app",
+            "subtype": "factory",
+            "offset": "0x2d0000",
+            "size": "256K"
+        },
+        {
+            "name": "ffat",
+            "type": "data",
+            "subtype": "fat",
+            "offset": "0x310000",
+            "size": "960K"
+        }
+    ],
+    "tinyuf2-partitions-16MB": [
+        {
+            "name": "nvs",
+            "type": "data",
+            "subtype": "nvs",
+            "offset": "0x9000",
+            "size": "20K"
+        },
+        {
+            "name": "otadata",
+            "type": "data",
+            "subtype": "ota",
+            "offset": "0xe000",
+            "size": "8K"
+        },
+        {
+            "name": "ota_0",
+            "type": "app",
+            "subtype": "ota_0",
+            "offset": "0x10000",
+            "size": "2048K"
+        },
+        {
+            "name": "ota_1",
+            "type": "app",
+            "subtype": "ota_1",
+            "offset": "0x210000",
+            "size": "2048K"
+        },
+        {
+            "name": "uf2",
+            "type": "app",
+            "subtype": "factory",
+            "offset": "0x410000",
+            "size": "256K"
+        },
+        {
+            "name": "ffat",
+            "type": "data",
+            "subtype": "fat",
+            "offset": "0x450000",
+            "size": "11968K"
+        }
+    ],
+    "tinyuf2-partitions-16MB-noota": [
+        {
+            "name": "nvs",
+            "type": "data",
+            "subtype": "nvs",
+            "offset": "0x9000",
+            "size": "20K"
+        },
+        {
+            "name": "otadata",
+            "type": "data",
+            "subtype": "ota",
+            "offset": "0xe000",
+            "size": "8K"
+        },
+        {
+            "name": "ota_0",
+            "type": "app",
+            "subtype": "ota_0",
+            "offset": "0x10000",
+            "size": "4096K"
+        },
+        {
+            "name": "uf2",
+            "type": "app",
+            "subtype": "factory",
+            "offset": "0x410000",
+            "size": "256K"
+        },
+        {
+            "name": "ffat",
+            "type": "data",
+            "subtype": "fat",
+            "offset": "0x450000",
+            "size": "11968K"
+        }
+    ],
+    "large_spiffs_8MB": [
+        {
+            "name": "nvs",
+            "type": "data",
+            "subtype": "nvs",
+            "offset": "0x9000",
+            "size": "0x5000"
+        },
+        {
+            "name": "otadata",
+            "type": "data",
+            "subtype": "ota",
+            "offset": "0xe000",
+            "size": "0x2000"
+        },
+        {
+            "name": "app0",
+            "type": "app",
+            "subtype": "ota_0",
+            "offset": "0x10000",
+            "size": "0x140000"
+        },
+        {
+            "name": "app1",
+            "type": "app",
+            "subtype": "ota_1",
+            "offset": "0x150000",
+            "size": "0x140000"
+        },
+        {
+            "name": "spiffs",
+            "type": "data",
+            "subtype": "spiffs",
+            "offset": "0x290000",
+            "size": "0x560000"
+        },
+        {
+            "name": "coredump",
+            "type": "data",
+            "subtype": "coredump",
+            "offset": "0x7F0000",
+            "size": "0x10000"
+        }
+    ],
+    "tinyuf2-partitions-8MB": [
+        {
+            "name": "nvs",
+            "type": "data",
+            "subtype": "nvs",
+            "offset": "0x9000",
+            "size": "20K"
+        },
+        {
+            "name": "otadata",
+            "type": "data",
+            "subtype": "ota",
+            "offset": "0xe000",
+            "size": "8K"
+        },
+        {
+            "name": "ota_0",
+            "type": "app",
+            "subtype": "ota_0",
+            "offset": "0x10000",
+            "size": "2048K"
+        },
+        {
+            "name": "ota_1",
+            "type": "app",
+            "subtype": "ota_1",
+            "offset": "0x210000",
+            "size": "2048K"
+        },
+        {
+            "name": "uf2",
+            "type": "app",
+            "subtype": "factory",
+            "offset": "0x410000",
+            "size": "256K"
+        },
+        {
+            "name": "ffat",
+            "type": "data",
+            "subtype": "fat",
+            "offset": "0x450000",
+            "size": "3776K"
+        }
+    ],
+    "tinyuf2-partitions-8MB-noota": [
+        {
+            "name": "nvs",
+            "type": "data",
+            "subtype": "nvs",
+            "offset": "0x9000",
+            "size": "20K"
+        },
+        {
+            "name": "otadata",
+            "type": "data",
+            "subtype": "ota",
+            "offset": "0xe000",
+            "size": "8K"
+        },
+        {
+            "name": "ota_0",
+            "type": "app",
+            "subtype": "ota_0",
+            "offset": "0x10000",
+            "size": "4096K"
+        },
+        {
+            "name": "uf2",
+            "type": "app",
+            "subtype": "factory",
+            "offset": "0x410000",
+            "size": "256K"
+        },
+        {
+            "name": "ffat",
+            "type": "data",
+            "subtype": "fat",
+            "offset": "0x450000",
+            "size": "3776K"
+        }
+    ],
+    "max_app_8MB": [
+        {
+            "name": "nvs",
+            "type": "data",
+            "subtype": "nvs",
+            "offset": "0x9000",
+            "size": "0x5000"
+        },
+        {
+            "name": "otadata",
+            "type": "data",
+            "subtype": "ota",
+            "offset": "0xe000",
+            "size": "0x2000"
+        },
+        {
+            "name": "app0",
+            "type": "app",
+            "subtype": "factory",
+            "offset": "0x10000",
+            "size": "0x7E0000"
+        },
+        {
+            "name": "coredump",
+            "type": "data",
+            "subtype": "coredump",
+            "offset": "0x7F0000",
+            "size": "0x10000"
+        }
+    ],
+    "default_ffat_8MB": [
+        {
+            "name": "nvs",
+            "type": "data",
+            "subtype": "nvs",
+            "offset": "0x9000",
+            "size": "0x5000"
+        },
+        {
+            "name": "otadata",
+            "type": "data",
+            "subtype": "ota",
+            "offset": "0xe000",
+            "size": "0x2000"
+        },
+        {
+            "name": "app0",
+            "type": "app",
+            "subtype": "ota_0",
+            "offset": "0x10000",
+            "size": "0x330000"
+        },
+        {
+            "name": "app1",
+            "type": "app",
+            "subtype": "ota_1",
+            "offset": "0x340000",
+            "size": "0x330000"
+        },
+        {
+            "name": "ffat",
+            "type": "data",
+            "subtype": "fat",
+            "offset": "0x670000",
+            "size": "0x180000"
+        },
+        {
+            "name": "coredump",
+            "type": "data",
+            "subtype": "coredump",
+            "offset": "0x7F0000",
+            "size": "0x10000"
+        }
+    ],
+    "large_ffat_8MB": [
+        {
+            "name": "nvs",
+            "type": "data",
+            "subtype": "nvs",
+            "offset": "0x9000",
+            "size": "0x5000"
+        },
+        {
+            "name": "otadata",
+            "type": "data",
+            "subtype": "ota",
+            "offset": "0xe000",
+            "size": "0x2000"
+        },
+        {
+            "name": "app0",
+            "type": "app",
+            "subtype": "ota_0",
+            "offset": "0x10000",
+            "size": "0x140000"
+        },
+        {
+            "name": "app1",
+            "type": "app",
+            "subtype": "ota_1",
+            "offset": "0x150000",
+            "size": "0x140000"
+        },
+        {
+            "name": "ffat",
+            "type": "data",
+            "subtype": "fat",
+            "offset": "0x290000",
+            "size": "0x560000"
+        },
+        {
+            "name": "coredump",
+            "type": "data",
+            "subtype": "coredump",
+            "offset": "0x7F0000",
+            "size": "0x10000"
+        }
+    ],
+    "app3M_fat9M_fact512k_16MB": [
+        {
+            "name": "nvs",
+            "type": "data",
+            "subtype": "nvs",
+            "offset": "0x9000",
+            "size": "0x5000"
+        },
+        {
+            "name": "otadata",
+            "type": "data",
+            "subtype": "ota",
+            "offset": "0xe000",
+            "size": "0x2000"
+        },
+        {
+            "name": "app0",
+            "type": "app",
+            "subtype": "ota_0",
+            "offset": "0x10000",
+            "size": "0x300000"
+        },
+        {
+            "name": "app1",
+            "type": "app",
+            "subtype": "ota_1",
+            "offset": "0x310000",
+            "size": "0x300000"
+        },
+        {
+            "name": "ffat",
+            "type": "data",
+            "subtype": "fat",
+            "offset": "0x610000",
+            "size": "0x960000"
+        },
+        {
+            "name": "factory",
+            "type": "app",
+            "subtype": "factory",
+            "offset": "0xF70000",
+            "size": "0x80000"
+        },
+        {
+            "name": "coredump",
+            "type": "data",
+            "subtype": "coredump",
+            "offset": "0xFF0000",
+            "size": "0x10000"
+        }
+    ]
+}

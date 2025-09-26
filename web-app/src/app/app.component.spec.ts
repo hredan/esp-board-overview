@@ -6,6 +6,7 @@ import { provideRouter } from '@angular/router';
 import { EspCoreOverviewComponent } from "./esp-core-overview/esp-core-overview.component";
 import { Esp8266BoardOverviewComponent } from "./esp8266-board-overview/esp8266-board-overview.component";
 import { Esp32BoardOverviewComponent } from "./esp32-board-overview/esp32-board-overview.component";
+import { Esp32PartitionOverviewComponent } from "./esp32-partition-overview/esp32-partition-overview.component";
 
 describe('AppComponent', () => {
 
@@ -45,7 +46,7 @@ describe('AppComponent', () => {
   it('should initialize links and activeLink', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.links).toEqual(['Info', 'ESP8266', 'ESP32']);
+    expect(app.links).toEqual(['Info', 'ESP8266', 'ESP32', 'ESP32-Partitions']);
     expect(app.activeLink).toEqual('Info');
   });
   it('should update activeLink and title on route activation', () => {
@@ -58,10 +59,14 @@ describe('AppComponent', () => {
 
     app.onActivate(new Esp8266BoardOverviewComponent());
     expect(app.activeLink).toEqual('ESP8266');
-    expect(app.title).toEqual('ESP8266 Board Overview');
+    expect(app.title).toEqual('ESP8266 Boards Arduino IDE');
 
     app.onActivate(new Esp32BoardOverviewComponent());
     expect(app.activeLink).toEqual('ESP32');
-    expect(app.title).toEqual('ESP32 Board Overview');
+    expect(app.title).toEqual('ESP32 Boards Arduino IDE');
+
+    app.onActivate(new Esp32PartitionOverviewComponent());
+    expect(app.activeLink).toEqual('ESP32-Partitions');
+    expect(app.title).toEqual('ESP32 Partitions Overview');
   });
 });

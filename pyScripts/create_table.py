@@ -25,7 +25,7 @@ if __name__ == "__main__":
         core_version = core_info["latest_version"]
         CORE_DATA_PATH = f"./esp_data/{core_name}-{core_version}"
         cd = CoreData(core_info["core_name"], core_info["installed_version"], CORE_DATA_PATH)
-        print(f"core: {core_name}")
+        print(f"### core: {core_name} ###")
         print(f"number of boards: {len(cd.boards)}")
         print(f"number of boards without led: {cd.num_of_boards_without_led}")
         # save data in json file
