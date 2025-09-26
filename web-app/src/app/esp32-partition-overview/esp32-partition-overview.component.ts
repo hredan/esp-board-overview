@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import esp32_partitions from '../../../data/esp32_partitions.json';
-import esp32_schemes from '../../../data/esp32_partition_schemes.json';
 import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatOptionModule } from '@angular/material/core';
 import {MatTableDataSource, MatTableModule} from '@angular/material/table';
+
+import { Esp32DataService, PartitionEntry } from '../esp32-data.service';
 
 @Component({
   selector: 'app-esp32-partition-overview',
@@ -13,8 +13,9 @@ import {MatTableDataSource, MatTableModule} from '@angular/material/table';
   styleUrl: './esp32-partition-overview.component.css'
 })
 export class Esp32PartitionOverviewComponent implements OnInit {
-  partitionsData: BoardPartitionsInfo = esp32_partitions as BoardPartitionsInfo;
-  defaultSchemes: DefaultSchemes = esp32_schemes as DefaultSchemes;
+  esp32DataService: Esp32DataService = new Esp32DataService();
+  partitionsData = this.esp32DataService.partitionsData;
+  defaultSchemes = this.esp32DataService.defaultSchemes;
   boardNames = Object.keys(this.partitionsData);
   selectedBoard: string = this.boardNames[0];
   defaultScheme: string = this.partitionsData[this.selectedBoard].default;
@@ -129,30 +130,6 @@ export class Esp32PartitionOverviewComponent implements OnInit {
   }
 }
 
-interface BoardSchemeInfo {
-  full_name: string;
-  build: string;
-}
-
-type BoardPartitionScheme = Record<string, BoardSchemeInfo>;
-
-
-interface BoardPartitions {
-  default: string;
-  schemes?: BoardPartitionScheme | undefined;
-}
-
-type BoardPartitionsInfo = Record<string, BoardPartitions>;
-
-interface PartitionEntry {
-  name: string;
-  type: string;
-  subtype: string;
-  offset: string;
-  size: string;
-}
-
-
 interface PartitionEntryExtended {
   color: string;
   name: string;
@@ -164,9 +141,6 @@ interface PartitionEntryExtended {
   size_dec: number;
   offset_size: number;
 }
-
-type DefaultSchemes = Record<string, PartitionEntry[]>;
-
 interface Partition{
   color: string;
   offset: number;

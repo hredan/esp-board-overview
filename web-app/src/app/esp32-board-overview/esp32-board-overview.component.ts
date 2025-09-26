@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { BoardOverviewComponent, BoardInfo } from '../board-overview/board-overview.component';
-import board_data from '../../../data/esp32.json';
+import { Esp32DataService } from '../esp32-data.service';
 @Component({
   selector: 'app-esp32-board-overview',
   imports: [BoardOverviewComponent],
@@ -8,5 +8,6 @@ import board_data from '../../../data/esp32.json';
   styleUrl: './esp32-board-overview.component.css'
 })
 export class Esp32BoardOverviewComponent {
-  boardsData: BoardInfo[] = board_data as BoardInfo[];
+  esp32DataService = new Esp32DataService();
+  boardsData: BoardInfo[] = this.esp32DataService.boardsData;
 }
