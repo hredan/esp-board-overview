@@ -32,7 +32,7 @@ describe('Esp32BoardOverviewComponent', () => {
     expect(boardOverview).toBeTruthy();
   });
 
-  it('should set the board type to ESP8266', () => {
+  it('should set the board type to ESP32', () => {
     expect(boardOverview.coreName).toEqual('esp32');
   });
 });

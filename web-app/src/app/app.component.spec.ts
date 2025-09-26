@@ -6,6 +6,7 @@ import { provideRouter } from '@angular/router';
 import { EspCoreOverviewComponent } from "./esp-core-overview/esp-core-overview.component";
 import { Esp8266BoardOverviewComponent } from "./esp8266-board-overview/esp8266-board-overview.component";
 import { Esp32BoardOverviewComponent } from "./esp32-board-overview/esp32-board-overview.component";
+import { Esp32PartitionOverviewComponent } from "./esp32-partition-overview/esp32-partition-overview.component";
 
 describe('AppComponent', () => {
 
@@ -63,5 +64,9 @@ describe('AppComponent', () => {
     app.onActivate(new Esp32BoardOverviewComponent());
     expect(app.activeLink).toEqual('ESP32');
     expect(app.title).toEqual('ESP32 Boards Arduino IDE');
+
+    app.onActivate(new Esp32PartitionOverviewComponent());
+    expect(app.activeLink).toEqual('ESP32-Partitions');
+    expect(app.title).toEqual('ESP32 Partitions Overview');
   });
 });

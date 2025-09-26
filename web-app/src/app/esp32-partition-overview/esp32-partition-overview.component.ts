@@ -40,7 +40,6 @@ export class Esp32PartitionOverviewComponent implements OnInit {
   }
 
   onBoardChange(event: string) {
-    console.log(event);
     // schemes are undefined, use default
     if (this.partitionsData[event].schemes === undefined) {
       this.schemes = [this.partitionsData[event].default];
@@ -65,16 +64,21 @@ export class Esp32PartitionOverviewComponent implements OnInit {
         this.selectedSchemeData = this.defaultSchemes[build_name];
       }
       else {
-        this.selectedSchemeData = [];
+        const data = this.defaultSchemes[this.selectedScheme];
+        if (data !== undefined) {
+          this.selectedSchemeData = data;
+        }
+        else {
+          this.selectedSchemeData = [];
+        }
+
       }
       //this.dataSource = new MatTableDataSource<PartitionEntry>(this.selectedSchemeData);
       this.setTableData();
-      console.log(this.selectedSchemeData);
     }
   }
 
   onSchemeChange(event: string) {
-    console.log(event);
     const selectedScheme = this.partitionsData[this.selectedBoard].schemes?.[event];
     if (selectedScheme !== undefined) {
       this.selectedSchemeData = this.defaultSchemes[selectedScheme.build] || [];
@@ -84,44 +88,44 @@ export class Esp32PartitionOverviewComponent implements OnInit {
     }
     //this.dataSource = new MatTableDataSource<PartitionEntry>(this.selectedSchemeData);
     this.setTableData();
-    console.log(this.selectedSchemeData);
   }
 
   setTableData(){
     const data = this.selectedSchemeData;
-    const newData: PartitionEntryExtended[] = [];
-    const partitions: Partition[] = [];
-    let collorIndex = 0;
-    const colors = ['#4caf50', '#2196f3', '#ff9800', '#9c27b0', '#f44336', '#00bcd4', '#8bc34a', '#ffc107'];
-    for (const entry of data) {
-      const offset_dec = Number(entry.offset);
-      const size_dec = Number(entry.size);
-      newData.push({
-        color: colors[collorIndex],
-        name: entry.name,
-        type: entry.type,
-        subtype: entry.subtype,
-        offset_hex: entry.offset,
-        offset_dec: offset_dec,
-        size_hex: entry.size,
-        size_dec: size_dec,
-        offset_size: offset_dec + size_dec
-      });
-      partitions.push({
-        color: colors[collorIndex],
-        offset: Math.floor(offset_dec/1000),
-        size: Math.floor(size_dec/1000)
-      });
-      collorIndex += 1;
+    if (data !== undefined && data.length !== 0) {
+      const newData: PartitionEntryExtended[] = [];
+      const partitions: Partition[] = [];
+      let collorIndex = 0;
+      const colors = ['#4caf50', '#2196f3', '#ff9800', '#9c27b0', '#f44336', '#00bcd4', '#8bc34a', '#ffc107'];
+      for (const entry of data) {
+        const offset_dec = Number(entry.offset);
+        const size_dec = Number(entry.size);
+        newData.push({
+          color: colors[collorIndex],
+          name: entry.name,
+          type: entry.type,
+          subtype: entry.subtype,
+          offset_hex: entry.offset,
+          offset_dec: offset_dec,
+          size_hex: entry.size,
+          size_dec: size_dec,
+          offset_size: offset_dec + size_dec
+        });
+        partitions.push({
+          color: colors[collorIndex],
+          offset: Math.floor(offset_dec/1000),
+          size: Math.floor(size_dec/1000)
+        });
+        collorIndex += 1;
+      }
+      
+      const lastEntry = partitions[partitions.length - 1];
+      const totalSize = lastEntry.offset + lastEntry.size;
+      this.viewBox = `0 0 ${totalSize} 100`;
+      this.partitionGraphTotalSize = totalSize;
+      this.partitionGraph = partitions;
+      this.dataSource = new MatTableDataSource<PartitionEntryExtended>(newData)
     }
-    
-    const lastEntry = partitions[partitions.length - 1];
-    const totalSize = lastEntry.offset + lastEntry.size;
-    console.log("Total Size:", totalSize);
-    this.viewBox = `0 0 ${totalSize} 100`;
-    this.partitionGraphTotalSize = totalSize;
-    this.partitionGraph = partitions;
-    this.dataSource = new MatTableDataSource<PartitionEntryExtended>(newData)
   }
 }
 

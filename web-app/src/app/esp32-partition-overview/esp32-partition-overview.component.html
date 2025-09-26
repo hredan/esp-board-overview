@@ -19,64 +19,73 @@
     </mat-select>
 </mat-form-field>
 <h2>Partition Graph</h2>
-<div class="svg-container">
-    <svg [attr.viewBox]="viewBox" preserveAspectRatio="none">
-        <g>
-            <rect x="0" y="0" [attr.width]="partitionGraphTotalSize" height="100" stroke-width="3" stroke="black" fill="white"/>
-            @for (partition of partitionGraph; track partition.offset) {
-                <rect [attr.x]="partition.offset" y="3" [attr.width]="partition.size" height="94" [attr.fill]="partition.color"/>
-            }
-        </g>
-    </svg>
-</div>
+    @if (selectedSchemeData.length > 0) {
+        <div class="svg-container">
+        <svg [attr.viewBox]="viewBox" preserveAspectRatio="none">
+            <g>
+                <rect x="0" y="0" [attr.width]="partitionGraphTotalSize" height="100" stroke-width="3" stroke="black" fill="white"/>
+                @for (partition of partitionGraph; track partition.offset) {
+                    <rect [attr.x]="partition.offset" y="3" [attr.width]="partition.size" height="94" [attr.fill]="partition.color"/>
+                }
+            </g>
+        </svg>
+        </div>
+    } @else {
+        <div>Error, no data available</div>
+    }
+
 <h2>Partition Table</h2>
-<div class="mat-elevation-z8">
-    <table mat-table [dataSource]="dataSource">
-    <ng-container matColumnDef="color">
-        <th mat-header-cell *matHeaderCellDef> Color </th>
-        <td mat-cell *matCellDef="let element" class="color-cell"><div class="color-indicator" [style.backgroundColor]="element.color"> </div> </td>
-    </ng-container>
-    <ng-container matColumnDef="name">
-        <th mat-header-cell *matHeaderCellDef> Name </th> 
-        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
-    </ng-container>
+ @if (selectedSchemeData.length > 0) {
+    <div class="mat-elevation-z8">
+        <table mat-table [dataSource]="dataSource">
+        <ng-container matColumnDef="color">
+            <th mat-header-cell *matHeaderCellDef> Color </th>
+            <td mat-cell *matCellDef="let element" class="color-cell"><div class="color-indicator" [style.backgroundColor]="element.color"> </div> </td>
+        </ng-container>
+        <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef> Name </th> 
+            <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        </ng-container>
 
-    <ng-container matColumnDef="type">
-        <th mat-header-cell *matHeaderCellDef> Type </th>
-        <td mat-cell *matCellDef="let element"> {{element.type}} </td>
-    </ng-container>
+        <ng-container matColumnDef="type">
+            <th mat-header-cell *matHeaderCellDef> Type </th>
+            <td mat-cell *matCellDef="let element"> {{element.type}} </td>
+        </ng-container>
 
-    <ng-container matColumnDef="subtype">
-        <th mat-header-cell *matHeaderCellDef> Subtype </th>
-        <td mat-cell *matCellDef="let element"> {{element.subtype}} </td>
-    </ng-container>
+        <ng-container matColumnDef="subtype">
+            <th mat-header-cell *matHeaderCellDef> Subtype </th>
+            <td mat-cell *matCellDef="let element"> {{element.subtype}} </td>
+        </ng-container>
 
-    <ng-container matColumnDef="offset_hex">
-        <th mat-header-cell *matHeaderCellDef> Offset hex</th>
-        <td mat-cell *matCellDef="let element"> {{element.offset_hex}} </td>
-    </ng-container>
+        <ng-container matColumnDef="offset_hex">
+            <th mat-header-cell *matHeaderCellDef> Offset hex</th>
+            <td mat-cell *matCellDef="let element"> {{element.offset_hex}} </td>
+        </ng-container>
 
-    <ng-container matColumnDef="offset_dec">
-        <th mat-header-cell *matHeaderCellDef class="text-align-right"> Offset dec</th>
-        <td mat-cell *matCellDef="let element" class="text-align-right"> {{element.offset_dec}} </td>
-    </ng-container>
+        <ng-container matColumnDef="offset_dec">
+            <th mat-header-cell *matHeaderCellDef class="text-align-right"> Offset dec</th>
+            <td mat-cell *matCellDef="let element" class="text-align-right"> {{element.offset_dec}} </td>
+        </ng-container>
 
-    <ng-container matColumnDef="size_hex">
-        <th mat-header-cell *matHeaderCellDef> Size hex</th>
-        <td mat-cell *matCellDef="let element"> {{element.size_hex}} </td>
-    </ng-container>
+        <ng-container matColumnDef="size_hex">
+            <th mat-header-cell *matHeaderCellDef> Size hex</th>
+            <td mat-cell *matCellDef="let element"> {{element.size_hex}} </td>
+        </ng-container>
 
-    <ng-container matColumnDef="size_dec">
-        <th mat-header-cell *matHeaderCellDef class="text-align-right"> Size dec</th>
-        <td mat-cell *matCellDef="let element" class="text-align-right"> {{element.size_dec}} </td>
-    </ng-container>
+        <ng-container matColumnDef="size_dec">
+            <th mat-header-cell *matHeaderCellDef class="text-align-right"> Size dec</th>
+            <td mat-cell *matCellDef="let element" class="text-align-right"> {{element.size_dec}} </td>
+        </ng-container>
 
-    <ng-container matColumnDef="offset_size">
-        <th mat-header-cell *matHeaderCellDef class="text-align-right"> Offset + Size</th>
-        <td mat-cell *matCellDef="let element" class="text-align-right"> {{element.offset_size}} </td>
-    </ng-container>
+        <ng-container matColumnDef="offset_size">
+            <th mat-header-cell *matHeaderCellDef class="text-align-right"> Offset + Size</th>
+            <td mat-cell *matCellDef="let element" class="text-align-right"> {{element.offset_size}} </td>
+        </ng-container>
 
-    <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-</table>
-</div>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    </div>
+} @else {
+    <div>Error, no data available</div>
+}
