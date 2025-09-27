@@ -10,11 +10,15 @@
     "python.testing.unittestArgs": [
         "-v",
         "-s",
-        "./pyScripts/helper",
+        "./pyScripts",
         "-p",
         "test_*.py"
     ],
     "python.testing.pytestEnabled": true,
     "python.testing.unittestEnabled": false,
     "python.defaultInterpreterPath": "/workspaces/esp-board-overview/.venv/bin/python3",
+    "python.analysis.extraPaths": [
+        "./pyScripts"
+    ],
+    "python.analysis.typeCheckingMode": "strict"
 }
