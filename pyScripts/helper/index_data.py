@@ -32,14 +32,14 @@ class IndexData:
         :return: Last core version as a string."""
         return self.index_data["packages"][0]["platforms"][0]["version"]
 
-def get_core_list():
+def get_core_list() -> list[dict[str, str]]:
     """Retrieve a list of core names from the index data.
     :return: List of core names."""
-    core_list = []
+    core_list: list[dict[str, str]] = []
     core_names = ["esp8266", "esp32"]
     for core_name in core_names:
         index_data = IndexData(core_name)
-        core_info = {
+        core_info: dict[str, str] = {
             "core": f"{index_data.get_core_name()}:{index_data.get_core_name()}",
             "installed_version": index_data.get_last_core_version(),
             "latest_version": index_data.get_last_core_version(),
