@@ -56,14 +56,21 @@ if __name__ == "__main__":
                 for scheme, scheme_data in scheme_data["schemes"].items():
                     scheme_file_name = scheme_data["build"]
                     if scheme_file_name not in schemes:
-                        schemes[scheme_file_name] = load_scheme(scheme_file_name, esp32_core["installed_version"])
+                        schemes[scheme_file_name] = load_scheme(
+                            scheme_file_name,
+                            esp32_core["installed_version"]
+                        )
             else:
                 if "default" in scheme_data and scheme_data["default"] not in schemes:
-                    schemes[scheme_data["default"]] = load_scheme(scheme_data["default"], esp32_core["installed_version"])
+                    schemes[scheme_data["default"]] = load_scheme(
+                        scheme_data["default"],
+                        esp32_core["installed_version"]
+                    )
                 # else:
                 #     print(f"Default: {board} - {scheme_data['default']} already loaded")
 
-        with open(f"{ESP_DATA_PATH}/esp32_partition_schemes.json", 'w', encoding='utf-8') as file_out:
+        PARTITION_SCHEMES_PATH = f"{ESP_DATA_PATH}/esp32_partition_schemes.json"
+        with open(PARTITION_SCHEMES_PATH, 'w', encoding='utf-8') as file_out:
             json.dump(schemes, file_out, ensure_ascii=False, indent=4)
         # Create partition schemes json for each core
         # SCHEME = "default"
