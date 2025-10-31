@@ -6,7 +6,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "12",
         "board": "AirM2M_CORE_ESP32C3",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/AirM2M_CORE_ESP32C3/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/AirM2M_CORE_ESP32C3/pins_arduino.h"
     },
     {
         "name": "Bee Data Logger",
@@ -15,7 +15,7 @@
         "flash_size": "[8MB]",
         "LED_BUILTIN": "N/A",
         "board": "Bee_Data_Logger",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/Bee_Data_Logger/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/Bee_Data_Logger/pins_arduino.h"
     },
     {
         "name": "Bee Motion",
@@ -24,7 +24,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "Bee_Motion",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/Bee_Motion/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/Bee_Motion/pins_arduino.h"
     },
     {
         "name": "Bee Motion Mini",
@@ -33,7 +33,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "Bee_Motion_Mini",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/Bee_Motion_Mini/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/Bee_Motion_Mini/pins_arduino.h"
     },
     {
         "name": "Bee Motion S3",
@@ -42,7 +42,7 @@
         "flash_size": "[8MB]",
         "LED_BUILTIN": "N/A",
         "board": "Bee_Motion_S3",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/Bee_Motion_S3/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/Bee_Motion_S3/pins_arduino.h"
     },
     {
         "name": "Bee S3",
@@ -51,7 +51,7 @@
         "flash_size": "[8MB]",
         "LED_BUILTIN": "N/A",
         "board": "Bee_S3",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/Bee_S3/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/Bee_S3/pins_arduino.h"
     },
     {
         "name": "BharatPi A7672S 4G Module",
@@ -60,7 +60,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "2",
         "board": "BharatPi-A7672S-4G",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/BharatPi-A7672S-4G/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/BharatPi-A7672S-4G/pins_arduino.h"
     },
     {
         "name": "BharatPi LoRa Module",
@@ -69,7 +69,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "2",
         "board": "BharatPi-LoRa",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/BharatPi-LoRa/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/BharatPi-LoRa/pins_arduino.h"
     },
     {
         "name": "BharatPi Node Wifi Module",
@@ -78,7 +78,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "2",
         "board": "BharatPi-Node-Wifi",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/BharatPi-Node-Wifi/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/BharatPi-Node-Wifi/pins_arduino.h"
     },
     {
         "name": "Microduino-CoreESP32",
@@ -87,7 +87,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "CoreESP32",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/Microduino-esp32/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/Microduino-esp32/pins_arduino.h"
     },
     {
         "name": "ET-Board",
@@ -96,7 +96,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "5",
         "board": "ET-Board",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/ET-Board/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/ET-Board/pins_arduino.h"
     },
     {
         "name": "Edgebox-ESP-100",
@@ -105,7 +105,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "Edgebox-ESP-100",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/Edgebox-ESP-100/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/Edgebox-ESP-100/pins_arduino.h"
     },
     {
         "name": "Geekble Mini ESP32-C3",
@@ -114,7 +114,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "10",
         "board": "Geekble_ESP32C3",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/Geekble_ESP32C3/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/Geekble_ESP32C3/pins_arduino.h"
     },
     {
         "name": "Geekble nano ESP32-S3",
@@ -123,7 +123,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "Geekble_Nano_ESP32S3",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/Geekble_Nano_ESP32S3/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/Geekble_Nano_ESP32S3/pins_arduino.h"
     },
     {
         "name": "INEX OpenKB",
@@ -132,7 +132,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "16",
         "board": "OpenKB",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/openkb/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/openkb/pins_arduino.h"
     },
     {
         "name": "Pcbcupid GLYPH C3",
@@ -141,7 +141,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "1",
         "board": "Pcbcupid_GLYPH_C3",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/Pcbcupid_GLYPH_C3/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/Pcbcupid_GLYPH_C3/pins_arduino.h"
     },
     {
         "name": "Pcbcupid GLYPH C6",
@@ -150,7 +150,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "14",
         "board": "Pcbcupid_GLYPH_C6",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/Pcbcupid_GLYPH_C6/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/Pcbcupid_GLYPH_C6/pins_arduino.h"
     },
     {
         "name": "Pcbcupid GLYPH H2",
@@ -159,7 +159,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "0",
         "board": "Pcbcupid_GLYPH_H2",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/Pcbcupid_GLYPH_H2/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/Pcbcupid_GLYPH_H2/pins_arduino.h"
     },
     {
         "name": "S.ODI Ultra v1",
@@ -168,7 +168,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "2",
         "board": "S_ODI_Ultra",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/S_ODI_Ultra_v1/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/S_ODI_Ultra_v1/pins_arduino.h"
     },
     {
         "name": "VALTRACK_V4_MFW_ESP32_C3",
@@ -177,7 +177,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "VALTRACK_V4_MFW_ESP32_C3",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/VALTRACK_V4_MFW_ESP32_C3/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/VALTRACK_V4_MFW_ESP32_C3/pins_arduino.h"
     },
     {
         "name": "VALTRACK_V4_VTS_ESP32_C3",
@@ -186,7 +186,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "VALTRACK_V4_VTS_ESP32_C3",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/VALTRACK_V4_VTS_ESP32_C3/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/VALTRACK_V4_VTS_ESP32_C3/pins_arduino.h"
     },
     {
         "name": "WeMos WiFi&Bluetooth Battery",
@@ -195,7 +195,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "16",
         "board": "WeMosBat",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/pocket_32/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/pocket_32/pins_arduino.h"
     },
     {
         "name": "XIAO_ESP32C3",
@@ -204,7 +204,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "XIAO_ESP32C3",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/XIAO_ESP32C3/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/XIAO_ESP32C3/pins_arduino.h"
     },
     {
         "name": "XIAO_ESP32C5",
@@ -213,7 +213,7 @@
         "flash_size": "[8MB]",
         "LED_BUILTIN": "27",
         "board": "XIAO_ESP32C5",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/XIAO_ESP32C5/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/XIAO_ESP32C5/pins_arduino.h"
     },
     {
         "name": "XIAO_ESP32C6",
@@ -222,7 +222,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "15",
         "board": "XIAO_ESP32C6",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/XIAO_ESP32C6/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/XIAO_ESP32C6/pins_arduino.h"
     },
     {
         "name": "XIAO_ESP32S3",
@@ -231,7 +231,7 @@
         "flash_size": "[8MB]",
         "LED_BUILTIN": "21",
         "board": "XIAO_ESP32S3",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/XIAO_ESP32S3/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/XIAO_ESP32S3/pins_arduino.h"
     },
     {
         "name": "XIAO_ESP32S3_PLUS",
@@ -240,7 +240,7 @@
         "flash_size": "[16MB]",
         "LED_BUILTIN": "21",
         "board": "XIAO_ESP32S3_Plus",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/XIAO_ESP32S3_Plus/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/XIAO_ESP32S3_Plus/pins_arduino.h"
     },
     {
         "name": "Adafruit pyCamera S3",
@@ -249,7 +249,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "adafruit_camera_esp32s3",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/adafruit_camera_esp32s3/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/adafruit_camera_esp32s3/pins_arduino.h"
     },
     {
         "name": "Adafruit Feather ESP32 V2",
@@ -258,7 +258,7 @@
         "flash_size": "[8MB]",
         "LED_BUILTIN": "13",
         "board": "adafruit_feather_esp32_v2",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/adafruit_feather_esp32_v2/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/adafruit_feather_esp32_v2/pins_arduino.h"
     },
     {
         "name": "Adafruit Feather ESP32-C6",
@@ -267,7 +267,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "15",
         "board": "adafruit_feather_esp32c6",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/adafruit_feather_esp32c6/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/adafruit_feather_esp32c6/pins_arduino.h"
     },
     {
         "name": "Adafruit Feather ESP32-S2",
@@ -276,7 +276,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "adafruit_feather_esp32s2",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/adafruit_feather_esp32s2/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/adafruit_feather_esp32s2/pins_arduino.h"
     },
     {
         "name": "Adafruit Feather ESP32-S2 Reverse TFT",
@@ -285,7 +285,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "adafruit_feather_esp32s2_reversetft",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/adafruit_feather_esp32s2_reversetft/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/adafruit_feather_esp32s2_reversetft/pins_arduino.h"
     },
     {
         "name": "Adafruit Feather ESP32-S2 TFT",
@@ -294,7 +294,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "adafruit_feather_esp32s2_tft",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/adafruit_feather_esp32s2_tft/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/adafruit_feather_esp32s2_tft/pins_arduino.h"
     },
     {
         "name": "Adafruit Feather ESP32-S3 2MB PSRAM",
@@ -303,7 +303,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "adafruit_feather_esp32s3",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/adafruit_feather_esp32s3/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/adafruit_feather_esp32s3/pins_arduino.h"
     },
     {
         "name": "Adafruit Feather ESP32-S3 No PSRAM",
@@ -312,7 +312,7 @@
         "flash_size": "[8MB]",
         "LED_BUILTIN": "N/A",
         "board": "adafruit_feather_esp32s3_nopsram",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/adafruit_feather_esp32s3_nopsram/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/adafruit_feather_esp32s3_nopsram/pins_arduino.h"
     },
     {
         "name": "Adafruit Feather ESP32-S3 Reverse TFT",
@@ -321,7 +321,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "adafruit_feather_esp32s3_reversetft",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/adafruit_feather_esp32s3_reversetft/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/adafruit_feather_esp32s3_reversetft/pins_arduino.h"
     },
     {
         "name": "Adafruit Feather ESP32-S3 TFT",
@@ -330,7 +330,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "adafruit_feather_esp32s3_tft",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/adafruit_feather_esp32s3_tft/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/adafruit_feather_esp32s3_tft/pins_arduino.h"
     },
     {
         "name": "Adafruit FunHouse",
@@ -339,7 +339,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "adafruit_funhouse_esp32s2",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/adafruit_funhouse_esp32s2/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/adafruit_funhouse_esp32s2/pins_arduino.h"
     },
     {
         "name": "Adafruit ItsyBitsy ESP32",
@@ -348,7 +348,7 @@
         "flash_size": "[8MB]",
         "LED_BUILTIN": "13",
         "board": "adafruit_itsybitsy_esp32",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/adafruit_itsybitsy_esp32/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/adafruit_itsybitsy_esp32/pins_arduino.h"
     },
     {
         "name": "Adafruit MagTag 2.9\"",
@@ -357,7 +357,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "adafruit_magtag29_esp32s2",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/adafruit_magtag29_esp32s2/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/adafruit_magtag29_esp32s2/pins_arduino.h"
     },
     {
         "name": "Adafruit MatrixPortal ESP32-S3",
@@ -366,7 +366,7 @@
         "flash_size": "[8MB]",
         "LED_BUILTIN": "N/A",
         "board": "adafruit_matrixportal_esp32s3",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/adafruit_matrixportal_esp32s3/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/adafruit_matrixportal_esp32s3/pins_arduino.h"
     },
     {
         "name": "Adafruit Metro ESP32-S2",
@@ -375,7 +375,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "adafruit_metro_esp32s2",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/adafruit_metro_esp32s2/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/adafruit_metro_esp32s2/pins_arduino.h"
     },
     {
         "name": "Adafruit Metro ESP32-S3",
@@ -384,7 +384,7 @@
         "flash_size": "[16MB]",
         "LED_BUILTIN": "N/A",
         "board": "adafruit_metro_esp32s3",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/adafruit_metro_esp32s3/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/adafruit_metro_esp32s3/pins_arduino.h"
     },
     {
         "name": "Adafruit QT Py ESP32",
@@ -393,7 +393,7 @@
         "flash_size": "[8MB]",
         "LED_BUILTIN": "N/A",
         "board": "adafruit_qtpy_esp32_pico",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/adafruit_qtpy_esp32/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/adafruit_qtpy_esp32/pins_arduino.h"
     },
     {
         "name": "Adafruit QT Py ESP32-C3",
@@ -402,7 +402,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "adafruit_qtpy_esp32c3",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/adafruit_qtpy_esp32c3/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/adafruit_qtpy_esp32c3/pins_arduino.h"
     },
     {
         "name": "Adafruit QT Py ESP32-S2",
@@ -411,7 +411,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "adafruit_qtpy_esp32s2",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/adafruit_qtpy_esp32s2/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/adafruit_qtpy_esp32s2/pins_arduino.h"
     },
     {
         "name": "Adafruit QT Py ESP32-S3 (4M Flash 2M PSRAM)",
@@ -420,7 +420,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "adafruit_qtpy_esp32s3_n4r2",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/adafruit_qtpy_esp32s3_n4r2/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/adafruit_qtpy_esp32s3_n4r2/pins_arduino.h"
     },
     {
         "name": "Adafruit QT Py ESP32-S3 No PSRAM",
@@ -429,7 +429,7 @@
         "flash_size": "[8MB]",
         "LED_BUILTIN": "N/A",
         "board": "adafruit_qtpy_esp32s3_nopsram",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/adafruit_qtpy_esp32s3_nopsram/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/adafruit_qtpy_esp32s3_nopsram/pins_arduino.h"
     },
     {
         "name": "Adafruit Qualia ESP32-S3 RGB666",
@@ -438,7 +438,7 @@
         "flash_size": "[16MB]",
         "LED_BUILTIN": "N/A",
         "board": "adafruit_qualia_s3_rgb666",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/adafruit_qualia_s3_rgb666/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/adafruit_qualia_s3_rgb666/pins_arduino.h"
     },
     {
         "name": "Alfredo NoU3",
@@ -447,7 +447,7 @@
         "flash_size": "[8MB]",
         "LED_BUILTIN": "N/A",
         "board": "alfredo-nou3",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/alfredo-nou3/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/alfredo-nou3/pins_arduino.h"
     },
     {
         "name": "ALKS ESP32",
@@ -456,7 +456,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "23",
         "board": "alksesp32",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/alksesp32/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/alksesp32/pins_arduino.h"
     },
     {
         "name": "AutosportLabs ESP-CAN-X2",
@@ -465,7 +465,7 @@
         "flash_size": "[8MB]",
         "LED_BUILTIN": "2",
         "board": "aslcanx2",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/aslcanx2/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/aslcanx2/pins_arduino.h"
     },
     {
         "name": "ATD1.47-S3",
@@ -474,7 +474,7 @@
         "flash_size": "[8MB]",
         "LED_BUILTIN": "N/A",
         "board": "atd147_s3",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/atd147_s3/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/atd147_s3/pins_arduino.h"
     },
     {
         "name": "ATD3.5-S3",
@@ -483,7 +483,7 @@
         "flash_size": "[8MB]",
         "LED_BUILTIN": "5",
         "board": "atd35s3",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/atd35s3/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/atd35s3/pins_arduino.h"
     },
     {
         "name": "ATMegaZero ESP32-S2",
@@ -492,7 +492,7 @@
         "flash_size": "[16MB]",
         "LED_BUILTIN": "N/A",
         "board": "atmegazero_esp32s2",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/atmegazero_esp32s2/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/atmegazero_esp32s2/pins_arduino.h"
     },
     {
         "name": "Aventen S3 Sync",
@@ -501,7 +501,7 @@
         "flash_size": "[16MB]",
         "LED_BUILTIN": "N/A",
         "board": "aventen_s3_sync",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/Aventen_S3_Sync/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/Aventen_S3_Sync/pins_arduino.h"
     },
     {
         "name": "CNRS AW2ETH",
@@ -510,7 +510,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "aw2eth",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/cnrs_aw2eth/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/cnrs_aw2eth/pins_arduino.h"
     },
     {
         "name": "Axiometa PIXIE M1",
@@ -519,7 +519,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "axiometa_pixie_m1",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/axiometa_pixie_m1/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/axiometa_pixie_m1/pins_arduino.h"
     },
     {
         "name": "BPI-BIT",
@@ -528,7 +528,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "bpi-bit",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/bpi-bit/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/bpi-bit/pins_arduino.h"
     },
     {
         "name": "BPI-Leaf-S3",
@@ -537,7 +537,7 @@
         "flash_size": "[8MB]",
         "LED_BUILTIN": "N/A",
         "board": "bpi_leaf_s3",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/bpi_leaf_s3/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/bpi_leaf_s3/pins_arduino.h"
     },
     {
         "name": "cezerio dev ESP32C6",
@@ -546,7 +546,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "cezerio_dev_esp32c6",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/cezerio_dev_esp32c6/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/cezerio_dev_esp32c6/pins_arduino.h"
     },
     {
         "name": "cezerio mini dev ESP32C6",
@@ -555,7 +555,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "cezerio_mini_dev_esp32c6",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/cezerio_mini_dev_esp32c6/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/cezerio_mini_dev_esp32c6/pins_arduino.h"
     },
     {
         "name": "Denky",
@@ -564,7 +564,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "ch_denky",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/ch_denky/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/ch_denky/pins_arduino.h"
     },
     {
         "name": "CircuitART Zero S3",
@@ -573,7 +573,7 @@
         "flash_size": "[16MB]",
         "LED_BUILTIN": "N/A",
         "board": "circuitart_zero_s3",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/circuitart_zero_s3/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/circuitart_zero_s3/pins_arduino.h"
     },
     {
         "name": "CodeCell C3",
@@ -582,7 +582,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "codecell",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/codecell/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/codecell/pins_arduino.h"
     },
     {
         "name": "Connaxio's Espoir",
@@ -591,7 +591,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "connaxio_espoir",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/connaxio_espoir/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/connaxio_espoir/pins_arduino.h"
     },
     {
         "name": "Crabik Slot ESP32-S3",
@@ -600,7 +600,7 @@
         "flash_size": "[8MB]",
         "LED_BUILTIN": "21",
         "board": "crabik_slot_esp32_s3",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/crabik_slot_esp32_s3/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/crabik_slot_esp32_s3/pins_arduino.h"
     },
     {
         "name": "XinaBox CW02",
@@ -609,7 +609,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "27",
         "board": "cw02",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/xinabox/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/xinabox/pins_arduino.h"
     },
     {
         "name": "CYOBOT V2 ESP32S3",
@@ -618,7 +618,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "cyobot_v2_esp32s3",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/cyobot_v2_esp32s3/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/cyobot_v2_esp32s3/pins_arduino.h"
     },
     {
         "name": "Cytron Maker Feather AIoT S3",
@@ -627,7 +627,7 @@
         "flash_size": "[8MB]",
         "LED_BUILTIN": "2",
         "board": "cytron_maker_feather_aiot_s3",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/cytron_maker_feather_aiot_s3/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/cytron_maker_feather_aiot_s3/pins_arduino.h"
     },
     {
         "name": "D-duino-32",
@@ -636,7 +636,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "d-duino-32",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/d-duino-32/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/d-duino-32/pins_arduino.h"
     },
     {
         "name": "WEMOS D1 MINI ESP32",
@@ -645,7 +645,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "2",
         "board": "d1_mini32",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/d1_mini32/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/d1_mini32/pins_arduino.h"
     },
     {
         "name": "WEMOS D1 R32",
@@ -654,7 +654,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "2",
         "board": "d1_uno32",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/d1_uno32/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/d1_uno32/pins_arduino.h"
     },
     {
         "name": "LOLIN D32",
@@ -663,7 +663,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "5",
         "board": "d32",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/d32/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/d32/pins_arduino.h"
     },
     {
         "name": "LOLIN D32 PRO",
@@ -672,7 +672,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "5",
         "board": "d32_pro",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/d32_pro/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/d32_pro/pins_arduino.h"
     },
     {
         "name": "Deneyap Kart",
@@ -681,7 +681,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "4",
         "board": "deneyapkart",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/deneyapkart/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/deneyapkart/pins_arduino.h"
     },
     {
         "name": "Deneyap Kart 1A",
@@ -690,7 +690,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "deneyapkart1A",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/deneyapkart1A/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/deneyapkart1A/pins_arduino.h"
     },
     {
         "name": "Deneyap Kart 1A v2",
@@ -699,7 +699,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "deneyapkart1Av2",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/deneyapkart1Av2/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/deneyapkart1Av2/pins_arduino.h"
     },
     {
         "name": "Deneyap Kart G",
@@ -708,7 +708,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "deneyapkartg",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/deneyapkartg/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/deneyapkartg/pins_arduino.h"
     },
     {
         "name": "Deneyap Kart v2",
@@ -717,7 +717,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "deneyapkartv2",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/deneyapkartv2/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/deneyapkartv2/pins_arduino.h"
     },
     {
         "name": "Deneyap Mini",
@@ -726,7 +726,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "35",
         "board": "deneyapmini",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/deneyapmini/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/deneyapmini/pins_arduino.h"
     },
     {
         "name": "Deneyap Mini v2",
@@ -735,7 +735,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "deneyapminiv2",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/deneyapminiv2/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/deneyapminiv2/pins_arduino.h"
     },
     {
         "name": "Department of Alchemy MiniMain ESP32-S2",
@@ -744,7 +744,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "department_of_alchemy_minimain_esp32s2",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/department_of_alchemy_minimain_esp32s2/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/department_of_alchemy_minimain_esp32s2/pins_arduino.h"
     },
     {
         "name": "DFRobot Beetle ESP32-C3",
@@ -753,7 +753,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "10",
         "board": "dfrobot_beetle_esp32c3",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/dfrobot_beetle_esp32c3/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/dfrobot_beetle_esp32c3/pins_arduino.h"
     },
     {
         "name": "DFRobot Beetle ESP32-C6",
@@ -762,7 +762,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "15",
         "board": "dfrobot_beetle_esp32c6",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/dfrobot_beetle_esp32c6/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/dfrobot_beetle_esp32c6/pins_arduino.h"
     },
     {
         "name": "DFRobot FireBeetle 2 ESP32-C6",
@@ -771,7 +771,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "15",
         "board": "dfrobot_firebeetle2_esp32c6",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/dfrobot_firebeetle2_esp32c6/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/dfrobot_firebeetle2_esp32c6/pins_arduino.h"
     },
     {
         "name": "FireBeetle 2 ESP32-E",
@@ -780,7 +780,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "2",
         "board": "dfrobot_firebeetle2_esp32e",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/dfrobot_firebeetle2_esp32e/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/dfrobot_firebeetle2_esp32e/pins_arduino.h"
     },
     {
         "name": "DFRobot Firebeetle 2 ESP32-S3",
@@ -789,7 +789,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "dfrobot_firebeetle2_esp32s3",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/dfrobot_firebeetle2_esp32s3/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/dfrobot_firebeetle2_esp32s3/pins_arduino.h"
     },
     {
         "name": "DFRobot LoRaWAN ESP32-S3",
@@ -798,7 +798,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "dfrobot_lorawan_esp32s3",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/dfrobot_lorawan_esp32s3/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/dfrobot_lorawan_esp32s3/pins_arduino.h"
     },
     {
         "name": "DFRobot Romeo ESP32-S3",
@@ -807,7 +807,7 @@
         "flash_size": "[16MB]",
         "LED_BUILTIN": "N/A",
         "board": "dfrobot_romeo_esp32s3",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/dfrobot_romeo_esp32s3/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/dfrobot_romeo_esp32s3/pins_arduino.h"
     },
     {
         "name": "DPU ESP32",
@@ -816,7 +816,7 @@
         "flash_size": "[8MB]",
         "LED_BUILTIN": "N/A",
         "board": "dpu_esp32",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/dpu_esp32/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/dpu_esp32/pins_arduino.h"
     },
     {
         "name": "Elecrow CrowPanel 7.0P",
@@ -825,7 +825,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "elecrow_crowpanel_7",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/elecrow_crowpanel_7/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/elecrow_crowpanel_7/pins_arduino.h"
     },
     {
         "name": "ThingPulse ePulse Feather",
@@ -834,7 +834,7 @@
         "flash_size": "[8MB]",
         "LED_BUILTIN": "N/A",
         "board": "epulse_feather",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/thingpulse_epulse_feather/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/thingpulse_epulse_feather/pins_arduino.h"
     },
     {
         "name": "ThingPulse ePulse Feather C6",
@@ -843,7 +843,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "epulse_feather_c6",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/thingpulse_epulse_feather_c6/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/thingpulse_epulse_feather_c6/pins_arduino.h"
     },
     {
         "name": "ESP32 Dev Module",
@@ -852,7 +852,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "esp32",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/esp32/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/esp32/pins_arduino.h"
     },
     {
         "name": "OLIMEX ESP32-DevKit-LiPo",
@@ -861,7 +861,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "esp32-devkitlipo",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/esp32-devkit-lipo/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/esp32-devkit-lipo/pins_arduino.h"
     },
     {
         "name": "OLIMEX ESP32-EVB",
@@ -870,7 +870,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "esp32-evb",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/esp32-evb/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/esp32-evb/pins_arduino.h"
     },
     {
         "name": "OLIMEX ESP32-GATEWAY",
@@ -879,7 +879,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "33",
         "board": "esp32-gateway",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/esp32-gateway/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/esp32-gateway/pins_arduino.h"
     },
     {
         "name": "OLIMEX ESP32-POE",
@@ -888,7 +888,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "esp32-poe",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/esp32-poe/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/esp32-poe/pins_arduino.h"
     },
     {
         "name": "OLIMEX ESP32-POE-ISO",
@@ -897,7 +897,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "esp32-poe-iso",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/esp32-poe-iso/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/esp32-poe-iso/pins_arduino.h"
     },
     {
         "name": "OLIMEX ESP32-SBC-FABGL",
@@ -906,7 +906,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "esp32-sbc-fabgl",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/esp32-sbc-fabgl/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/esp32-sbc-fabgl/pins_arduino.h"
     },
     {
         "name": "Trueverit ESP32 Universal IoT Driver",
@@ -915,7 +915,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "18",
         "board": "esp32-trueverit-iot-driver",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/esp32-trueverit-iot-driver/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/esp32-trueverit-iot-driver/pins_arduino.h"
     },
     {
         "name": "Trueverit ESP32 Universal IoT Driver MK II",
@@ -924,7 +924,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "18",
         "board": "esp32-trueverit-iot-driver-mkii",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/esp32-trueverit-iot-driver-mkii/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/esp32-trueverit-iot-driver-mkii/pins_arduino.h"
     },
     {
         "name": "Electronic SweetPeas - ESP320",
@@ -933,7 +933,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "5",
         "board": "esp320",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/esp320/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/esp320/pins_arduino.h"
     },
     {
         "name": "ESP32 Family Device",
@@ -950,7 +950,7 @@
         "flash_size": "[2MB]",
         "LED_BUILTIN": "N/A",
         "board": "esp32c2",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/esp32c2/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/esp32c2/pins_arduino.h"
     },
     {
         "name": "ESP32C3 Dev Module",
@@ -959,7 +959,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "esp32c3",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/esp32c3/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/esp32c3/pins_arduino.h"
     },
     {
         "name": "OLIMEX ESP32-C3-DevKit-Lipo",
@@ -968,7 +968,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "8",
         "board": "esp32c3-devkitlipo",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/esp32c3-devkit-lipo/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/esp32c3-devkit-lipo/pins_arduino.h"
     },
     {
         "name": "ESP-C3-M1-I-Kit",
@@ -977,7 +977,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "esp32c3m1IKit",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/esp_c3_m1_i_kit/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/esp_c3_m1_i_kit/pins_arduino.h"
     },
     {
         "name": "ESP32C5 Dev Module",
@@ -986,7 +986,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "esp32c5",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/esp32c5/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/esp32c5/pins_arduino.h"
     },
     {
         "name": "ESP32C6 Dev Module",
@@ -995,7 +995,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "esp32c6",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/esp32c6/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/esp32c6/pins_arduino.h"
     },
     {
         "name": "OLIMEX ESP32-C6-EVB",
@@ -1004,7 +1004,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "8",
         "board": "esp32c6-evb",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/esp32c6-evb/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/esp32c6-evb/pins_arduino.h"
     },
     {
         "name": "AI Thinker ESP32-CAM",
@@ -1013,7 +1013,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "esp32cam",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/esp32/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/esp32/pins_arduino.h"
     },
     {
         "name": "ESP32-WROOM-DA Module",
@@ -1022,7 +1022,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "esp32da",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/esp32da/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/esp32da/pins_arduino.h"
     },
     {
         "name": "DOIT ESP32 DEVKIT V1",
@@ -1031,7 +1031,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "2",
         "board": "esp32doit-devkit-v1",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/doitESP32devkitV1/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/doitESP32devkitV1/pins_arduino.h"
     },
     {
         "name": "DOIT ESPduino32",
@@ -1040,7 +1040,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "2",
         "board": "esp32doit-espduino",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/doitESPduino32/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/doitESPduino32/pins_arduino.h"
     },
     {
         "name": "ESP32H2 Dev Module",
@@ -1049,7 +1049,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "esp32h2",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/esp32h2/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/esp32h2/pins_arduino.h"
     },
     {
         "name": "OLIMEX ESP32-H2-DevKit-LiPo",
@@ -1058,7 +1058,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "esp32h2-devkitlipo",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/esp32h2-devkit-lipo/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/esp32h2-devkit-lipo/pins_arduino.h"
     },
     {
         "name": "SparkFun ESP32 MicroMod",
@@ -1067,7 +1067,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "2",
         "board": "esp32micromod",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/esp32micromod/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/esp32micromod/pins_arduino.h"
     },
     {
         "name": "ESP32P4 Dev Module",
@@ -1076,7 +1076,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "esp32p4",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/esp32p4/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/esp32p4/pins_arduino.h"
     },
     {
         "name": "4D Systems ESP32-P4 MIPI Displays",
@@ -1085,7 +1085,7 @@
         "flash_size": "[32MB]",
         "LED_BUILTIN": "N/A",
         "board": "esp32p4_4ds_mipi",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/esp32p4_4ds_mipi/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/esp32p4_4ds_mipi/pins_arduino.h"
     },
     {
         "name": "ESP32S2 Dev Module",
@@ -1094,7 +1094,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "esp32s2",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/esp32s2/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/esp32s2/pins_arduino.h"
     },
     {
         "name": "OLIMEX ESP32-S2-DevKit-Lipo",
@@ -1103,7 +1103,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "esp32s2-devkitlipo",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/esp32s2-devkit-lipo/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/esp32s2-devkit-lipo/pins_arduino.h"
     },
     {
         "name": "OLIMEX ESP32-S2-DevKit-Lipo-USB",
@@ -1112,7 +1112,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "esp32s2-devkitlipo-usb",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/esp32s2-devkit-lipo-usb/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/esp32s2-devkit-lipo-usb/pins_arduino.h"
     },
     {
         "name": "ESP32S2 Native USB",
@@ -1121,7 +1121,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "esp32s2usb",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/esp32s2usb/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/esp32s2usb/pins_arduino.h"
     },
     {
         "name": "ESP32S3 Dev Module",
@@ -1130,7 +1130,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "esp32s3",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/esp32s3/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/esp32s3/pins_arduino.h"
     },
     {
         "name": "OLIMEX ESP32-S3-DevKit-Lipo",
@@ -1139,7 +1139,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "38",
         "board": "esp32s3-devkitlipo",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/esp32s3-devkit-lipo/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/esp32s3-devkit-lipo/pins_arduino.h"
     },
     {
         "name": "ESP32S3 Dev Module Octal (WROOM2)",
@@ -1148,7 +1148,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "esp32s3-octal",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/esp32s3/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/esp32s3/pins_arduino.h"
     },
     {
         "name": "ESP32-S3 PowerFeather",
@@ -1157,7 +1157,7 @@
         "flash_size": "[8MB]",
         "LED_BUILTIN": "N/A",
         "board": "esp32s3_powerfeather",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/esp32s3_powerfeather/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/esp32s3_powerfeather/pins_arduino.h"
     },
     {
         "name": "ESP32-S3-Box",
@@ -1166,7 +1166,7 @@
         "flash_size": "[16MB]",
         "LED_BUILTIN": "N/A",
         "board": "esp32s3box",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/esp32s3box/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/esp32s3box/pins_arduino.h"
     },
     {
         "name": "ESP32S3 CAM LCD",
@@ -1175,7 +1175,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "esp32s3camlcd",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/esp32s3camlcd/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/esp32s3camlcd/pins_arduino.h"
     },
     {
         "name": "ESP32-S3-USB-OTG",
@@ -1184,7 +1184,7 @@
         "flash_size": "[8MB]",
         "LED_BUILTIN": "N/A",
         "board": "esp32s3usbotg",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/esp32s3usbotg/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/esp32s3usbotg/pins_arduino.h"
     },
     {
         "name": "SparkFun ESP32 Thing",
@@ -1193,7 +1193,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "5",
         "board": "esp32thing",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/esp32thing/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/esp32thing/pins_arduino.h"
     },
     {
         "name": "SparkFun ESP32 Thing Plus",
@@ -1202,7 +1202,7 @@
         "flash_size": "[16MB]",
         "LED_BUILTIN": "13",
         "board": "esp32thing_plus",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/esp32thing_plus/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/esp32thing_plus/pins_arduino.h"
     },
     {
         "name": "SparkFun ESP32 Thing Plus C",
@@ -1211,7 +1211,7 @@
         "flash_size": "[16MB]",
         "LED_BUILTIN": "13",
         "board": "esp32thing_plus_c",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/esp32thing_plus_c/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/esp32thing_plus_c/pins_arduino.h"
     },
     {
         "name": "ESP32vn IoT Uno",
@@ -1220,7 +1220,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "esp32vn-iot-uno",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/esp32vn-iot-uno/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/esp32vn-iot-uno/pins_arduino.h"
     },
     {
         "name": "ESP32 Wrover Module",
@@ -1229,7 +1229,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "esp32wrover",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/esp32/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/esp32/pins_arduino.h"
     },
     {
         "name": "ESP32 Wrover Kit (all versions)",
@@ -1238,7 +1238,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "esp32wroverkit",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/esp32/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/esp32/pins_arduino.h"
     },
     {
         "name": "ESPea32",
@@ -1247,7 +1247,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "5",
         "board": "espea32",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/espea32/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/espea32/pins_arduino.h"
     },
     {
         "name": "ESPectro32",
@@ -1256,7 +1256,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "15",
         "board": "espectro32",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/espectro32/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/espectro32/pins_arduino.h"
     },
     {
         "name": "ThaiEasyElec's ESPino32",
@@ -1265,7 +1265,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "16",
         "board": "espino32",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/espino32/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/espino32/pins_arduino.h"
     },
     {
         "name": "Adafruit ESP32 Feather",
@@ -1274,7 +1274,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "13",
         "board": "featheresp32",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/feather_esp32/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/feather_esp32/pins_arduino.h"
     },
     {
         "name": "FED4",
@@ -1283,7 +1283,7 @@
         "flash_size": "[16MB]",
         "LED_BUILTIN": "N/A",
         "board": "fed4",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/fed4/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/fed4/pins_arduino.h"
     },
     {
         "name": "FireBeetle-ESP32",
@@ -1292,7 +1292,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "2",
         "board": "firebeetle32",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/firebeetle32/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/firebeetle32/pins_arduino.h"
     },
     {
         "name": "ESP32 FM DevKit",
@@ -1301,7 +1301,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "5",
         "board": "fm-devkit",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/fm-devkit/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/fm-devkit/pins_arduino.h"
     },
     {
         "name": "FoBE Quill ESP32S3 Mesh",
@@ -1310,7 +1310,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "fobe_quill_esp32s3_mesh",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/fobe_quill_esp32s3_mesh/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/fobe_quill_esp32s3_mesh/pins_arduino.h"
     },
     {
         "name": "Franzininho WiFi",
@@ -1319,7 +1319,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "franzininho_wifi_esp32s2",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/franzininho_wifi_esp32s2/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/franzininho_wifi_esp32s2/pins_arduino.h"
     },
     {
         "name": "Franzininho WiFi MSC",
@@ -1328,7 +1328,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "franzininho_wifi_msc_esp32s2",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/franzininho_wifi_msc_esp32s2/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/franzininho_wifi_msc_esp32s2/pins_arduino.h"
     },
     {
         "name": "Fri3d Badge 2024 (ESP32-S3-WROOM-1)",
@@ -1337,7 +1337,7 @@
         "flash_size": "[16MB]",
         "LED_BUILTIN": "21",
         "board": "fri3d_2024_esp32s3",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/fri3d_2024_esp32s3/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/fri3d_2024_esp32s3/pins_arduino.h"
     },
     {
         "name": "Frog Board ESP32",
@@ -1346,7 +1346,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "frogboard",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/frog32/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/frog32/pins_arduino.h"
     },
     {
         "name": "4D Systems gen4-ESP32 Modules (ESP32-S3)",
@@ -1355,7 +1355,7 @@
         "flash_size": "[16MB (128Mb)]",
         "LED_BUILTIN": "N/A",
         "board": "gen4-ESP32-S3R8n16",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/esp32_s3r8n16/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/esp32_s3r8n16/pins_arduino.h"
     },
     {
         "name": "Pycom GPy",
@@ -1364,7 +1364,7 @@
         "flash_size": "[8MB]",
         "LED_BUILTIN": "N/A",
         "board": "gpy",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/gpy/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/gpy/pins_arduino.h"
     },
     {
         "name": "ProtoCentral HealthyPi 4",
@@ -1373,7 +1373,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "15",
         "board": "healthypi4",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/healthypi4/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/healthypi4/pins_arduino.h"
     },
     {
         "name": "Heltec Capsule Sensor (V3)",
@@ -1382,7 +1382,7 @@
         "flash_size": "[8MB]",
         "LED_BUILTIN": "N/A",
         "board": "heltec_capsule_sensor_V3",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/heltec_capsule_sensor_v3/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/heltec_capsule_sensor_v3/pins_arduino.h"
     },
     {
         "name": "Heltec E-Ink Driver",
@@ -1391,7 +1391,7 @@
         "flash_size": "[8MB]",
         "LED_BUILTIN": "35",
         "board": "heltec_ht_de01",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/heltec_ht_de01/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/heltec_ht_de01/pins_arduino.h"
     },
     {
         "name": "Heltec Vision Master E290",
@@ -1400,7 +1400,7 @@
         "flash_size": "[8MB]",
         "LED_BUILTIN": "N/A",
         "board": "heltec_vision_master_e290",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/heltec_vision_master_e290/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/heltec_vision_master_e290/pins_arduino.h"
     },
     {
         "name": "Heltec Vision Master E213",
@@ -1409,7 +1409,7 @@
         "flash_size": "[8MB]",
         "LED_BUILTIN": "N/A",
         "board": "heltec_vision_master_e_213",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/heltec_vision_master_e_213/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/heltec_vision_master_e_213/pins_arduino.h"
     },
     {
         "name": "Heltec Vision Master T190",
@@ -1418,7 +1418,7 @@
         "flash_size": "[8MB]",
         "LED_BUILTIN": "N/A",
         "board": "heltec_vision_master_t190",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/heltec_vision_master_t190/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/heltec_vision_master_t190/pins_arduino.h"
     },
     {
         "name": "Heltec WiFi Kit 32",
@@ -1427,7 +1427,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "25",
         "board": "heltec_wifi_kit_32",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/heltec_wifi_kit_32/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/heltec_wifi_kit_32/pins_arduino.h"
     },
     {
         "name": "Heltec WiFi Kit 32(V3)",
@@ -1436,7 +1436,7 @@
         "flash_size": "[8MB]",
         "LED_BUILTIN": "35",
         "board": "heltec_wifi_kit_32_V3",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/heltec_wifi_kit_32_V3/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/heltec_wifi_kit_32_V3/pins_arduino.h"
     },
     {
         "name": "Heltec WiFi LoRa 32",
@@ -1445,7 +1445,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "25",
         "board": "heltec_wifi_lora_32",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/heltec_wifi_lora_32/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/heltec_wifi_lora_32/pins_arduino.h"
     },
     {
         "name": "Heltec WiFi LoRa 32(V2)",
@@ -1454,7 +1454,7 @@
         "flash_size": "[8MB]",
         "LED_BUILTIN": "25",
         "board": "heltec_wifi_lora_32_V2",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/heltec_wifi_lora_32_V2/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/heltec_wifi_lora_32_V2/pins_arduino.h"
     },
     {
         "name": "Heltec WiFi LoRa 32(V3)",
@@ -1463,7 +1463,7 @@
         "flash_size": "[8MB]",
         "LED_BUILTIN": "35",
         "board": "heltec_wifi_lora_32_V3",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/heltec_wifi_lora_32_V3/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/heltec_wifi_lora_32_V3/pins_arduino.h"
     },
     {
         "name": "Heltec Wireless Bridge",
@@ -1472,7 +1472,7 @@
         "flash_size": "[8MB]",
         "LED_BUILTIN": "25",
         "board": "heltec_wireless_bridge",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/heltec_wireless_bridge/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/heltec_wireless_bridge/pins_arduino.h"
     },
     {
         "name": "Heltec Wireless Mini Shell",
@@ -1481,7 +1481,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "heltec_wireless_mini_shell",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/heltec_wireless_mini_shell/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/heltec_wireless_mini_shell/pins_arduino.h"
     },
     {
         "name": "Heltec Wireless Paper",
@@ -1490,7 +1490,7 @@
         "flash_size": "[8MB]",
         "LED_BUILTIN": "35",
         "board": "heltec_wireless_paper",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/heltec_wireless_paper/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/heltec_wireless_paper/pins_arduino.h"
     },
     {
         "name": "Heltec Wireless Shell (V3)",
@@ -1499,7 +1499,7 @@
         "flash_size": "[8MB]",
         "LED_BUILTIN": "35",
         "board": "heltec_wireless_shell_V3",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/heltec_wireless_shell_v3/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/heltec_wireless_shell_v3/pins_arduino.h"
     },
     {
         "name": "Heltec Wireless Stick",
@@ -1508,7 +1508,7 @@
         "flash_size": "[8MB]",
         "LED_BUILTIN": "25",
         "board": "heltec_wireless_stick",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/heltec_wireless_stick/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/heltec_wireless_stick/pins_arduino.h"
     },
     {
         "name": "Heltec Wireless Stick(V3)",
@@ -1517,7 +1517,7 @@
         "flash_size": "[8MB]",
         "LED_BUILTIN": "N/A",
         "board": "heltec_wireless_stick_V3",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/heltec_wireless_stick_v3/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/heltec_wireless_stick_v3/pins_arduino.h"
     },
     {
         "name": "Heltec Wireless Stick Lite / Wireless Shell",
@@ -1526,7 +1526,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "25",
         "board": "heltec_wireless_stick_lite",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/heltec_wireless_stick_lite/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/heltec_wireless_stick_lite/pins_arduino.h"
     },
     {
         "name": "Heltec Wireless Stick Lite(V3)",
@@ -1535,7 +1535,7 @@
         "flash_size": "[8MB]",
         "LED_BUILTIN": "35",
         "board": "heltec_wireless_stick_lite_V3",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/heltec_wireless_stick_lite_v3/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/heltec_wireless_stick_lite_v3/pins_arduino.h"
     },
     {
         "name": "Heltec Wireless Tracker",
@@ -1544,7 +1544,7 @@
         "flash_size": "[8MB]",
         "LED_BUILTIN": "N/A",
         "board": "heltec_wireless_tracker",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/heltec_wireless_tracker/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/heltec_wireless_tracker/pins_arduino.h"
     },
     {
         "name": "HONEYLemon",
@@ -1553,7 +1553,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "2",
         "board": "honeylemon",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/honeylemon/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/honeylemon/pins_arduino.h"
     },
     {
         "name": "Hornbill ESP32 Dev",
@@ -1562,7 +1562,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "13",
         "board": "hornbill32dev",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/hornbill32dev/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/hornbill32dev/pins_arduino.h"
     },
     {
         "name": "Hornbill ESP32 Minima",
@@ -1571,7 +1571,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "hornbill32minima",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/hornbill32minima/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/hornbill32minima/pins_arduino.h"
     },
     {
         "name": "Huidu HD-WF2",
@@ -1580,7 +1580,7 @@
         "flash_size": "[8MB]",
         "LED_BUILTIN": "N/A",
         "board": "huidu_hd_wf2",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/huidu_hd_wf2/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/huidu_hd_wf2/pins_arduino.h"
     },
     {
         "name": "Huidu HD-WF4",
@@ -1589,7 +1589,7 @@
         "flash_size": "[8MB]",
         "LED_BUILTIN": "N/A",
         "board": "huidu_hd_wf4",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/huidu_hd_wf4/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/huidu_hd_wf4/pins_arduino.h"
     },
     {
         "name": "IMBRIOS LOGSENS_V1P1",
@@ -1598,7 +1598,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "33",
         "board": "imbrios-logsens-v1p1",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/imbrios-logsens-v1p1/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/imbrios-logsens-v1p1/pins_arduino.h"
     },
     {
         "name": "IntoRobot Fig",
@@ -1607,7 +1607,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "4",
         "board": "intorobot-fig",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/intorobot-fig/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/intorobot-fig/pins_arduino.h"
     },
     {
         "name": "IOXESP32",
@@ -1616,7 +1616,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "5",
         "board": "ioxesp32",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/ioxesp32/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/ioxesp32/pins_arduino.h"
     },
     {
         "name": "IOXESP32-C6",
@@ -1625,7 +1625,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "ioxesp32c6",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/ioxesp32c6/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/ioxesp32c6/pins_arduino.h"
     },
     {
         "name": "IOXESP32PS",
@@ -1634,7 +1634,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "5",
         "board": "ioxesp32ps",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/ioxesp32/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/ioxesp32/pins_arduino.h"
     },
     {
         "name": "ESP32-2432S028R CYD",
@@ -1643,7 +1643,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "jczn_2432s028r",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/jczn_2432s028r/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/jczn_2432s028r/pins_arduino.h"
     },
     {
         "name": "KB32-FT",
@@ -1652,7 +1652,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "kb32",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/esp32/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/esp32/pins_arduino.h"
     },
     {
         "name": "KITS ESP32 EDU",
@@ -1661,7 +1661,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "kits-edu",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/pico32/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/pico32/pins_arduino.h"
     },
     {
         "name": "kode dot",
@@ -1670,7 +1670,7 @@
         "flash_size": "[16MB]",
         "LED_BUILTIN": "N/A",
         "board": "kodedot",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/kodedot/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/kodedot/pins_arduino.h"
     },
     {
         "name": "LilyGo T3-S3",
@@ -1687,7 +1687,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "lilygo_t_display",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/lilygo_t_display/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/lilygo_t_display/pins_arduino.h"
     },
     {
         "name": "LilyGo T-Display-S3",
@@ -1696,7 +1696,7 @@
         "flash_size": "[16MB]",
         "LED_BUILTIN": "N/A",
         "board": "lilygo_t_display_s3",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/lilygo_t_display_s3/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/lilygo_t_display_s3/pins_arduino.h"
     },
     {
         "name": "LilyGo T-ETH-Lite",
@@ -1705,7 +1705,7 @@
         "flash_size": "[16MB]",
         "LED_BUILTIN": "N/A",
         "board": "lilygo_t_eth_lite",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/lilygo_t_eth_lite/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/lilygo_t_eth_lite/pins_arduino.h"
     },
     {
         "name": "Lion:Bit Dev Board",
@@ -1714,7 +1714,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "0",
         "board": "lionbit",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/lionbit/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/lionbit/pins_arduino.h"
     },
     {
         "name": "Lion:Bit S3 STEM Dev Board",
@@ -1723,7 +1723,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "0",
         "board": "lionbits3",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/lionbits3/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/lionbits3/pins_arduino.h"
     },
     {
         "name": "WEMOS LOLIN32",
@@ -1732,7 +1732,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "5",
         "board": "lolin32",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/lolin32/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/lolin32/pins_arduino.h"
     },
     {
         "name": "WEMOS LOLIN32 Lite",
@@ -1741,7 +1741,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "22",
         "board": "lolin32-lite",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/lolin32-lite/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/lolin32-lite/pins_arduino.h"
     },
     {
         "name": "LOLIN C3 Mini",
@@ -1750,7 +1750,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "lolin_c3_mini",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/lolin_c3_mini/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/lolin_c3_mini/pins_arduino.h"
     },
     {
         "name": "LOLIN C3 Pico",
@@ -1759,7 +1759,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "lolin_c3_pico",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/lolin_c3_pico/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/lolin_c3_pico/pins_arduino.h"
     },
     {
         "name": "LOLIN S2 Mini",
@@ -1768,7 +1768,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "15",
         "board": "lolin_s2_mini",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/lolin_s2_mini/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/lolin_s2_mini/pins_arduino.h"
     },
     {
         "name": "LOLIN S2 PICO",
@@ -1777,7 +1777,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "10",
         "board": "lolin_s2_pico",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/lolin_s2_pico/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/lolin_s2_pico/pins_arduino.h"
     },
     {
         "name": "LOLIN S3",
@@ -1786,7 +1786,7 @@
         "flash_size": "[16MB]",
         "LED_BUILTIN": "38",
         "board": "lolin_s3",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/lolin_s3/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/lolin_s3/pins_arduino.h"
     },
     {
         "name": "LOLIN S3 Mini",
@@ -1795,7 +1795,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "47",
         "board": "lolin_s3_mini",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/lolin_s3_mini/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/lolin_s3_mini/pins_arduino.h"
     },
     {
         "name": "LOLIN S3 Mini Pro",
@@ -1804,7 +1804,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "8",
         "board": "lolin_s3_mini_pro",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/lolin_s3_mini_pro/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/lolin_s3_mini_pro/pins_arduino.h"
     },
     {
         "name": "LOLIN S3 Pro",
@@ -1813,7 +1813,7 @@
         "flash_size": "[16MB]",
         "LED_BUILTIN": "38",
         "board": "lolin_s3_pro",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/lolin_s3_pro/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/lolin_s3_pro/pins_arduino.h"
     },
     {
         "name": "LoPy",
@@ -1822,7 +1822,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "lopy",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/lopy/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/lopy/pins_arduino.h"
     },
     {
         "name": "LoPy4",
@@ -1831,7 +1831,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "lopy4",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/lopy4/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/lopy4/pins_arduino.h"
     },
     {
         "name": "M5Atom",
@@ -1840,7 +1840,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "m5stack_atom",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/m5stack_atom/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/m5stack_atom/pins_arduino.h"
     },
     {
         "name": "M5AtomS3",
@@ -1849,7 +1849,7 @@
         "flash_size": "[8MB]",
         "LED_BUILTIN": "N/A",
         "board": "m5stack_atoms3",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/m5stack_atoms3/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/m5stack_atoms3/pins_arduino.h"
     },
     {
         "name": "M5Capsule",
@@ -1858,7 +1858,7 @@
         "flash_size": "[8MB]",
         "LED_BUILTIN": "N/A",
         "board": "m5stack_capsule",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/m5stack_capsule/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/m5stack_capsule/pins_arduino.h"
     },
     {
         "name": "M5Cardputer",
@@ -1867,7 +1867,7 @@
         "flash_size": "[8MB]",
         "LED_BUILTIN": "N/A",
         "board": "m5stack_cardputer",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/m5stack_cardputer/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/m5stack_cardputer/pins_arduino.h"
     },
     {
         "name": "M5Core",
@@ -1876,7 +1876,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "m5stack_core",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/m5stack_core/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/m5stack_core/pins_arduino.h"
     },
     {
         "name": "M5Core2",
@@ -1885,7 +1885,7 @@
         "flash_size": "[16MB]",
         "LED_BUILTIN": "N/A",
         "board": "m5stack_core2",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/m5stack_core2/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/m5stack_core2/pins_arduino.h"
     },
     {
         "name": "M5CoreInk",
@@ -1894,7 +1894,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "m5stack_coreink",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/m5stack_coreink/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/m5stack_coreink/pins_arduino.h"
     },
     {
         "name": "M5CoreS3",
@@ -1903,7 +1903,7 @@
         "flash_size": "[16MB]",
         "LED_BUILTIN": "N/A",
         "board": "m5stack_cores3",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/m5stack_cores3/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/m5stack_cores3/pins_arduino.h"
     },
     {
         "name": "M5Dial",
@@ -1912,7 +1912,7 @@
         "flash_size": "[8MB]",
         "LED_BUILTIN": "N/A",
         "board": "m5stack_dial",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/m5stack_dial/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/m5stack_dial/pins_arduino.h"
     },
     {
         "name": "M5DinMeter",
@@ -1921,7 +1921,7 @@
         "flash_size": "[8MB]",
         "LED_BUILTIN": "N/A",
         "board": "m5stack_dinmeter",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/m5stack_dinmeter/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/m5stack_dinmeter/pins_arduino.h"
     },
     {
         "name": "M5Fire",
@@ -1930,7 +1930,7 @@
         "flash_size": "[16MB]",
         "LED_BUILTIN": "N/A",
         "board": "m5stack_fire",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/m5stack_fire/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/m5stack_fire/pins_arduino.h"
     },
     {
         "name": "M5NanoC6",
@@ -1939,7 +1939,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "7",
         "board": "m5stack_nanoc6",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/m5stack_nanoc6/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/m5stack_nanoc6/pins_arduino.h"
     },
     {
         "name": "M5Paper",
@@ -1948,7 +1948,7 @@
         "flash_size": "[16MB]",
         "LED_BUILTIN": "N/A",
         "board": "m5stack_paper",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/m5stack_paper/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/m5stack_paper/pins_arduino.h"
     },
     {
         "name": "M5PoECAM",
@@ -1957,7 +1957,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "m5stack_poe_cam",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/m5stack_poe_cam/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/m5stack_poe_cam/pins_arduino.h"
     },
     {
         "name": "M5StampC3",
@@ -1966,7 +1966,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "m5stack_stamp_c3",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/m5stack_stamp_c3/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/m5stack_stamp_c3/pins_arduino.h"
     },
     {
         "name": "M5StampPico",
@@ -1975,7 +1975,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "m5stack_stamp_pico",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/m5stack_stamp_pico/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/m5stack_stamp_pico/pins_arduino.h"
     },
     {
         "name": "M5StampS3",
@@ -1984,7 +1984,7 @@
         "flash_size": "[8MB]",
         "LED_BUILTIN": "N/A",
         "board": "m5stack_stamp_s3",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/m5stack_stamp_s3/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/m5stack_stamp_s3/pins_arduino.h"
     },
     {
         "name": "M5Station",
@@ -1993,7 +1993,7 @@
         "flash_size": "[16MB]",
         "LED_BUILTIN": "N/A",
         "board": "m5stack_station",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/m5stack_station/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/m5stack_station/pins_arduino.h"
     },
     {
         "name": "M5StickC",
@@ -2002,7 +2002,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "m5stack_stickc",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/m5stack_stickc/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/m5stack_stickc/pins_arduino.h"
     },
     {
         "name": "M5StickCPlus",
@@ -2011,7 +2011,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "m5stack_stickc_plus",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/m5stack_stickc_plus/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/m5stack_stickc_plus/pins_arduino.h"
     },
     {
         "name": "M5StickCPlus2",
@@ -2020,7 +2020,7 @@
         "flash_size": "[8MB]",
         "LED_BUILTIN": "N/A",
         "board": "m5stack_stickc_plus2",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/m5stack_stickc_plus2/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/m5stack_stickc_plus2/pins_arduino.h"
     },
     {
         "name": "M5Tab5",
@@ -2029,7 +2029,7 @@
         "flash_size": "[16MB]",
         "LED_BUILTIN": "N/A",
         "board": "m5stack_tab5",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/m5stack_tab5/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/m5stack_tab5/pins_arduino.h"
     },
     {
         "name": "M5TimerCAM",
@@ -2038,7 +2038,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "2",
         "board": "m5stack_timer_cam",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/m5stack_timer_cam/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/m5stack_timer_cam/pins_arduino.h"
     },
     {
         "name": "M5Tough",
@@ -2047,7 +2047,7 @@
         "flash_size": "[16MB]",
         "LED_BUILTIN": "N/A",
         "board": "m5stack_tough",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/m5stack_tough/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/m5stack_tough/pins_arduino.h"
     },
     {
         "name": "M5UnitCAM",
@@ -2056,7 +2056,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "4",
         "board": "m5stack_unit_cam",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/m5stack_unit_cam/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/m5stack_unit_cam/pins_arduino.h"
     },
     {
         "name": "M5UnitCAMS3",
@@ -2065,7 +2065,7 @@
         "flash_size": "[16MB]",
         "LED_BUILTIN": "N/A",
         "board": "m5stack_unit_cams3",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/m5stack_unit_cams3/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/m5stack_unit_cams3/pins_arduino.h"
     },
     {
         "name": "Labplus mPython",
@@ -2074,7 +2074,7 @@
         "flash_size": "[8MB]",
         "LED_BUILTIN": "N/A",
         "board": "mPython",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/mpython/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/mpython/pins_arduino.h"
     },
     {
         "name": "MagicBit",
@@ -2083,7 +2083,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "16",
         "board": "magicbit",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/magicbit/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/magicbit/pins_arduino.h"
     },
     {
         "name": "MakerGO ESP32 C3 SuperMini",
@@ -2092,7 +2092,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "8",
         "board": "makergo_c3_supermini",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/makergo_c3_supermini/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/makergo_c3_supermini/pins_arduino.h"
     },
     {
         "name": "Silicognition ManT1S",
@@ -2101,7 +2101,7 @@
         "flash_size": "[8MB]",
         "LED_BUILTIN": "N/A",
         "board": "mant1s",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/mant1s/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/mant1s/pins_arduino.h"
     },
     {
         "name": "Metro ESP-32",
@@ -2110,7 +2110,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "2",
         "board": "metro_esp-32",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/metro_esp-32/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/metro_esp-32/pins_arduino.h"
     },
     {
         "name": "MGBOT IOTIK 32A",
@@ -2119,7 +2119,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "4",
         "board": "mgbot-iotik32a",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/mgbot-iotik32a/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/mgbot-iotik32a/pins_arduino.h"
     },
     {
         "name": "MGBOT IOTIK 32B",
@@ -2128,7 +2128,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "18",
         "board": "mgbot-iotik32b",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/mgbot-iotik32b/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/mgbot-iotik32b/pins_arduino.h"
     },
     {
         "name": "MH ET LIVE ESP32DevKIT",
@@ -2137,7 +2137,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "2",
         "board": "mhetesp32devkit",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/mhetesp32devkit/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/mhetesp32devkit/pins_arduino.h"
     },
     {
         "name": "MH ET LIVE ESP32MiniKit",
@@ -2146,7 +2146,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "2",
         "board": "mhetesp32minikit",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/mhetesp32minikit/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/mhetesp32minikit/pins_arduino.h"
     },
     {
         "name": "microS2",
@@ -2155,7 +2155,7 @@
         "flash_size": "[16MB]",
         "LED_BUILTIN": "21",
         "board": "micros2",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/micro_s2/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/micro_s2/pins_arduino.h"
     },
     {
         "name": "Namino Arancio",
@@ -2164,7 +2164,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "namino_arancio",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/namino_arancio/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/namino_arancio/pins_arduino.h"
     },
     {
         "name": "Namino Bianco",
@@ -2173,7 +2173,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "namino_bianco",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/namino_bianco/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/namino_bianco/pins_arduino.h"
     },
     {
         "name": "Namino Rosso",
@@ -2182,7 +2182,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "namino_rosso",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/namino_rosso/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/namino_rosso/pins_arduino.h"
     },
     {
         "name": "Nano32",
@@ -2191,7 +2191,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "16",
         "board": "nano32",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/nano32/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/nano32/pins_arduino.h"
     },
     {
         "name": "Arduino Nano ESP32",
@@ -2200,7 +2200,7 @@
         "flash_size": "[16MB]",
         "LED_BUILTIN": "N/A",
         "board": "nano_nora",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/arduino_nano_nora/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/arduino_nano_nora/pins_arduino.h"
     },
     {
         "name": "Arduino on Nano ESP32",
@@ -2217,7 +2217,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "nebulas3",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/Nebula_S3/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/Nebula_S3/pins_arduino.h"
     },
     {
         "name": "u-blox NINA-W10 series (ESP32)",
@@ -2226,7 +2226,7 @@
         "flash_size": "[2MB]",
         "LED_BUILTIN": "N/A",
         "board": "nina_w10",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/nina_w10/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/nina_w10/pins_arduino.h"
     },
     {
         "name": "Node32s",
@@ -2235,7 +2235,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "2",
         "board": "node32s",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/node32s/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/node32s/pins_arduino.h"
     },
     {
         "name": "NodeMCU-32S",
@@ -2244,7 +2244,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "2",
         "board": "nodemcu-32s",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/nodemcu-32s/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/nodemcu-32s/pins_arduino.h"
     },
     {
         "name": "Nologo ESP32C3 Super Mini",
@@ -2253,7 +2253,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "8",
         "board": "nologo_esp32c3_super_mini",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/nologo_esp32c3_super_mini/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/nologo_esp32c3_super_mini/pins_arduino.h"
     },
     {
         "name": "Nologo ESP32S3 Pico",
@@ -2262,7 +2262,7 @@
         "flash_size": "[8MB]",
         "LED_BUILTIN": "21",
         "board": "nologo_esp32s3_pico",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/nologo_esp32s3_pico/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/nologo_esp32s3_pico/pins_arduino.h"
     },
     {
         "name": "u-blox NORA-W10 series (ESP32-S3)",
@@ -2271,7 +2271,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "nora_w10",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/nora_w10/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/nora_w10/pins_arduino.h"
     },
     {
         "name": "ODROID ESP32",
@@ -2280,7 +2280,7 @@
         "flash_size": "[16MB]",
         "LED_BUILTIN": "2",
         "board": "odroid_esp32",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/odroid_esp32/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/odroid_esp32/pins_arduino.h"
     },
     {
         "name": "Onehorse ESP32 Dev Module",
@@ -2289,7 +2289,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "5",
         "board": "onehorse32dev",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/onehorse32dev/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/onehorse32dev/pins_arduino.h"
     },
     {
         "name": "OROCA EduBot",
@@ -2298,7 +2298,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "13",
         "board": "oroca_edubot",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/oroca_edubot/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/oroca_edubot/pins_arduino.h"
     },
     {
         "name": "ESP32 PICO-D4",
@@ -2307,7 +2307,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "pico32",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/pico32/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/pico32/pins_arduino.h"
     },
     {
         "name": "Piranha ESP-32",
@@ -2316,7 +2316,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "2",
         "board": "piranha_esp-32",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/piranha_esp-32/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/piranha_esp-32/pins_arduino.h"
     },
     {
         "name": "Dongsen Tech Pocket 32",
@@ -2325,7 +2325,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "16",
         "board": "pocket_32",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/pocket_32/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/pocket_32/pins_arduino.h"
     },
     {
         "name": "Noduino Quantum",
@@ -2334,7 +2334,7 @@
         "flash_size": "[16MB]",
         "LED_BUILTIN": "N/A",
         "board": "quantum",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/quantum/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/quantum/pins_arduino.h"
     },
     {
         "name": "RAKwireless RAK3112",
@@ -2343,7 +2343,7 @@
         "flash_size": "[16MB]",
         "LED_BUILTIN": "N/A",
         "board": "rakwireless_rak3112",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/rakwireless_rak3112/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/rakwireless_rak3112/pins_arduino.h"
     },
     {
         "name": "RedPill(+) ESP32-S3",
@@ -2352,7 +2352,7 @@
         "flash_size": "[8MB]",
         "LED_BUILTIN": "N/A",
         "board": "redpill_esp32s3",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/redpill_esp32s3/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/redpill_esp32s3/pins_arduino.h"
     },
     {
         "name": "RoboHeart Hercules",
@@ -2361,7 +2361,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "roboheart_hercules",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/roboheart_hercules/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/roboheart_hercules/pins_arduino.h"
     },
     {
         "name": "senseBox Eye",
@@ -2370,7 +2370,7 @@
         "flash_size": "[16MB (128Mb)]",
         "LED_BUILTIN": "N/A",
         "board": "sensebox_eye",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/sensebox_eye/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/sensebox_eye/pins_arduino.h"
     },
     {
         "name": "senseBox MCU-S2 ESP32-S2",
@@ -2379,7 +2379,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "sensebox_mcu_esp32s2",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/sensebox_mcu_esp32s2/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/sensebox_mcu_esp32s2/pins_arduino.h"
     },
     {
         "name": "Senses's WEIZEN",
@@ -2388,7 +2388,16 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "sensesiot_weizen",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/esp32/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/esp32/pins_arduino.h"
+    },
+    {
+        "name": "Soldered NULA Mini ESP32C6",
+        "mcu": "esp32c6",
+        "variant": "soldered_nula_mini_esp32c6",
+        "flash_size": "[4MB]",
+        "LED_BUILTIN": "23",
+        "board": "soldered_nula_mini_esp32c6",
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/soldered_nula_mini_esp32c6/pins_arduino.h"
     },
     {
         "name": "Sonoff DUALR3",
@@ -2397,7 +2406,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "sonoff_dualr3",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/esp32/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/esp32/pins_arduino.h"
     },
     {
         "name": "SparkFun ESP32 IoT RedBoard",
@@ -2406,7 +2415,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "18",
         "board": "sparkfun_esp32_iot_redboard",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/sparkfun_esp32_iot_redboard/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/sparkfun_esp32_iot_redboard/pins_arduino.h"
     },
     {
         "name": "SparkFun ESP32-C6 Qwiic Pocket",
@@ -2415,7 +2424,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "23",
         "board": "sparkfun_esp32c6_qwiic_pocket",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/sparkfun_esp32c6_qwiic_pocket/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/sparkfun_esp32c6_qwiic_pocket/pins_arduino.h"
     },
     {
         "name": "SparkFun ESP32-C6 Thing Plus",
@@ -2424,7 +2433,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "sparkfun_esp32c6_thing_plus",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/sparkfun_esp32c6_thing_plus/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/sparkfun_esp32c6_thing_plus/pins_arduino.h"
     },
     {
         "name": "SparkFun ESP32-S2 Thing Plus",
@@ -2433,7 +2442,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "13",
         "board": "sparkfun_esp32s2_thing_plus",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/esp32s2thing_plus/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/esp32s2thing_plus/pins_arduino.h"
     },
     {
         "name": "SparkFun ESP32-S3 Thing Plus",
@@ -2442,7 +2451,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "sparkfun_esp32s3_thing_plus",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/sparkfun_esp32s3_thing_plus/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/sparkfun_esp32s3_thing_plus/pins_arduino.h"
     },
     {
         "name": "SparkFun LoRa Gateway 1-Channel",
@@ -2451,7 +2460,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "17",
         "board": "sparkfun_lora_gateway_1-channel",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/sparkfun_lora_gateway_1-channel/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/sparkfun_lora_gateway_1-channel/pins_arduino.h"
     },
     {
         "name": "SparkFun Pro Micro - ESP32C3",
@@ -2460,7 +2469,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "10",
         "board": "sparkfun_pro_micro_esp32c3",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/sparkfun_pro_micro_esp32c3/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/sparkfun_pro_micro_esp32c3/pins_arduino.h"
     },
     {
         "name": "Adafruit Sparkle Motion (ESP32)",
@@ -2469,7 +2478,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "4",
         "board": "sparklemotion",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/adafruit_sparklemotion_esp32/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/adafruit_sparklemotion_esp32/pins_arduino.h"
     },
     {
         "name": "Adafruit Sparkle Motion Mini (ESP32)",
@@ -2478,7 +2487,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "12",
         "board": "sparklemotionmini",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/adafruit_sparklemotionmini_esp32/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/adafruit_sparklemotionmini_esp32/pins_arduino.h"
     },
     {
         "name": "Adafruit Sparkle Motion Stick (ESP32)",
@@ -2487,7 +2496,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "4",
         "board": "sparklemotionstick",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/adafruit_sparklemotionstick_esp32/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/adafruit_sparklemotionstick_esp32/pins_arduino.h"
     },
     {
         "name": "T-Beam",
@@ -2496,7 +2505,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "14",
         "board": "t-beam",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/tbeam/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/tbeam/pins_arduino.h"
     },
     {
         "name": "TAMC Termod S3",
@@ -2505,7 +2514,7 @@
         "flash_size": "[8MB]",
         "LED_BUILTIN": "N/A",
         "board": "tamc_termod_s3",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/tamc_termod_s3/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/tamc_termod_s3/pins_arduino.h"
     },
     {
         "name": "LilyGo-T-LoRa-Pager",
@@ -2514,7 +2523,7 @@
         "flash_size": "[16MB]",
         "LED_BUILTIN": "N/A",
         "board": "tlora_pager",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/lilygo_tlora_pager/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/lilygo_tlora_pager/pins_arduino.h"
     },
     {
         "name": "TTGO LoRa32-OLED",
@@ -2531,7 +2540,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "3",
         "board": "ttgo-t-oi-plus",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/ttgo-t-oi-plus/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/ttgo-t-oi-plus/pins_arduino.h"
     },
     {
         "name": "TTGO T1",
@@ -2540,7 +2549,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "22",
         "board": "ttgo-t1",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/ttgo-t1/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/ttgo-t1/pins_arduino.h"
     },
     {
         "name": "TTGO T7 V1.3 Mini32",
@@ -2549,7 +2558,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "22",
         "board": "ttgo-t7-v13-mini32",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/ttgo-t7-v13-mini32/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/ttgo-t7-v13-mini32/pins_arduino.h"
     },
     {
         "name": "TTGO T7 V1.4 Mini32",
@@ -2558,7 +2567,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "19",
         "board": "ttgo-t7-v14-mini32",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/ttgo-t7-v14-mini32/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/ttgo-t7-v14-mini32/pins_arduino.h"
     },
     {
         "name": "Turta IoT Node",
@@ -2567,7 +2576,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "turta_iot_node",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/pico32/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/pico32/pins_arduino.h"
     },
     {
         "name": "TTGO T-Watch",
@@ -2576,7 +2585,7 @@
         "flash_size": "[16MB]",
         "LED_BUILTIN": "N/A",
         "board": "twatch",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/twatch/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/twatch/pins_arduino.h"
     },
     {
         "name": "LilyGo T-Watch-Ultra",
@@ -2585,7 +2594,7 @@
         "flash_size": "[16MB]",
         "LED_BUILTIN": "N/A",
         "board": "twatch_ultra",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/lilygo_twatch_ultra/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/lilygo_twatch_ultra/pins_arduino.h"
     },
     {
         "name": "LilyGo T-Watch-S3",
@@ -2594,7 +2603,7 @@
         "flash_size": "[16MB]",
         "LED_BUILTIN": "N/A",
         "board": "twatchs3",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/lilygo_twatch_s3/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/lilygo_twatch_s3/pins_arduino.h"
     },
     {
         "name": "Twin AIoT Module",
@@ -2603,7 +2612,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "35",
         "board": "twinaiot",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/twinaiot/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/twinaiot/pins_arduino.h"
     },
     {
         "name": "uPesy EDU ESP32",
@@ -2612,7 +2621,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "2",
         "board": "uPesy_edu_esp32",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/uPesy_edu_esp32/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/uPesy_edu_esp32/pins_arduino.h"
     },
     {
         "name": "uPesy ESP32 Wroom DevKit",
@@ -2621,7 +2630,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "2",
         "board": "uPesy_wroom",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/uPesy_esp32_wroom_devkit/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/uPesy_esp32_wroom_devkit/pins_arduino.h"
     },
     {
         "name": "uPesy ESP32 Wrover DevKit",
@@ -2630,7 +2639,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "2",
         "board": "uPesy_wrover",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/uPesy_esp32_wrover_devkit/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/uPesy_esp32_wrover_devkit/pins_arduino.h"
     },
     {
         "name": "UM BLING",
@@ -2639,7 +2648,7 @@
         "flash_size": "[8MB]",
         "LED_BUILTIN": "N/A",
         "board": "um_bling",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/um_bling/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/um_bling/pins_arduino.h"
     },
     {
         "name": "UM EdgeS3[D]",
@@ -2648,7 +2657,7 @@
         "flash_size": "[8MB]",
         "LED_BUILTIN": "N/A",
         "board": "um_edges3_d",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/um_edges3_d/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/um_edges3_d/pins_arduino.h"
     },
     {
         "name": "UM FeatherS2",
@@ -2657,7 +2666,7 @@
         "flash_size": "[16MB]",
         "LED_BUILTIN": "N/A",
         "board": "um_feathers2",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/um_feathers2/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/um_feathers2/pins_arduino.h"
     },
     {
         "name": "UM FeatherS2 Neo",
@@ -2666,7 +2675,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "um_feathers2neo",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/um_feathers2neo/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/um_feathers2neo/pins_arduino.h"
     },
     {
         "name": "UM FeatherS3",
@@ -2675,7 +2684,7 @@
         "flash_size": "[16MB]",
         "LED_BUILTIN": "N/A",
         "board": "um_feathers3",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/um_feathers3/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/um_feathers3/pins_arduino.h"
     },
     {
         "name": "UM FeatherS3 Neo",
@@ -2684,7 +2693,7 @@
         "flash_size": "[8MB]",
         "LED_BUILTIN": "N/A",
         "board": "um_feathers3neo",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/um_feathers3neo/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/um_feathers3neo/pins_arduino.h"
     },
     {
         "name": "UM NanoS3",
@@ -2693,7 +2702,7 @@
         "flash_size": "[8MB]",
         "LED_BUILTIN": "N/A",
         "board": "um_nanos3",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/um_nanos3/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/um_nanos3/pins_arduino.h"
     },
     {
         "name": "UM OMGS3",
@@ -2702,7 +2711,7 @@
         "flash_size": "[8MB]",
         "LED_BUILTIN": "N/A",
         "board": "um_omgs3",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/um_omgs3/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/um_omgs3/pins_arduino.h"
     },
     {
         "name": "UM PROS3",
@@ -2711,7 +2720,7 @@
         "flash_size": "[16MB]",
         "LED_BUILTIN": "N/A",
         "board": "um_pros3",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/um_pros3/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/um_pros3/pins_arduino.h"
     },
     {
         "name": "UM SQUIXL",
@@ -2720,16 +2729,16 @@
         "flash_size": "[16MB]",
         "LED_BUILTIN": "N/A",
         "board": "um_squixl",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/um_squixl/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/um_squixl/pins_arduino.h"
     },
     {
         "name": "UM TinyC6",
         "mcu": "esp32c6",
         "variant": "um_tinyc6",
-        "flash_size": "[4MB]",
+        "flash_size": "[8MB]",
         "LED_BUILTIN": "N/A",
         "board": "um_tinyc6",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/um_tinyc6/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/um_tinyc6/pins_arduino.h"
     },
     {
         "name": "UM TinyPICO",
@@ -2738,7 +2747,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "um_tinypico",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/um_tinypico/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/um_tinypico/pins_arduino.h"
     },
     {
         "name": "UM TinyS2",
@@ -2747,7 +2756,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "um_tinys2",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/um_tinys2/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/um_tinys2/pins_arduino.h"
     },
     {
         "name": "UM TinyS3",
@@ -2756,7 +2765,7 @@
         "flash_size": "[8MB]",
         "LED_BUILTIN": "N/A",
         "board": "um_tinys3",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/um_tinys3/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/um_tinys3/pins_arduino.h"
     },
     {
         "name": "unPhone 7",
@@ -2765,7 +2774,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "13",
         "board": "unphone7",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/feather_esp32/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/feather_esp32/pins_arduino.h"
     },
     {
         "name": "unPhone 8",
@@ -2774,7 +2783,7 @@
         "flash_size": "[8MB]",
         "LED_BUILTIN": "N/A",
         "board": "unphone8",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/unphone8/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/unphone8/pins_arduino.h"
     },
     {
         "name": "unPhone 9",
@@ -2783,7 +2792,7 @@
         "flash_size": "[8MB]",
         "LED_BUILTIN": "N/A",
         "board": "unphone9",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/unphone9/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/unphone9/pins_arduino.h"
     },
     {
         "name": "uPesy ESP32C3 Basic",
@@ -2792,7 +2801,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "upesy_esp32c3_basic",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/uPesy_esp32c3_basic/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/uPesy_esp32c3_basic/pins_arduino.h"
     },
     {
         "name": "uPesy ESP32C3 Mini",
@@ -2801,7 +2810,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "upesy_esp32c3_mini",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/uPesy_esp32c3_mini/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/uPesy_esp32c3_mini/pins_arduino.h"
     },
     {
         "name": "uPesy ESP32S3 Basic",
@@ -2810,7 +2819,7 @@
         "flash_size": "[16MB]",
         "LED_BUILTIN": "2",
         "board": "upesy_esp32s3_basic",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/uPesy_esp32s3_basic/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/uPesy_esp32s3_basic/pins_arduino.h"
     },
     {
         "name": "VintLabs ESP32 Devkit",
@@ -2819,7 +2828,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "2",
         "board": "vintlabs-devkit-v1",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/vintlabsdevkitv1/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/vintlabsdevkitv1/pins_arduino.h"
     },
     {
         "name": "ViraLink Gate32-0.1",
@@ -2828,7 +2837,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "5",
         "board": "viralink32g01",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/ViraLink-G0.1/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/ViraLink-G0.1/pins_arduino.h"
     },
     {
         "name": "ViraLink Gate32-1.1",
@@ -2837,7 +2846,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "viralink32g11",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/ViraLink-G1.1/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/ViraLink-G1.1/pins_arduino.h"
     },
     {
         "name": "DPTechnics Walter",
@@ -2846,7 +2855,7 @@
         "flash_size": "[16MB]",
         "LED_BUILTIN": "N/A",
         "board": "walter",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/walter/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/walter/pins_arduino.h"
     },
     {
         "name": "Watchy",
@@ -2855,7 +2864,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "watchy",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/watchy/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/watchy/pins_arduino.h"
     },
     {
         "name": "Waveshare ESP32-S3-LCD-1.46",
@@ -2864,7 +2873,7 @@
         "flash_size": "[16MB]",
         "LED_BUILTIN": "N/A",
         "board": "waveshare_esp32_s3_lcd_146",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/waveshare_esp32_s3_lcd_146/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/waveshare_esp32_s3_lcd_146/pins_arduino.h"
     },
     {
         "name": "Waveshare ESP32-S3-LCD-1.47",
@@ -2873,7 +2882,7 @@
         "flash_size": "[16MB]",
         "LED_BUILTIN": "N/A",
         "board": "waveshare_esp32_s3_lcd_147",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/waveshare_esp32_s3_lcd_147/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/waveshare_esp32_s3_lcd_147/pins_arduino.h"
     },
     {
         "name": "Waveshare ESP32-S3-LCD-1.69",
@@ -2882,7 +2891,7 @@
         "flash_size": "[16MB]",
         "LED_BUILTIN": "N/A",
         "board": "waveshare_esp32_s3_lcd_169",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/waveshare_esp32_s3_lcd_169/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/waveshare_esp32_s3_lcd_169/pins_arduino.h"
     },
     {
         "name": "Waveshare ESP32-S3-LCD-1.85",
@@ -2891,7 +2900,7 @@
         "flash_size": "[16MB]",
         "LED_BUILTIN": "N/A",
         "board": "waveshare_esp32_s3_lcd_185",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/waveshare_esp32_s3_lcd_185/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/waveshare_esp32_s3_lcd_185/pins_arduino.h"
     },
     {
         "name": "Waveshare ESP32-S3-Relay-6CH",
@@ -2900,7 +2909,7 @@
         "flash_size": "[8MB]",
         "LED_BUILTIN": "N/A",
         "board": "waveshare_esp32_s3_relay_6ch",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/waveshare_esp32_s3_relay_6ch/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/waveshare_esp32_s3_relay_6ch/pins_arduino.h"
     },
     {
         "name": "Waveshare ESP32-S3-Touch-AMOLED-1.43",
@@ -2909,7 +2918,7 @@
         "flash_size": "[16MB]",
         "LED_BUILTIN": "N/A",
         "board": "waveshare_esp32_s3_touch_amoled_143",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/waveshare_esp32_s3_touch_amoled_143/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/waveshare_esp32_s3_touch_amoled_143/pins_arduino.h"
     },
     {
         "name": "Waveshare ESP32-S3-Touch-AMOLED-1.64",
@@ -2918,7 +2927,7 @@
         "flash_size": "[16MB]",
         "LED_BUILTIN": "N/A",
         "board": "waveshare_esp32_s3_touch_amoled_164",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/waveshare_esp32_s3_touch_amoled_164/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/waveshare_esp32_s3_touch_amoled_164/pins_arduino.h"
     },
     {
         "name": "Waveshare ESP32-S3-Touch-AMOLED-1.8",
@@ -2927,7 +2936,7 @@
         "flash_size": "[16MB]",
         "LED_BUILTIN": "N/A",
         "board": "waveshare_esp32_s3_touch_amoled_18",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/waveshare_esp32_s3_touch_amoled_18/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/waveshare_esp32_s3_touch_amoled_18/pins_arduino.h"
     },
     {
         "name": "Waveshare ESP32-S3-Touch-AMOLED-1.91",
@@ -2936,7 +2945,7 @@
         "flash_size": "[16MB]",
         "LED_BUILTIN": "N/A",
         "board": "waveshare_esp32_s3_touch_amoled_191",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/waveshare_esp32_s3_touch_amoled_191/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/waveshare_esp32_s3_touch_amoled_191/pins_arduino.h"
     },
     {
         "name": "Waveshare ESP32-S3-Touch-AMOLED-2.41",
@@ -2945,7 +2954,7 @@
         "flash_size": "[16MB]",
         "LED_BUILTIN": "N/A",
         "board": "waveshare_esp32_s3_touch_amoled_241",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/waveshare_esp32_s3_touch_amoled_241/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/waveshare_esp32_s3_touch_amoled_241/pins_arduino.h"
     },
     {
         "name": "Waveshare ESP32-S3-Touch-LCD-1.46",
@@ -2954,7 +2963,7 @@
         "flash_size": "[16MB]",
         "LED_BUILTIN": "N/A",
         "board": "waveshare_esp32_s3_touch_lcd_146",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/waveshare_esp32_s3_touch_lcd_146/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/waveshare_esp32_s3_touch_lcd_146/pins_arduino.h"
     },
     {
         "name": "Waveshare ESP32-S3-Touch-LCD-1.69",
@@ -2963,7 +2972,7 @@
         "flash_size": "[16MB]",
         "LED_BUILTIN": "N/A",
         "board": "waveshare_esp32_s3_touch_lcd_169",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/waveshare_esp32_s3_touch_lcd_169/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/waveshare_esp32_s3_touch_lcd_169/pins_arduino.h"
     },
     {
         "name": "Waveshare ESP32-S3-Touch-LCD-1.85",
@@ -2972,7 +2981,7 @@
         "flash_size": "[16MB]",
         "LED_BUILTIN": "N/A",
         "board": "waveshare_esp32_s3_touch_lcd_185",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/waveshare_esp32_s3_touch_lcd_185/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/waveshare_esp32_s3_touch_lcd_185/pins_arduino.h"
     },
     {
         "name": "Waveshare ESP32-S3-Touch-LCD-1.85-BOX",
@@ -2981,7 +2990,7 @@
         "flash_size": "[16MB]",
         "LED_BUILTIN": "N/A",
         "board": "waveshare_esp32_s3_touch_lcd_185_box",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/waveshare_esp32_s3_touch_lcd_185_box/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/waveshare_esp32_s3_touch_lcd_185_box/pins_arduino.h"
     },
     {
         "name": "Waveshare ESP32-S3-Touch-LCD-2.1",
@@ -2990,7 +2999,7 @@
         "flash_size": "[16MB]",
         "LED_BUILTIN": "N/A",
         "board": "waveshare_esp32_s3_touch_lcd_21",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/waveshare_esp32_s3_touch_lcd_21/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/waveshare_esp32_s3_touch_lcd_21/pins_arduino.h"
     },
     {
         "name": "Waveshare ESP32-S3-Touch-LCD-2.8",
@@ -2999,7 +3008,7 @@
         "flash_size": "[16MB]",
         "LED_BUILTIN": "N/A",
         "board": "waveshare_esp32_s3_touch_lcd_28",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/waveshare_esp32_s3_touch_lcd_28/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/waveshare_esp32_s3_touch_lcd_28/pins_arduino.h"
     },
     {
         "name": "Waveshare ESP32-S3-Touch-LCD-4",
@@ -3008,7 +3017,7 @@
         "flash_size": "[16MB]",
         "LED_BUILTIN": "N/A",
         "board": "waveshare_esp32_s3_touch_lcd_4",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/waveshare_esp32_s3_touch_lcd_4/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/waveshare_esp32_s3_touch_lcd_4/pins_arduino.h"
     },
     {
         "name": "Waveshare ESP32-S3-Touch-LCD-4.3",
@@ -3017,7 +3026,7 @@
         "flash_size": "[8MB]",
         "LED_BUILTIN": "N/A",
         "board": "waveshare_esp32_s3_touch_lcd_43",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/waveshare_esp32_s3_touch_lcd_43/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/waveshare_esp32_s3_touch_lcd_43/pins_arduino.h"
     },
     {
         "name": "Waveshare ESP32-S3-Touch-LCD-4.3B",
@@ -3026,7 +3035,7 @@
         "flash_size": "[16MB]",
         "LED_BUILTIN": "N/A",
         "board": "waveshare_esp32_s3_touch_lcd_43B",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/waveshare_esp32_s3_touch_lcd_43b/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/waveshare_esp32_s3_touch_lcd_43b/pins_arduino.h"
     },
     {
         "name": "Waveshare ESP32-S3-Touch-LCD-5",
@@ -3035,7 +3044,7 @@
         "flash_size": "[16MB]",
         "LED_BUILTIN": "N/A",
         "board": "waveshare_esp32_s3_touch_lcd_5",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/waveshare_esp32_s3_touch_lcd_5/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/waveshare_esp32_s3_touch_lcd_5/pins_arduino.h"
     },
     {
         "name": "Waveshare ESP32-S3-Touch-LCD-5B",
@@ -3044,7 +3053,7 @@
         "flash_size": "[16MB]",
         "LED_BUILTIN": "N/A",
         "board": "waveshare_esp32_s3_touch_lcd_5B",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/waveshare_esp32_s3_touch_lcd_5b/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/waveshare_esp32_s3_touch_lcd_5b/pins_arduino.h"
     },
     {
         "name": "Waveshare ESP32-S3-Touch-LCD-7",
@@ -3053,7 +3062,7 @@
         "flash_size": "[8MB]",
         "LED_BUILTIN": "N/A",
         "board": "waveshare_esp32_s3_touch_lcd_7",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/waveshare_esp32_s3_touch_lcd_7/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/waveshare_esp32_s3_touch_lcd_7/pins_arduino.h"
     },
     {
         "name": "Waveshare ESP32-S3-Zero",
@@ -3062,7 +3071,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "waveshare_esp32_s3_zero",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/waveshare_esp32_s3_zero/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/waveshare_esp32_s3_zero/pins_arduino.h"
     },
     {
         "name": "Waveshare ESP32S3 Touch LCD 128",
@@ -3071,7 +3080,7 @@
         "flash_size": "[16MB]",
         "LED_BUILTIN": "N/A",
         "board": "waveshare_esp32s3_touch_lcd_128",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/waveshare_esp32s3_touch_lcd_128/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/waveshare_esp32s3_touch_lcd_128/pins_arduino.h"
     },
     {
         "name": "WeAct Studio ESP32C3",
@@ -3080,16 +3089,16 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "8",
         "board": "weact_studio_esp32c3",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/weact_studio_esp32c3/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/weact_studio_esp32c3/pins_arduino.h"
     },
     {
         "name": "Silicognition wESP32",
         "mcu": "esp32",
         "variant": "wesp32",
-        "flash_size": "[4MB]",
+        "flash_size": "[16MB]",
         "LED_BUILTIN": "N/A",
         "board": "wesp32",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/wesp32/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/wesp32/pins_arduino.h"
     },
     {
         "name": "Widora AIR",
@@ -3098,7 +3107,7 @@
         "flash_size": "[16MB]",
         "LED_BUILTIN": "25",
         "board": "widora-air",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/widora-air/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/widora-air/pins_arduino.h"
     },
     {
         "name": "WiFiduino32",
@@ -3107,7 +3116,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "2",
         "board": "wifiduino32",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/wifiduino32/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/wifiduino32/pins_arduino.h"
     },
     {
         "name": "WiFiduinoV2",
@@ -3116,7 +3125,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "13",
         "board": "wifiduino32c3",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/wifiduinov2/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/wifiduinov2/pins_arduino.h"
     },
     {
         "name": "WiFiduino32S3",
@@ -3125,7 +3134,7 @@
         "flash_size": "[16MB]",
         "LED_BUILTIN": "N/A",
         "board": "wifiduino32s3",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/wifiduino32s3/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/wifiduino32s3/pins_arduino.h"
     },
     {
         "name": "WiPy 3.0",
@@ -3134,7 +3143,7 @@
         "flash_size": "[8MB]",
         "LED_BUILTIN": "N/A",
         "board": "wipy3",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/wipy3/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/wipy3/pins_arduino.h"
     },
     {
         "name": "Waveshare ESP32-S3-Matrix",
@@ -3143,7 +3152,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "ws_esp32_s3_matrix",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/ws_esp32_s3_matrix/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/ws_esp32_s3_matrix/pins_arduino.h"
     },
     {
         "name": "WT32-ETH01 Ethernet Module",
@@ -3152,7 +3161,7 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "N/A",
         "board": "wt32-eth01",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/wt32-eth01/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/wt32-eth01/pins_arduino.h"
     },
     {
         "name": "WT32-SC01 PLUS",
@@ -3161,7 +3170,7 @@
         "flash_size": "[16MB]",
         "LED_BUILTIN": "N/A",
         "board": "wt32-sc01-plus",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/wt32-sc01-plus/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/wt32-sc01-plus/pins_arduino.h"
     },
     {
         "name": "YelloByte YB-ESP32-S3-AMP (Rev.2)",
@@ -3170,7 +3179,7 @@
         "flash_size": "[8MB]",
         "LED_BUILTIN": "47",
         "board": "yb_esp32s3_amp_v2",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/yb_esp32s3_amp_v2/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/yb_esp32s3_amp_v2/pins_arduino.h"
     },
     {
         "name": "YelloByte YB-ESP32-S3-AMP (Rev.3)",
@@ -3179,7 +3188,7 @@
         "flash_size": "[8MB]",
         "LED_BUILTIN": "47",
         "board": "yb_esp32s3_amp_v3",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/yb_esp32s3_amp_v3/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/yb_esp32s3_amp_v3/pins_arduino.h"
     },
     {
         "name": "YelloByte YB-ESP32-S3-DRV",
@@ -3188,7 +3197,7 @@
         "flash_size": "[8MB]",
         "LED_BUILTIN": "47",
         "board": "yb_esp32s3_drv",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/yb_esp32s3_drv/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/yb_esp32s3_drv/pins_arduino.h"
     },
     {
         "name": "YelloByte YB-ESP32-S3-ETH",
@@ -3197,6 +3206,6 @@
         "flash_size": "[4MB]",
         "LED_BUILTIN": "47",
         "board": "yb_esp32s3_eth",
-        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.1/variants/yb_esp32s3_eth/pins_arduino.h"
+        "linkPins": "https://github.com/espressif/arduino-esp32/blob/3.3.2/variants/yb_esp32s3_eth/pins_arduino.h"
     }
 ]
