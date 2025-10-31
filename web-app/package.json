@@ -25,7 +25,7 @@
     "@angular/ssr": "^20.3.8",
     "@luki117/angular-cli-ghpages": "^2.0.4",
     "express": "^5.1.0",
-    "ng-mocks": "^14.13.5",
+    "ng-mocks": "^14.14.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
