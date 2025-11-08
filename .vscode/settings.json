@@ -4,15 +4,9 @@
     "jestrunner.projectPath": "./web-app",
     // "jestrunner.changeDirectoryToWorkspaceRoot": true,
     "python.testing.pytestArgs": [
+        "-vv",
         "--ignore=./createTable.py",
         "./pyScripts/helper"
-    ],
-    "python.testing.unittestArgs": [
-        "-v",
-        "-s",
-        "./pyScripts",
-        "-p",
-        "test_*.py"
     ],
     "python.testing.pytestEnabled": true,
     "python.testing.unittestEnabled": false,
