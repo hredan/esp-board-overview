@@ -1,4 +1,5 @@
 """Module for handling partition data structures."""
+import json
 class Scheme:
     """Class to hold data for a partition scheme."""
     def __init__(self):
@@ -34,5 +35,4 @@ class PartitionList(dict[str, PartitionData]):
 
     def to_json(self):
         """Convert the partition list to JSON format."""
-        import json
         return json.dumps(self, default=lambda o: o.__dict__, indent=4)

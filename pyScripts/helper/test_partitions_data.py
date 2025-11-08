@@ -1,5 +1,5 @@
 """Unit tests for partitions_data.py"""
-from pyScripts.helper.partitions_data import PartitionData, Scheme, PartitionList
+from helper.partitions_data import PartitionData, Scheme, PartitionList
 
 def test_partition_data():
     """Test the PartitionData and Scheme classes."""
