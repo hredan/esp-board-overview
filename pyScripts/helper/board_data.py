@@ -5,11 +5,11 @@ class BoardData:
     """Class to hold data for a single board."""
     def __init__(self):
         self.name: str = ""
-        self.mcu: str = ""
-        self.variant: str = ""
-        self.flash_size: str = ""
-        self.led_builtin: str = ""
-        self.board_id: str = ""
+        self.variant: str = "N/A"
+        self.mcu: str = "N/A"
+        self.flash_size: list[str] = []
+        self.led_builtin: str = "N/A"
+        self.board: str = ""
 
     def set_name(self, name: str):
         """Set the name of the board."""
@@ -25,7 +25,12 @@ class BoardData:
 
     def set_flash_size(self, flash_size: str):
         """Set the flash size of the board."""
-        self.flash_size = flash_size
+        if flash_size not in self.flash_size:
+            if flash_size == "512KB":
+                # add 512KB to the beginning of the list
+                self.flash_size.insert(0, flash_size)
+            else:
+                self.flash_size.append(flash_size)
 
     def set_led_builtin(self, gpio: str):
         """Set the built-in LED GPIO pin of the board."""
@@ -33,7 +38,7 @@ class BoardData:
 
     def set_board_id(self, board_id: str):
         """Set the board ID of the board."""
-        self.board_id = board_id
+        self.board = board_id
 
     def to_json(self):
         """Convert the board data to JSON format."""
@@ -43,4 +48,12 @@ class BoardList(list[BoardData]):
     """Class to hold a list of BoardData objects."""
     def to_json(self):
         """Convert the board list to JSON format."""
+        self.sort(key=lambda board: board.board)
         return json.dumps(self, default=lambda o: o.__dict__, indent=4)
+
+    def get_board_by_id(self, board_id: str) -> BoardData | None:
+        """Get a board by its ID."""
+        for board in self:
+            if board.board == board_id:
+                return board
+        return None

@@ -14,5 +14,7 @@
     "python.analysis.extraPaths": [
         "./pyScripts"
     ],
-    "python.analysis.typeCheckingMode": "strict"
+    "python.analysis.typeCheckingMode": "strict",
+    "pylint.interpreter": ["/workspaces/esp-board-overview/.venv/bin/python3"],
+    "pylint.path": ["${workspaceFolder}/.venv/bin/pylint"]
 }

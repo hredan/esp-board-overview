@@ -19,11 +19,13 @@ def test_to_json():
 
     expected_json = '''{
     "name": "TestBoard",
-    "mcu": "TestMCU",
     "variant": "TestVariant",
-    "flash_size": "256KB",
+    "mcu": "TestMCU",
+    "flash_size": [
+        "256KB"
+    ],
     "led_builtin": "2",
-    "board_id": "12345"
+    "board": "12345"
 }'''
 
     assert board.to_json() == expected_json  # Ensure __str__ works as expected
@@ -45,19 +47,19 @@ def test_board_list_to_json():
     expected_json = '''[
     {
         "name": "Board1",
+        "variant": "N/A",
         "mcu": "MCU1",
-        "variant": "",
-        "flash_size": "",
-        "led_builtin": "",
-        "board_id": ""
+        "flash_size": [],
+        "led_builtin": "N/A",
+        "board": ""
     },
     {
         "name": "Board2",
+        "variant": "N/A",
         "mcu": "MCU2",
-        "variant": "",
-        "flash_size": "",
-        "led_builtin": "",
-        "board_id": ""
+        "flash_size": [],
+        "led_builtin": "N/A",
+        "board": ""
     }
 ]'''
 

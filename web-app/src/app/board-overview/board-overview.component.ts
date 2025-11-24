@@ -38,11 +38,21 @@ export class BoardOverviewComponent implements OnInit {
     });
   }
 
+  get_pins_arduino_link(variant: string): string {
+    let pins_arduino_url = '';
+    if (this.coreName() === 'esp8266') {
+      pins_arduino_url = `https://github.com/esp8266/Arduino/blob/${this.coreVersion}/variants/${variant}/pins_arduino.h`;
+    }
+    else if (this.coreName() === 'esp32') {
+      pins_arduino_url = `https://github.com/espressif/arduino-esp32/blob/${this.coreVersion}/variants/${variant}/pins_arduino.h`;
+    }
+    return pins_arduino_url;
+  }
   updateTable() {
     if (this.checked) {
       const ignoreNA: BoardInfo[] = [];
       this.dataSource().forEach((boardInfo) => {
-        if (boardInfo.LED_BUILTIN !== 'N/A') {
+        if (boardInfo.led_builtin !== 'N/A') {
           ignoreNA.push(boardInfo);
         }
       });
@@ -87,7 +97,7 @@ export class BoardOverviewComponent implements OnInit {
         case 'mcu':
           return compare(a.mcu, b.mcu, isAsc);
         case 'led':
-          return compareLed(a.LED_BUILTIN, b.LED_BUILTIN, isAsc);
+          return compareLed(a.led_builtin, b.led_builtin, isAsc);
         case 'flash_size':
           return compareFlashSize(a.flash_size, b.flash_size, isAsc);
         default:
@@ -101,10 +111,9 @@ export interface BoardInfo {
   name: string;
   board: string;
   variant: string;
-  linkPins: string;
-  LED_BUILTIN: string;
+  led_builtin: string;
   mcu: string;
-  flash_size: string;
+  flash_size: string[];
 }
 
 export interface Core {
@@ -135,15 +144,17 @@ function compareLed(a: string, b: string, isAsc: boolean) {
   return (aNum < bNum ? -1 : 1) * (isAsc ? 1 : -1);
 }
 
-function get_flash_size_value(a: string, isAsc: boolean) {
-  let flash_size = a.slice(1, -1);
-  const list = flash_size.split(';');
-  if (list.length > 1) {
+function get_flash_size_value(list_flash_sizes: string[], isAsc: boolean) {
+  if (list_flash_sizes.length === 0) {
+    return 0;
+  }
+  let flash_size = list_flash_sizes[0];
+  if (list_flash_sizes.length > 1) {
     if (isAsc){
-      flash_size = list[0];
+      flash_size = list_flash_sizes[0];
     }
     else{
-      flash_size = list[list.length - 1];
+      flash_size = list_flash_sizes[list_flash_sizes.length - 1];
     }
   }
   if (flash_size === '512KB') {
@@ -159,7 +170,7 @@ function get_flash_size_value(a: string, isAsc: boolean) {
   }
 }
 
-function compareFlashSize(a: string, b: string, isAsc: boolean) {
+function compareFlashSize(a: string[], b: string[], isAsc: boolean) {
   const aNum = get_flash_size_value(a, isAsc);
   const bNum = get_flash_size_value(b, isAsc);
   return (aNum < bNum ? -1 : 1) * (isAsc ? 1 : -1);
