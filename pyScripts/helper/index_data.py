@@ -7,7 +7,7 @@ Copyright (c) 2025 hredan
 import json
 class IndexData:
     """Class to handle ESP core package index data."""
-    def __init__(self, core_name):
+    def __init__(self, core_name: str):
         self.core_name = core_name
         if core_name == "esp32":
             self.package_index_path = "./esp_data/package_esp32_index.json"
