@@ -44,6 +44,99 @@
             }
         }
     },
+    "esp32c5": {
+        "default": "default",
+        "schemes": {
+            "default": {
+                "full_name": "Default 4MB with spiffs (1.2MB APP/1.5MB SPIFFS)",
+                "build": "default"
+            },
+            "defaultffat": {
+                "full_name": "Default 4MB with ffat (1.2MB APP/1.5MB FATFS)",
+                "build": "default_ffat"
+            },
+            "default_8MB": {
+                "full_name": "8M with spiffs (3MB APP/1.5MB SPIFFS)",
+                "build": "default_8MB"
+            },
+            "minimal": {
+                "full_name": "Minimal (1.3MB APP/700KB SPIFFS)",
+                "build": "minimal"
+            },
+            "no_fs": {
+                "full_name": "No FS 4MB (2MB APP x2)",
+                "build": "no_fs"
+            },
+            "no_ota": {
+                "full_name": "No OTA (2MB APP/2MB SPIFFS)",
+                "build": "no_ota"
+            },
+            "noota_3g": {
+                "full_name": "No OTA (1MB APP/3MB SPIFFS)",
+                "build": "noota_3g"
+            },
+            "noota_ffat": {
+                "full_name": "No OTA (2MB APP/2MB FATFS)",
+                "build": "noota_ffat"
+            },
+            "noota_3gffat": {
+                "full_name": "No OTA (1MB APP/3MB FATFS)",
+                "build": "noota_3gffat"
+            },
+            "huge_app": {
+                "full_name": "Huge APP (3MB No OTA/1MB SPIFFS)",
+                "build": "huge_app"
+            },
+            "min_spiffs": {
+                "full_name": "Minimal SPIFFS (1.9MB APP with OTA/190KB SPIFFS)",
+                "build": "min_spiffs"
+            },
+            "fatflash": {
+                "full_name": "16M Flash (2MB APP/12.5MB FATFS)",
+                "build": "ffat"
+            },
+            "app3M_fat9M_16MB": {
+                "full_name": "16M Flash (3MB APP/9.9MB FATFS)",
+                "build": "app3M_fat9M_16MB"
+            },
+            "rainmaker": {
+                "full_name": "RainMaker 4MB",
+                "build": "rainmaker"
+            },
+            "rainmaker_4MB": {
+                "full_name": "RainMaker 4MB No OTA",
+                "build": "rainmaker_4MB_no_ota"
+            },
+            "rainmaker_8MB": {
+                "full_name": "RainMaker 8MB",
+                "build": "rainmaker_8MB"
+            },
+            "zigbee_2MB": {
+                "full_name": "Zigbee 2MB with spiffs",
+                "build": "zigbee_2MB"
+            },
+            "zigbee": {
+                "full_name": "Zigbee 4MB with spiffs",
+                "build": "zigbee"
+            },
+            "zigbee_8MB": {
+                "full_name": "Zigbee 8MB with spiffs",
+                "build": "zigbee_8MB"
+            },
+            "zigbee_zczr_2MB": {
+                "full_name": "Zigbee ZCZR 2MB with spiffs",
+                "build": "zigbee_zczr_2MB"
+            },
+            "zigbee_zczr": {
+                "full_name": "Zigbee ZCZR 4MB with spiffs",
+                "build": "zigbee_zczr"
+            },
+            "zigbee_zczr_8MB": {
+                "full_name": "Zigbee ZCZR 8MB with spiffs",
+                "build": "zigbee_zczr_8MB"
+            }
+        }
+    },
     "esp32p4": {
         "default": "default",
         "schemes": {
@@ -110,6 +203,10 @@
             "app13M_data7M_32MB": {
                 "full_name": "32M Flash (13MB APP/6.75MB SPIFFS)",
                 "build": "default_32MB"
+            },
+            "esp_sr_16": {
+                "full_name": "ESP SR 16M (3MB APP/7MB SPIFFS/2.9MB MODEL)",
+                "build": "esp_sr_16"
             }
         }
     },
@@ -691,10 +788,6 @@
                 "full_name": "Default 4MB with ffat (1.2MB APP/1.5MB FATFS)",
                 "build": "default_ffat"
             },
-            "default_8MB": {
-                "full_name": "8M with spiffs (3MB APP/1.5MB SPIFFS)",
-                "build": "default_8MB"
-            },
             "minimal": {
                 "full_name": "Minimal (1.3MB APP/700KB SPIFFS)",
                 "build": "minimal"
@@ -722,10 +815,6 @@
             "min_spiffs": {
                 "full_name": "Minimal SPIFFS (1.9MB APP with OTA/190KB SPIFFS)",
                 "build": "min_spiffs"
-            },
-            "fatflash": {
-                "full_name": "16M Flash (2MB APP/12.5MB FATFS)",
-                "build": "ffat"
             },
             "rainmaker": {
                 "full_name": "RainMaker 4MB",
@@ -890,14 +979,6 @@
             "min_spiffs": {
                 "full_name": "Minimal SPIFFS (1.9MB APP with OTA/190KB SPIFFS)",
                 "build": "min_spiffs"
-            },
-            "fatflash": {
-                "full_name": "16M Flash (2MB APP/12.5MB FATFS)",
-                "build": "ffat"
-            },
-            "app3M_fat9M_16MB": {
-                "full_name": "16M Flash (3MB APP/9.9MB FATFS)",
-                "build": "app3M_fat9M_16MB"
             }
         }
     },
@@ -911,10 +992,6 @@
             "defaultffat": {
                 "full_name": "Default 4MB with ffat (1.2MB APP/1.5MB FATFS)",
                 "build": "default_ffat"
-            },
-            "default_8MB": {
-                "full_name": "8M with spiffs (3MB APP/1.5MB SPIFFS)",
-                "build": "default_8MB"
             },
             "minimal": {
                 "full_name": "Minimal (1.3MB APP/700KB SPIFFS)",
@@ -943,14 +1020,6 @@
             "min_spiffs": {
                 "full_name": "Minimal SPIFFS (1.9MB APP with OTA/190KB SPIFFS)",
                 "build": "min_spiffs"
-            },
-            "fatflash": {
-                "full_name": "16M Flash (2MB APP/12.5MB FATFS)",
-                "build": "ffat"
-            },
-            "app3M_fat9M_16MB": {
-                "full_name": "16M Flash (3MB APP/9.9MB FATFS)",
-                "build": "app3M_fat9M_16MB"
             }
         }
     },
@@ -1635,7 +1704,8 @@
         }
     },
     "S_ODI_Ultra": {
-        "default": "default"
+        "default": "default",
+        "schemes": {}
     },
     "lilygo_t_display": {
         "default": "default",
@@ -1886,13 +1956,16 @@
         }
     },
     "magicbit": {
-        "default": "default"
+        "default": "default",
+        "schemes": {}
     },
     "turta_iot_node": {
-        "default": "default"
+        "default": "default",
+        "schemes": {}
     },
     "ttgo-lora32": {
-        "default": "default"
+        "default": "default",
+        "schemes": {}
     },
     "ttgo-t1": {
         "default": "default",
@@ -2059,7 +2132,8 @@
         }
     },
     "cw02": {
-        "default": "default"
+        "default": "default",
+        "schemes": {}
     },
     "esp32thing": {
         "default": "default",
@@ -2655,13 +2729,16 @@
         }
     },
     "widora-air": {
-        "default": "default"
+        "default": "default",
+        "schemes": {}
     },
     "esp320": {
-        "default": "default"
+        "default": "default",
+        "schemes": {}
     },
     "nano32": {
-        "default": "default"
+        "default": "default",
+        "schemes": {}
     },
     "d32": {
         "default": "default",
@@ -3046,7 +3123,8 @@
         }
     },
     "pocket_32": {
-        "default": "default"
+        "default": "default",
+        "schemes": {}
     },
     "WeMosBat": {
         "default": "default",
@@ -3110,10 +3188,12 @@
         }
     },
     "espea32": {
-        "default": "default"
+        "default": "default",
+        "schemes": {}
     },
     "quantum": {
-        "default": "default"
+        "default": "default",
+        "schemes": {}
     },
     "node32s": {
         "default": "default",
@@ -3133,10 +3213,12 @@
         }
     },
     "hornbill32dev": {
-        "default": "default"
+        "default": "default",
+        "schemes": {}
     },
     "hornbill32minima": {
-        "default": "default"
+        "default": "default",
+        "schemes": {}
     },
     "dfrobot_beetle_esp32c3": {
         "default": "default",
@@ -3148,10 +3230,6 @@
             "defaultffat": {
                 "full_name": "Default 4MB with ffat (1.2MB APP/1.5MB FATFS)",
                 "build": "default_ffat"
-            },
-            "default_8MB": {
-                "full_name": "8M with spiffs (3MB APP/1.5MB SPIFFS)",
-                "build": "default_8MB"
             },
             "minimal": {
                 "full_name": "Minimal (1.3MB APP/700KB SPIFFS)",
@@ -3180,14 +3258,6 @@
             "min_spiffs": {
                 "full_name": "Minimal SPIFFS (1.9MB APP with OTA/190KB SPIFFS)",
                 "build": "min_spiffs"
-            },
-            "fatflash": {
-                "full_name": "16M Flash (2MB APP/12.5MB FATFS)",
-                "build": "ffat"
-            },
-            "app3M_fat9M_16MB": {
-                "full_name": "16M Flash (3MB APP/9.9MB FATFS)",
-                "build": "app3M_fat9M_16MB"
             },
             "rainmaker": {
                 "full_name": "RainMaker 4MB",
@@ -3530,24 +3600,27 @@
         }
     },
     "firebeetle32": {
-        "default": "default"
+        "default": "default",
+        "schemes": {}
     },
     "intorobot-fig": {
-        "default": "default"
+        "default": "default",
+        "schemes": {}
     },
     "onehorse32dev": {
-        "default": "default"
+        "default": "default",
+        "schemes": {}
     },
     "adafruit_metro_esp32s2": {
         "default": "default",
         "schemes": {
-            "tinyuf2": {
-                "full_name": "TinyUF2 4MB (1.3MB APP/960KB FATFS)",
-                "build": "tinyuf2-partitions-4MB"
-            },
             "tinyuf2_noota": {
                 "full_name": "TinyUF2 4MB No OTA (2.7MB APP/960KB FATFS)",
                 "build": "tinyuf2-partitions-4MB-noota"
+            },
+            "tinyuf2": {
+                "full_name": "TinyUF2 4MB (1.3MB APP/960KB FATFS)",
+                "build": "tinyuf2-partitions-4MB"
             },
             "default": {
                 "full_name": "Default 4MB with spiffs (1.2MB APP/1.5MB SPIFFS)",
@@ -3619,13 +3692,13 @@
     "adafruit_magtag29_esp32s2": {
         "default": "default",
         "schemes": {
-            "tinyuf2": {
-                "full_name": "TinyUF2 4MB (1.3MB APP/960KB FATFS)",
-                "build": "tinyuf2-partitions-4MB"
-            },
             "tinyuf2_noota": {
                 "full_name": "TinyUF2 4MB No OTA (2.7MB APP/960KB FATFS)",
                 "build": "tinyuf2-partitions-4MB-noota"
+            },
+            "tinyuf2": {
+                "full_name": "TinyUF2 4MB (1.3MB APP/960KB FATFS)",
+                "build": "tinyuf2-partitions-4MB"
             },
             "default": {
                 "full_name": "Default 4MB with spiffs (1.2MB APP/1.5MB SPIFFS)",
@@ -3668,13 +3741,13 @@
     "adafruit_funhouse_esp32s2": {
         "default": "default",
         "schemes": {
-            "tinyuf2": {
-                "full_name": "TinyUF2 4MB (1.3MB APP/960KB FATFS)",
-                "build": "tinyuf2-partitions-4MB"
-            },
             "tinyuf2_noota": {
                 "full_name": "TinyUF2 4MB No OTA (2.7MB APP/960KB FATFS)",
                 "build": "tinyuf2-partitions-4MB-noota"
+            },
+            "tinyuf2": {
+                "full_name": "TinyUF2 4MB (1.3MB APP/960KB FATFS)",
+                "build": "tinyuf2-partitions-4MB"
             },
             "default": {
                 "full_name": "Default 4MB with spiffs (1.2MB APP/1.5MB SPIFFS)",
@@ -3771,13 +3844,13 @@
     "adafruit_feather_esp32s2": {
         "default": "default",
         "schemes": {
-            "tinyuf2": {
-                "full_name": "TinyUF2 4MB (1.3MB APP/960KB FATFS)",
-                "build": "tinyuf2-partitions-4MB"
-            },
             "tinyuf2_noota": {
                 "full_name": "TinyUF2 4MB No OTA (2.7MB APP/960KB FATFS)",
                 "build": "tinyuf2-partitions-4MB-noota"
+            },
+            "tinyuf2": {
+                "full_name": "TinyUF2 4MB (1.3MB APP/960KB FATFS)",
+                "build": "tinyuf2-partitions-4MB"
             },
             "default": {
                 "full_name": "Default 4MB with spiffs (1.2MB APP/1.5MB SPIFFS)",
@@ -3820,13 +3893,13 @@
     "adafruit_feather_esp32s2_tft": {
         "default": "default",
         "schemes": {
-            "tinyuf2": {
-                "full_name": "TinyUF2 4MB (1.3MB APP/960KB FATFS)",
-                "build": "tinyuf2-partitions-4MB"
-            },
             "tinyuf2_noota": {
                 "full_name": "TinyUF2 4MB No OTA (2.7MB APP/960KB FATFS)",
                 "build": "tinyuf2-partitions-4MB-noota"
+            },
+            "tinyuf2": {
+                "full_name": "TinyUF2 4MB (1.3MB APP/960KB FATFS)",
+                "build": "tinyuf2-partitions-4MB"
             },
             "default": {
                 "full_name": "Default 4MB with spiffs (1.2MB APP/1.5MB SPIFFS)",
@@ -3869,13 +3942,13 @@
     "adafruit_feather_esp32s2_reversetft": {
         "default": "default",
         "schemes": {
-            "tinyuf2": {
-                "full_name": "TinyUF2 4MB (1.3MB APP/960KB FATFS)",
-                "build": "tinyuf2-partitions-4MB"
-            },
             "tinyuf2_noota": {
                 "full_name": "TinyUF2 4MB No OTA (2.7MB APP/960KB FATFS)",
                 "build": "tinyuf2-partitions-4MB-noota"
+            },
+            "tinyuf2": {
+                "full_name": "TinyUF2 4MB (1.3MB APP/960KB FATFS)",
+                "build": "tinyuf2-partitions-4MB"
             },
             "default": {
                 "full_name": "Default 4MB with spiffs (1.2MB APP/1.5MB SPIFFS)",
@@ -3918,13 +3991,13 @@
     "adafruit_feather_esp32s3": {
         "default": "default",
         "schemes": {
-            "tinyuf2": {
-                "full_name": "TinyUF2 4MB (1.3MB APP/960KB FATFS)",
-                "build": "tinyuf2-partitions-4MB"
-            },
             "tinyuf2_noota": {
                 "full_name": "TinyUF2 4MB No OTA (2.7MB APP/960KB FATFS)",
                 "build": "tinyuf2-partitions-4MB-noota"
+            },
+            "tinyuf2": {
+                "full_name": "TinyUF2 4MB (1.3MB APP/960KB FATFS)",
+                "build": "tinyuf2-partitions-4MB"
             },
             "default": {
                 "full_name": "Default 4MB with spiffs (1.2MB APP/1.5MB SPIFFS)",
@@ -3984,13 +4057,13 @@
     "adafruit_feather_esp32s3_tft": {
         "default": "default",
         "schemes": {
-            "tinyuf2": {
-                "full_name": "TinyUF2 4MB (1.3MB APP/960KB FATFS)",
-                "build": "tinyuf2-partitions-4MB"
-            },
             "tinyuf2_noota": {
                 "full_name": "TinyUF2 4MB No OTA (2.7MB APP/960KB FATFS)",
                 "build": "tinyuf2-partitions-4MB-noota"
+            },
+            "tinyuf2": {
+                "full_name": "TinyUF2 4MB (1.3MB APP/960KB FATFS)",
+                "build": "tinyuf2-partitions-4MB"
             },
             "default": {
                 "full_name": "Default 4MB with spiffs (1.2MB APP/1.5MB SPIFFS)",
@@ -4033,13 +4106,13 @@
     "adafruit_feather_esp32s3_reversetft": {
         "default": "default",
         "schemes": {
-            "tinyuf2": {
-                "full_name": "TinyUF2 4MB (1.3MB APP/960KB FATFS)",
-                "build": "tinyuf2-partitions-4MB"
-            },
             "tinyuf2_noota": {
                 "full_name": "TinyUF2 4MB No OTA (2.7MB APP/960KB FATFS)",
                 "build": "tinyuf2-partitions-4MB-noota"
+            },
+            "tinyuf2": {
+                "full_name": "TinyUF2 4MB (1.3MB APP/960KB FATFS)",
+                "build": "tinyuf2-partitions-4MB"
             },
             "default": {
                 "full_name": "Default 4MB with spiffs (1.2MB APP/1.5MB SPIFFS)",
@@ -4090,10 +4163,6 @@
                 "full_name": "Default 4MB with ffat (1.2MB APP/1.5MB FATFS)",
                 "build": "default_ffat"
             },
-            "default_8MB": {
-                "full_name": "8M with spiffs (3MB APP/1.5MB SPIFFS)",
-                "build": "default_8MB"
-            },
             "minimal": {
                 "full_name": "Minimal (1.3MB APP/700KB SPIFFS)",
                 "build": "minimal"
@@ -4121,14 +4190,6 @@
             "min_spiffs": {
                 "full_name": "Minimal SPIFFS (1.9MB APP with OTA/190KB SPIFFS)",
                 "build": "min_spiffs"
-            },
-            "fatflash": {
-                "full_name": "16M Flash (2MB APP/12.5MB FATFS)",
-                "build": "ffat"
-            },
-            "app3M_fat9M_16MB": {
-                "full_name": "16M Flash (3MB APP/9.9MB FATFS)",
-                "build": "app3M_fat9M_16MB"
             },
             "rainmaker": {
                 "full_name": "RainMaker 4MB",
@@ -4205,13 +4266,13 @@
     "adafruit_qtpy_esp32s2": {
         "default": "default",
         "schemes": {
-            "tinyuf2": {
-                "full_name": "TinyUF2 4MB (1.3MB APP/960KB FATFS)",
-                "build": "tinyuf2-partitions-4MB"
-            },
             "tinyuf2_noota": {
                 "full_name": "TinyUF2 4MB No OTA (2.7MB APP/960KB FATFS)",
                 "build": "tinyuf2-partitions-4MB-noota"
+            },
+            "tinyuf2": {
+                "full_name": "TinyUF2 4MB (1.3MB APP/960KB FATFS)",
+                "build": "tinyuf2-partitions-4MB"
             },
             "default": {
                 "full_name": "Default 4MB with spiffs (1.2MB APP/1.5MB SPIFFS)",
@@ -4271,13 +4332,13 @@
     "adafruit_qtpy_esp32s3_n4r2": {
         "default": "default",
         "schemes": {
-            "tinyuf2": {
-                "full_name": "TinyUF2 4MB (1.3MB APP/960KB FATFS)",
-                "build": "tinyuf2-partitions-4MB"
-            },
             "tinyuf2_noota": {
                 "full_name": "TinyUF2 4MB No OTA (2.7MB APP/960KB FATFS)",
                 "build": "tinyuf2-partitions-4MB-noota"
+            },
+            "tinyuf2": {
+                "full_name": "TinyUF2 4MB (1.3MB APP/960KB FATFS)",
+                "build": "tinyuf2-partitions-4MB"
             },
             "default": {
                 "full_name": "Default 4MB with spiffs (1.2MB APP/1.5MB SPIFFS)",
@@ -4545,7 +4606,8 @@
         }
     },
     "nodemcu-32s": {
-        "default": "default"
+        "default": "default",
+        "schemes": {}
     },
     "nologo_esp32c3_super_mini": {
         "default": "default",
@@ -4557,10 +4619,6 @@
             "defaultffat": {
                 "full_name": "Default 4MB with ffat (1.2MB APP/1.5MB FATFS)",
                 "build": "default_ffat"
-            },
-            "default_8MB": {
-                "full_name": "8M with spiffs (3MB APP/1.5MB SPIFFS)",
-                "build": "default_8MB"
             },
             "minimal": {
                 "full_name": "Minimal (1.3MB APP/700KB SPIFFS)",
@@ -4651,14 +4709,6 @@
                 "full_name": "RainMaker 8MB",
                 "build": "rainmaker_8MB"
             },
-            "app5M_fat24M_32MB": {
-                "full_name": "32M Flash (4.8MB APP/22MB FATFS)",
-                "build": "large_fat_32MB"
-            },
-            "app5M_little24M_32MB": {
-                "full_name": "32M Flash (4.8MB APP/22MB LittleFS)",
-                "build": "large_littlefs_32MB"
-            },
             "esp_sr_16": {
                 "full_name": "ESP SR 16M (3MB APP/7MB SPIFFS/2.9MB MODEL)",
                 "build": "esp_sr_16"
@@ -4708,10 +4758,12 @@
         }
     },
     "esp32vn-iot-uno": {
-        "default": "default"
+        "default": "default",
+        "schemes": {}
     },
     "esp32doit-devkit-v1": {
-        "default": "default"
+        "default": "default",
+        "schemes": {}
     },
     "esp32doit-espduino": {
         "default": "default",
@@ -4924,10 +4976,6 @@
             "min_spiffs": {
                 "full_name": "Minimal SPIFFS (Large APPS with OTA)",
                 "build": "min_spiffs"
-            },
-            "fatflash": {
-                "full_name": "16M Fat",
-                "build": "ffat"
             }
         }
     },
@@ -5407,7 +5455,8 @@
         }
     },
     "espino32": {
-        "default": "default"
+        "default": "default",
+        "schemes": {}
     },
     "m5stack_core": {
         "default": "default",
@@ -5745,10 +5794,6 @@
                 "full_name": "Default 4MB with ffat (1.2MB APP/1.5MB FATFS)",
                 "build": "default_ffat"
             },
-            "default_8MB": {
-                "full_name": "8M with spiffs (3MB APP/1.5MB SPIFFS)",
-                "build": "default_8MB"
-            },
             "minimal": {
                 "full_name": "Minimal (1.3MB APP/700KB SPIFFS)",
                 "build": "minimal"
@@ -5772,10 +5817,6 @@
             "min_spiffs": {
                 "full_name": "Minimal SPIFFS (1.9MB APP with OTA/190KB SPIFFS)",
                 "build": "min_spiffs"
-            },
-            "fatflash": {
-                "full_name": "16M Flash (2MB APP/12.5MB FATFS)",
-                "build": "ffat"
             },
             "rainmaker": {
                 "full_name": "RainMaker 4MB",
@@ -5802,10 +5843,6 @@
                 "full_name": "Default 4MB with ffat (1.2MB APP/1.5MB FATFS)",
                 "build": "default_ffat"
             },
-            "default_8MB": {
-                "full_name": "8M with spiffs (3MB APP/1.5MB SPIFFS)",
-                "build": "default_8MB"
-            },
             "minimal": {
                 "full_name": "Minimal (1.3MB APP/700KB SPIFFS)",
                 "build": "minimal"
@@ -5829,10 +5866,6 @@
             "min_spiffs": {
                 "full_name": "Minimal SPIFFS (1.9MB APP with OTA/190KB SPIFFS)",
                 "build": "min_spiffs"
-            },
-            "fatflash": {
-                "full_name": "16M Flash (2MB APP/12.5MB FATFS)",
-                "build": "ffat"
             },
             "rainmaker": {
                 "full_name": "RainMaker 4MB",
@@ -5887,10 +5920,6 @@
                 "full_name": "Minimal SPIFFS (1.9MB APP with OTA/190KB SPIFFS)",
                 "build": "min_spiffs"
             },
-            "fatflash": {
-                "full_name": "16M Flash (2MB APP/12.5MB FATFS)",
-                "build": "ffat"
-            },
             "rainmaker": {
                 "full_name": "RainMaker 4MB",
                 "build": "rainmaker"
@@ -5920,10 +5949,6 @@
                 "full_name": "Default 4MB with ffat (1.2MB APP/1.5MB FATFS)",
                 "build": "default_ffat"
             },
-            "default_8MB": {
-                "full_name": "8M with spiffs (3MB APP/1.5MB SPIFFS)",
-                "build": "default_8MB"
-            },
             "minimal": {
                 "full_name": "Minimal (1.3MB APP/700KB SPIFFS)",
                 "build": "minimal"
@@ -5947,10 +5972,6 @@
             "min_spiffs": {
                 "full_name": "Minimal SPIFFS (1.9MB APP with OTA/190KB SPIFFS)",
                 "build": "min_spiffs"
-            },
-            "fatflash": {
-                "full_name": "16M Flash (2MB APP/12.5MB FATFS)",
-                "build": "ffat"
             },
             "rainmaker": {
                 "full_name": "RainMaker 4MB",
@@ -6005,14 +6026,6 @@
                 "full_name": "Minimal SPIFFS (1.9MB APP with OTA/190KB SPIFFS)",
                 "build": "min_spiffs"
             },
-            "fatflash": {
-                "full_name": "16M Flash (2MB APP/12.5MB FATFS)",
-                "build": "ffat"
-            },
-            "app3M_fat9M_16MB": {
-                "full_name": "16M Flash (3MB APP/9.9MB FATFS)",
-                "build": "app3M_fat9M_16MB"
-            },
             "rainmaker": {
                 "full_name": "RainMaker 4MB",
                 "build": "rainmaker"
@@ -6024,18 +6037,6 @@
             "rainmaker_8MB": {
                 "full_name": "RainMaker 8MB",
                 "build": "rainmaker_8MB"
-            },
-            "app5M_fat24M_32MB": {
-                "full_name": "32M Flash (4.8MB APP/22MB FATFS)",
-                "build": "large_fat_32MB"
-            },
-            "app5M_little24M_32MB": {
-                "full_name": "32M Flash (4.8MB APP/22MB LittleFS)",
-                "build": "large_littlefs_32MB"
-            },
-            "esp_sr_16": {
-                "full_name": "ESP SR 16M (3MB APP/7MB SPIFFS/2.9MB MODEL)",
-                "build": "esp_sr_16"
             }
         }
     },
@@ -6116,6 +6117,59 @@
             }
         }
     },
+    "m5stack_tab5": {
+        "default": "default",
+        "schemes": {
+            "default": {
+                "full_name": "Default (2 x 6.5 MB app, 3.6 MB SPIFFS)",
+                "build": "default_16MB"
+            },
+            "default_8MB": {
+                "full_name": "8M with spiffs (3MB APP/1.5MB SPIFFS)",
+                "build": "default_8MB"
+            },
+            "minimal": {
+                "full_name": "Minimal (1.3MB APP/700KB SPIFFS)",
+                "build": "minimal"
+            },
+            "no_fs": {
+                "full_name": "No FS 4MB (2MB APP x2)",
+                "build": "no_fs"
+            },
+            "no_ota": {
+                "full_name": "No OTA (2MB APP/2MB SPIFFS)",
+                "build": "no_ota"
+            },
+            "noota_3g": {
+                "full_name": "No OTA (1MB APP/3MB SPIFFS)",
+                "build": "noota_3g"
+            },
+            "noota_ffat": {
+                "full_name": "No OTA (2MB APP/2MB FATFS)",
+                "build": "noota_ffat"
+            },
+            "noota_3gffat": {
+                "full_name": "No OTA (1MB APP/3MB FATFS)",
+                "build": "noota_3gffat"
+            },
+            "huge_app": {
+                "full_name": "Huge APP (3MB No OTA/1MB SPIFFS)",
+                "build": "huge_app"
+            },
+            "min_spiffs": {
+                "full_name": "Minimal SPIFFS (1.9MB APP with OTA/190KB SPIFFS)",
+                "build": "min_spiffs"
+            },
+            "fatflash": {
+                "full_name": "16M Flash (2MB APP/12.5MB FATFS)",
+                "build": "ffat"
+            },
+            "app3M_fat9M_16MB": {
+                "full_name": "16M Flash (3MB APP/9.9MB FATFS)",
+                "build": "app3M_fat9M_16MB"
+            }
+        }
+    },
     "m5stack_timer_cam": {
         "default": "default",
         "schemes": {
@@ -6126,10 +6180,6 @@
             "defaultffat": {
                 "full_name": "Default 4MB with ffat (1.2MB APP/1.5MB FATFS)",
                 "build": "default_ffat"
-            },
-            "default_8MB": {
-                "full_name": "8M with spiffs (3MB APP/1.5MB SPIFFS)",
-                "build": "default_8MB"
             },
             "minimal": {
                 "full_name": "Minimal (1.3MB APP/700KB SPIFFS)",
@@ -6171,10 +6221,6 @@
             "defaultffat": {
                 "full_name": "Default 4MB with ffat (1.2MB APP/1.5MB FATFS)",
                 "build": "default_ffat"
-            },
-            "default_8MB": {
-                "full_name": "8M with spiffs (3MB APP/1.5MB SPIFFS)",
-                "build": "default_8MB"
             },
             "minimal": {
                 "full_name": "Minimal (1.3MB APP/700KB SPIFFS)",
@@ -6294,10 +6340,6 @@
                 "full_name": "Default 4MB with ffat (1.2MB APP/1.5MB FATFS)",
                 "build": "default_ffat"
             },
-            "default_8MB": {
-                "full_name": "8M with spiffs (3MB APP/1.5MB SPIFFS)",
-                "build": "default_8MB"
-            },
             "minimal": {
                 "full_name": "Minimal (1.3MB APP/700KB SPIFFS)",
                 "build": "minimal"
@@ -6404,10 +6446,6 @@
                 "full_name": "Default 4MB with ffat (1.2MB APP/1.5MB FATFS)",
                 "build": "default_ffat"
             },
-            "default_8MB": {
-                "full_name": "8M with spiffs (3MB APP/1.5MB SPIFFS)",
-                "build": "default_8MB"
-            },
             "minimal": {
                 "full_name": "Minimal (1.3MB APP/700KB SPIFFS)",
                 "build": "minimal"
@@ -6435,10 +6473,6 @@
             "min_spiffs": {
                 "full_name": "Minimal SPIFFS (1.9MB APP with OTA/190KB SPIFFS)",
                 "build": "min_spiffs"
-            },
-            "fatflash": {
-                "full_name": "16M Flash (2MB APP/12.5MB FATFS)",
-                "build": "ffat"
             },
             "rainmaker": {
                 "full_name": "RainMaker 4MB",
@@ -6461,10 +6495,6 @@
                 "full_name": "Default 4MB with ffat (1.2MB APP/1.5MB FATFS)",
                 "build": "default_ffat"
             },
-            "default_8MB": {
-                "full_name": "8M with spiffs (3MB APP/1.5MB SPIFFS)",
-                "build": "default_8MB"
-            },
             "minimal": {
                 "full_name": "Minimal (1.3MB APP/700KB SPIFFS)",
                 "build": "minimal"
@@ -6492,10 +6522,6 @@
             "min_spiffs": {
                 "full_name": "Minimal SPIFFS (1.9MB APP with OTA/190KB SPIFFS)",
                 "build": "min_spiffs"
-            },
-            "fatflash": {
-                "full_name": "16M Flash (2MB APP/12.5MB FATFS)",
-                "build": "ffat"
             },
             "rainmaker": {
                 "full_name": "RainMaker 4MB",
@@ -7025,7 +7051,8 @@
         }
     },
     "heltec_wifi_kit_32_V3": {
-        "default": "default_8MB"
+        "default": "default_8MB",
+        "schemes": {}
     },
     "heltec_wifi_lora_32": {
         "default": "default",
@@ -7061,52 +7088,68 @@
         }
     },
     "heltec_wifi_lora_32_V2": {
-        "default": "default_8MB"
+        "default": "default_8MB",
+        "schemes": {}
     },
     "heltec_wifi_lora_32_V3": {
-        "default": "default_8MB"
+        "default": "default_8MB",
+        "schemes": {}
     },
     "heltec_wireless_stick_V3": {
-        "default": "default_8MB"
+        "default": "default_8MB",
+        "schemes": {}
     },
     "heltec_wireless_stick_lite_V3": {
-        "default": "default_8MB"
+        "default": "default_8MB",
+        "schemes": {}
     },
     "heltec_wireless_shell_V3": {
-        "default": "default_8MB"
+        "default": "default_8MB",
+        "schemes": {}
     },
     "heltec_wireless_paper": {
-        "default": "default_8MB"
+        "default": "default_8MB",
+        "schemes": {}
     },
     "heltec_wireless_tracker": {
-        "default": "default_8MB"
+        "default": "default_8MB",
+        "schemes": {}
     },
     "heltec_wireless_mini_shell": {
-        "default": "default"
+        "default": "default",
+        "schemes": {}
     },
     "heltec_wireless_stick": {
-        "default": "default_8MB"
+        "default": "default_8MB",
+        "schemes": {}
     },
     "heltec_wireless_stick_lite": {
-        "default": "default"
+        "default": "default",
+        "schemes": {}
     },
     "heltec_wireless_bridge": {
-        "default": "default_8MB"
+        "default": "default_8MB",
+        "schemes": {}
     },
     "heltec_ht_de01": {
-        "default": "default_8MB"
+        "default": "default_8MB",
+        "schemes": {}
     },
     "heltec_vision_master_e290": {
-        "default": "default_8MB"
+        "default": "default_8MB",
+        "schemes": {}
     },
     "heltec_vision_master_t190": {
-        "default": "default_8MB"
+        "default": "default_8MB",
+        "schemes": {}
     },
     "heltec_vision_master_e_213": {
-        "default": "default_8MB"
+        "default": "default_8MB",
+        "schemes": {}
     },
     "espectro32": {
-        "default": "default"
+        "default": "default",
+        "schemes": {}
     },
     "CoreESP32": {
         "default": "default",
@@ -7179,7 +7222,8 @@
         }
     },
     "wipy3": {
-        "default": "default"
+        "default": "default",
+        "schemes": {}
     },
     "wt32-eth01": {
         "default": "default",
@@ -7232,7 +7276,8 @@
         }
     },
     "bpi-bit": {
-        "default": "default"
+        "default": "default",
+        "schemes": {}
     },
     "bpi_leaf_s3": {
         "default": "default",
@@ -7300,10 +7345,50 @@
         }
     },
     "wesp32": {
-        "default": "default"
+        "default": "default",
+        "schemes": {
+            "default": {
+                "full_name": "16M OTA with large SPIFFS (4.5MB APP/6.8MB SPIFFS)",
+                "build": "large_spiffs_16MB"
+            },
+            "default_large_app": {
+                "full_name": "16M large OTA app with SPIFFS (6.2MB APP/3.3MB SPIFFS)",
+                "build": "default_16MB"
+            },
+            "default_fatfs": {
+                "full_name": "16M OTA with large FATFS (3MB APP/9.8MB FATFS)",
+                "build": "app3M_fat9M_16MB"
+            },
+            "default_4m_flash": {
+                "full_name": "4M OTA app with SPIFFS (1.25MB APP/1.3MB SPIFFS)",
+                "build": "default"
+            }
+        }
+    },
+    "mant1s": {
+        "default": "default",
+        "schemes": {
+            "default": {
+                "full_name": "8M OTA with large SPIFFS (1.25MB APP/5.3MB SPIFFS)",
+                "build": "large_spiffs_8MB"
+            },
+            "default_large_app": {
+                "full_name": "8M large OTA app with SPIFFS (3MB APP/1.5MB SPIFFS)",
+                "build": "default_8MB"
+            },
+            "default_fatfs": {
+                "full_name": "8M OTA with large FATFS (1.25MB APP/5.3MB FATFS)",
+                "build": "large_ffat_8MB"
+            },
+            "default_large_app_fatfs": {
+                "full_name": "8M large OTA app with FATFS (3MB APP/1.5MB FATFS)",
+                "build": "default_ffat_8MB"
+            }
+        }
     },
     "t-beam": {
-        "default": "default"
+        "default": "default",
+        "schemes": {}
     },
     "d-duino-32": {
         "default": "default",
@@ -7331,10 +7416,12 @@
         }
     },
     "lopy": {
-        "default": "default"
+        "default": "default",
+        "schemes": {}
     },
     "lopy4": {
-        "default": "default"
+        "default": "default",
+        "schemes": {}
     },
     "oroca_edubot": {
         "default": "huge_app",
@@ -7350,7 +7437,8 @@
         }
     },
     "fm-devkit": {
-        "default": "default"
+        "default": "default",
+        "schemes": {}
     },
     "fri3d_2024_esp32s3": {
         "default": "default",
@@ -7527,7 +7615,8 @@
         }
     },
     "gpy": {
-        "default": "default"
+        "default": "default",
+        "schemes": {}
     },
     "vintlabs-devkit-v1": {
         "default": "default",
@@ -7583,7 +7672,8 @@
         }
     },
     "honeylemon": {
-        "default": "default"
+        "default": "default",
+        "schemes": {}
     },
     "mgbot-iotik32a": {
         "default": "default",
@@ -7726,7 +7816,8 @@
         }
     },
     "sensesiot_weizen": {
-        "default": "default"
+        "default": "default",
+        "schemes": {}
     },
     "kits-edu": {
         "default": "default",
@@ -7783,15 +7874,12 @@
             "min_spiffs": {
                 "full_name": "Minimal SPIFFS (1.9MB APP with OTA/190KB SPIFFS)",
                 "build": "min_spiffs"
-            },
-            "fatflash": {
-                "full_name": "16M Flash (2MB APP/12.5MB FATFS)",
-                "build": "ffat"
             }
         }
     },
     "OpenKB": {
-        "default": "default"
+        "default": "default",
+        "schemes": {}
     },
     "wifiduino32": {
         "default": "default",
@@ -8340,6 +8428,63 @@
             }
         }
     },
+    "deneyapkartv2": {
+        "default": "default",
+        "schemes": {
+            "default": {
+                "full_name": "Default 4MB with spiffs (1.2MB APP/1.5MB SPIFFS)",
+                "build": "default"
+            },
+            "defaultffat": {
+                "full_name": "Default 4MB with ffat (1.2MB APP/1.5MB FATFS)",
+                "build": "default_ffat"
+            },
+            "minimal": {
+                "full_name": "Minimal (1.3MB APP/700KB SPIFFS)",
+                "build": "minimal"
+            },
+            "no_fs": {
+                "full_name": "No FS 4MB (2MB APP x2)",
+                "build": "no_fs"
+            },
+            "no_ota": {
+                "full_name": "No OTA (2MB APP/2MB SPIFFS)",
+                "build": "no_ota"
+            },
+            "noota_3g": {
+                "full_name": "No OTA (1MB APP/3MB SPIFFS)",
+                "build": "noota_3g"
+            },
+            "noota_ffat": {
+                "full_name": "No OTA (2MB APP/2MB FATFS)",
+                "build": "noota_ffat"
+            },
+            "noota_3gffat": {
+                "full_name": "No OTA (1MB APP/3MB FATFS)",
+                "build": "noota_3gffat"
+            },
+            "huge_app": {
+                "full_name": "Huge APP (3MB No OTA/1MB SPIFFS)",
+                "build": "huge_app"
+            },
+            "min_spiffs": {
+                "full_name": "Minimal SPIFFS (1.9MB APP with OTA/190KB SPIFFS)",
+                "build": "min_spiffs"
+            },
+            "rainmaker": {
+                "full_name": "RainMaker 4MB",
+                "build": "rainmaker"
+            },
+            "rainmaker_4MB": {
+                "full_name": "RainMaker 4MB No OTA",
+                "build": "rainmaker_4MB_no_ota"
+            },
+            "zigbee_zczr": {
+                "full_name": "Zigbee ZCZR 4MB with spiffs",
+                "build": "zigbee_zczr"
+            }
+        }
+    },
     "deneyapkart1A": {
         "default": "default",
         "schemes": {
@@ -8666,10 +8811,12 @@
         }
     },
     "esp32-trueverit-iot-driver": {
-        "default": "default"
+        "default": "default",
+        "schemes": {}
     },
     "esp32-trueverit-iot-driver-mkii": {
-        "default": "default"
+        "default": "default",
+        "schemes": {}
     },
     "atmegazero_esp32s2": {
         "default": "default",
@@ -8937,10 +9084,6 @@
             "min_spiffs": {
                 "full_name": "Minimal SPIFFS (1.9MB APP with OTA/190KB SPIFFS)",
                 "build": "min_spiffs"
-            },
-            "fatflash": {
-                "full_name": "16M Flash (2MB APP/12.5MB FATFS)",
-                "build": "ffat"
             }
         }
     },
@@ -9137,6 +9280,79 @@
             }
         }
     },
+    "XIAO_ESP32C5": {
+        "default": "default_8MB",
+        "schemes": {
+            "default_8MB": {
+                "full_name": "8M with spiffs (3MB APP/1.5MB SPIFFS)",
+                "build": "default_8MB"
+            },
+            "default": {
+                "full_name": "Default 4MB with spiffs (1.2MB APP/1.5MB SPIFFS)",
+                "build": "default"
+            },
+            "defaultffat": {
+                "full_name": "Default 4MB with ffat (1.2MB APP/1.5MB FATFS)",
+                "build": "default_ffat"
+            },
+            "minimal": {
+                "full_name": "Minimal (1.3MB APP/700KB SPIFFS)",
+                "build": "minimal"
+            },
+            "no_ota": {
+                "full_name": "No OTA (2MB APP/2MB SPIFFS)",
+                "build": "no_ota"
+            },
+            "noota_3g": {
+                "full_name": "No OTA (1MB APP/3MB SPIFFS)",
+                "build": "noota_3g"
+            },
+            "noota_ffat": {
+                "full_name": "No OTA (2MB APP/2MB FATFS)",
+                "build": "noota_ffat"
+            },
+            "noota_3gffat": {
+                "full_name": "No OTA (1MB APP/3MB FATFS)",
+                "build": "noota_3gffat"
+            },
+            "huge_app": {
+                "full_name": "Huge APP (3MB No OTA/1MB SPIFFS)",
+                "build": "huge_app"
+            },
+            "min_spiffs": {
+                "full_name": "Minimal SPIFFS (1.9MB APP with OTA/190KB SPIFFS)",
+                "build": "min_spiffs"
+            },
+            "rainmaker": {
+                "full_name": "RainMaker 4MB",
+                "build": "rainmaker"
+            },
+            "rainmaker_4MB": {
+                "full_name": "RainMaker 4MB No OTA",
+                "build": "rainmaker_4MB_no_ota"
+            },
+            "rainmaker_8MB": {
+                "full_name": "RainMaker 8MB",
+                "build": "rainmaker_8MB"
+            },
+            "zigbee": {
+                "full_name": "Zigbee 4MB with spiffs",
+                "build": "zigbee"
+            },
+            "zigbee_8MB": {
+                "full_name": "Zigbee 8MB with spiffs",
+                "build": "zigbee_8MB"
+            },
+            "zigbee_zczr": {
+                "full_name": "Zigbee ZCZR 4MB with spiffs",
+                "build": "zigbee_zczr"
+            },
+            "zigbee_zczr_8MB": {
+                "full_name": "Zigbee ZCZR 8MB with spiffs",
+                "build": "zigbee_zczr_8MB"
+            }
+        }
+    },
     "XIAO_ESP32C6": {
         "default": "default",
         "schemes": {
@@ -9188,6 +9404,14 @@
             "max_app_8MB": {
                 "full_name": "Maximum APP (7.9MB APP No OTA/No FS)",
                 "build": "max_app_8MB"
+            },
+            "tinyuf2": {
+                "full_name": "TinyUF2 8MB (2MB APP/3.7MB FFAT)",
+                "build": "tinyuf2-partitions-8MB"
+            },
+            "tinyuf2_noota": {
+                "full_name": "TinyUF2 8MB No OTA (4MB APP/3.7MB FFAT)",
+                "build": "tinyuf2-partitions-8MB-noota"
             }
         }
     },
@@ -10131,7 +10355,20 @@
     },
     "gen4-ESP32-S3R8n16": {
         "default": "default",
-        "schemes": {}
+        "schemes": {
+            "app5M_fat24M_32MB": {
+                "full_name": "32M Flash (4.8MB APP/22MB FATFS)",
+                "build": "large_fat_32MB"
+            },
+            "app5M_little24M_32MB": {
+                "full_name": "32M Flash (4.8MB APP/22MB LittleFS)",
+                "build": "large_littlefs_32MB"
+            },
+            "app13M_data7M_32MB": {
+                "full_name": "32M Flash (13MB APP/6.75MB SPIFFS)",
+                "build": "default_32MB"
+            }
+        }
     },
     "namino_rosso": {
         "default": "default",
@@ -10267,10 +10504,6 @@
                 "full_name": "Default 4MB with ffat (1.2MB APP/1.5MB FATFS)",
                 "build": "default_ffat"
             },
-            "default_8MB": {
-                "full_name": "8M with spiffs (3MB APP/1.5MB SPIFFS)",
-                "build": "default_8MB"
-            },
             "minimal": {
                 "full_name": "Minimal (1.3MB APP/700KB SPIFFS)",
                 "build": "minimal"
@@ -10298,10 +10531,6 @@
             "min_spiffs": {
                 "full_name": "Minimal SPIFFS (1.9MB APP with OTA/190KB SPIFFS)",
                 "build": "min_spiffs"
-            },
-            "fatflash": {
-                "full_name": "16M Flash (2MB APP/12.5MB FATFS)",
-                "build": "ffat"
             },
             "rainmaker": {
                 "full_name": "RainMaker 4MB",
@@ -10324,10 +10553,6 @@
                 "full_name": "Default 4MB with ffat (1.2MB APP/1.5MB FATFS)",
                 "build": "default_ffat"
             },
-            "default_8MB": {
-                "full_name": "8M with spiffs (3MB APP/1.5MB SPIFFS)",
-                "build": "default_8MB"
-            },
             "minimal": {
                 "full_name": "Minimal (1.3MB APP/700KB SPIFFS)",
                 "build": "minimal"
@@ -10355,10 +10580,6 @@
             "min_spiffs": {
                 "full_name": "Minimal SPIFFS (1.9MB APP with OTA/190KB SPIFFS)",
                 "build": "min_spiffs"
-            },
-            "fatflash": {
-                "full_name": "16M Flash (2MB APP/12.5MB FATFS)",
-                "build": "ffat"
             },
             "rainmaker": {
                 "full_name": "RainMaker 4MB",
@@ -10595,8 +10816,30 @@
             }
         }
     },
+    "sensebox_eye": {
+        "default": "tinyuf2",
+        "schemes": {
+            "default_16MB": {
+                "full_name": "Default (6.25MB APP/3.43MB SPIFFS)",
+                "build": "default_16MB"
+            },
+            "large_spiffs": {
+                "full_name": "Large SPIFFS (4.5MB APP/6.93MB SPIFFS)",
+                "build": "large_spiffs_16MB"
+            },
+            "app3M_fat9M_16MB": {
+                "full_name": "FFAT (3MB APP/9MB FATFS)",
+                "build": "app3M_fat9M_16MB"
+            },
+            "fatflash": {
+                "full_name": "Large FFAT (2MB APP/12.5MB FATFS)",
+                "build": "ffat"
+            }
+        }
+    },
     "nano_nora": {
-        "default": "app3M_fat9M_fact512k_16MB"
+        "default": "app3M_fat9M_fact512k_16MB",
+        "schemes": {}
     },
     "makergo_c3_supermini": {
         "default": "default",
@@ -11088,10 +11331,6 @@
                 "full_name": "Default 4MB with ffat (1.2MB APP/1.5MB FATFS)",
                 "build": "default_ffat"
             },
-            "default_8MB": {
-                "full_name": "8M with spiffs (3MB APP/1.5MB SPIFFS)",
-                "build": "default_8MB"
-            },
             "minimal": {
                 "full_name": "Minimal (1.3MB APP/700KB SPIFFS)",
                 "build": "minimal"
@@ -11306,14 +11545,6 @@
                 "full_name": "Minimal SPIFFS (1.9MB APP with OTA/190KB SPIFFS)",
                 "build": "min_spiffs"
             },
-            "fatflash": {
-                "full_name": "16M Flash (2MB APP/12.5MB FATFS)",
-                "build": "ffat"
-            },
-            "app3M_fat9M_16MB": {
-                "full_name": "16M Flash (3MB APP/9.9MB FATFS)",
-                "build": "app3M_fat9M_16MB"
-            },
             "rainmaker": {
                 "full_name": "RainMaker 4MB",
                 "build": "rainmaker"
@@ -11322,17 +11553,9 @@
                 "full_name": "RainMaker 4MB No OTA",
                 "build": "rainmaker_4MB_no_ota"
             },
-            "rainmaker_8MB": {
-                "full_name": "RainMaker 8MB",
-                "build": "rainmaker_8MB"
-            },
             "zigbee_zczr": {
                 "full_name": "Zigbee ZCZR 4MB with spiffs",
                 "build": "zigbee_zczr"
-            },
-            "zigbee_zczr_8MB": {
-                "full_name": "Zigbee ZCZR 8MB with spiffs",
-                "build": "zigbee_zczr_8MB"
             }
         }
     },
@@ -13239,6 +13462,292 @@
             "fatflash": {
                 "full_name": "Large FFAT (2MB APP/12.5MB FATFS)",
                 "build": "ffat"
+            }
+        }
+    },
+    "fobe_quill_esp32s3_mesh": {
+        "default": "ffat",
+        "schemes": {
+            "tinyuf2": {
+                "full_name": "TinyUF2 4MB (1.3MB APP/960KB FATFS)",
+                "build": "tinyuf2-partitions-4MB"
+            },
+            "tinyuf2_noota": {
+                "full_name": "TinyUF2 4MB No OTA (2.7MB APP/960KB FATFS)",
+                "build": "tinyuf2-partitions-4MB-noota"
+            },
+            "default": {
+                "full_name": "Default 4MB with spiffs (1.2MB APP/1.5MB SPIFFS)",
+                "build": "default"
+            },
+            "defaultffat": {
+                "full_name": "Default 4MB with ffat (1.2MB APP/1.5MB FATFS)",
+                "build": "default_ffat"
+            },
+            "minimal": {
+                "full_name": "Minimal (1.3MB APP/700KB SPIFFS)",
+                "build": "minimal"
+            },
+            "no_ota": {
+                "full_name": "No OTA (2MB APP/2MB SPIFFS)",
+                "build": "no_ota"
+            },
+            "noota_3g": {
+                "full_name": "No OTA (1MB APP/3MB SPIFFS)",
+                "build": "noota_3g"
+            },
+            "noota_ffat": {
+                "full_name": "No OTA (2MB APP/2MB FATFS)",
+                "build": "noota_ffat"
+            },
+            "noota_3gffat": {
+                "full_name": "No OTA (1MB APP/3MB FATFS)",
+                "build": "noota_3gffat"
+            },
+            "huge_app": {
+                "full_name": "Huge APP (3MB No OTA/1MB SPIFFS)",
+                "build": "huge_app"
+            },
+            "min_spiffs": {
+                "full_name": "Minimal SPIFFS (1.9MB APP with OTA/190KB SPIFFS)",
+                "build": "min_spiffs"
+            },
+            "zigbee_zczr": {
+                "full_name": "Zigbee ZCZR 4MB with spiffs",
+                "build": "zigbee_zczr"
+            }
+        }
+    },
+    "twinaiot": {
+        "default": "default",
+        "schemes": {
+            "default": {
+                "full_name": "Default 4MB with spiffs (1.2MB APP/1.5MB SPIFFS)",
+                "build": "default"
+            },
+            "defaultffat": {
+                "full_name": "Default 4MB with ffat (1.2MB APP/1.5MB FATFS)",
+                "build": "default_ffat"
+            },
+            "minimal": {
+                "full_name": "Minimal (1.3MB APP/700KB SPIFFS)",
+                "build": "minimal"
+            },
+            "no_fs": {
+                "full_name": "No FS 4MB (2MB APP x2)",
+                "build": "no_fs"
+            },
+            "no_ota": {
+                "full_name": "No OTA (2MB APP/2MB SPIFFS)",
+                "build": "no_ota"
+            },
+            "noota_3g": {
+                "full_name": "No OTA (1MB APP/3MB SPIFFS)",
+                "build": "noota_3g"
+            },
+            "noota_ffat": {
+                "full_name": "No OTA (2MB APP/2MB FATFS)",
+                "build": "noota_ffat"
+            },
+            "noota_3gffat": {
+                "full_name": "No OTA (1MB APP/3MB FATFS)",
+                "build": "noota_3gffat"
+            },
+            "huge_app": {
+                "full_name": "Huge APP (3MB No OTA/1MB SPIFFS)",
+                "build": "huge_app"
+            },
+            "min_spiffs": {
+                "full_name": "Minimal SPIFFS (1.9MB APP with OTA/190KB SPIFFS)",
+                "build": "min_spiffs"
+            },
+            "rainmaker": {
+                "full_name": "RainMaker 4MB",
+                "build": "rainmaker"
+            },
+            "rainmaker_4MB": {
+                "full_name": "RainMaker 4MB No OTA",
+                "build": "rainmaker_4MB_no_ota"
+            },
+            "zigbee_zczr": {
+                "full_name": "Zigbee ZCZR 4MB with spiffs",
+                "build": "zigbee_zczr"
+            }
+        }
+    },
+    "esp32p4_4ds_mipi": {
+        "default": "app5M_fat24M_32MB",
+        "schemes": {
+            "app5M_fat24M_32MB": {
+                "full_name": "32M Flash (4.8MB APP/22MB FATFS)",
+                "build": "large_fat_32MB"
+            },
+            "app5M_little24M_32MB": {
+                "full_name": "32M Flash (4.8MB APP/22MB LittleFS)",
+                "build": "large_littlefs_32MB"
+            },
+            "app13M_data7M_32MB": {
+                "full_name": "32M Flash (13MB APP/6.75MB SPIFFS)",
+                "build": "default_32MB"
+            }
+        }
+    },
+    "axiometa_pixie_m1": {
+        "default": "default",
+        "schemes": {
+            "default": {
+                "full_name": "Default 4MB with spiffs (1.2MB APP/1.5MB SPIFFS)",
+                "build": "default"
+            },
+            "defaultffat": {
+                "full_name": "Default 4MB with ffat (1.2MB APP/1.5MB FATFS)",
+                "build": "default_ffat"
+            },
+            "minimal": {
+                "full_name": "Minimal (1.3MB APP/700KB SPIFFS)",
+                "build": "minimal"
+            },
+            "no_fs": {
+                "full_name": "No FS 4MB (2MB APP x2)",
+                "build": "no_fs"
+            },
+            "no_ota": {
+                "full_name": "No OTA (2MB APP/2MB SPIFFS)",
+                "build": "no_ota"
+            },
+            "noota_3g": {
+                "full_name": "No OTA (1MB APP/3MB SPIFFS)",
+                "build": "noota_3g"
+            },
+            "noota_ffat": {
+                "full_name": "No OTA (2MB APP/2MB FATFS)",
+                "build": "noota_ffat"
+            },
+            "noota_3gffat": {
+                "full_name": "No OTA (1MB APP/3MB FATFS)",
+                "build": "noota_3gffat"
+            },
+            "huge_app": {
+                "full_name": "Huge APP (3MB No OTA/1MB SPIFFS)",
+                "build": "huge_app"
+            },
+            "min_spiffs": {
+                "full_name": "Minimal SPIFFS (1.9MB APP with OTA/190KB SPIFFS)",
+                "build": "min_spiffs"
+            },
+            "rainmaker": {
+                "full_name": "RainMaker 4MB",
+                "build": "rainmaker"
+            },
+            "rainmaker_4MB": {
+                "full_name": "RainMaker 4MB No OTA",
+                "build": "rainmaker_4MB_no_ota"
+            },
+            "zigbee_zczr": {
+                "full_name": "Zigbee ZCZR 4MB with spiffs",
+                "build": "zigbee_zczr"
+            }
+        }
+    },
+    "soldered_nula_mini_esp32c6": {
+        "default": "default",
+        "schemes": {
+            "default": {
+                "full_name": "Default 4MB with spiffs (1.2MB APP/1.5MB SPIFFS)",
+                "build": "default"
+            },
+            "defaultffat": {
+                "full_name": "Default 4MB with ffat (1.2MB APP/1.5MB FATFS)",
+                "build": "default_ffat"
+            },
+            "minimal": {
+                "full_name": "Minimal (1.3MB APP/700KB SPIFFS)",
+                "build": "minimal"
+            },
+            "no_ota": {
+                "full_name": "No OTA (2MB APP/2MB SPIFFS)",
+                "build": "no_ota"
+            },
+            "noota_3g": {
+                "full_name": "No OTA (1MB APP/3MB SPIFFS)",
+                "build": "noota_3g"
+            },
+            "noota_ffat": {
+                "full_name": "No OTA (2MB APP/2MB FATFS)",
+                "build": "noota_ffat"
+            },
+            "noota_3gffat": {
+                "full_name": "No OTA (1MB APP/3MB FATFS)",
+                "build": "noota_3gffat"
+            },
+            "huge_app": {
+                "full_name": "Huge APP (3MB No OTA/1MB SPIFFS)",
+                "build": "huge_app"
+            },
+            "min_spiffs": {
+                "full_name": "Minimal SPIFFS (1.9MB APP with OTA/190KB SPIFFS)",
+                "build": "min_spiffs"
+            },
+            "rainmaker": {
+                "full_name": "RainMaker 4MB",
+                "build": "rainmaker"
+            },
+            "rainmaker_4MB": {
+                "full_name": "RainMaker 4MB No OTA",
+                "build": "rainmaker_4MB_no_ota"
+            },
+            "zigbee": {
+                "full_name": "Zigbee 4MB with spiffs",
+                "build": "zigbee"
+            },
+            "zigbee_zczr": {
+                "full_name": "Zigbee ZCZR 4MB with spiffs",
+                "build": "zigbee_zczr"
+            }
+        }
+    },
+    "arduino_nesso_n1": {
+        "default": "default",
+        "schemes": {
+            "app3M_fat9M_16MB": {
+                "full_name": "16M Flash (3MB APP/9.9MB FATFS)",
+                "build": "app3M_fat9M_16MB"
+            },
+            "default": {
+                "full_name": "Default 4MB with spiffs (1.2MB APP/1.5MB SPIFFS)",
+                "build": "default"
+            },
+            "defaultffat": {
+                "full_name": "Default 4MB with ffat (1.2MB APP/1.5MB FATFS)",
+                "build": "default_ffat"
+            },
+            "no_ota": {
+                "full_name": "No OTA (2MB APP/2MB SPIFFS)",
+                "build": "no_ota"
+            },
+            "noota_3g": {
+                "full_name": "No OTA (1MB APP/3MB SPIFFS)",
+                "build": "noota_3g"
+            },
+            "noota_ffat": {
+                "full_name": "No OTA (2MB APP/2MB FATFS)",
+                "build": "noota_ffat"
+            },
+            "noota_3gffat": {
+                "full_name": "No OTA (1MB APP/3MB FATFS)",
+                "build": "noota_3gffat"
+            },
+            "huge_app": {
+                "full_name": "Huge APP (3MB No OTA/1MB SPIFFS)",
+                "build": "huge_app"
+            },
+            "zigbee": {
+                "full_name": "Zigbee 4MB with spiffs",
+                "build": "zigbee"
+            },
+            "zigbee_zczr": {
+                "full_name": "Zigbee ZCZR 4MB with spiffs",
+                "build": "zigbee_zczr"
             }
         }
     }

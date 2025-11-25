@@ -1663,56 +1663,5 @@
             "offset": "0x7F0000",
             "size": "0x10000"
         }
-    ],
-    "app3M_fat9M_fact512k_16MB": [
-        {
-            "name": "nvs",
-            "type": "data",
-            "subtype": "nvs",
-            "offset": "0x9000",
-            "size": "0x5000"
-        },
-        {
-            "name": "otadata",
-            "type": "data",
-            "subtype": "ota",
-            "offset": "0xe000",
-            "size": "0x2000"
-        },
-        {
-            "name": "app0",
-            "type": "app",
-            "subtype": "ota_0",
-            "offset": "0x10000",
-            "size": "0x300000"
-        },
-        {
-            "name": "app1",
-            "type": "app",
-            "subtype": "ota_1",
-            "offset": "0x310000",
-            "size": "0x300000"
-        },
-        {
-            "name": "ffat",
-            "type": "data",
-            "subtype": "fat",
-            "offset": "0x610000",
-            "size": "0x960000"
-        },
-        {
-            "name": "factory",
-            "type": "app",
-            "subtype": "factory",
-            "offset": "0xF70000",
-            "size": "0x80000"
-        },
-        {
-            "name": "coredump",
-            "type": "data",
-            "subtype": "coredump",
-            "offset": "0xFF0000",
-            "size": "0x10000"
-        }
     ]
 }
