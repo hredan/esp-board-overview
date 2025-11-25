@@ -42,7 +42,7 @@ export class Esp32PartitionOverviewComponent implements OnInit {
 
   onBoardChange(event: string) {
     // schemes are undefined, use default
-    if (this.partitionsData[event].schemes === undefined) {
+    if (Object.keys(this.partitionsData[event].schemes).length === 0) {
       this.schemes = [this.partitionsData[event].default];
       this.selectedScheme = this.partitionsData[event].default;
     }
