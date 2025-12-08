@@ -32,7 +32,7 @@ jobs:
           pip install -r requirements_test.txt
       - name: Run tests
         run: |
-          pylint -v ./pyScripts
+          pylint --max-line-length=120 ./pyScripts
   pyright:
     runs-on: ubuntu-latest
     steps:

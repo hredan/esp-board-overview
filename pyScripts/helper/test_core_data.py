@@ -4,6 +4,7 @@ from pathlib import Path
 import pytest
 from helper.core_data import CoreData
 from helper.board_data import BoardList
+from helper.partitions_data import PartitionList
 
 
 @pytest.fixture(name="setup", scope="function")
@@ -54,6 +55,11 @@ d1_mini32.name=WEMOS D1 MINI ESP32
 d1_mini32.build.variant=d1_mini32
 d1_mini32.build.mcu=esp32
 d1_mini32.build.flash_size=4MB
+d1_mini32.build.partitions=default
+d1_mini32.menu.PartitionScheme.default=Default
+d1_mini32.menu.PartitionScheme.default.build.partitions=default
+d1_mini32.menu.PartitionScheme.no_ota=No OTA (Large APP)
+d1_mini32.menu.PartitionScheme.no_ota.build.partitions=no_ota
     """
     boards_txt_path = core_path / "boards.txt"
     boards_txt_path.write_text(boards_txt_content)
@@ -66,6 +72,49 @@ d1_mini32.build.flash_size=4MB
 static const uint8_t LED_BUILTIN = 2;
     """
     (variant_path / "pins_arduino.h").write_text(pins_arduino_content)
+    return core_path
+
+@pytest.fixture(name="setup_esp32_scheme_data")
+def fixture_setup_esp32_scheme_data(tmp_path: Path):
+    """Fixture to set up the test environment for CoreData."""
+    # Create a temporary directory structure for the test
+    # This is a mock of the Arduino core path
+    core_path = tmp_path / "packages" / "esp32" / "hardware" / "esp32" / "3.2.0"
+    core_path.mkdir(parents=True)
+    # Create a mock boards.txt file
+    boards_txt_content = """
+d1_mini32.name=WEMOS D1 MINI ESP32
+d1_mini32.build.variant=d1_mini32
+d1_mini32.build.mcu=esp32
+d1_mini32.build.flash_size=4MB
+d1_mini32.build.partitions=default
+    """
+    boards_txt_path = core_path / "boards.txt"
+    boards_txt_path.write_text(boards_txt_content)
+
+    # Create a mock variant directory
+    variant_path = core_path / "variants" / "d1_mini32"
+    variant_path.mkdir(parents=True)
+    # Create a mock pins_arduino.h file
+    pins_arduino_content = """
+static const uint8_t LED_BUILTIN = 2;
+    """
+    (variant_path / "pins_arduino.h").write_text(pins_arduino_content)
+    return core_path
+
+@pytest.fixture(name="setup_esp32_scheme_data_with_csv")
+def fixture_setup_esp32_scheme_data_with_csv(setup_esp32_scheme_data: pytest.Function):
+    """
+        Fixture to setup the test environment for esp32 with
+        only default scheme and partition csv.
+    """
+    core_path: Path = Path(str(setup_esp32_scheme_data))
+    # Create a mock partitions directory
+    partitions_path = core_path / "tools" / "partitions"
+    partitions_path.mkdir(parents=True)
+    # Create a mock default.csv file
+    default_csv_content = ""
+    (partitions_path / "default.csv").write_text(default_csv_content)
     return core_path
 
 @pytest.fixture(name="setup_esp32_without_variant_flash_size")
@@ -120,7 +169,7 @@ def fixture_setup_missing_board_txt(tmp_path: Path):
     core_path.mkdir(parents=True)
     return core_path
 
-class TestCoreData:
+class TestBoardData:
     """Test cases for the CoreData class."""
 
     def test_core_data_initialization(self, setup: pytest.Function):
@@ -251,3 +300,85 @@ class TestCoreData:
         assert isinstance(data, list)
         assert len(data) == 1
         assert data[0] == expected_data
+
+class TestPartitionData:
+    """Test cases for the CoreData partition data extraction."""
+    def test_export_partitions_esp32(self, setup_esp32: pytest.Function, tmpdir: Path):
+        """Test the export_json method of CoreData."""
+        file = tmpdir / "esp32.json"
+        core_data = CoreData("esp32", "3.2.0", str(setup_esp32))
+        # clear the output buffer
+        core_data.partitions_export_json(filename=str(file))
+        # Check if the output contains the expected values
+        expected_data = {
+            "d1_mini32": {
+                'default': 'default',
+                'schemes': {
+                    "default": {
+                            "full_name": "Default",
+                            "build": "default"
+                        },
+                        "no_ota": {
+                            "full_name": "No OTA (Large APP)",
+                            "build": "no_ota"
+                        }
+                }
+            }
+        }
+
+        with open(str(file), 'r', encoding='utf8') as file:
+            data: PartitionList = json.loads(file.read())
+        assert isinstance(data, dict)
+        assert data == expected_data
+
+    def test_export_partitions_esp32_no_scheme_data(self,
+                                                    setup_esp32_scheme_data_with_csv: pytest.Function,
+                                                    tmpdir: Path,
+                                                    ):
+        """Test the export_json method of CoreData."""
+        file = tmpdir / "esp32.json"
+        core_data = CoreData("esp32", "3.2.0", str(setup_esp32_scheme_data_with_csv))
+        # clear the output buffer
+        core_data.partitions_export_json(filename=str(file))
+        # Check if the output contains the expected values
+
+        expected_data: dict[str, dict[str, str | dict[str, dict[str, str]]]] = {
+            "d1_mini32": {
+                'default': 'default',
+                'schemes': {}
+            }
+        }
+
+        with open(str(file), 'r', encoding='utf8') as file:
+            data: PartitionList = json.loads(file.read())
+        assert isinstance(data, dict)
+        assert data == expected_data
+
+    def test_export_partitions_esp32_no_(self,
+                                         setup_esp32_scheme_data: pytest.Function,
+                                         tmpdir: Path,
+                                         caplog: pytest.LogCaptureFixture):
+        """Test the export_json method of CoreData."""
+        file = tmpdir / "esp32.json"
+        core_data = CoreData("esp32", "3.2.0", str(setup_esp32_scheme_data))
+        # clear the output buffer
+        core_data.partitions_export_json(filename=str(file))
+        # Check if the output contains the expected values
+
+        expected_data = {}
+
+        with open(str(file), 'r', encoding='utf8') as file:
+            data: PartitionList = json.loads(file.read())
+        assert isinstance(data, dict)
+        assert data == expected_data
+
+        #check log output
+        log_records = caplog.get_records("call")
+        assert len(log_records) == 2
+        assert log_records[0].levelname == "ERROR"
+        assert log_records[0].name == "helper.core_data.partition"
+        assert "Default partition 'default' for 'd1_mini32' does not exist" in \
+            log_records[0].message
+
+        assert log_records[1].levelname == "ERROR"
+        assert "Removing 1 boards without partition: d1_mini32" in log_records[1].message

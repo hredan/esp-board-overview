@@ -9,9 +9,11 @@ Copyright (c) 2025 hredan"""
 import re
 import logging
 import os
+import sys
 
 from helper.partitions_data import Scheme, PartitionList, PartitionData
 from helper.board_data import BoardData, BoardList
+
 
 LOG_FILE = "./esp_data/core_data.log"
 # if os.path.exists(LOG_FILE):
@@ -19,8 +21,13 @@ LOG_FILE = "./esp_data/core_data.log"
 
 log_board = logging.getLogger(__name__ + ".board")
 log_board.setLevel(logging.ERROR)
+
 log_partition = logging.getLogger(__name__ + ".partition")
-#log_partition.setLevel(logging.ERROR)
+#enable stdout logging for debugging
+if os.environ.get('LOG_STDOUT') == '1':
+    log_partition.addHandler(logging.StreamHandler(sys.stdout))
+    log_board.addHandler(logging.StreamHandler(sys.stdout))
+
 logging.basicConfig(filename=LOG_FILE, filemode='w', level=logging.INFO)
 
 
@@ -158,7 +165,8 @@ class CoreData:
             # add last board
             if board_data.name:
                 self.boards.append(board_data)
-        self.__check_partitions(self.partitions)
+        if self.core_name == "esp32":
+            self.__check_partitions(self.partitions)
 
 
     def __partition_scheme_exists(self, name: str) -> bool:
@@ -187,17 +195,17 @@ class CoreData:
                 else:
                     default_partition = partitions[board_name].default
                     if not self.__partition_scheme_exists(default_partition):
-                        log_partition.error("Default partition %s for %s does not exist",
+                        log_partition.error("Default partition '%s' for '%s' does not exist",
                                             default_partition, board_name)
                         boards_without_partition.append(board_name)
                     else:
-                        log_partition.warning("Only default partition %s for %s exists",
+                        log_partition.warning("Only default partition '%s' for '%s' exists",
                                            default_partition, board_name)
             else:
                 scheme_without_build: list[str] = []
                 for scheme_name in partitions[board_name].schemes.keys():
                     if partitions[board_name].schemes[scheme_name].build == "":
-                        log_partition.warning("No build name found for %s in scheme %s",
+                        log_partition.warning("No build name found for '%s' in scheme '%s'",
                                             board_name, scheme_name)
                         scheme_without_build.append(scheme_name)
                 if scheme_without_build:
@@ -212,7 +220,7 @@ class CoreData:
         """ find gpio for built-in led from pins_arduino.h files """
         for board in self.boards:
             found_led_entry = False
-            if board.variant:
+            if board.variant != "N/A":
                 file_path = f"{self.core_path}/variants/{board.variant}/pins_arduino.h"
                 if not os.path.isfile(file_path):
                     log_board.error("Could not find pins_arduino.h for %s variant: %s",
