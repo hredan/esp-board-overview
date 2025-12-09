@@ -4,17 +4,14 @@
     "jestrunner.projectPath": "./web-app",
     // "jestrunner.changeDirectoryToWorkspaceRoot": true,
     "python.testing.pytestArgs": [
+        //"-vv",
         "--ignore=./createTable.py",
         "./pyScripts/helper"
-    ],
-    "python.testing.unittestArgs": [
-        "-v",
-        "-s",
-        "./pyScripts/helper",
-        "-p",
-        "test_*.py"
     ],
     "python.testing.pytestEnabled": true,
     "python.testing.unittestEnabled": false,
     "python.defaultInterpreterPath": "/workspaces/esp-board-overview/.venv/bin/python3",
+    "pylint.interpreter": ["/workspaces/esp-board-overview/.venv/bin/python3"],
+    "pylint.path": ["${workspaceFolder}/.venv/bin/pylint"],
+    "pylint.args": ["--max-line-length=120"]
 }

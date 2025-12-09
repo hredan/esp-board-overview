@@ -7,50 +7,45 @@ const data_lolin: BoardInfo = {
   name: 'LOLIN(WeMos) D1 R1',
   board: 'd1',
   variant: 'd1',
-  LED_BUILTIN: '2',
+  led_builtin: '2',
   mcu: 'esp8266a',
-  flash_size: '[4MB]',
-  linkPins: "https://fake-link.com/blynk-board-pins"
+  flash_size: ['4MB']
 };
 
 const data_blynk: BoardInfo = {
   name: 'SparkFun Blynk Board',
   board: 'blynk',
   variant: 'thing',
-  LED_BUILTIN: '5',
+  led_builtin: '5',
   mcu: 'esp8266b',
-  flash_size: '[8MB]',
-  linkPins: "https://fake-link.com/blynk-board-pins"
+  flash_size: ['8MB']
 };
 
 const data_wifiduino: BoardInfo = {
   name: 'WiFiduino',
   board: 'wifiduino',
   variant: 'wifiduino',
-  LED_BUILTIN: 'N/A',
+  led_builtin: 'N/A',
   mcu: 'esp8266',
-  flash_size: '[4MB]',
-  linkPins: "https://fake-link.com/blynk-board-pins"
+  flash_size: ['4MB']
 };
 
 const data_generic: BoardInfo = {
   name: 'Generic ESP8266 Module',
   board: 'generic',
   variant: 'generic',
-  LED_BUILTIN: '1',
+  led_builtin: '1',
   mcu: 'esp8266',
-  flash_size: '[512KB;1MB;2MB;4MB;8MB;16MB]',
-  linkPins: "https://fake-link.com/blynk-board-pins"
+  flash_size: ['512KB','1MB','2MB','4MB','8MB','16MB'],
 };
 
 const data_lolin_na: BoardInfo = {
   name: 'LOLIN(WeMos) D1 R1',
   board: 'd1',
   variant: 'N/A',
-  LED_BUILTIN: 'N/A',
+  led_builtin: 'N/A',
   mcu: 'N/A',
-  flash_size: '[N/A]',
-  linkPins: "https://fake-link.com/blynk-board-pins"
+  flash_size: [],
 };
 
 describe('BoardOverviewComponent', () => {
@@ -153,8 +148,8 @@ describe('BoardOverviewComponent', () => {
     const sort: Sort = { active: 'led', direction: 'asc' };
     component.sortData(sort);
     const data: BoardInfo[] = component.sortedData.data.slice();
-    expect(data[0].LED_BUILTIN).toBe('2');
-    expect(data[1].LED_BUILTIN).toBe('5');
+    expect(data[0].led_builtin).toBe('2');
+    expect(data[1].led_builtin).toBe('5');
   }
   );
 
@@ -163,8 +158,8 @@ describe('BoardOverviewComponent', () => {
     const sort: Sort = { active: 'led', direction: 'asc' };
     component.sortData(sort);
     const data: BoardInfo[] = component.sortedData.data.slice();
-    expect(data[0].LED_BUILTIN).toBe('5');
-    expect(data[1].LED_BUILTIN).toBe('N/A');
+    expect(data[0].led_builtin).toBe('5');
+    expect(data[1].led_builtin).toBe('N/A');
   }
   );
 
@@ -173,9 +168,9 @@ describe('BoardOverviewComponent', () => {
     const sort: Sort = { active: 'led', direction: 'desc' };
     component.sortData(sort);
     const data: BoardInfo[] = component.sortedData.data.slice();
-    expect(data[0].LED_BUILTIN).toBe('N/A');
-    expect(data[1].LED_BUILTIN).toBe('N/A');
-    expect(data[2].LED_BUILTIN).toBe('2');
+    expect(data[0].led_builtin).toBe('N/A');
+    expect(data[1].led_builtin).toBe('N/A');
+    expect(data[2].led_builtin).toBe('2');
   }
   );
 
@@ -183,8 +178,8 @@ describe('BoardOverviewComponent', () => {
     const sort: Sort = { active: 'led', direction: 'desc' };
     component.sortData(sort);
     const data: BoardInfo[] = component.sortedData.data.slice();
-    expect(data[0].LED_BUILTIN).toBe('5');
-    expect(data[1].LED_BUILTIN).toBe('2');
+    expect(data[0].led_builtin).toBe('5');
+    expect(data[1].led_builtin).toBe('2');
   }
   );
 
@@ -194,9 +189,9 @@ describe('BoardOverviewComponent', () => {
     component.sortData(sort);
     const data: BoardInfo[] = component.sortedData.data.slice();
     expect(data.length).toBe(3);
-    expect(data[0].flash_size).toBe('[512KB;1MB;2MB;4MB;8MB;16MB]');
-    expect(data[1].flash_size).toBe('[4MB]');
-    expect(data[2].flash_size).toBe('[8MB]');
+    expect(data[0].flash_size).toEqual(['512KB','1MB','2MB','4MB','8MB','16MB']);
+    expect(data[1].flash_size).toEqual(['4MB']);
+    expect(data[2].flash_size).toEqual(['8MB']);
   }
   );
 
@@ -206,8 +201,8 @@ describe('BoardOverviewComponent', () => {
     component.sortData(sort);
     const data: BoardInfo[] = component.sortedData.data.slice();
     expect(data.length).toBe(2);
-    expect(data[0].flash_size).toBe('[N/A]');
-    expect(data[1].flash_size).toBe('[4MB]');
+    expect(data[0].flash_size).toEqual([]);
+    expect(data[1].flash_size).toEqual(['4MB']);
   }
   );
 
@@ -217,9 +212,9 @@ describe('BoardOverviewComponent', () => {
     component.sortData(sort);
     const data: BoardInfo[] = component.sortedData.data.slice();
     expect(data.length).toBe(3);
-    expect(data[0].flash_size).toBe('[512KB;1MB;2MB;4MB;8MB;16MB]');
-    expect(data[1].flash_size).toBe('[8MB]');
-    expect(data[2].flash_size).toBe('[4MB]');
+    expect(data[0].flash_size).toEqual(['512KB','1MB','2MB','4MB','8MB','16MB']);
+    expect(data[1].flash_size).toEqual(['8MB']);
+    expect(data[2].flash_size).toEqual(['4MB']);
   }
   );
 

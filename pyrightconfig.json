@@ -1,0 +1,8 @@
+{
+  "include": [
+    "./pyScripts"
+  ],
+  "strict": [
+    "./pyScripts"
+  ]
+}

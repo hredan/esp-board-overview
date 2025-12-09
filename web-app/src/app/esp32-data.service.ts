@@ -24,7 +24,7 @@ type BoardPartitionScheme = Record<string, BoardSchemeInfo>;
 
 interface BoardPartitions {
   default: string;
-  schemes?: BoardPartitionScheme | undefined;
+  schemes: BoardPartitionScheme;
 }
 
 type BoardPartitionsInfo = Record<string, BoardPartitions>;

@@ -13,18 +13,18 @@ import json
 
 from helper.core_data import CoreData
 
-def get_installed_core_info(core_list_path_):
+def get_installed_core_info(core_list_path_: str) -> list[dict[str, str]]:
     """
     Get the installed core information from the core_list.txt file.
     :param core_list_path_: Path to the core_list.txt file.
     :return: List of dictionaries containing core information."""
-    core_list = []
+    core_list: list[dict[str, str]] = []
     if os.path.exists(core_list_path_):
         with open(core_list_path_, 'r', encoding='utf8') as file:
             lines = file.readlines()
             if len(lines) > 1:
                 for index, line in enumerate(lines):
-                    core_info_ = {}
+                    core_info_ :dict[str, str] = {}
                     if index > 0 and line.strip() != "":
                         pattern = r"^([a-z\d]+:[a-z\d]+) +([\.\d]+) +([\.\d]+) +([a-z\d]+)"
                         matches = re.match(pattern, line.rstrip())
@@ -42,7 +42,7 @@ def get_installed_core_info(core_list_path_):
     return core_list
 
 if __name__ == "__main__":
-    ESP_DATA_PATH = "./esp_data"
+    ESP_DATA_PATH = os.path.join(os.path.dirname(__file__), "../esp_data")
     # core_list.txt is created by Scripts/install_esp_cores.sh
     core_list_path = os.path.join(ESP_DATA_PATH, "core_list.txt")
     core_info_list = get_installed_core_info(core_list_path)
@@ -53,13 +53,12 @@ if __name__ == "__main__":
     for core_info in core_info_list:
         core_name = core_info["core_name"]
         core_version = core_info["installed_version"]
-        CORE_DATA_PATH = "/home/vscode/.arduino15/packages/" + \
+        core_data_path = "/home/vscode/.arduino15/packages/" + \
             f"{core_name}/hardware/{core_name}/{core_version}"
-        cd = CoreData(core_name, core_version, CORE_DATA_PATH)
+        core_data = CoreData(core_name, core_version, core_data_path)
         print(f"core: {core_name}")
-        print(f"number of boards: {len(cd.boards)}")
-        print(f"number of boards without led: {cd.num_of_boards_without_led}")
+        print(f"number of boards: {len(core_data.boards)}")
+        print(f"number of boards without led: {core_data.num_of_boards_without_led}")
         csv_path = os.path.join(ESP_DATA_PATH, core_name + ".csv")
         json_path = os.path.join(ESP_DATA_PATH, core_name + ".json")
-        cd.boards_export_csv(filename=csv_path, ignore_missing_led=False)
-        cd.boards_export_json(filename=json_path)
+        core_data.boards_export_json(filename=json_path)

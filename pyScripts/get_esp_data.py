@@ -13,7 +13,7 @@ import json
 import zipfile
 
 
-def cleanup_directory(directory_path):
+def cleanup_directory(directory_path: str):
     """
     Remove the directory if it exists and create a new one.
     :param directory_path: Path to the directory to be removed and created.
@@ -28,7 +28,7 @@ def cleanup_directory(directory_path):
     else:
         os.mkdir(directory_path)
 
-def download_file(url, save_path):
+def download_file(url: str, save_path: str):
     """
     Download a file from a URL and save it to a specified path.
     :param url: URL of the file to download.
@@ -37,7 +37,7 @@ def download_file(url, save_path):
     urllib.request.urlretrieve(url, save_path)
     print(f"Downloaded {url} to {save_path}")
 
-def read_json_file(file_path):
+def read_json_file(file_path: str):
     """
     Read a JSON file and return its content.
     :param file_path: Path to the JSON file.
@@ -46,7 +46,7 @@ def read_json_file(file_path):
     with open(file_path, 'r', encoding='utf-8') as f:
         return json.load(f)
 
-def get_file_name_from_url(url):
+def get_file_name_from_url(url: str):
     """
     Extract the archive name from a URL.
     :param url: URL of the archive.
@@ -54,7 +54,7 @@ def get_file_name_from_url(url):
     """
     return url.rsplit('/', 1)[-1]
 
-def extract_zip_file(zip_path, extract_to):
+def extract_zip_file(zip_path: str, extract_to: str):
     """
     Extract a ZIP file to a specified directory.
     :param zip_path: Path to the ZIP file.
@@ -64,7 +64,7 @@ def extract_zip_file(zip_path, extract_to):
         zip_ref.extractall(extract_to)
         print(f"Extracted {zip_path} to {extract_to}")
 
-def get_esp_data(directory_path, url):
+def get_esp_data(directory_path: str, url: str):
     """
     Main function to get ESP data.
     :param directory_path: Path to the directory where ESP data will be stored.
