@@ -229,12 +229,10 @@ class CoreData:
                 else:
                     with open(file_path, 'r', encoding='utf8') as infile:
                         for line in infile:
-                            if self.core_name == "esp8266":
-                                match_built_in_led = re.match(r"^.+ LED_BUILTIN +\(?(\d+)\)?", line)
-                                # #define LED_BUILTIN    (13)
-                                # #define LED_BUILTIN    13
-                            else:
-                                match_built_in_led = re.match(r"^.+ LED_BUILTIN = (\d+)", line)
+                            match_built_in_led = re.match(r"^.+ LED_BUILTIN[\(\= ]+(\d+)\)?", line)
+                            # #define LED_BUILTIN    (13)
+                            # #define LED_BUILTIN    13
+                            # static const uint8_t BUILTIN_LED = 2;
 
                             if match_built_in_led:
                                 builtin_led_gpio = match_built_in_led.group(1)
