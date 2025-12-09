@@ -364,7 +364,7 @@
         "flash_size": [
             "4MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "2",
         "board": "wifiduino"
     },
     {

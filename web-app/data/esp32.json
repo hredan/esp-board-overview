@@ -306,7 +306,7 @@
         "flash_size": [
             "4MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "13",
         "board": "adafruit_feather_esp32s2"
     },
     {
@@ -316,7 +316,7 @@
         "flash_size": [
             "4MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "13",
         "board": "adafruit_feather_esp32s2_reversetft"
     },
     {
@@ -326,7 +326,7 @@
         "flash_size": [
             "4MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "13",
         "board": "adafruit_feather_esp32s2_tft"
     },
     {
@@ -336,7 +336,7 @@
         "flash_size": [
             "4MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "13",
         "board": "adafruit_feather_esp32s3"
     },
     {
@@ -346,7 +346,7 @@
         "flash_size": [
             "8MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "13",
         "board": "adafruit_feather_esp32s3_nopsram"
     },
     {
@@ -356,7 +356,7 @@
         "flash_size": [
             "4MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "13",
         "board": "adafruit_feather_esp32s3_reversetft"
     },
     {
@@ -366,7 +366,7 @@
         "flash_size": [
             "4MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "13",
         "board": "adafruit_feather_esp32s3_tft"
     },
     {
@@ -376,7 +376,7 @@
         "flash_size": [
             "4MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "37",
         "board": "adafruit_funhouse_esp32s2"
     },
     {
@@ -396,7 +396,7 @@
         "flash_size": [
             "4MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "13",
         "board": "adafruit_magtag29_esp32s2"
     },
     {
@@ -406,7 +406,7 @@
         "flash_size": [
             "8MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "13",
         "board": "adafruit_matrixportal_esp32s3"
     },
     {
@@ -416,7 +416,7 @@
         "flash_size": [
             "4MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "42",
         "board": "adafruit_metro_esp32s2"
     },
     {
@@ -426,7 +426,7 @@
         "flash_size": [
             "16MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "13",
         "board": "adafruit_metro_esp32s3"
     },
     {
@@ -496,7 +496,7 @@
         "flash_size": [
             "8MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "45",
         "board": "alfredo-nou3"
     },
     {
@@ -646,7 +646,7 @@
         "flash_size": [
             "16MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "46",
         "board": "circuitart_zero_s3"
     },
     {
@@ -836,7 +836,7 @@
         "flash_size": [
             "4MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "13",
         "board": "department_of_alchemy_minimain_esp32s2"
     },
     {
@@ -896,7 +896,7 @@
         "flash_size": [
             "4MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "21",
         "board": "dfrobot_lorawan_esp32s3"
     },
     {
@@ -1294,7 +1294,7 @@
         "flash_size": [
             "8MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "46",
         "board": "esp32s3_powerfeather"
     },
     {
@@ -1464,7 +1464,7 @@
         "flash_size": [
             "4MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "11",
         "board": "fobe_quill_esp32s3_mesh"
     },
     {
@@ -2992,7 +2992,7 @@
         "flash_size": [
             "16MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "13",
         "board": "um_feathers3"
     },
     {
@@ -3002,7 +3002,7 @@
         "flash_size": [
             "8MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "13",
         "board": "um_feathers3neo"
     },
     {
@@ -3102,7 +3102,7 @@
         "flash_size": [
             "8MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "13",
         "board": "unphone8"
     },
     {
@@ -3112,7 +3112,7 @@
         "flash_size": [
             "8MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "13",
         "board": "unphone9"
     },
     {
