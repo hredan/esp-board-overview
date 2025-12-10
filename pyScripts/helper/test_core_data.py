@@ -42,9 +42,9 @@ d1_mini.menu.eesz.4M.build.flash_size=4M
     (variant_path / "pins_arduino.h").write_text(pins_arduino_content)
     return core_path
 
-@pytest.fixture(name="setup_esp32")
-def fixture_setup_esp32(tmp_path: Path):
-    """Fixture to set up the test environment for CoreData."""
+@pytest.fixture(name="setup_esp32_base", scope="function")
+def fixture_setup_esp32_base(tmp_path: Path):
+    """Fixture to set up the test environment for esp32 CoreData."""
     # Create a temporary directory structure for the test
     # This is a mock of the Arduino core path
     core_path = tmp_path / "packages" / "esp32" / "hardware" / "esp32" / "3.2.0"
@@ -63,13 +63,35 @@ d1_mini32.menu.PartitionScheme.no_ota.build.partitions=no_ota
     """
     boards_txt_path = core_path / "boards.txt"
     boards_txt_path.write_text(boards_txt_content)
+    return core_path
 
+@pytest.fixture(name="setup_esp32")
+def fixture_setup_esp32(setup_esp32_base: pytest.Function):
+    """Fixture to set up the test environment for CoreData."""
+    core_path: Path = Path(str(setup_esp32_base))
     # Create a mock variant directory
     variant_path = core_path / "variants" / "d1_mini32"
     variant_path.mkdir(parents=True)
     # Create a mock pins_arduino.h file
     pins_arduino_content = """
 static const uint8_t LED_BUILTIN = 2;
+    """
+    (variant_path / "pins_arduino.h").write_text(pins_arduino_content)
+    return core_path
+
+@pytest.fixture(name="setup_esp32_led_builtin_pin_count")
+def fixture_setup_esp32_led_builtin_pin_count(setup_esp32_base: pytest.Function):
+    """Fixture to set up the test environment for CoreData."""
+    core_path: Path = Path(str(setup_esp32_base))
+    # Create a mock variant directory
+    variant_path = core_path / "variants" / "d1_mini32"
+    variant_path.mkdir(parents=True)
+    # Create a mock pins_arduino.h file
+    pins_arduino_content = """
+static const uint8_t RGB_DATA = 40;
+static const uint8_t RGB_PWR = 34;
+#define PIN_RGB_LED RGB_DATA
+static const uint8_t LED_BUILTIN = SOC_GPIO_PIN_COUNT + PIN_RGB_LED;
     """
     (variant_path / "pins_arduino.h").write_text(pins_arduino_content)
     return core_path
@@ -273,6 +295,21 @@ class TestBoardData:
         assert board_data.name == "WEMOS D1 MINI ESP32"
         assert board_data.variant == "d1_mini32"
         assert board_data.flash_size == ["4MB"]
+
+    def test_get_data_esp32_led_builtin(self, setup_esp32: pytest.Function):
+        """Test the __get_data method of CoreData from esp32 test set."""
+        core_data = CoreData("esp32", "3.2.0", str(setup_esp32))
+        board_data = core_data.boards.get_board_by_id("d1_mini32")
+        assert board_data is not None
+        assert board_data.led_builtin == "2"
+
+    def test_get_data_esp32_led_builtin_pin_count(self,
+                                                  setup_esp32_led_builtin_pin_count: pytest.Function):
+        """Test the __get_data method of CoreData from esp32 test set."""
+        core_data = CoreData("esp32", "3.2.0", str(setup_esp32_led_builtin_pin_count))
+        board_data = core_data.boards.get_board_by_id("d1_mini32")
+        assert board_data is not None
+        assert board_data.led_builtin == "80"
 
     def test_find_led_builtin(self, setup_esp8266: pytest.Function):
         """Test the __find_led_builtin method of CoreData."""

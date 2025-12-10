@@ -14,7 +14,7 @@ import sys
 from helper.partitions_data import Scheme, PartitionList, PartitionData
 from helper.board_data import BoardData, BoardList
 
-
+SOC_GPIO_PIN_COUNT = 40
 LOG_FILE = "./esp_data/core_data.log"
 # if os.path.exists(LOG_FILE):
 #     os.remove(LOG_FILE)
@@ -30,6 +30,13 @@ if os.environ.get('LOG_STDOUT') == '1':
 
 logging.basicConfig(filename=LOG_FILE, filemode='w', level=logging.INFO)
 
+def is_number(s: str) -> bool:
+    """ Check if string is a number """
+    try:
+        int(s)
+        return True
+    except ValueError:
+        return False
 
 class CoreData:
     """
@@ -227,8 +234,34 @@ class CoreData:
                                    board.name, board.variant)
                     board.led_builtin="N/A"
                 else:
+                    defines: dict[str, str] = {}
+                    var_definitions: dict[str, str] = {}
                     with open(file_path, 'r', encoding='utf8') as infile:
                         for line in infile:
+                            if self.core_name == "esp32":
+                                match_define = re.match(r"#define +([A-Z_]+) +([A-Z_]+)", line)
+                                if match_define:
+                                    var_name = match_define.group(1)
+                                    var_value = match_define.group(2)
+                                    defines[var_name] = var_value
+                                match_var_definition = re.match(r"static +const +uint8_t +([A-Z_]+) += +(\d+);", line)
+                                if match_var_definition:
+                                    var_name = match_var_definition.group(1)
+                                    var_value = match_var_definition.group(2)
+                                    var_definitions[var_name] = var_value
+
+                                match_pin_count = re.match(r"^.+LED_BUILTIN += +SOC_GPIO_PIN_COUNT +\+ +([A-Z_]+);", line)
+                                if match_pin_count:
+                                    rgb_name = match_pin_count.group(1)
+                                    if rgb_name in defines:
+                                        rgb_value = defines[rgb_name]
+                                        if rgb_value in var_definitions:
+                                            builtin_led_gpio = int(var_definitions[rgb_value]) + SOC_GPIO_PIN_COUNT
+                                            board.led_builtin=str(builtin_led_gpio)
+                                            found_led_entry = True
+                                            break
+                                    found_led_entry = True
+                                    continue
                             match_built_in_led = re.match(r"^.+ LED_BUILTIN[\(\= ]+(\d+)\)?", line)
                             # #define LED_BUILTIN    (13)
                             # #define LED_BUILTIN    13
