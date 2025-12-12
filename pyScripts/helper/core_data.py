@@ -49,6 +49,8 @@ class CoreData:
         self.core_version = core_version
         self.num_of_boards_without_led = 0
         self.core_path = core_path
+        self.defines: dict[str, str] = {}
+        self.var_definitions: dict[str, str] = {}
         if not os.path.exists(self.core_path):
             raise ValueError(f"Error: could not found {self.core_path}")
 
@@ -223,6 +225,22 @@ class CoreData:
         for board_name in boards_without_partition:
             del partitions[board_name]
 
+    def __find_defines(self, line: str):
+        """ find #define entries from pins_arduino.h files """
+        match_define = re.match(r"#define +([A-Z_]+) +([A-Z_]+)", line)
+        if match_define:
+            var_name = match_define.group(1)
+            var_value = match_define.group(2)
+            self.defines[var_name] = var_value
+
+    def __find_var_definitions(self, line: str):
+        """ find static const uint8_t entries from pins_arduino.h files """
+        match_var_definition = re.match(r"static +const +uint8_t +([A-Z_]+) += +(\d+);", line)
+        if match_var_definition:
+            var_name = match_var_definition.group(1)
+            var_value = match_var_definition.group(2)
+            self.var_definitions[var_name] = var_value
+
     def __find_led_builtin(self):
         """ find gpio for built-in led from pins_arduino.h files """
         for board in self.boards:
@@ -234,34 +252,27 @@ class CoreData:
                                    board.name, board.variant)
                     board.led_builtin="N/A"
                 else:
-                    defines: dict[str, str] = {}
-                    var_definitions: dict[str, str] = {}
+                    self.defines = {}
+                    self.var_definitions = {}
                     with open(file_path, 'r', encoding='utf8') as infile:
                         for line in infile:
                             if self.core_name == "esp32":
-                                match_define = re.match(r"#define +([A-Z_]+) +([A-Z_]+)", line)
-                                if match_define:
-                                    var_name = match_define.group(1)
-                                    var_value = match_define.group(2)
-                                    defines[var_name] = var_value
-                                match_var_definition = re.match(r"static +const +uint8_t +([A-Z_]+) += +(\d+);", line)
-                                if match_var_definition:
-                                    var_name = match_var_definition.group(1)
-                                    var_value = match_var_definition.group(2)
-                                    var_definitions[var_name] = var_value
+                                self.__find_defines(line)
+                                self.__find_var_definitions(line)
 
-                                match_pin_count = re.match(r"^.+LED_BUILTIN += +SOC_GPIO_PIN_COUNT +\+ +([A-Z_]+);", line)
+                                match_pin_count = re.match(
+                                    r"^.+LED_BUILTIN += +SOC_GPIO_PIN_COUNT +\+ +([A-Z_]+);",
+                                    line
+                                    )
                                 if match_pin_count:
                                     rgb_name = match_pin_count.group(1)
-                                    if rgb_name in defines:
-                                        rgb_value = defines[rgb_name]
-                                        if rgb_value in var_definitions:
-                                            builtin_led_gpio = int(var_definitions[rgb_value]) + SOC_GPIO_PIN_COUNT
+                                    if rgb_name in self.defines:
+                                        rgb_value = self.defines[rgb_name]
+                                        if rgb_value in self.var_definitions:
+                                            builtin_led_gpio = int(self.var_definitions[rgb_value]) + SOC_GPIO_PIN_COUNT
                                             board.led_builtin=str(builtin_led_gpio)
                                             found_led_entry = True
                                             break
-                                    found_led_entry = True
-                                    continue
                             match_built_in_led = re.match(r"^.+ LED_BUILTIN[\(\= ]+(\d+)\)?", line)
                             # #define LED_BUILTIN    (13)
                             # #define LED_BUILTIN    13
@@ -271,6 +282,7 @@ class CoreData:
                                 builtin_led_gpio = match_built_in_led.group(1)
                                 board.led_builtin=builtin_led_gpio
                                 found_led_entry = True
+                                break
             else:
                 board.led_builtin="N/A"
             if not found_led_entry:

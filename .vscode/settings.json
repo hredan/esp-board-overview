@@ -6,7 +6,7 @@
     "python.testing.pytestArgs": [
         //"-vv",
         "--ignore=./createTable.py",
-        "./pyScripts/helper"
+        "./pyScripts/tests"
     ],
     "python.testing.pytestEnabled": true,
     "python.testing.unittestEnabled": false,

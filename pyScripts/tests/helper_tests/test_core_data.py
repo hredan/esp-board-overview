@@ -2,6 +2,7 @@
 import json
 from pathlib import Path
 import pytest
+
 from helper.core_data import CoreData
 from helper.board_data import BoardList
 from helper.partitions_data import PartitionList
