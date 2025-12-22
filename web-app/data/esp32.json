@@ -16,7 +16,7 @@
         "flash_size": [
             "8MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "80",
         "board": "Bee_Data_Logger"
     },
     {
@@ -46,7 +46,7 @@
         "flash_size": [
             "8MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "80",
         "board": "Bee_Motion_S3"
     },
     {
@@ -56,7 +56,7 @@
         "flash_size": [
             "8MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "88",
         "board": "Bee_S3"
     },
     {
@@ -1434,7 +1434,7 @@
         "flash_size": [
             "16MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "75",
         "board": "fed4"
     },
     {
