@@ -38,7 +38,7 @@ def is_number(s: str) -> bool:
     except ValueError:
         return False
 
-class CoreData:
+class CollectingCoreData:
     """
     This class is used to parse the boards.txt file of an Arduino core and extract
     information about the boards, including the LED_BUILTIN and flash size.
