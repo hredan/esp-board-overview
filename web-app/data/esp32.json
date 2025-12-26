@@ -580,6 +580,16 @@
         "board": "aw2eth"
     },
     {
+        "name": "Axiometa Genesis One",
+        "variant": "axiometa_genesis_one",
+        "mcu": "esp32s3",
+        "flash_size": [
+            "8MB"
+        ],
+        "led_builtin": "N/A",
+        "board": "axiometa_genesis_one"
+    },
+    {
         "name": "Axiometa PIXIE M1",
         "variant": "axiometa_pixie_m1",
         "mcu": "esp32s3",
@@ -1128,6 +1138,16 @@
         "board": "esp32c6-evb"
     },
     {
+        "name": "ESP32C61 Dev Module",
+        "variant": "esp32c61",
+        "mcu": "esp32c61",
+        "flash_size": [
+            "4MB"
+        ],
+        "led_builtin": "N/A",
+        "board": "esp32c61"
+    },
+    {
         "name": "AI Thinker ESP32-CAM",
         "variant": "esp32",
         "mcu": "esp32",
@@ -1216,6 +1236,16 @@
         ],
         "led_builtin": "N/A",
         "board": "esp32p4_4ds_mipi"
+    },
+    {
+        "name": "4D Systems ESP32-P4 Round MIPI Displays",
+        "variant": "esp32p4_4ds_mipi_round",
+        "mcu": "esp32p4",
+        "flash_size": [
+            "32MB"
+        ],
+        "led_builtin": "N/A",
+        "board": "esp32p4_4ds_mipi_round"
     },
     {
         "name": "ESP32S2 Dev Module",
@@ -2338,6 +2368,16 @@
         "board": "makergo_c3_supermini"
     },
     {
+        "name": "MakerGO ESP32 C6 SuperMini",
+        "variant": "makergo_c6_supermini",
+        "mcu": "esp32c6",
+        "flash_size": [
+            "4MB"
+        ],
+        "led_builtin": "15",
+        "board": "makergo_c6_supermini"
+    },
+    {
         "name": "Silicognition ManT1S",
         "variant": "mant1s",
         "mcu": "esp32",
@@ -2664,6 +2704,16 @@
         ],
         "led_builtin": "N/A",
         "board": "sensesiot_weizen"
+    },
+    {
+        "name": "Soldered NULA DeepSleep ESP32S3",
+        "variant": "soldered_nula_deepsleep_esp32s3",
+        "mcu": "esp32s3",
+        "flash_size": [
+            "8MB"
+        ],
+        "led_builtin": "N/A",
+        "board": "soldered_nula_deepsleep_esp32s3"
     },
     {
         "name": "Soldered NULA Mini ESP32C6",
@@ -3194,6 +3244,26 @@
         ],
         "led_builtin": "N/A",
         "board": "watchy"
+    },
+    {
+        "name": "Waveshare ESP32-C3-Zero",
+        "variant": "waveshare_esp32_c3_zero",
+        "mcu": "esp32c3",
+        "flash_size": [
+            "4MB"
+        ],
+        "led_builtin": "N/A",
+        "board": "waveshare_esp32_c3_zero"
+    },
+    {
+        "name": "Waveshare ESP32-C6-Zero",
+        "variant": "waveshare_esp32_c6_zero",
+        "mcu": "esp32c6",
+        "flash_size": [
+            "4MB"
+        ],
+        "led_builtin": "N/A",
+        "board": "waveshare_esp32_c6_zero"
     },
     {
         "name": "Waveshare ESP32-S3-LCD-1.46",
