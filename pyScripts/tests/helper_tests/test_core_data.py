@@ -3,7 +3,7 @@ import json
 from pathlib import Path
 import pytest
 
-from pyScripts.helper.collecting_core_data import CollectingCoreData
+from helper.collecting_core_data import CollectingCoreData
 from helper.board_data import BoardList
 from helper.partitions_data import PartitionList
 

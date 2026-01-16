@@ -12,31 +12,18 @@ import os
 import sys
 
 from helper.partitions_data import Scheme, PartitionList, PartitionData
-from helper.board_data import BoardData, BoardList
+from helper.collecting_board_data import CollectingBoardData
 
-SOC_GPIO_PIN_COUNT = 40
 LOG_FILE = "./esp_data/core_data.log"
 # if os.path.exists(LOG_FILE):
 #     os.remove(LOG_FILE)
-
-log_board = logging.getLogger(__name__ + ".board")
-log_board.setLevel(logging.ERROR)
 
 log_partition = logging.getLogger(__name__ + ".partition")
 #enable stdout logging for debugging
 if os.environ.get('LOG_STDOUT') == '1':
     log_partition.addHandler(logging.StreamHandler(sys.stdout))
-    log_board.addHandler(logging.StreamHandler(sys.stdout))
 
 logging.basicConfig(filename=LOG_FILE, filemode='w', level=logging.INFO)
-
-def is_number(s: str) -> bool:
-    """ Check if string is a number """
-    try:
-        int(s)
-        return True
-    except ValueError:
-        return False
 
 class CollectingCoreData:
     """
@@ -47,40 +34,18 @@ class CollectingCoreData:
                  core_path: str):
         self.core_name = core_name
         self.core_version = core_version
-        self.num_of_boards_without_led = 0
         self.core_path = core_path
-        self.defines: dict[str, str] = {}
-        self.var_definitions: dict[str, str] = {}
+        self.num_of_boards_without_led = 0
         if not os.path.exists(self.core_path):
             raise ValueError(f"Error: could not found {self.core_path}")
 
         self.boards_txt = f"{self.core_path}/boards.txt"
         if not os.path.exists(self.boards_txt):
             raise ValueError(f"Error: could not found {self.boards_txt}")
-        self.boards: BoardList
+
         self.partitions: PartitionList
         self.__get_data()
-        self.__find_led_builtin()
         #self.__set_boars_without_led()
-
-    def __get_board_name(self, line:str)-> tuple[str, str]:
-        match_board = re.match(r"(.+)\.name=(.+)", line)
-        if match_board:
-            board_id=match_board.group(1)
-            name_full=match_board.group(2)
-
-            return board_id, name_full
-        return "", ""
-
-    def __get_variant(self, line:str, board: BoardData, name:str):
-        match_variant = re.match(name + r"\.build\.variant=(.+)", line)
-        if match_variant:
-            board.set_variant(match_variant.group(1))
-
-    def __get_mcu(self, line:str, board: BoardData, name:str):
-        match_mcu = re.match(name + r"\.build\.mcu=(.+)", line)
-        if match_mcu:
-            board.set_mcu(match_mcu.group(1))
 
     def __get_default_partition(self, line:str, partitions: PartitionList, name:str):
         match_partition = re.match(name + r"\.build\.partitions=(.+)", line)
@@ -115,67 +80,30 @@ class CollectingCoreData:
                 log_partition.warning("%s has more than one build partition for %s",
                                       name, partitions_name)
 
-    def __special_pattern_esp8266(self, line:str, name:str) -> str:
-        pattern = name + r"\.menu\.eesz\.(.+)\.build\.flash_size=(.+)"
-        match_partition = re.match(pattern, line)
-        if match_partition:
-            flash_partition = match_partition.group(1)
-            # if flash_partition != "autoflash":
-            #     if "flash_partitions" not in boards[name]:
-            #         boards[name]["flash_partitions"] = [flash_partition]
-            #     else:
-            #         boards[name]["flash_partitions"].append(flash_partition)
-            # else:
-            #     return ""
-            if flash_partition == "autoflash":
-                return ""
-            # align flash size unit with esp32 (M-> MB or K-> KB)
-            flash_size = match_partition.group(2)
-            if flash_size[-1] != "B":
-                flash_size = flash_size + "B"
-            return flash_size
-        return ""
-
     def __get_data(self):
-        self.boards: BoardList = BoardList()
+        board_data: CollectingBoardData = CollectingBoardData(self.core_name, self.core_path)
         self.partitions: PartitionList = PartitionList()
-        board_data: BoardData = BoardData()
         name=""
         partitions_name = ""
         with open(self.boards_txt, 'r', encoding='utf8') as infile:
             for line in infile:
-                flash_size = None
-                board_id, name_full = self.__get_board_name(line)
+                board_id: str = board_data.collect_board_data(line)
                 if board_id:
                     name = board_id
                     self.partitions.add_partition(name, PartitionData())
-                    if board_data.name:
-                        self.boards.append(board_data)
-                    board_data = BoardData()
-                    board_data.set_name(name_full)
-                    board_data.set_board_id(board_id)
-                self.__get_variant(line, board_data, name)
-                self.__get_mcu(line, board_data, name)
-                if self.core_name == "esp8266":
-                    flash_size = self.__special_pattern_esp8266(line, name)
-                else:
+                if self.core_name == "esp32":
                     # esp32 pattern
-                    match_partition = re.match(name + r"\.build\.flash_size=(.+)", line)
-                    if match_partition:
-                        flash_size = match_partition.group(1)
                     self.__get_default_partition(line, self.partitions, name)
                     find_partition_name = self.__get_partition_name(line, self.partitions, name)
                     if find_partition_name:
                         partitions_name = find_partition_name
                     self.__get_patition_build(line, self.partitions, name, partitions_name)
-                # store flash size
-                if flash_size:
-                    board_data.set_flash_size(flash_size)
-            # add last board
-            if board_data.name:
-                self.boards.append(board_data)
+
         if self.core_name == "esp32":
             self.__check_partitions(self.partitions)
+        board_data.final_data()
+        self.boards = board_data.get_collected_data()
+        self.num_of_boards_without_led = board_data.num_of_boards_without_led
 
 
     def __partition_scheme_exists(self, name: str) -> bool:
@@ -224,69 +152,6 @@ class CollectingCoreData:
                             len(boards_without_partition), ", ".join(boards_without_partition))
         for board_name in boards_without_partition:
             del partitions[board_name]
-
-    def __find_defines(self, line: str):
-        """ find #define entries from pins_arduino.h files """
-        match_define = re.match(r"#define +([A-Z_]+) +([A-Z_]+)", line)
-        if match_define:
-            var_name = match_define.group(1)
-            var_value = match_define.group(2)
-            self.defines[var_name] = var_value
-
-    def __find_var_definitions(self, line: str):
-        """ find static const uint8_t entries from pins_arduino.h files """
-        match_var_definition = re.match(r"static +const +uint8_t +([A-Z_]+) += +(\d+);", line)
-        if match_var_definition:
-            var_name = match_var_definition.group(1)
-            var_value = match_var_definition.group(2)
-            self.var_definitions[var_name] = var_value
-
-    def __find_led_builtin(self):
-        """ find gpio for built-in led from pins_arduino.h files """
-        for board in self.boards:
-            found_led_entry = False
-            if board.variant != "N/A":
-                file_path = f"{self.core_path}/variants/{board.variant}/pins_arduino.h"
-                if not os.path.isfile(file_path):
-                    log_board.error("Could not find pins_arduino.h for %s variant: %s",
-                                   board.name, board.variant)
-                    board.led_builtin="N/A"
-                else:
-                    self.defines = {}
-                    self.var_definitions = {}
-                    with open(file_path, 'r', encoding='utf8') as infile:
-                        for line in infile:
-                            if self.core_name == "esp32":
-                                self.__find_defines(line)
-                                self.__find_var_definitions(line)
-
-                                match_pin_count = re.match(
-                                    r"^.+LED_BUILTIN += +SOC_GPIO_PIN_COUNT +\+ +([A-Z_]+);",
-                                    line
-                                    )
-                                if match_pin_count:
-                                    rgb_name = match_pin_count.group(1)
-                                    if rgb_name in self.defines:
-                                        rgb_value = self.defines[rgb_name]
-                                        if rgb_value in self.var_definitions:
-                                            builtin_led_gpio = int(self.var_definitions[rgb_value]) + SOC_GPIO_PIN_COUNT
-                                            board.led_builtin=str(builtin_led_gpio)
-                                            found_led_entry = True
-                                            break
-                            match_built_in_led = re.match(r"^.+ LED_BUILTIN[\(\= ]+(\d+)\)?", line)
-                            # #define LED_BUILTIN    (13)
-                            # #define LED_BUILTIN    13
-                            # static const uint8_t BUILTIN_LED = 2;
-
-                            if match_built_in_led:
-                                builtin_led_gpio = match_built_in_led.group(1)
-                                board.led_builtin=builtin_led_gpio
-                                found_led_entry = True
-                                break
-            else:
-                board.led_builtin="N/A"
-            if not found_led_entry:
-                self.num_of_boards_without_led += 1
 
     def partitions_export_json(self, filename:str):
         """
