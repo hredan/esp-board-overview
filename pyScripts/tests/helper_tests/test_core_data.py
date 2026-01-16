@@ -486,7 +486,7 @@ class TestPartitionData:
         log_records = caplog.get_records("call")
         assert len(log_records) == 2
         assert log_records[0].levelname == "ERROR"
-        assert log_records[0].name == "helper.collecting_core_data.partition"
+        assert log_records[0].name == "helper.collecting_partition_data.partition"
         assert "Default partition 'default' for 'd1_mini32' does not exist" in \
             log_records[0].message
 
