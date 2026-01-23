@@ -436,7 +436,7 @@
         "flash_size": [
             "8MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "45",
         "board": "adafruit_qtpy_esp32_pico"
     },
     {
@@ -446,7 +446,7 @@
         "flash_size": [
             "4MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "42",
         "board": "adafruit_qtpy_esp32c3"
     },
     {
@@ -456,7 +456,7 @@
         "flash_size": [
             "4MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "79",
         "board": "adafruit_qtpy_esp32s2"
     },
     {
@@ -466,7 +466,7 @@
         "flash_size": [
             "4MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "79",
         "board": "adafruit_qtpy_esp32s3_n4r2"
     },
     {
@@ -476,7 +476,7 @@
         "flash_size": [
             "8MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "79",
         "board": "adafruit_qtpy_esp32s3_nopsram"
     },
     {
@@ -616,7 +616,7 @@
         "flash_size": [
             "8MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "88",
         "board": "bpi_leaf_s3"
     },
     {
@@ -626,7 +626,7 @@
         "flash_size": [
             "4MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "43",
         "board": "cezerio_dev_esp32c6"
     },
     {
@@ -636,7 +636,7 @@
         "flash_size": [
             "4MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "60",
         "board": "cezerio_mini_dev_esp32c6"
     },
     {
@@ -956,7 +956,7 @@
         "flash_size": [
             "4MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "48",
         "board": "epulse_feather_c6"
     },
     {
@@ -1084,7 +1084,7 @@
         "flash_size": [
             "4MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "48",
         "board": "esp32c3"
     },
     {
@@ -1114,7 +1114,7 @@
         "flash_size": [
             "4MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "67",
         "board": "esp32c5"
     },
     {
@@ -1124,7 +1124,7 @@
         "flash_size": [
             "4MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "48",
         "board": "esp32c6"
     },
     {
@@ -1144,7 +1144,7 @@
         "flash_size": [
             "4MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "48",
         "board": "esp32c61"
     },
     {
@@ -1194,7 +1194,7 @@
         "flash_size": [
             "4MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "48",
         "board": "esp32h2"
     },
     {
@@ -1204,7 +1204,7 @@
         "flash_size": [
             "4MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "48",
         "board": "esp32h2-devkitlipo"
     },
     {
@@ -1254,7 +1254,7 @@
         "flash_size": [
             "4MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "58",
         "board": "esp32s2"
     },
     {
@@ -1294,7 +1294,7 @@
         "flash_size": [
             "4MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "88",
         "board": "esp32s3"
     },
     {
@@ -1314,7 +1314,7 @@
         "flash_size": [
             "4MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "88",
         "board": "esp32s3-octal"
     },
     {
@@ -1844,7 +1844,7 @@
         "flash_size": [
             "4MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "48",
         "board": "ioxesp32c6"
     },
     {
@@ -1984,7 +1984,7 @@
         "flash_size": [
             "4MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "47",
         "board": "lolin_c3_mini"
     },
     {
@@ -1994,7 +1994,7 @@
         "flash_size": [
             "4MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "47",
         "board": "lolin_c3_pico"
     },
     {
@@ -2094,7 +2094,7 @@
         "flash_size": [
             "8MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "75",
         "board": "m5stack_atoms3"
     },
     {
@@ -2712,7 +2712,7 @@
         "flash_size": [
             "8MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "42",
         "board": "soldered_nula_deepsleep_esp32s3"
     },
     {
@@ -2762,7 +2762,7 @@
         "flash_size": [
             "4MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "63",
         "board": "sparkfun_esp32c6_thing_plus"
     },
     {
@@ -3252,7 +3252,7 @@
         "flash_size": [
             "4MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "50",
         "board": "waveshare_esp32_c3_zero"
     },
     {
@@ -3492,7 +3492,7 @@
         "flash_size": [
             "4MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "61",
         "board": "waveshare_esp32_s3_zero"
     },
     {
@@ -3562,7 +3562,7 @@
         "flash_size": [
             "16MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "88",
         "board": "wifiduino32s3"
     },
     {

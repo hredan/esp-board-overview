@@ -23,7 +23,7 @@ class FindLedBuiltinGpio:
     @classmethod
     def find_defines(cls, line: str, defines: dict[str, str]):
         """ find #define entries from pins_arduino.h files """
-        match_define = re.match(r"#define +([A-Z_]+) +([A-Z_]+)", line)
+        match_define = re.match(r"#define +([A-Z_]+) +([A-Z_\d]+)", line)
         if match_define:
             var_name = match_define.group(1)
             var_value = match_define.group(2)
@@ -71,7 +71,7 @@ class FindLedBuiltinGpio:
                                     line, var_definitions)
 
                                 match_pin_count = re.match(
-                                    r"^.+LED_BUILTIN += +SOC_GPIO_PIN_COUNT +\+ +([A-Z_]+);",
+                                    r"^.+LED_BUILTIN += +\(?SOC_GPIO_PIN_COUNT +\+ +([A-Z_]+)\)?;",
                                     line
                                 )
                                 if match_pin_count:
