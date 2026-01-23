@@ -4,14 +4,13 @@ import os
 import logging
 import sys
 from helper.board_data import BoardList, BoardData
+from helper.find_led_builtin_gpio import FindLedBuiltinGpio
 
-log_board = logging.getLogger(__name__ + ".board")
+log_board = logging.getLogger(__name__)
 log_board.setLevel(logging.ERROR)
 
 if os.environ.get('LOG_STDOUT') == '1':
     log_board.addHandler(logging.StreamHandler(sys.stdout))
-
-SOC_GPIO_PIN_COUNT = 40
 
 class CollectingBoardData:
     """ Class for collecting board data from boards.txt """
@@ -94,78 +93,13 @@ class CollectingBoardData:
             return ""
         return ""
 
-    @classmethod
-    def find_defines(cls, line: str, defines: dict[str, str]):
-        """ find #define entries from pins_arduino.h files """
-        match_define = re.match(r"#define +([A-Z_]+) +([A-Z_]+)", line)
-        if match_define:
-            var_name = match_define.group(1)
-            var_value = match_define.group(2)
-            defines[var_name] = var_value
-
-    @classmethod
-    def find_var_definitions(cls, line: str, var_definitions: dict[str, str]):
-        """ find static const uint8_t entries from pins_arduino.h files """
-        match_var_definition = re.match(r"static +const +uint8_t +([A-Z_]+) += +(\d+);", line)
-        if match_var_definition:
-            var_name = match_var_definition.group(1)
-            var_value = match_var_definition.group(2)
-            var_definitions[var_name] = var_value
-
-    def find_led_builtin(self):
-        """ find gpio for built-in led from pins_arduino.h files """
-        defines: dict[str, str] = {}
-        var_definitions: dict[str, str] = {}
-        for board in self.boards_list:
-            found_led_entry = False
-            if board.variant != "N/A":
-                file_path = f"{self.core_path}/variants/{board.variant}/pins_arduino.h"
-                if not os.path.isfile(file_path):
-                    log_board.error("Could not find pins_arduino.h for %s variant: %s",
-                                   board.name, board.variant)
-                    board.led_builtin="N/A"
-                else:
-                    defines = {}
-                    var_definitions = {}
-                    with open(file_path, 'r', encoding='utf8') as infile:
-                        for line in infile:
-                            if self.core_name == "esp32":
-                                CollectingBoardData.find_defines(line, defines)
-                                CollectingBoardData.find_var_definitions(line, var_definitions)
-
-                                match_pin_count = re.match(
-                                    r"^.+LED_BUILTIN += +SOC_GPIO_PIN_COUNT +\+ +([A-Z_]+);",
-                                    line
-                                    )
-                                if match_pin_count:
-                                    rgb_name = match_pin_count.group(1)
-                                    if rgb_name in defines:
-                                        rgb_value = defines[rgb_name]
-                                        if rgb_value in var_definitions:
-                                            builtin_led_gpio = int(var_definitions[rgb_value]) + SOC_GPIO_PIN_COUNT
-                                            board.led_builtin=str(builtin_led_gpio)
-                                            found_led_entry = True
-                                            break
-                            match_built_in_led = re.match(r"^.+ LED_BUILTIN[\(\= ]+(\d+)\)?", line)
-                            # #define LED_BUILTIN    (13)
-                            # #define LED_BUILTIN    13
-                            # static const uint8_t BUILTIN_LED = 2;
-
-                            if match_built_in_led:
-                                builtin_led_gpio = match_built_in_led.group(1)
-                                board.led_builtin=builtin_led_gpio
-                                found_led_entry = True
-                                break
-            else:
-                board.led_builtin="N/A"
-            if not found_led_entry:
-                self.num_of_boards_without_led += 1
     def final_data(self):
         """ finalize collected data after board.txt is parsed """
         # append the last collected board data
         if self.board_data.name:
             self.boards_list.append(self.board_data)
-        self.find_led_builtin()
+        led_finder = FindLedBuiltinGpio(self.core_path, self.core_name, self.boards_list)
+        self.num_of_boards_without_led = led_finder.find_led_builtin()
 
     def get_collected_data(self):
         """ Get collected board data """
