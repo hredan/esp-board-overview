@@ -1554,7 +1554,7 @@
         "flash_size": [
             "8MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "40",
         "board": "gpy"
     },
     {
@@ -2064,7 +2064,7 @@
         "flash_size": [
             "4MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "40",
         "board": "lopy"
     },
     {
@@ -2074,7 +2074,7 @@
         "flash_size": [
             "4MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "40",
         "board": "lopy4"
     },
     {
@@ -3572,7 +3572,7 @@
         "flash_size": [
             "8MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "40",
         "board": "wipy3"
     },
     {

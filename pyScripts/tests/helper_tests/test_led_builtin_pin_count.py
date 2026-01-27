@@ -59,10 +59,10 @@ class TestLEDBuiltinPinCountEsp32:
         assert board_data is not None
         assert board_data.led_builtin == "80"
 
-    # def test_get_data_esp32_led_builtin_pin_count_v2(self,
-    #                                               setup_esp32_led_builtin_pin_count_v2: pytest.Function):
-    #     """Test the __get_data method of CoreData from esp32 test set."""
-    #     core_data = CollectingCoreData("esp32", "3.2.0", str(setup_esp32_led_builtin_pin_count_v2))
-    #     board_data = core_data.boards.get_board_by_id("d1_mini32")
-    #     assert board_data is not None
-    #     assert board_data.led_builtin == "80"
+    def test_get_data_esp32_led_builtin_pin_count_v2(self,
+                                                  setup_esp32_led_builtin_pin_count_v2: pytest.Function):
+        """Test the __get_data method of CoreData from esp32 test set."""
+        core_data = CollectingCoreData("esp32", "3.2.0", str(setup_esp32_led_builtin_pin_count_v2))
+        board_data = core_data.boards.get_board_by_id("d1_mini32")
+        assert board_data is not None
+        assert board_data.led_builtin == "80"

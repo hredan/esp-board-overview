@@ -38,6 +38,36 @@ class FindLedBuiltinPinCount:
         except ValueError:
             return False
 
+    def _soc_pattern_v1(self, line: str) -> str:
+        """ Find built-in LED GPIO pin with SOC_GPIO_PIN_COUNT variable at beginning of term from pins_arduino.h files """
+        match_pin_count = re.match(
+            r"^.+LED_BUILTIN += +\(?SOC_GPIO_PIN_COUNT +\+ +([A-Z_]+)\)?;",
+            line
+        )
+        if match_pin_count:
+            return match_pin_count.group(1)
+        return ""
+
+    def _soc_pattern_v2(self, line: str) -> str:
+        """ Find built-in LED GPIO pin with SOC_GPIO_PIN_COUNT variable at end of term from pins_arduino.h files """
+        match_pin_count = re.match(
+            r"^.+LED_BUILTIN += +\(?([A-Z_]+) +\+ +SOC_GPIO_PIN_COUNT\)?;",
+            line
+        )
+        if match_pin_count:
+            return match_pin_count.group(1)
+        return ""
+
+    def _find_soc_gpio_pin_count(self, line: str) -> str:
+        """ Find built-in LED GPIO pin with SOC_GPIO_PIN_COUNT from pins_arduino.h files """
+        rgb_name = self._soc_pattern_v1(line)
+        if rgb_name:
+            return rgb_name
+        rgb_name = self._soc_pattern_v2(line)
+        if rgb_name:
+            return rgb_name
+        return ""
+
     def find_gpio(self, line: str) -> int:
         """ Find built-in LED GPIO pin with SOC_GPIO_PIN_COUNT from pins_arduino.h files """
         # Example logic to find the built-in LED GPIO pin
@@ -45,12 +75,8 @@ class FindLedBuiltinPinCount:
         FindLedBuiltinPinCount.find_var_definitions(line, self.var_definitions)
         found_led_entry = False
         builtin_led_gpio = -1
-        match_pin_count = re.match(
-            r"^.+LED_BUILTIN += +\(?SOC_GPIO_PIN_COUNT +\+ +([A-Z_]+)\)?;",
-            line
-        )
-        if match_pin_count:
-            rgb_name = match_pin_count.group(1)
+        rgb_name = self._find_soc_gpio_pin_count(line)
+        if rgb_name:
             if rgb_name in self.defines:
                 if FindLedBuiltinPinCount.is_number(self.defines[rgb_name]):
                     builtin_led_gpio = int(self.defines[rgb_name]) + SOC_GPIO_PIN_COUNT

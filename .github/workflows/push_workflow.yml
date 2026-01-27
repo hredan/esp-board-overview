@@ -1,7 +1,7 @@
 name: push_workflow
 on: [push, pull_request]
 jobs:
-  web-app-test:
+  web-app-tests:
     uses: ./.github/workflows/web_app_test.yml
-  pytest:
+  py-tests:
     uses: ./.github/workflows/python_test.yml
