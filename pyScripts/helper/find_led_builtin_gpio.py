@@ -53,6 +53,11 @@ class FindLedBuiltinGpio:
                                 board.led_builtin = builtin_led_gpio
                                 found_led_entry = True
                                 break
+                if not found_led_entry:
+                    with open(file_path, 'r', encoding='utf8') as infile:
+                        infile_content = infile.read()
+                        if "LED_BUILTIN" in infile_content:
+                            log_board.error("No built-in LED found for board: %s\n%s", board.name, file_path)
             else:
                 board.led_builtin = "N/A"
             if not found_led_entry:

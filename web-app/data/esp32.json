@@ -276,7 +276,7 @@
         "flash_size": [
             "4MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "41",
         "board": "adafruit_camera_esp32s3"
     },
     {
@@ -556,7 +556,7 @@
         "flash_size": [
             "16MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "80",
         "board": "atmegazero_esp32s2"
     },
     {
@@ -606,7 +606,7 @@
         "flash_size": [
             "4MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "44",
         "board": "bpi-bit"
     },
     {
@@ -786,7 +786,7 @@
         "flash_size": [
             "4MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "53",
         "board": "deneyapkart1A"
     },
     {
@@ -796,7 +796,7 @@
         "flash_size": [
             "4MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "88",
         "board": "deneyapkart1Av2"
     },
     {
@@ -806,7 +806,7 @@
         "flash_size": [
             "4MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "50",
         "board": "deneyapkartg"
     },
     {
@@ -816,7 +816,7 @@
         "flash_size": [
             "4MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "86",
         "board": "deneyapkartv2"
     },
     {
@@ -836,7 +836,7 @@
         "flash_size": [
             "4MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "73",
         "board": "deneyapminiv2"
     },
     {
@@ -936,7 +936,7 @@
         "flash_size": [
             "4MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "88",
         "board": "elecrow_crowpanel_7"
     },
     {
@@ -1074,7 +1074,7 @@
         "flash_size": [
             "2MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "53",
         "board": "esp32c2"
     },
     {
@@ -1504,7 +1504,7 @@
         "flash_size": [
             "4MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "58",
         "board": "franzininho_wifi_esp32s2"
     },
     {
@@ -1514,7 +1514,7 @@
         "flash_size": [
             "4MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "58",
         "board": "franzininho_wifi_msc_esp32s2"
     },
     {
@@ -1574,7 +1574,7 @@
         "flash_size": [
             "8MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "88",
         "board": "heltec_capsule_sensor_V3"
     },
     {
@@ -1684,7 +1684,7 @@
         "flash_size": [
             "4MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "48",
         "board": "heltec_wireless_mini_shell"
     },
     {
@@ -1724,7 +1724,7 @@
         "flash_size": [
             "8MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "88",
         "board": "heltec_wireless_stick_V3"
     },
     {
@@ -1754,7 +1754,7 @@
         "flash_size": [
             "8MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "88",
         "board": "heltec_wireless_tracker"
     },
     {
@@ -2024,7 +2024,7 @@
         "flash_size": [
             "16MB"
         ],
-        "led_builtin": "38",
+        "led_builtin": "78",
         "board": "lolin_s3"
     },
     {
@@ -2034,7 +2034,7 @@
         "flash_size": [
             "4MB"
         ],
-        "led_builtin": "47",
+        "led_builtin": "87",
         "board": "lolin_s3_mini"
     },
     {
@@ -2044,7 +2044,7 @@
         "flash_size": [
             "4MB"
         ],
-        "led_builtin": "8",
+        "led_builtin": "48",
         "board": "lolin_s3_mini_pro"
     },
     {
@@ -2054,7 +2054,7 @@
         "flash_size": [
             "16MB"
         ],
-        "led_builtin": "38",
+        "led_builtin": "78",
         "board": "lolin_s3_pro"
     },
     {
@@ -2154,7 +2154,7 @@
         "flash_size": [
             "16MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "88",
         "board": "m5stack_cores3"
     },
     {
@@ -2512,7 +2512,7 @@
         "flash_size": [
             "4MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "85",
         "board": "nebulas3"
     },
     {
@@ -2662,7 +2662,7 @@
         "flash_size": [
             "8MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "43",
         "board": "redpill_esp32s3"
     },
     {
