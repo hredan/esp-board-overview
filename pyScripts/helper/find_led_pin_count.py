@@ -19,10 +19,11 @@ class FindLedBuiltinPinCount:
         if match_define:
             var_name = match_define.group(1)
             var_value = match_define.group(2)
-            self.defines[var_name] = var_value
+            if var_name not in self.defines:
+                self.defines[var_name] = var_value
             return
         match_definition = re.match(
-            r"#define +([A-Z_]+) *=? *\(?([A-Z_\d]+) +\+ +SOC_GPIO_PIN_COUNT\)?;?", line)
+            r".* +([A-Z_]+) *=? *\(?([A-Z_\d]+) +\+ +SOC_GPIO_PIN_COUNT\)?;?", line)
         if match_definition:
             var_name = match_definition.group(1)
             var_name_2 = match_definition.group(2)
@@ -33,7 +34,7 @@ class FindLedBuiltinPinCount:
                 if FindLedBuiltinPinCount.is_number(value_2):
                     self.defines[var_name] = str(int(value_2) + SOC_GPIO_PIN_COUNT)
         match_definition = re.match(
-            r"#define +([A-Z_]+) *=? *\(?SOC_GPIO_PIN_COUNT +\+ +([A-Z_\d]+)\)?;?", line)
+            r".* +([A-Z_]+) *=? *\(?SOC_GPIO_PIN_COUNT +\+ +([A-Z_\d]+)\)?;?", line)
         if match_definition:
             var_name = match_definition.group(1)
             var_name_2 = match_definition.group(2)

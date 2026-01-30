@@ -35,7 +35,13 @@ class FindLedBuiltinGpio:
     @classmethod
     def log_led_not_found(cls, found_led_entry: bool, file_path: str, board: BoardData):
         """ log error if no built-in led found """
-        if not found_led_entry and os.path.isfile(file_path):
+        ignore_list = [
+            "esp32s2-devkit-lipo-usb", # LED_BUILTIN only in comment, variable named BUT_BUILTIN
+            "Microduino-esp32", # LED_BUILTIN = -1
+            "arduino_nano_nora", # LED_BUILTIN in comment but not defined
+            "thingpulse_epulse_feather", # LED_BUILTIN = -1
+                       ]
+        if not found_led_entry and os.path.isfile(file_path) and board.variant not in ignore_list:
             with open(file_path, 'r', encoding='utf8') as infile:
                 infile_content = infile.read()
                 if "LED_BUILTIN" in infile_content:
