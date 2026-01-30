@@ -40,6 +40,7 @@ class FindLedBuiltinGpio:
             "Microduino-esp32", # LED_BUILTIN = -1
             "arduino_nano_nora", # LED_BUILTIN in comment but not defined
             "thingpulse_epulse_feather", # LED_BUILTIN = -1
+            "arduino_nesso_n1" # define LED_BUILTIN _LED_BUILTIN not defined
                        ]
         if not found_led_entry and os.path.isfile(file_path) and board.variant not in ignore_list:
             with open(file_path, 'r', encoding='utf8') as infile:

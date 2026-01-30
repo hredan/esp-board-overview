@@ -15,7 +15,7 @@ class FindLedBuiltinPinCount:
 
     def find_defines(self, line: str):
         """ find #define entries from pins_arduino.h files """
-        match_define = re.match(r"#define +([A-Z_]+) +([A-Z_\d]+)", line)
+        match_define = re.match(r"#define +([A-Z_\d]+) +([A-Z_\d]+)", line)
         if match_define:
             var_name = match_define.group(1)
             var_value = match_define.group(2)

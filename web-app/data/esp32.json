@@ -1794,7 +1794,7 @@
         "flash_size": [
             "8MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "40",
         "board": "huidu_hd_wf2"
     },
     {
@@ -1804,7 +1804,7 @@
         "flash_size": [
             "8MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "40",
         "board": "huidu_hd_wf4"
     },
     {
