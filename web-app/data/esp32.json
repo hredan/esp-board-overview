@@ -1248,6 +1248,16 @@
         "board": "esp32p4_4ds_mipi_round"
     },
     {
+        "name": "ESP32P4 Core Board",
+        "variant": "esp32p4_core_board",
+        "mcu": "esp32p4",
+        "flash_size": [
+            "16MB"
+        ],
+        "led_builtin": "84",
+        "board": "esp32p4_core_board"
+    },
+    {
         "name": "ESP32S2 Dev Module",
         "variant": "esp32s2",
         "mcu": "esp32s2",
@@ -2606,6 +2616,56 @@
         "board": "oroca_edubot"
     },
     {
+        "name": "PandaByte x32 - ESP32",
+        "variant": "pandabyte_x32",
+        "mcu": "esp32",
+        "flash_size": [
+            "4MB"
+        ],
+        "led_builtin": "2",
+        "board": "pandabyte_x32"
+    },
+    {
+        "name": "Pandabyte xC3m - ESP32C3",
+        "variant": "pandabyte_xc3m",
+        "mcu": "esp32c3",
+        "flash_size": [
+            "4MB"
+        ],
+        "led_builtin": "5",
+        "board": "pandabyte_xc3m"
+    },
+    {
+        "name": "Pandabyte xC5 - ESP32C5",
+        "variant": "pandabyte_xc5",
+        "mcu": "esp32c5",
+        "flash_size": [
+            "4MB"
+        ],
+        "led_builtin": "23",
+        "board": "pandabyte_xc5"
+    },
+    {
+        "name": "PandaByte xC6 - ESP32C6",
+        "variant": "pandabyte_xc6",
+        "mcu": "esp32c6",
+        "flash_size": [
+            "4MB"
+        ],
+        "led_builtin": "3",
+        "board": "pandabyte_xc6"
+    },
+    {
+        "name": "PandaByte xS3 - ESP32S3",
+        "variant": "pandabyte_xs3",
+        "mcu": "esp32s3",
+        "flash_size": [
+            "4MB"
+        ],
+        "led_builtin": "2",
+        "board": "pandabyte_xs3"
+    },
+    {
         "name": "ESP32 PICO-D4",
         "variant": "pico32",
         "mcu": "esp32",
@@ -3356,6 +3416,16 @@
         "board": "waveshare_esp32_s3_touch_amoled_191"
     },
     {
+        "name": "Waveshare ESP32-S3-Touch-AMOLED-2.06",
+        "variant": "waveshare_esp32_s3_touch_amoled_206",
+        "mcu": "esp32s3",
+        "flash_size": [
+            "32MB"
+        ],
+        "led_builtin": "N/A",
+        "board": "waveshare_esp32_s3_touch_amoled_206"
+    },
+    {
         "name": "Waveshare ESP32-S3-Touch-AMOLED-2.41",
         "variant": "waveshare_esp32_s3_touch_amoled_241",
         "mcu": "esp32s3",
@@ -3606,6 +3676,16 @@
         "board": "wt32-sc01-plus"
     },
     {
+        "name": "YelloByte YB-ESP32-S3-AMP",
+        "variant": "yb_esp32s3_amp",
+        "mcu": "esp32s3",
+        "flash_size": [
+            "8MB"
+        ],
+        "led_builtin": "47",
+        "board": "yb_esp32s3_amp"
+    },
+    {
         "name": "YelloByte YB-ESP32-S3-AMP (Rev.2)",
         "variant": "yb_esp32s3_amp_v2",
         "mcu": "esp32s3",
@@ -3624,6 +3704,16 @@
         ],
         "led_builtin": "47",
         "board": "yb_esp32s3_amp_v3"
+    },
+    {
+        "name": "YelloByte YB-ESP32-S3-DAC",
+        "variant": "yb_esp32s3_dac",
+        "mcu": "esp32s3",
+        "flash_size": [
+            "8MB"
+        ],
+        "led_builtin": "47",
+        "board": "yb_esp32s3_dac"
     },
     {
         "name": "YelloByte YB-ESP32-S3-DRV",

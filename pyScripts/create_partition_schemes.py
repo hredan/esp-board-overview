@@ -11,7 +11,7 @@ def load_scheme(scheme_name: str, version: str) -> list[dict[str, str]]:
     :param scheme_name: The name of the partition scheme to load.
     :return: The partition scheme data.
     """
-    csv_file_path = f"{ESP_DATA_PATH}/esp32-{version}/tools/partitions/{scheme_name}.csv"
+    csv_file_path = f"{ESP_DATA_PATH}/esp32-core-{version}/tools/partitions/{scheme_name}.csv"
     if not os.path.exists(csv_file_path):
         print(f"Partition scheme file not found: {csv_file_path}")
         return []
@@ -66,18 +66,7 @@ if __name__ == "__main__":
                         scheme_data["default"],
                         esp32_core["installed_version"]
                     )
-                # else:
-                #     print(f"Default: {board} - {scheme_data['default']} already loaded")
 
         PARTITION_SCHEMES_PATH = f"{ESP_DATA_PATH}/esp32_partition_schemes.json"
         with open(PARTITION_SCHEMES_PATH, 'w', encoding='utf-8') as file_out:
             json.dump(schemes, file_out, ensure_ascii=False, indent=4)
-        # Create partition schemes json for each core
-        # SCHEME = "default"
-        # partition_data = load_scheme(SCHEME)
-        # for partition in partition_data:
-        #     offset = int(partition['offset'], 16)
-        #     size = int(partition['size'], 16)
-        #     print(f"Partition Name: {partition['name']} offset: {offset}" + \
-        #           f" size: {size} pos: {offset + size}")
-        # print(4 * 1024 * 1024)  # 4MB in bytes

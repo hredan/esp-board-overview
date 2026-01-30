@@ -23,7 +23,10 @@ if __name__ == "__main__":
     for core_info in core_info_list:
         core_name = core_info["core_name"]
         core_version = core_info["latest_version"]
-        core_data_path = f"./esp_data/{core_name}-{core_version}"
+        if core_name == "esp8266":
+            core_data_path = f"./esp_data/{core_name}-{core_version}"
+        else:
+            core_data_path = f"./esp_data/{core_name}-core-{core_version}"
         cd = CollectingCoreData(core_info["core_name"], core_info["installed_version"], core_data_path)
         print(f"### core: {core_name} ###")
         print(f"number of boards: {len(cd.boards)}")
