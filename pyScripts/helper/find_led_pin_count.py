@@ -13,24 +13,45 @@ class FindLedBuiltinPinCount:
         self.defines: dict[str, str] = {}
         self.var_definitions: dict[str, str] = {}
 
-    @classmethod
-    def find_defines(cls, line: str, defines: dict[str, str]):
+    def find_defines(self, line: str):
         """ find #define entries from pins_arduino.h files """
         match_define = re.match(r"#define +([A-Z_]+) +([A-Z_\d]+)", line)
         if match_define:
             var_name = match_define.group(1)
             var_value = match_define.group(2)
-            defines[var_name] = var_value
+            self.defines[var_name] = var_value
+            return
+        match_definition = re.match(
+            r"#define +([A-Z_]+) *=? *\(?([A-Z_\d]+) +\+ +SOC_GPIO_PIN_COUNT\)?;?", line)
+        if match_definition:
+            var_name = match_definition.group(1)
+            var_name_2 = match_definition.group(2)
+            if FindLedBuiltinPinCount.is_number(var_name_2):
+                self.defines[var_name] = str(int(var_name_2) + SOC_GPIO_PIN_COUNT)
+            elif var_name_2 in self.var_definitions:
+                value_2 = self.var_definitions[var_name_2]
+                if FindLedBuiltinPinCount.is_number(value_2):
+                    self.defines[var_name] = str(int(value_2) + SOC_GPIO_PIN_COUNT)
+        match_definition = re.match(
+            r"#define +([A-Z_]+) *=? *\(?SOC_GPIO_PIN_COUNT +\+ +([A-Z_\d]+)\)?;?", line)
+        if match_definition:
+            var_name = match_definition.group(1)
+            var_name_2 = match_definition.group(2)
+            if FindLedBuiltinPinCount.is_number(var_name_2):
+                self.defines[var_name] = str(int(var_name_2) + SOC_GPIO_PIN_COUNT)
+            elif var_name_2 in self.var_definitions:
+                value_2 = self.var_definitions[var_name_2]
+                if FindLedBuiltinPinCount.is_number(value_2):
+                    self.defines[var_name] = str(int(value_2) + SOC_GPIO_PIN_COUNT)
 
-    @classmethod
-    def find_var_definitions(cls, line: str, var_definitions: dict[str, str]):
+    def find_var_definitions(self, line: str):
         """ find static const uint8_t entries from pins_arduino.h files """
         match_var_definition = re.match(
-            r"static +const +uint8_t +([A-Z_]+) += +(\d+);", line)
+            r"static +const +uint8_t +([A-Z_\d]+) += +(\d+);", line)
         if match_var_definition:
             var_name = match_var_definition.group(1)
             var_value = match_var_definition.group(2)
-            var_definitions[var_name] = var_value
+            self.var_definitions[var_name] = var_value
 
     @classmethod
     def is_number(cls, s: str) -> bool:
@@ -42,7 +63,8 @@ class FindLedBuiltinPinCount:
             return False
 
     def _soc_pattern_v1(self, line: str) -> str:
-        """ Find built-in LED GPIO pin with SOC_GPIO_PIN_COUNT variable at beginning of term from pins_arduino.h files """
+        """ Find built-in LED GPIO pin with SOC_GPIO_PIN_COUNT
+        variable at beginning of term from pins_arduino.h files """
         match_pin_count = re.match(
             r"^.+LED_BUILTIN *=? *\(?SOC_GPIO_PIN_COUNT +\+ +([A-Z_\d]+)\)?;?",
             line
@@ -70,20 +92,41 @@ class FindLedBuiltinPinCount:
             rgb_name = self._soc_pattern_v2(line)
             if rgb_name:
                 return rgb_name
-            else:
-                log.error("pattern not working for line:\n %s", line)
+            log.error("pattern not working for line:\n %s", line)
         return ""
 
-    def find_gpio(self, line: str) -> int:
+    def _find_gpio_variable(self, line: str) -> int:
+        """ Find built-in LED GPIO pin variable from pins_arduino.h files """
+        match_pin_count = re.match(
+            r"^.+LED_BUILTIN *=? *([A-Z_\d]+);?",
+            line
+        )
+        if match_pin_count:
+            var_name = match_pin_count.group(1)
+            if FindLedBuiltinPinCount.is_number(var_name):
+                return int(var_name)
+            if var_name in self.defines:
+                if FindLedBuiltinPinCount.is_number(self.defines[var_name]):
+                    return int(self.defines[var_name])
+                value_2 = self.defines[var_name]
+                if value_2 in self.var_definitions:
+                    if FindLedBuiltinPinCount.is_number(self.var_definitions[value_2]):
+                        return int(self.var_definitions[value_2])
+            elif var_name in self.var_definitions:
+                if FindLedBuiltinPinCount.is_number(self.var_definitions[var_name]):
+                    return int(self.var_definitions[var_name])
+        return -1
+
+    def _find_gpio(self, line: str) -> int:
         """ Find built-in LED GPIO pin with SOC_GPIO_PIN_COUNT from pins_arduino.h files """
         # Example logic to find the built-in LED GPIO pin
-        FindLedBuiltinPinCount.find_defines(line, self.defines)
-        FindLedBuiltinPinCount.find_var_definitions(line, self.var_definitions)
+        self.find_defines(line)
+        self.find_var_definitions(line)
         found_led_entry = False
         builtin_led_gpio = -1
         rgb_name = self._find_soc_gpio_pin_count(line)
         if rgb_name:
-            if self.is_number(rgb_name):
+            if FindLedBuiltinPinCount.is_number(rgb_name):
                 builtin_led_gpio = int(rgb_name) + SOC_GPIO_PIN_COUNT
                 found_led_entry = True
             elif rgb_name in self.defines:
@@ -99,6 +142,12 @@ class FindLedBuiltinPinCount:
                 found_led_entry = True
             if found_led_entry:
                 return builtin_led_gpio
-            else:
-                log.error("Could not resolve LED built-in GPIO pin from line:\n %s", line)
+            log.error("Could not resolve LED built-in GPIO pin from line:\n %s", line)
         return -1
+
+    def find_gpio(self, line: str) -> int:
+        """ Find built-in LED GPIO pin with SOC_GPIO_PIN_COUNT from pins_arduino.h files """
+        gpio_led = self._find_gpio(line)
+        if gpio_led != -1:
+            return gpio_led
+        return self._find_gpio_variable(line)

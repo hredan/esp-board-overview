@@ -136,7 +136,7 @@
         "flash_size": [
             "4MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "48",
         "board": "Geekble_Nano_ESP32S3"
     },
     {
@@ -596,7 +596,7 @@
         "flash_size": [
             "4MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "11",
         "board": "axiometa_pixie_m1"
     },
     {
@@ -896,7 +896,7 @@
         "flash_size": [
             "4MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "21",
         "board": "dfrobot_firebeetle2_esp32s3"
     },
     {
@@ -1104,7 +1104,7 @@
         "flash_size": [
             "4MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "18",
         "board": "esp32c3m1IKit"
     },
     {
@@ -1894,7 +1894,7 @@
         "flash_size": [
             "32MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "4",
         "board": "kodedot"
     },
     {
@@ -2572,7 +2572,7 @@
         "flash_size": [
             "4MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "8",
         "board": "nora_w10"
     },
     {
@@ -2652,7 +2652,7 @@
         "flash_size": [
             "16MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "46",
         "board": "rakwireless_rak3112"
     },
     {
@@ -2672,7 +2672,7 @@
         "flash_size": [
             "4MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "13",
         "board": "roboheart_hercules"
     },
     {
@@ -2782,7 +2782,7 @@
         "flash_size": [
             "4MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "46",
         "board": "sparkfun_esp32s3_thing_plus"
     },
     {
@@ -3002,7 +3002,7 @@
         "flash_size": [
             "8MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "58",
         "board": "um_bling"
     },
     {
@@ -3032,7 +3032,7 @@
         "flash_size": [
             "4MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "80",
         "board": "um_feathers2neo"
     },
     {
@@ -3062,7 +3062,7 @@
         "flash_size": [
             "8MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "81",
         "board": "um_nanos3"
     },
     {
@@ -3072,7 +3072,7 @@
         "flash_size": [
             "8MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "75",
         "board": "um_omgs3"
     },
     {
@@ -3082,7 +3082,7 @@
         "flash_size": [
             "16MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "58",
         "board": "um_pros3"
     },
     {
@@ -3102,7 +3102,7 @@
         "flash_size": [
             "8MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "63",
         "board": "um_tinyc6"
     },
     {
@@ -3122,7 +3122,7 @@
         "flash_size": [
             "4MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "41",
         "board": "um_tinys2"
     },
     {
@@ -3132,7 +3132,7 @@
         "flash_size": [
             "8MB"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "58",
         "board": "um_tinys3"
     },
     {
