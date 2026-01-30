@@ -10,7 +10,7 @@ Copyright (c) 2025 hredan
 import os.path
 import json
 
-from helper.core_data import CoreData
+from helper.collecting_core_data import CollectingCoreData
 from helper.index_data import get_core_list
 
 if __name__ == "__main__":
@@ -24,7 +24,7 @@ if __name__ == "__main__":
         core_name = core_info["core_name"]
         core_version = core_info["latest_version"]
         core_data_path = f"./esp_data/{core_name}-{core_version}"
-        cd = CoreData(core_info["core_name"], core_info["installed_version"], core_data_path)
+        cd = CollectingCoreData(core_info["core_name"], core_info["installed_version"], core_data_path)
         print(f"### core: {core_name} ###")
         print(f"number of boards: {len(cd.boards)}")
         print(f"number of boards without led: {cd.num_of_boards_without_led}")

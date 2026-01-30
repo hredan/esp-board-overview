@@ -5,6 +5,7 @@ Author: hredan
 Copyright (c) 2025 hredan
 """
 import json
+LAST_VERSION_INDEX = 0
 class IndexData:
     """Class to handle ESP core package index data."""
     def __init__(self, core_name: str):
@@ -25,12 +26,12 @@ class IndexData:
     def get_core_name(self):
         """ Get the core name from the index data.
         :return: Core name as a string."""
-        return self.index_data["packages"][0]["name"]
+        return self.index_data["packages"][LAST_VERSION_INDEX]["name"]
 
     def get_last_core_version(self):
         """ Get the last core version from the index data.
         :return: Last core version as a string."""
-        return self.index_data["packages"][0]["platforms"][0]["version"]
+        return self.index_data["packages"][LAST_VERSION_INDEX]["platforms"][LAST_VERSION_INDEX]["version"]
 
 def get_core_list() -> list[dict[str, str]]:
     """Retrieve a list of core names from the index data.

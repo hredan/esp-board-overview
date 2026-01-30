@@ -1,4 +1,5 @@
 """Unit tests for board_data.py"""
+
 from helper.board_data import BoardData, BoardList
 
 def test_set_name():

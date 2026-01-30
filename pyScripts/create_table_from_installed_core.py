@@ -11,7 +11,7 @@ import re
 import os.path
 import json
 
-from helper.core_data import CoreData
+from helper.collecting_core_data import CollectingCoreData
 
 def get_installed_core_info(core_list_path_: str) -> list[dict[str, str]]:
     """
@@ -55,7 +55,7 @@ if __name__ == "__main__":
         core_version = core_info["installed_version"]
         core_data_path = "/home/vscode/.arduino15/packages/" + \
             f"{core_name}/hardware/{core_name}/{core_version}"
-        core_data = CoreData(core_name, core_version, core_data_path)
+        core_data = CollectingCoreData(core_name, core_version, core_data_path)
         print(f"core: {core_name}")
         print(f"number of boards: {len(core_data.boards)}")
         print(f"number of boards without led: {core_data.num_of_boards_without_led}")

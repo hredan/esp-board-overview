@@ -16,7 +16,7 @@ jobs:
           pip install -r requirements_test.txt
       - name: Run tests
         run: |
-          pytest --cov=helper --cov-fail-under=80 ./pyScripts/helper
+          pytest --cov=helper --cov-fail-under=80 ./pyScripts/tests
   pylint:
     runs-on: ubuntu-latest
     steps:
