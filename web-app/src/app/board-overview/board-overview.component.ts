@@ -7,6 +7,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {Sort, MatSortModule} from '@angular/material/sort';
 import coreList_input from '../../../data/core_list.json';
 
+import { Esp32DataService, PartitionEntry } from '../esp32-data.service';
+
 @Component({
   selector: 'app-board-overview',
   imports: [MatTableModule, MatInputModule, MatFormFieldModule, MatSortModule, MatPaginatorModule, MatCheckboxModule],
@@ -19,6 +21,9 @@ export class BoardOverviewComponent implements OnInit {
   coreName = input.required<string>();
   dataSource = input.required<BoardInfo[]>();
   //dataSource: BoardInfo[] = [];
+  esp32DataService: Esp32DataService = new Esp32DataService();
+  partitionsData = this.esp32DataService.partitionsData;
+  boardNamesPartitions: string[] = Object.keys(this.partitionsData);
   totalBoardCount = 0;
   filteredBoardCount = 0;
   displayedColumns: string[] = ['name', 'board','variant', 'led', 'mcu', 'flash_size'];
@@ -36,6 +41,17 @@ export class BoardOverviewComponent implements OnInit {
         this.coreVersion = core.installed_version;
       }
     });
+  }
+  get_flash_size_element(flash_sizes: string[], boardName: string): string {
+    if (flash_sizes.length === 0) {
+      return 'N/A';
+    }
+    else if (this.boardNamesPartitions.includes(boardName) && this.coreName() === 'esp32') {
+      return `<a href="/esp32-partitions/${boardName}/${this.partitionsData[boardName].default}">${flash_sizes.join(',')}</a>`;
+    }
+    else {
+      return flash_sizes.join(',');
+    }
   }
 
   get_pins_arduino_link(variant: string): string {

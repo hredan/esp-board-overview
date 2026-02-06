@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatOptionModule } from '@angular/material/core';
 import {MatTableDataSource, MatTableModule} from '@angular/material/table';
 
 import { Esp32DataService, PartitionEntry } from '../esp32-data.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-esp32-partition-overview',
@@ -13,10 +14,11 @@ import { Esp32DataService, PartitionEntry } from '../esp32-data.service';
   styleUrl: './esp32-partition-overview.component.css'
 })
 export class Esp32PartitionOverviewComponent implements OnInit {
+  private activatedRoute = Inject(ActivatedRoute);
   esp32DataService: Esp32DataService = new Esp32DataService();
   partitionsData = this.esp32DataService.partitionsData;
   defaultSchemes = this.esp32DataService.defaultSchemes;
-  boardNames = Object.keys(this.partitionsData);
+  boardNames: string[] = Object.keys(this.partitionsData);
   selectedBoard: string = this.boardNames[0];
   defaultScheme: string = this.partitionsData[this.selectedBoard].default;
 
@@ -36,31 +38,51 @@ export class Esp32PartitionOverviewComponent implements OnInit {
 
   innerWidth: number | undefined;
 
+  constructor(private _activatedRoute: ActivatedRoute, private router: Router) {
+    this._activatedRoute.params.subscribe(params => {
+      const boardNamesParam = params['boardId'];
+      const schemesParam = params['schemeId'];
+      // set board based on param
+      if (boardNamesParam === undefined) {
+        this.selectedBoard = this.boardNames[0];
+      } else {
+        if (boardNamesParam && this.boardNames.includes(boardNamesParam)) {
+          this.selectedBoard = boardNamesParam;
+        }
+        else {
+          this.selectedBoard = this.boardNames[0];
+          this.router.navigate(['/page-not-found']);
+        }
+        // set schemes based on selected board
+        this.onSchemeChange(schemesParam);
+      }
+    });
+  }
   ngOnInit(){
     this.setTableData();
   }
 
-  onBoardChange(event: string) {
+  onBoardChange(board: string) {
     // schemes are undefined, use default
-    if (Object.keys(this.partitionsData[event].schemes).length === 0) {
-      this.schemes = [this.partitionsData[event].default];
-      this.selectedScheme = this.partitionsData[event].default;
+    if (Object.keys(this.partitionsData[board].schemes).length === 0) {
+      this.schemes = [this.partitionsData[board].default];
+      this.selectedScheme = this.partitionsData[board].default;
     }
     else {
       // schemes are defined, use default to select scheme
-      const defaultScheme = this.partitionsData[event].default;
-      this.schemes = Object.keys(this.partitionsData[event].schemes);
-      const selectedScheme = this.partitionsData[event].schemes[defaultScheme];
+      const defaultScheme = this.partitionsData[board].default;
+      this.schemes = Object.keys(this.partitionsData[board].schemes);
+      const selectedScheme = this.partitionsData[board].schemes[defaultScheme];
       // if default scheme is not found, use first scheme
       if (selectedScheme === undefined) {
-        this.selectedScheme = Object.keys(this.partitionsData[event].schemes)[0]
+        this.selectedScheme = Object.keys(this.partitionsData[board].schemes)[0]
       }
       else {
         this.selectedScheme = defaultScheme;
       }
     }
     if (this.selectedScheme !== undefined) {
-      const build_name = this.partitionsData[event].schemes?.[this.selectedScheme]?.build || undefined;
+      const build_name = this.partitionsData[board].schemes?.[this.selectedScheme]?.build || undefined;
       if (build_name !== undefined) {
         this.selectedSchemeData = this.defaultSchemes[build_name];
       }
@@ -79,8 +101,8 @@ export class Esp32PartitionOverviewComponent implements OnInit {
     }
   }
 
-  onSchemeChange(event: string) {
-    const selectedScheme = this.partitionsData[this.selectedBoard].schemes?.[event];
+  onSchemeChange(scheme: string) {
+    const selectedScheme = this.partitionsData[this.selectedBoard].schemes?.[scheme];
     if (selectedScheme !== undefined) {
       this.selectedSchemeData = this.defaultSchemes[selectedScheme.build] || [];
     }

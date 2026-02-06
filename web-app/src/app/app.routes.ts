@@ -27,6 +27,11 @@ export const routes: Routes = [
         title: 'ESP32 Partitions Overview'
     },
     {
+        path: 'esp32-partitions/:boardId/:schemeId',
+        component: Esp32PartitionOverviewComponent,
+        title: 'ESP32 Partitions Overview'
+    },
+    {
         path: '**',
         component: PageNotFoundComponent
     },
