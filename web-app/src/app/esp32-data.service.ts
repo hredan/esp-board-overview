@@ -12,6 +12,22 @@ export class Esp32DataService {
   partitionsData: BoardPartitionsInfo = esp32_partitions as BoardPartitionsInfo;
   defaultSchemes: DefaultSchemes = esp32_schemes as DefaultSchemes;
   boardsData: BoardInfo[] = board_data as BoardInfo[];
+
+  getBoardName(board: string): string {
+    const boardInfo = this.boardsData.find(b => b.board === board);
+    return boardInfo ? boardInfo.name : board;
+  }
+
+  getMemorySize(board: string): string {
+    const boardInfo = this.boardsData.find(b => b.board === board);
+    const flash_size_list = boardInfo ? boardInfo.flash_size : [];
+    if (flash_size_list.length === 0) {
+      return 'N/A';
+    }
+    else {
+      return flash_size_list.join(',');
+    }
+  }
 }
 
 interface BoardSchemeInfo {

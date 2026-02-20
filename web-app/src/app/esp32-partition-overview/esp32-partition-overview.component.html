@@ -18,7 +18,34 @@
         }
     </mat-select>
 </mat-form-field>
-<h2>Partition Graph</h2>
+<h2>{{selectedBoard}} - {{selectedScheme}}</h2>
+<table>
+    <tr>
+        <td>Board ID:</td>
+        <td class="second_column">{{selectedBoard}}</td>
+    </tr>
+    <tr>
+        <td>Board Name:</td>
+        <td class="second_column">{{esp32DataService.getBoardName(selectedBoard)}}</td>
+    </tr>
+    <tr>
+        <td>Memory Size:</td>
+        <td class="second_column">{{esp32DataService.getMemorySize(selectedBoard)}}</td>
+    </tr>
+    <tr>
+        <td>Scheme Default:</td>
+        <td class="second_column">{{partitionsData[selectedBoard]?.default}}</td>
+    </tr>
+    <tr>
+        <td>Scheme ID:</td>
+        <td class="second_column">{{selectedScheme}}</td>
+    </tr>
+    <tr>
+        <td>Scheme Name:</td>
+        <td class="second_column">{{partitionsData[selectedBoard]?.schemes?.[selectedScheme]?.full_name}}</td>
+    </tr>
+</table>
+<h2>Partition Graph - {{partitionsData[selectedBoard]?.schemes?.[selectedScheme]?.full_name}}</h2>
     @if (selectedSchemeData.length > 0) {
         <div class="svg-container">
         <svg [attr.viewBox]="viewBox" preserveAspectRatio="none">
@@ -34,7 +61,7 @@
         <div>Error, no data available</div>
     }
 
-<h2>Partition Table</h2>
+<h2>Partition Table - {{partitionsData[selectedBoard]?.schemes?.[selectedScheme]?.full_name}}</h2>
  @if (selectedSchemeData.length > 0) {
     <div class="mat-elevation-z8">
         <table mat-table [dataSource]="dataSource">
