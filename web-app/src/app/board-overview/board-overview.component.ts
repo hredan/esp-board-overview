@@ -1,4 +1,5 @@
 import { Component, input, OnInit } from '@angular/core';
+import { RouterLink} from '@angular/router';
 import {MatTableDataSource, MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatInputModule} from '@angular/material/input';
@@ -7,11 +8,11 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {Sort, MatSortModule} from '@angular/material/sort';
 import coreList_input from '../../../data/core_list.json';
 
-import { Esp32DataService, PartitionEntry } from '../esp32-data.service';
+import { Esp32DataService } from '../esp32-data.service';
 
 @Component({
   selector: 'app-board-overview',
-  imports: [MatTableModule, MatInputModule, MatFormFieldModule, MatSortModule, MatPaginatorModule, MatCheckboxModule],
+  imports: [MatTableModule, MatInputModule, MatFormFieldModule, MatSortModule, MatPaginatorModule, MatCheckboxModule, RouterLink],
   templateUrl: './board-overview.component.html',
   styleUrl: './board-overview.component.css'
 })
@@ -47,7 +48,7 @@ export class BoardOverviewComponent implements OnInit {
       return 'N/A';
     }
     else if (this.boardNamesPartitions.includes(boardName) && this.coreName() === 'esp32') {
-      return `<a href="/esp32-partitions/${boardName}/${this.partitionsData[boardName].default}">${flash_sizes.join(',')}</a>`;
+      return `<a href="/esp32-partitions/${boardName}/${this.esp32DataService.getDefaultScheme(boardName)}">${flash_sizes.join(',')}</a>`;
     }
     else {
       return flash_sizes.join(',');

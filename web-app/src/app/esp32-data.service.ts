@@ -28,6 +28,20 @@ export class Esp32DataService {
       return flash_size_list.join(',');
     }
   }
+
+  getDefaultScheme(board: string): string {
+    const schemes = Object.keys(this.partitionsData[board].schemes);
+    const defaultScheme = this.partitionsData[board].default;
+    if (schemes.length === 0) {
+      return defaultScheme
+    }
+    else if (schemes.includes(defaultScheme)) {
+      return defaultScheme;
+    }
+    else {
+      return schemes[0];
+    }
+  }
 }
 
 interface BoardSchemeInfo {

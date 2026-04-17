@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { BoardOverviewComponent, BoardInfo } from './board-overview.component';
 import { Sort } from '@angular/material/sort';
 import { MatCheckboxChange } from '@angular/material/checkbox';
+import { provideRouter } from '@angular/router';
 
 const data_lolin: BoardInfo = {
   name: 'LOLIN(WeMos) D1 R1',
@@ -56,6 +57,7 @@ describe('BoardOverviewComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       providers: [
+        provideRouter([])
       ],
       imports: [BoardOverviewComponent]
     })

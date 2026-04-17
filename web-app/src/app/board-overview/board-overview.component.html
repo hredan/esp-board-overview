@@ -23,7 +23,7 @@
       <td mat-cell *matCellDef="let element">
         @if (element.variant !== 'N/A') {
           <div>
-            <a target="_blank" rel="noopener noreferrer" [href]="get_pins_arduino_link(element.variant)">{{element.variant}}</a>
+            <a [routerLink] = "get_pins_arduino_link(element.variant)" routerLinkActive="router-link-active">{{element.variant}}</a>
           </div>
         } @else {
           {{element.variant}}
