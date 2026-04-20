@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatOptionModule } from '@angular/material/core';
@@ -14,6 +14,9 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrl: './esp32-partition-overview.component.css'
 })
 export class Esp32PartitionOverviewComponent {
+  private _activatedRoute = inject(ActivatedRoute);
+  private router = inject(Router);
+
   esp32DataService: Esp32DataService = new Esp32DataService();
   partitionsData = this.esp32DataService.partitionsData;
   defaultSchemes = this.esp32DataService.defaultSchemes;
@@ -37,7 +40,7 @@ export class Esp32PartitionOverviewComponent {
 
   innerWidth: number | undefined;
 
-  constructor(private _activatedRoute: ActivatedRoute, private router: Router) {
+  constructor() {
     this._activatedRoute.params.subscribe(params => {
       const boardNamesParam = params['boardId'];
       const schemesParam = params['schemeId'];
@@ -64,23 +67,6 @@ export class Esp32PartitionOverviewComponent {
         }
       }
     });
-  }
-
-  setSchemesForSelectedBoard() {
-    this.schemes = Object.keys(this.partitionsData[this.selectedBoard].schemes || {});
-    if (this.schemes.length === 0) {
-      this.selectedScheme = this.partitionsData[this.selectedBoard].default;
-      this.schemes = [this.selectedScheme];
-    }
-    else {
-      const defaultScheme = this.partitionsData[this.selectedBoard].default;
-      if (this.schemes.includes(defaultScheme)) {
-        this.selectedScheme = defaultScheme;
-      }
-      else {
-        this.selectedScheme = this.schemes[0];
-      }
-    }
   }
 
   onBoardChange(board: string) {
