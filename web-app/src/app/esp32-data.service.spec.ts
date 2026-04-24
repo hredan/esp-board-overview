@@ -114,4 +114,12 @@ describe('Esp32DataService', () => {
     const boardName = service.getBoardName('unknown_board');
     expect(boardName).toBe("N/A");
   });
+
+  it ('should return partition routes', () => {
+    const routes = service.getPartitionRoutes();
+    expect(routes.length).toBe(3);
+    expect(routes[0]).toEqual({ boardId: 'esp32_devkitc_v4', schemeId: 'default_4MB' });
+    expect(routes[1]).toEqual({ boardId: 'esp32_devkitc_v4_16mb', schemeId: 'default_16MB' });
+    expect(routes[2]).toEqual({ boardId: 'board_default_partition_not_in_schemes', schemeId: 'default_8MB' });
+  });
 });

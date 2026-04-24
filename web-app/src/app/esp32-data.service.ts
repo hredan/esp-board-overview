@@ -42,6 +42,27 @@ export class Esp32DataService {
       return schemes[0];
     }
   }
+
+  getPartitionRoutes() {
+    // Implement route generation logic here
+    const boards = Object.keys(this.partitionsData);
+    const routes = [];
+    for (const board of boards) {
+      const schemes = Object.keys(this.partitionsData[board].schemes);
+      if (schemes.length === 0) {
+        routes.push({ boardId: board, schemeId: this.partitionsData[board].default });
+        continue;
+      }
+      else {
+        for (const scheme of schemes) {
+          routes.push({ boardId: board, schemeId: scheme });
+        }
+      }
+    }
+    return routes;
+
+  }
+
 }
 
 interface BoardSchemeInfo {
