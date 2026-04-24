@@ -52,7 +52,6 @@ export class BoardOverviewComponent implements OnInit {
   }
 
   get_partition_route(boardName: string): string {
-    const defaultScheme = this.esp32DataService.getDefaultScheme(boardName);
     return `/esp32-partitions/${boardName}/${this.esp32DataService.getDefaultScheme(boardName)}`;
   }
 

@@ -239,4 +239,32 @@ describe('BoardOverviewComponent', () => {
     expect(data[1].variant).toBe('thing');
   }
   );
+
+  it('is_generate_partition_link should return true for esp32 core and valid board', () => {
+    createComponent([data_lolin, data_blynk]);
+    component.coreName = () => 'esp32';
+    component.boardNamesPartitions = ['d1'];
+    expect(component.is_generate_partition_link('d1')).toBe(true);
+  });
+
+  it('is_generate_partition_link should return false for non-esp32 core or invalid board', () => {
+    createComponent([data_lolin, data_blynk]);
+    component.coreName = () => 'esp8266';
+    component.boardNamesPartitions = ['d1'];
+    expect(component.is_generate_partition_link('d1')).toBe(false);
+  });
+
+  it('get_pins_arduino_link should return correct URL for esp8266 valid variant', () => {
+    createComponent([data_lolin, data_blynk]);
+    component.coreName = () => 'esp8266';
+    const link = component.get_pins_arduino_link('d1');
+    expect(link).toBe('https://github.com/esp8266/Arduino/blob/3.1.2/variants/d1/pins_arduino.h');
+  });
+
+  it('get_pins_arduino_link should return correct URL for esp32 valid variant', () => {
+    createComponent([data_lolin, data_blynk]);
+    component.coreName = () => 'esp32';
+    const link = component.get_pins_arduino_link('d1');
+    expect(link).toBe('https://github.com/espressif/arduino-esp32/blob/3.1.2/variants/d1/pins_arduino.h');
+  });
 });
