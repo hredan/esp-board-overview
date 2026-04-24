@@ -48,12 +48,12 @@ export class Esp32PartitionOverviewComponent {
       // set board based on param
       if (boardNamesParam === undefined) {
         const board = this.boardNames[0];
-        const selectedScheme = this.partitionsData[board].default;
+        const selectedScheme = this.esp32DataService.getDefaultScheme(board);
         this.updatePage(board, selectedScheme);
       } else {
         if (boardNamesParam && this.boardNames.includes(boardNamesParam) && schemesParam === undefined) {
           const board = boardNamesParam;
-          const selectedScheme = this.partitionsData[board].default;
+          const selectedScheme = this.esp32DataService.getDefaultScheme(board);
           this.updatePage(board, selectedScheme);
         }
         else if (boardNamesParam && this.boardNames.includes(boardNamesParam) && schemesParam) 
@@ -62,7 +62,6 @@ export class Esp32PartitionOverviewComponent {
             const selectedScheme = schemesParam;
             this.updatePage(board, selectedScheme);
           } else {
-          this.selectedBoard = this.boardNames[0];
           this.router.navigate(['/page-not-found']);
         }
       }
@@ -81,9 +80,6 @@ export class Esp32PartitionOverviewComponent {
       this.selectedScheme = scheme;
       this.selectedBoard = board;
       this.schemes = Object.keys(this.partitionsData[board].schemes || {});
-      if (!this.schemes.includes(scheme)) {
-        this.selectedScheme = this.partitionsData[board].default;
-      }
       const scheme_build = this.partitionsData[board].schemes?.[this.selectedScheme]?.build;
       if (scheme_build) {
         this.selectedSchemeData = this.defaultSchemes[scheme_build];
