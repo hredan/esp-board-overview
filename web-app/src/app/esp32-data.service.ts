@@ -15,7 +15,7 @@ export class Esp32DataService {
 
   getBoardName(board: string): string {
     const boardInfo = this.boardsData.find(b => b.board === board);
-    return boardInfo ? boardInfo.name : board;
+    return boardInfo ? boardInfo.name : "N/A";
   }
 
   getMemorySize(board: string): string {

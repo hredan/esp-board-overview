@@ -9,7 +9,10 @@ describe('Esp32PartitionOverviewComponent', () => {
   let component: Esp32PartitionOverviewComponent;
   let fixture: ComponentFixture<Esp32PartitionOverviewComponent>;
   let router: Router;
-  let paramsSubject: BehaviorSubject<{ [key: string]: string }> = new BehaviorSubject<{ [key: string]: string }>({ boardId: 'esp32c2', schemeId: 'minimal' });
+  
+  // is disabled for the test to allow emitting new params values, empty list of params and only one of the params
+  // eslint-disable-next-line @typescript-eslint/consistent-indexed-object-style
+  const paramsSubject = new BehaviorSubject<{[key: string]: string;}>({ boardId: 'esp32c2', schemeId: 'minimal' });
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
