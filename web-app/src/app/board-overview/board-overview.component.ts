@@ -43,12 +43,22 @@ export class BoardOverviewComponent implements OnInit {
       }
     });
   }
-  get_flash_size_element(flash_sizes: string[], boardName: string): string {
+
+  is_generate_partition_link(boardName: string): boolean {
+    if (this.boardNamesPartitions.includes(boardName) && this.coreName() === 'esp32') {
+      return true;
+    }
+    return false;
+  }
+
+  get_partition_route(boardName: string): string {
+    const defaultScheme = this.esp32DataService.getDefaultScheme(boardName);
+    return `/esp32-partitions/${boardName}/${this.esp32DataService.getDefaultScheme(boardName)}`;
+  }
+
+  get_flash_size_element(flash_sizes: string[]): string {
     if (flash_sizes.length === 0) {
       return 'N/A';
-    }
-    else if (this.boardNamesPartitions.includes(boardName) && this.coreName() === 'esp32') {
-      return `<a href="/esp32-partitions/${boardName}/${this.esp32DataService.getDefaultScheme(boardName)}">${flash_sizes.join(',')}</a>`;
     }
     else {
       return flash_sizes.join(',');
