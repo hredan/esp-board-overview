@@ -1154,14 +1154,14 @@
             "type": "data",
             "subtype": "spiffs",
             "offset": "0x610000",
-            "size": "0x700000"
+            "size": "0x600000"
         },
         {
             "name": "model",
             "type": "data",
             "subtype": "spiffs",
-            "offset": "0xD10000",
-            "size": "0x2E0000"
+            "offset": "0xC10000",
+            "size": "0x3E0000"
         },
         {
             "name": "coredump",
@@ -1693,5 +1693,6 @@
             "offset": "0x7F0000",
             "size": "0x10000"
         }
-    ]
+    ],
+    "partitions.csv": []
 }

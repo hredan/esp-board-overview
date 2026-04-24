@@ -510,6 +510,16 @@
         "board": "alksesp32"
     },
     {
+        "name": "AMYboard",
+        "variant": "amyboard",
+        "mcu": "esp32s3",
+        "flash_size": [
+            "16MB"
+        ],
+        "led_builtin": "N/A",
+        "board": "amyboard"
+    },
+    {
         "name": "Arduino Nesso N1",
         "variant": "arduino_nesso_n1",
         "mcu": "esp32c6",
@@ -578,6 +588,16 @@
         ],
         "led_builtin": "N/A",
         "board": "aw2eth"
+    },
+    {
+        "name": "Axiometa Genesis Mini",
+        "variant": "axiometa_genesis_mini",
+        "mcu": "esp32s3",
+        "flash_size": [
+            "4MB"
+        ],
+        "led_builtin": "N/A",
+        "board": "axiometa_genesis_mini"
     },
     {
         "name": "Axiometa Genesis One",
@@ -814,7 +834,7 @@
         "variant": "deneyapkartv2",
         "mcu": "esp32s3",
         "flash_size": [
-            "4MB"
+            "8MB"
         ],
         "led_builtin": "86",
         "board": "deneyapkartv2"
@@ -870,6 +890,16 @@
         "board": "dfrobot_beetle_esp32c6"
     },
     {
+        "name": "DFRobot Firebeetle 2 ESP32-C5",
+        "variant": "dfrobot_firebeetle2_esp32c5",
+        "mcu": "esp32c5",
+        "flash_size": [
+            "4MB"
+        ],
+        "led_builtin": "15",
+        "board": "dfrobot_firebeetle2_esp32c5"
+    },
+    {
         "name": "DFRobot FireBeetle 2 ESP32-C6",
         "variant": "dfrobot_firebeetle2_esp32c6",
         "mcu": "esp32c6",
@@ -888,6 +918,16 @@
         ],
         "led_builtin": "2",
         "board": "dfrobot_firebeetle2_esp32e"
+    },
+    {
+        "name": "DFRobot FireBeetle 2 ESP32-P4",
+        "variant": "dfrobot_firebeetle2_esp32p4",
+        "mcu": "esp32p4",
+        "flash_size": [
+            "16MB"
+        ],
+        "led_builtin": "3",
+        "board": "dfrobot_firebeetle2_esp32p4"
     },
     {
         "name": "DFRobot Firebeetle 2 ESP32-S3",
@@ -1678,6 +1718,16 @@
         "board": "heltec_wifi_lora_32_V3"
     },
     {
+        "name": "Heltec WiFi LoRa 32(V4)",
+        "variant": "heltec_wifi_lora_32_V4",
+        "mcu": "esp32s3",
+        "flash_size": [
+            "4MB"
+        ],
+        "led_builtin": "35",
+        "board": "heltec_wifi_lora_32_V4"
+    },
+    {
         "name": "Heltec Wireless Bridge",
         "variant": "heltec_wireless_bridge",
         "mcu": "esp32",
@@ -1766,6 +1816,16 @@
         ],
         "led_builtin": "88",
         "board": "heltec_wireless_tracker"
+    },
+    {
+        "name": "Heltec Wireless Tracker(V2)",
+        "variant": "heltec_wireless_tracker_v2",
+        "mcu": "esp32s3",
+        "flash_size": [
+            "8MB"
+        ],
+        "led_builtin": "88",
+        "board": "heltec_wireless_tracker_v2"
     },
     {
         "name": "HONEYLemon",
@@ -2616,6 +2676,16 @@
         "board": "oroca_edubot"
     },
     {
+        "name": "Ozobot circuit kit",
+        "variant": "ozobot_circuit_kit",
+        "mcu": "esp32s3",
+        "flash_size": [
+            "4MB"
+        ],
+        "led_builtin": "N/A",
+        "board": "ozobot_circuit_kit"
+    },
+    {
         "name": "PandaByte x32 - ESP32",
         "variant": "pandabyte_x32",
         "mcu": "esp32",
@@ -2736,13 +2806,23 @@
         "board": "roboheart_hercules"
     },
     {
+        "name": "Root Maker",
+        "variant": "esp32s3",
+        "mcu": "esp32s3",
+        "flash_size": [
+            "16MB"
+        ],
+        "led_builtin": "88",
+        "board": "rootmaker"
+    },
+    {
         "name": "senseBox Eye",
         "variant": "sensebox_eye",
         "mcu": "esp32s3",
         "flash_size": [
             "16MB (128Mb)"
         ],
-        "led_builtin": "N/A",
+        "led_builtin": "45",
         "board": "sensebox_eye"
     },
     {
@@ -2804,6 +2884,16 @@
         ],
         "led_builtin": "18",
         "board": "sparkfun_esp32_iot_redboard"
+    },
+    {
+        "name": "SparkFun ESP32-C5 Thing Plus",
+        "variant": "sparkfun_esp32c5_thing_plus",
+        "mcu": "esp32c5",
+        "flash_size": [
+            "8MB"
+        ],
+        "led_builtin": "67",
+        "board": "sparkfun_esp32c5_thing_plus"
     },
     {
         "name": "SparkFun ESP32-C6 Qwiic Pocket",
@@ -3674,6 +3764,16 @@
         ],
         "led_builtin": "N/A",
         "board": "wt32-sc01-plus"
+    },
+    {
+        "name": "Xteink X4 eReader",
+        "variant": "xteink_x4",
+        "mcu": "esp32c3",
+        "flash_size": [
+            "16MB"
+        ],
+        "led_builtin": "N/A",
+        "board": "xteink_x4"
     },
     {
         "name": "YelloByte YB-ESP32-S3-AMP",
