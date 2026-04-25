@@ -71,6 +71,9 @@
         },
         "serve": {
           "builder": "@angular/build:dev-server",
+          "options": {
+            "allowedHosts": ["localhost"]
+          },
           "configurations": {
             "production": {
               "buildTarget": "web-app:build:production"
