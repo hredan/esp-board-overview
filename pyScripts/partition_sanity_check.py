@@ -13,7 +13,7 @@ if esp32_partitions["aslcanx2"]["schemes"]["defaultffat"]["build"] == "default_8
     esp32_partitions["aslcanx2"]["schemes"]["defaultffat"]["build"] = "default_ffat_8MB"
 if esp32_partitions["xteink_x4"]["schemes"]["custom"]["build"] == "partitions.csv":
     print("Modifying: xteink_x4 remove custom scheme partitions.csv does not exist in the esp32 core version")
-    del(esp32_partitions["xteink_x4"]["schemes"]["custom"])
+    del esp32_partitions["xteink_x4"]["schemes"]["custom"]
 
 with open(ESP32_JSON_PATH, 'w', encoding='utf-8') as file:
     json.dump(esp32_partitions, file, ensure_ascii=False, indent=4)
