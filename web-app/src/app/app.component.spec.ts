@@ -7,6 +7,7 @@ import { EspCoreOverviewComponent } from "./esp-core-overview/esp-core-overview.
 import { Esp8266BoardOverviewComponent } from "./esp8266-board-overview/esp8266-board-overview.component";
 import { Esp32BoardOverviewComponent } from "./esp32-board-overview/esp32-board-overview.component";
 import { Esp32PartitionOverviewComponent } from "./esp32-partition-overview/esp32-partition-overview.component";
+import { Esp32SchemeListComponent } from './esp32-scheme-list/esp32-scheme-list.component';
 
 describe('AppComponent', () => {
 
@@ -70,5 +71,15 @@ describe('AppComponent', () => {
     app.onActivate(partitionComponent);
     expect(app.activeLink).toEqual('ESP32-Partitions');
     expect(app.title).toEqual('ESP32 Partitions Overview');
+  });
+
+  it('should update activeLink and title on route activation ESP32-Schemes', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+
+    const schemeComponent = TestBed.createComponent(Esp32SchemeListComponent).componentInstance;
+    app.onActivate(schemeComponent);
+    expect(app.activeLink).toEqual('ESP32-Partitions');
+    expect(app.title).toEqual('ESP32 Partition Schemes');
   });
 });

@@ -1,4 +1,5 @@
 import { Component, inject } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatOptionModule } from '@angular/material/core';
@@ -9,7 +10,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-esp32-partition-overview',
-  imports: [MatSelectModule, MatFormFieldModule, MatOptionModule, Esp32PartitionViewComponent],
+  imports: [MatSelectModule, MatFormFieldModule, MatOptionModule, Esp32PartitionViewComponent, RouterLink],
   templateUrl: './esp32-partition-overview.component.html',
   styleUrl: './esp32-partition-overview.component.css'
 })

@@ -63,6 +63,48 @@ export class Esp32DataService {
 
   }
 
+  getSchemeRoutes() {
+    return Object.keys(this.defaultSchemes).map((schemeId) => ({ schemeId }));
+  }
+
+  getMemorySizeOfScheme(defaultScheme: string): number | null {
+    const entries = this.defaultSchemes[defaultScheme];
+    if (!entries || entries.length === 0) {
+      return null;
+    }
+
+    const lastEntry = entries[entries.length - 1];
+    const offset = this.parsePartitionValue(lastEntry.offset);
+    const size = this.parsePartitionValue(lastEntry.size);
+
+    if (offset === null || size === null) {
+      return null;
+    }
+
+    return (offset + size) / (1024 * 1024);
+  }
+
+  private parsePartitionValue(value: string): number | null {
+    const normalized = value.trim();
+    const asNumber = Number(normalized);
+    if (!Number.isNaN(asNumber)) {
+      return asNumber;
+    }
+
+    const lower = normalized.toLowerCase();
+    if (lower.endsWith('k')) {
+      const kValue = Number(lower.slice(0, -1));
+      return Number.isNaN(kValue) ? null : kValue * 1024;
+    }
+
+    if (lower.endsWith('m')) {
+      const mValue = Number(lower.slice(0, -1));
+      return Number.isNaN(mValue) ? null : mValue * 1024 * 1024;
+    }
+
+    return null;
+  }
+
 }
 
 interface BoardSchemeInfo {

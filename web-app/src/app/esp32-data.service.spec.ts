@@ -66,6 +66,29 @@ describe('Esp32DataService', () => {
           "subtype": "ota",
           "offset": "0x6000",
           "size": "0x2000"
+        },
+        {
+            "name": "coredump",
+            "type": "data",
+            "subtype": "coredump",
+            "offset": "0x3F0000",
+            "size": "0x10000"
+        }
+      ],
+      "k_suffix_scheme": [
+        {
+          "name": "nvs",
+          "type": "data",
+          "subtype": "nvs",
+          "offset": "36K",
+          "size": "20K"
+        },
+        {
+          "name": "factory",
+          "type": "app",
+          "subtype": "factory",
+          "offset": "64K",
+          "size": "1900K"
         }
       ]
     };
@@ -121,5 +144,20 @@ describe('Esp32DataService', () => {
     expect(routes[0]).toEqual({ boardId: 'esp32_devkitc_v4', schemeId: 'default_4MB' });
     expect(routes[1]).toEqual({ boardId: 'esp32_devkitc_v4_16mb', schemeId: 'default_16MB' });
     expect(routes[2]).toEqual({ boardId: 'board_default_partition_not_in_schemes', schemeId: 'default_8MB' });
+  });
+
+  it('should return memory size in MB from the last partition entry of a default scheme', () => {
+    const result = service.getMemorySizeOfScheme('default_4MB');
+    expect(result).toEqual(4);
+  });
+
+  it('should return null for unknown scheme in getMemorySizeOfScheme', () => {
+    const result = service.getMemorySizeOfScheme('unknown_scheme');
+    expect(result).toBeNull();
+  });
+
+  it('should return memory size in MB for K-suffixed scheme values', () => {
+    const result = service.getMemorySizeOfScheme('k_suffix_scheme');
+    expect(result).toBeCloseTo(1.91796875);
   });
 });

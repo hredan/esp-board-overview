@@ -4,6 +4,7 @@ import { EspCoreOverviewComponent } from './esp-core-overview/esp-core-overview.
 import { Esp8266BoardOverviewComponent } from './esp8266-board-overview/esp8266-board-overview.component';
 import { Esp32BoardOverviewComponent } from './esp32-board-overview/esp32-board-overview.component';
 import { Esp32PartitionOverviewComponent } from './esp32-partition-overview/esp32-partition-overview.component';
+import { Esp32SchemeListComponent } from './esp32-scheme-list/esp32-scheme-list.component';
 
 export const routes: Routes = [
     { 
@@ -30,6 +31,16 @@ export const routes: Routes = [
         path: 'esp32-partitions/:boardId/:schemeId',
         component: Esp32PartitionOverviewComponent,
         title: 'ESP32 Partitions Overview',
+    },
+    {
+        path: 'esp32-schemes',
+        component: Esp32SchemeListComponent,
+        title: 'ESP32 Partition Schemes'
+    },
+    {
+        path: 'esp32-schemes/:schemeId',
+        component: Esp32SchemeListComponent,
+        title: 'ESP32 Partition Schemes'
     },
     {
         path: '**',

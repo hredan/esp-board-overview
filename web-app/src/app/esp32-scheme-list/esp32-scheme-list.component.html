@@ -1,0 +1,54 @@
+<section class="scheme-list">
+  <section class="action-row">
+    <button type="button" routerLink="/esp32-partitions">Back to ESP32-Partitions</button>
+  </section>
+
+  <h2>ESP32 Partition Schemes</h2>
+
+  <section class="filter-row">
+    <mat-form-field>
+      <mat-label>Memory Size</mat-label>
+      <mat-select [value]="selectedMemorySizeFilter" (selectionChange)="applyMemorySizeFilter($event.value)">
+        <mat-option value="all">All</mat-option>
+        <mat-option *ngFor="let size of memorySizeFilterValues" [value]="size.toString()">
+          {{ size | number:'1.2-2' }} MB
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </section>
+
+  <div class="mat-elevation-z8">
+    <table mat-table [dataSource]="sortedData" matSort (matSortChange)="sortData($event)">
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+        <td mat-cell *matCellDef="let entry">{{ entry.name }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="memorySizeMb">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Memory Size </th>
+        <td mat-cell *matCellDef="let entry">
+          @if (entry.memorySizeMb !== null) {
+            {{ entry.memorySizeMb | number:'1.2-2' }} MB
+          } @else {
+            N/A
+          }
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;" class="clickable-row" (click)="onRowSelect(row)"></tr>
+    </table>
+  </div>
+
+  @if (isOverlayOpen) {
+    <div class="overlay-backdrop" (click)="closeOverlay()">
+      <div class="overlay-content" (click)="$event.stopPropagation()">
+        <div class="overlay-header">
+          <h3>{{ selectedSchemeName }}</h3>
+          <button type="button" class="close-button" aria-label="Close overlay" (click)="closeOverlay()">&times;</button>
+        </div>
+        <app-esp32-partition-view [schemeName]="selectedSchemeName" [selectedSchemeData]="selectedSchemeData"></app-esp32-partition-view>
+      </div>
+    </div>
+  }
+</section>

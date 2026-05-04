@@ -1,4 +1,7 @@
 <div>
+    <div class="action-row">
+        <button type="button" routerLink="/esp32-schemes">Open ESP32-Schemes</button>
+    </div>
     <mat-form-field>
     <mat-label>Select a board</mat-label>
     <mat-select [(value)]="selectedBoard" (selectionChange)="onBoardChange($event.value)">
