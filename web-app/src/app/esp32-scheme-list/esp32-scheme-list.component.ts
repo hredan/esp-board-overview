@@ -5,7 +5,7 @@ import { MatOptionModule } from '@angular/material/core';
 import { MatSelectModule } from '@angular/material/select';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { MatSortModule, Sort } from '@angular/material/sort';
-import { ActivatedRoute, Router, RouterLink } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 
 import { Esp32DataService, PartitionEntry } from '../esp32-data.service';
 import { Esp32PartitionViewComponent } from '../esp32-partition-view/esp32-partition-view.component';
@@ -19,7 +19,7 @@ interface SchemeMemoryEntry {
 
 @Component({
   selector: 'app-esp32-scheme-list',
-  imports: [CommonModule, MatTableModule, MatSortModule, MatFormFieldModule, MatSelectModule, MatOptionModule, Esp32PartitionViewComponent, RouterLink],
+  imports: [CommonModule, MatTableModule, MatSortModule, MatFormFieldModule, MatSelectModule, MatOptionModule, Esp32PartitionViewComponent],
   templateUrl: './esp32-scheme-list.component.html',
   styleUrl: './esp32-scheme-list.component.css'
 })
@@ -55,7 +55,9 @@ export class Esp32SchemeListComponent implements OnInit {
         .filter((size): size is number => size !== null))
     ).sort((a, b) => a - b);
 
-    this.sortedData = new MatTableDataSource<SchemeMemoryEntry>(this.allEntries);
+    this.activatedRoute.queryParams.subscribe((queryParams) => {
+      this.applyFiltersFromQueryParams(queryParams);
+    });
 
     this.activatedRoute.params.subscribe((params) => {
       const schemeId = params['schemeId'];
@@ -88,17 +90,17 @@ export class Esp32SchemeListComponent implements OnInit {
 
   applySpiffsFilter(value: string) {
     this.selectedSpiffsFilter = value;
-    this.sortedData = new MatTableDataSource<SchemeMemoryEntry>(this.getFilteredEntries());
+    this.updateFilterQueryParams();
   }
 
   applyOtaFilter(value: string) {
     this.selectedOtaFilter = value;
-    this.sortedData = new MatTableDataSource<SchemeMemoryEntry>(this.getFilteredEntries());
+    this.updateFilterQueryParams();
   }
 
   applyMemorySizeFilter(value: string) {
     this.selectedMemorySizeFilter = value;
-    this.sortedData = new MatTableDataSource<SchemeMemoryEntry>(this.getFilteredEntries());
+    this.updateFilterQueryParams();
   }
 
   sortData(sort: Sort) {
@@ -126,11 +128,15 @@ export class Esp32SchemeListComponent implements OnInit {
   }
 
   onRowSelect(entry: SchemeMemoryEntry) {
-    this.router.navigate(['/esp32-schemes', entry.name]);
+    this.router.navigate(['/esp32-schemes', entry.name], { queryParams: this.buildFilterQueryParams() });
+  }
+
+  onBackToPartitions() {
+    this.router.navigate(['/esp32-partitions']);
   }
 
   closeOverlay() {
-    this.router.navigate(['/esp32-schemes']);
+    this.router.navigate(['/esp32-schemes'], { queryParams: this.buildFilterQueryParams() });
   }
 
   private openOverlayForScheme(schemeId: string): boolean {
@@ -149,6 +155,49 @@ export class Esp32SchemeListComponent implements OnInit {
     this.isOverlayOpen = false;
     this.selectedSchemeName = '';
     this.selectedSchemeData = [];
+  }
+
+  private updateFilterQueryParams() {
+    this.router.navigate([], {
+      relativeTo: this.activatedRoute,
+      queryParams: this.buildFilterQueryParams(),
+      queryParamsHandling: 'merge'
+    });
+  }
+
+  private buildFilterQueryParams(): Params {
+    return {
+      memory: this.selectedMemorySizeFilter === 'all' ? null : this.selectedMemorySizeFilter,
+      spiffs: this.selectedSpiffsFilter === 'all' ? null : this.selectedSpiffsFilter,
+      ota: this.selectedOtaFilter === 'all' ? null : this.selectedOtaFilter
+    };
+  }
+
+  private applyFiltersFromQueryParams(queryParams: Params) {
+    this.selectedSpiffsFilter = this.parseBooleanLikeFilter(queryParams['spiffs']);
+    this.selectedOtaFilter = this.parseBooleanLikeFilter(queryParams['ota']);
+    this.selectedMemorySizeFilter = this.parseMemoryFilter(queryParams['memory']);
+    this.sortedData = new MatTableDataSource<SchemeMemoryEntry>(this.getFilteredEntries());
+  }
+
+  private parseBooleanLikeFilter(value: unknown): 'all' | 'yes' | 'no' {
+    if (value === 'yes' || value === 'no' || value === 'all') {
+      return value;
+    }
+    return 'all';
+  }
+
+  private parseMemoryFilter(value: unknown): string {
+    if (typeof value !== 'string' || value === 'all') {
+      return 'all';
+    }
+
+    const parsed = Number(value);
+    if (Number.isNaN(parsed) || !this.memorySizeFilterValues.includes(parsed)) {
+      return 'all';
+    }
+
+    return value;
   }
 }
 
