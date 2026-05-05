@@ -12,6 +12,7 @@ import { Esp32PartitionViewComponent } from '../esp32-partition-view/esp32-parti
 
 interface SchemeMemoryEntry {
   name: string;
+  isSpiffs: boolean;
   memorySizeMb: number | null;
 }
 
@@ -26,11 +27,12 @@ export class Esp32SchemeListComponent implements OnInit {
   private activatedRoute = inject(ActivatedRoute);
   private router = inject(Router);
 
-  displayedColumns: string[] = ['name', 'memorySizeMb'];
+  displayedColumns: string[] = ['name', 'isSpiffs', 'memorySizeMb'];
   allEntries: SchemeMemoryEntry[] = [];
   sortedData: MatTableDataSource<SchemeMemoryEntry> = new MatTableDataSource<SchemeMemoryEntry>([]);
   memorySizeFilterValues: number[] = [];
   selectedMemorySizeFilter = 'all';
+  selectedSpiffsFilter = 'all';
   selectedSchemeName = '';
   selectedSchemeData: PartitionEntry[] = [];
   isOverlayOpen = false;
@@ -40,6 +42,7 @@ export class Esp32SchemeListComponent implements OnInit {
       .sort((a, b) => a.localeCompare(b))
       .map((name) => ({
         name,
+        isSpiffs: this.esp32DataService.isSpiffsScheme(name),
         memorySizeMb: this.esp32DataService.getMemorySizeOfScheme(name)
       }));
 
@@ -66,17 +69,25 @@ export class Esp32SchemeListComponent implements OnInit {
     });
   }
 
+  private getFilteredEntries(): SchemeMemoryEntry[] {
+    return this.allEntries.filter((entry) => {
+      const spiffsMatch = this.selectedSpiffsFilter === 'all'
+        || (this.selectedSpiffsFilter === 'yes' && entry.isSpiffs)
+        || (this.selectedSpiffsFilter === 'no' && !entry.isSpiffs);
+      const sizeMatch = this.selectedMemorySizeFilter === 'all'
+        || entry.memorySizeMb === Number(this.selectedMemorySizeFilter);
+      return spiffsMatch && sizeMatch;
+    });
+  }
+
+  applySpiffsFilter(value: string) {
+    this.selectedSpiffsFilter = value;
+    this.sortedData = new MatTableDataSource<SchemeMemoryEntry>(this.getFilteredEntries());
+  }
+
   applyMemorySizeFilter(value: string) {
     this.selectedMemorySizeFilter = value;
-    if (value === 'all') {
-      this.sortedData = new MatTableDataSource<SchemeMemoryEntry>(this.allEntries.slice());
-      return;
-    }
-
-    const selectedSize = Number(value);
-    this.sortedData = new MatTableDataSource<SchemeMemoryEntry>(
-      this.allEntries.filter((entry) => entry.memorySizeMb === selectedSize)
-    );
+    this.sortedData = new MatTableDataSource<SchemeMemoryEntry>(this.getFilteredEntries());
   }
 
   sortData(sort: Sort) {

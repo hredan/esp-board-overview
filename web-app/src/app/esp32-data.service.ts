@@ -67,6 +67,14 @@ export class Esp32DataService {
     return Object.keys(this.defaultSchemes).map((schemeId) => ({ schemeId }));
   }
 
+  isSpiffsScheme(schemeId: string): boolean {
+    const entries = this.defaultSchemes[schemeId];
+    if (!entries) {
+      return false;
+    }
+    return entries.some(entry => entry.name === 'spiffs');
+  }
+
   getMemorySizeOfScheme(defaultScheme: string): number | null {
     const entries = this.defaultSchemes[defaultScheme];
     if (!entries || entries.length === 0) {
