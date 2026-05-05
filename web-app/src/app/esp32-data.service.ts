@@ -75,6 +75,26 @@ export class Esp32DataService {
     return entries.some(entry => entry.name === 'spiffs');
   }
 
+  isOtaScheme(schemeId: string): boolean {
+    const entries = this.defaultSchemes[schemeId];
+    if (!entries || entries.length === 0) {
+      return false;
+    }
+
+    const hasOtadataPartition = entries.some(
+      (entry) => entry.name.trim().toLowerCase() === 'otadata'
+    );
+    if (!hasOtadataPartition) {
+      return false;
+    }
+
+    const otaSubtypeCount = entries.filter(
+      (entry) => /^ota_\d+$/i.test(entry.subtype.trim())
+    ).length;
+    // is ota with at least 2 ota partitions (ota_0 and ota_1)
+    return otaSubtypeCount >= 2;
+  }
+
   getMemorySizeOfScheme(defaultScheme: string): number | null {
     const entries = this.defaultSchemes[defaultScheme];
     if (!entries || entries.length === 0) {

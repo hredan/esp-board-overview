@@ -13,6 +13,7 @@ import { Esp32PartitionViewComponent } from '../esp32-partition-view/esp32-parti
 interface SchemeMemoryEntry {
   name: string;
   isSpiffs: boolean;
+  isOta: boolean;
   memorySizeMb: number | null;
 }
 
@@ -27,12 +28,13 @@ export class Esp32SchemeListComponent implements OnInit {
   private activatedRoute = inject(ActivatedRoute);
   private router = inject(Router);
 
-  displayedColumns: string[] = ['name', 'isSpiffs', 'memorySizeMb'];
+  displayedColumns: string[] = ['name', 'isSpiffs', 'isOta', 'memorySizeMb'];
   allEntries: SchemeMemoryEntry[] = [];
   sortedData: MatTableDataSource<SchemeMemoryEntry> = new MatTableDataSource<SchemeMemoryEntry>([]);
   memorySizeFilterValues: number[] = [];
   selectedMemorySizeFilter = 'all';
   selectedSpiffsFilter = 'all';
+  selectedOtaFilter = 'all';
   selectedSchemeName = '';
   selectedSchemeData: PartitionEntry[] = [];
   isOverlayOpen = false;
@@ -43,6 +45,7 @@ export class Esp32SchemeListComponent implements OnInit {
       .map((name) => ({
         name,
         isSpiffs: this.esp32DataService.isSpiffsScheme(name),
+        isOta: this.esp32DataService.isOtaScheme(name),
         memorySizeMb: this.esp32DataService.getMemorySizeOfScheme(name)
       }));
 
@@ -74,14 +77,22 @@ export class Esp32SchemeListComponent implements OnInit {
       const spiffsMatch = this.selectedSpiffsFilter === 'all'
         || (this.selectedSpiffsFilter === 'yes' && entry.isSpiffs)
         || (this.selectedSpiffsFilter === 'no' && !entry.isSpiffs);
+      const otaMatch = this.selectedOtaFilter === 'all'
+        || (this.selectedOtaFilter === 'yes' && entry.isOta)
+        || (this.selectedOtaFilter === 'no' && !entry.isOta);
       const sizeMatch = this.selectedMemorySizeFilter === 'all'
         || entry.memorySizeMb === Number(this.selectedMemorySizeFilter);
-      return spiffsMatch && sizeMatch;
+      return spiffsMatch && otaMatch && sizeMatch;
     });
   }
 
   applySpiffsFilter(value: string) {
     this.selectedSpiffsFilter = value;
+    this.sortedData = new MatTableDataSource<SchemeMemoryEntry>(this.getFilteredEntries());
+  }
+
+  applyOtaFilter(value: string) {
+    this.selectedOtaFilter = value;
     this.sortedData = new MatTableDataSource<SchemeMemoryEntry>(this.getFilteredEntries());
   }
 
@@ -102,6 +113,10 @@ export class Esp32SchemeListComponent implements OnInit {
       switch (sort.active) {
         case 'name':
           return compareText(a.name, b.name, isAsc);
+        case 'isSpiffs':
+          return compareBoolean(a.isSpiffs, b.isSpiffs, isAsc);
+        case 'isOta':
+          return compareBoolean(a.isOta, b.isOta, isAsc);
         case 'memorySizeMb':
           return compareNullableNumber(a.memorySizeMb, b.memorySizeMb, isAsc);
         default:
@@ -155,4 +170,10 @@ function compareNullableNumber(a: number | null, b: number | null, isAsc: boolea
   }
 
   return (a < b ? -1 : a > b ? 1 : 0) * (isAsc ? 1 : -1);
+}
+
+function compareBoolean(a: boolean, b: boolean, isAsc: boolean): number {
+  const aValue = a ? 1 : 0;
+  const bValue = b ? 1 : 0;
+  return (aValue < bValue ? -1 : aValue > bValue ? 1 : 0) * (isAsc ? 1 : -1);
 }

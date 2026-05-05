@@ -22,6 +22,14 @@
         <mat-option value="no">No</mat-option>
       </mat-select>
     </mat-form-field>
+    <mat-form-field>
+      <mat-label>OTA</mat-label>
+      <mat-select [value]="selectedOtaFilter" (selectionChange)="applyOtaFilter($event.value)">
+        <mat-option value="all">All</mat-option>
+        <mat-option value="yes">Yes</mat-option>
+        <mat-option value="no">No</mat-option>
+      </mat-select>
+    </mat-form-field>
   </section>
 
   <div class="mat-elevation-z8">
@@ -34,6 +42,11 @@
       <ng-container matColumnDef="isSpiffs">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> SPIFFS </th>
         <td mat-cell *matCellDef="let entry">{{ entry.isSpiffs ? 'Yes' : 'No' }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="isOta">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> OTA </th>
+        <td mat-cell *matCellDef="let entry">{{ entry.isOta ? 'Yes' : 'No' }}</td>
       </ng-container>
 
       <ng-container matColumnDef="memorySizeMb">
