@@ -2,12 +2,30 @@
   padding: 1rem 0;
 }
 
-.action-row {
-  margin-bottom: 0.5rem;
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
 }
 
-h2 {
-  margin-bottom: 1rem;
+.header-row h2 {
+  margin: 0;
+}
+
+.back-button {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  transition: background-color 0.2s;
+}
+
+.back-button:hover {
+  background-color: #e0e0e0;
 }
 
 .filter-row {

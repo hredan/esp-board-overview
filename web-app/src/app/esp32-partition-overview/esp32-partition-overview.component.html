@@ -1,27 +1,29 @@
 <div>
-    <div class="action-row">
-        <button type="button" routerLink="/esp32-schemes">Open ESP32-Schemes</button>
+    <div class="form-controls-row">
+        <div class="form-fields">
+            <mat-form-field>
+                <mat-label>Select a board</mat-label>
+                <mat-select [(value)]="selectedBoard" (selectionChange)="onBoardChange($event.value)">
+                    @for (boardName of boardNames; track boardName) {
+                    <mat-option [value]="boardName">
+                        {{boardName}}
+                    </mat-option>
+                }
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Select a scheme</mat-label>
+                <mat-select [(value)]="selectedScheme" (selectionChange)="onSchemeChange($event.value)">
+                    @for (scheme of schemes; track scheme) {
+                        <mat-option [value]="scheme">
+                            {{scheme}}
+                        </mat-option>
+                    }
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <button type="button" class="schemes-button" routerLink="/esp32-schemes">Open ESP32-Schemes</button>
     </div>
-    <mat-form-field>
-    <mat-label>Select a board</mat-label>
-    <mat-select [(value)]="selectedBoard" (selectionChange)="onBoardChange($event.value)">
-        @for (boardName of boardNames; track boardName) {
-        <mat-option [value]="boardName">
-            {{boardName}}
-        </mat-option>
-    }
-    </mat-select>
-    </mat-form-field>
-    <mat-form-field>
-        <mat-label>Select a scheme</mat-label>
-        <mat-select [(value)]="selectedScheme" (selectionChange)="onSchemeChange($event.value)">
-            @for (scheme of schemes; track scheme) {
-                <mat-option [value]="scheme">
-                    {{scheme}}
-                </mat-option>
-            }
-        </mat-select>
-    </mat-form-field>
     <h2>{{selectedBoard}} - {{selectedScheme}}</h2>
     <table>
         <tbody>
