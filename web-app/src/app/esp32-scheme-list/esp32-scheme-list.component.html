@@ -41,8 +41,18 @@
   </div>
 
   @if (isOverlayOpen) {
-    <div class="overlay-backdrop" (click)="closeOverlay()">
-      <div class="overlay-content" (click)="$event.stopPropagation()">
+    <div class="overlay-backdrop" 
+         role="button" 
+         tabindex="0" 
+         aria-label="Close overlay"
+         (click)="closeOverlay()" 
+         (keydown.escape)="closeOverlay()"
+         (keydown.enter)="closeOverlay()"
+         (keydown.space)="closeOverlay()">
+      <div class="overlay-content" 
+           tabindex="0"
+           (click)="$event.stopPropagation()"
+           (keydown)="$event.stopPropagation()">
         <div class="overlay-header">
           <h3>{{ selectedSchemeName }}</h3>
           <button type="button" class="close-button" aria-label="Close overlay" (click)="closeOverlay()">&times;</button>
