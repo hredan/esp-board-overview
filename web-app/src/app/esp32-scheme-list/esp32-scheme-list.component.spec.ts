@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Sort } from '@angular/material/sort';
-import { provideRouter, Router } from '@angular/router';
+import { provideRouter, Router, Params } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
 
@@ -19,8 +19,8 @@ describe('Esp32SchemeListComponent', () => {
   let fixture: ComponentFixture<Esp32SchemeListComponent>;
   let router: Router;
   let mockActivatedRoute: {
-    queryParams: BehaviorSubject<any>;
-    params: BehaviorSubject<any>;
+    queryParams: BehaviorSubject<Params>;
+    params: BehaviorSubject<Params>;
   };
 
   beforeEach(async () => {
