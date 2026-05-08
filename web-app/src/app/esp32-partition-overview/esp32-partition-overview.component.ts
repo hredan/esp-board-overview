@@ -34,7 +34,7 @@ export class Esp32PartitionOverviewComponent {
     this._activatedRoute.params.subscribe(params => {
       const boardNamesParam = params['boardId'];
       const schemesParam = params['schemeId'];
-      console.log('Received boarId:', boardNamesParam, 'Received schemeId:', schemesParam);
+      //console.log('Received boarId:', boardNamesParam, 'Received schemeId:', schemesParam);
       // set board based on param
       if (boardNamesParam === undefined) {
         const board = this.boardNames[0];
@@ -60,27 +60,35 @@ export class Esp32PartitionOverviewComponent {
 
   onBoardChange(board: string) {
     // schemes are undefined, use default
-    console.log('onBoardChange', board);
+    //console.log('onBoardChange', board);
     this.router.navigate([`/esp32-partitions/${board}/${this.esp32DataService.getDefaultScheme(board)}`]);
   }
 
   updatePage(board: string, scheme?: string) {
-    console.log('updatePage', board, scheme);
+    //console.log('updatePage', board, scheme);
     if (scheme) {
       this.selectedScheme = scheme;
       this.selectedBoard = board;
-      this.schemes = Object.keys(this.partitionsData[board].schemes || {});
-      const scheme_build = this.partitionsData[board].schemes?.[this.selectedScheme]?.build;
-      if (scheme_build) {
-        this.selectedSchemeData = this.defaultSchemes[scheme_build];
-      } else {
-        this.selectedSchemeData = [];
+      if (Object.keys(this.partitionsData[board].schemes || {}).length === 0 &&
+        Object.keys(this.defaultSchemes).includes(scheme)) {
+        this.selectedSchemeData = this.defaultSchemes[scheme];
+        this.schemes = [scheme];
       }
+      else {
+        this.schemes = Object.keys(this.partitionsData[board].schemes || {});
+        const scheme_build = this.partitionsData[board].schemes?.[this.selectedScheme]?.build;
+        if (scheme_build) {
+          this.selectedSchemeData = this.defaultSchemes[scheme_build];
+        } else {
+          this.selectedSchemeData = [];
+        }
+      }
+      
     }
   }
 
   onSchemeChange(scheme: string) {
-    console.log('onSchemeChange', scheme);
+    //console.log('onSchemeChange', scheme);
     this.router.navigate([`/esp32-partitions/${this.selectedBoard}/${scheme}`]);
   }
 }

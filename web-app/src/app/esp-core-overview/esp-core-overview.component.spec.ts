@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterModule } from '@angular/router';
 import { EspCoreOverviewComponent } from './esp-core-overview.component';
 
 describe('EspCoreOverviewComponent', () => {
@@ -7,7 +8,7 @@ describe('EspCoreOverviewComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [EspCoreOverviewComponent]
+      imports: [EspCoreOverviewComponent, RouterModule.forRoot([])]
     })
     .compileComponents();
 

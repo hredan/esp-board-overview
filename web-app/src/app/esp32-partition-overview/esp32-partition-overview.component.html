@@ -51,6 +51,10 @@
                 <td>Scheme Name:</td>
                 <td class="second_column">{{partitionsData[selectedBoard]?.schemes?.[selectedScheme]?.full_name}}</td>
             </tr>
+            <tr>
+                <td>Scheme Size:</td>
+                <td class="second_column">{{esp32DataService.getMemorySizeOfScheme(selectedScheme)}}MB</td>
+            </tr>
         </tbody>
     </table>
     <app-esp32-partition-view

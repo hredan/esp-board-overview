@@ -55,6 +55,16 @@ describe('Esp32PartitionOverviewComponent', () => {
     expect(component.selectedScheme).toEqual('default_8MB');
   });
 
+  it('board without schemes should use default scheme', () => {
+    const newParams = {boardId: 'S_ODI_Ultra', schemeId: 'default'};
+    paramsSubject.next(newParams);
+    fixture.detectChanges();
+    expect(component.selectedBoard).toEqual('S_ODI_Ultra');
+    expect(component.selectedScheme).toEqual('default');
+    expect(component.schemes).toEqual(['default']);
+    expect(component.selectedSchemeData).toEqual(component.esp32DataService.defaultSchemes['default']);
+  });
+
   it('onBoardChange if default scheme is not found', () => {
     const navigateSpy = jest.spyOn(router, 'navigate');
     component.onBoardChange('um_bling');
