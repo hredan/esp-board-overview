@@ -1,5 +1,5 @@
-import { Component, input, OnInit } from '@angular/core';
-import { RouterLink} from '@angular/router';
+import { Component, inject, input, OnInit } from '@angular/core';
+import { ActivatedRoute, Params, Router, RouterLink } from '@angular/router';
 import {MatTableDataSource, MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatInputModule} from '@angular/material/input';
@@ -18,6 +18,9 @@ import { Esp32DataService } from '../esp32-data.service';
 })
 
 export class BoardOverviewComponent implements OnInit {
+  private activatedRoute = inject(ActivatedRoute);
+  private router = inject(Router);
+
   checked = false;
   coreName = input.required<string>();
   dataSource = input.required<BoardInfo[]>();
@@ -34,6 +37,10 @@ export class BoardOverviewComponent implements OnInit {
   coreVersion = '';
 
   ngOnInit() {
+    this.activatedRoute.queryParams.subscribe((queryParams) => {
+      this.applyFiltersFromQueryParams(queryParams);
+    });
+
     this.totalBoardCount = this.dataSource().length;
     this.filteredBoardCount = this.dataSource().length;
     this.sortedData = new MatTableDataSource<BoardInfo>(this.dataSource());
@@ -42,6 +49,8 @@ export class BoardOverviewComponent implements OnInit {
         this.coreVersion = core.installed_version;
       }
     });
+
+    this.updateTable();
   }
 
   is_generate_partition_link(boardName: string): boolean {
@@ -95,11 +104,13 @@ export class BoardOverviewComponent implements OnInit {
   applyIgnoreNA(event: MatCheckboxChange) {
     this.checked = event.checked;
     this.updateTable();
+    this.updateFilterQueryParams();
   }
 
   applyFilter(event: Event) {
     this.filterValue = (event.target as HTMLInputElement).value;
     this.updateTable();
+    this.updateFilterQueryParams();
   }
 
   sortData(sort: Sort) {
@@ -130,6 +141,35 @@ export class BoardOverviewComponent implements OnInit {
           return 0;
       }
     }));
+  }
+
+  private updateFilterQueryParams() {
+    this.router.navigate([], {
+      relativeTo: this.activatedRoute,
+      queryParams: this.buildFilterQueryParams(),
+      queryParamsHandling: 'merge'
+    });
+  }
+
+  private buildFilterQueryParams(): Params {
+    return {
+      filter: this.filterValue.trim() === '' ? null : this.filterValue.trim(),
+      ignoreNaLed: this.checked ? 'true' : null
+    };
+  }
+
+  private applyFiltersFromQueryParams(queryParams: Params) {
+    this.filterValue = this.parseFilterValue(queryParams['filter']);
+    this.checked = this.parseBooleanQueryParam(queryParams['ignoreNaLed']);
+    this.updateTable();
+  }
+
+  private parseFilterValue(value: unknown): string {
+    return typeof value === 'string' ? value : '';
+  }
+
+  private parseBooleanQueryParam(value: unknown): boolean {
+    return value === 'true';
   }
 }
 
