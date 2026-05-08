@@ -14,6 +14,7 @@ interface SchemeMemoryEntry {
   name: string;
   isSpiffs: boolean;
   isOta: boolean;
+  isCoredump: boolean;
   memorySizeMb: number | null;
 }
 
@@ -28,13 +29,14 @@ export class Esp32SchemeListComponent implements OnInit {
   private activatedRoute = inject(ActivatedRoute);
   private router = inject(Router);
 
-  displayedColumns: string[] = ['name', 'isSpiffs', 'isOta', 'memorySizeMb'];
+  displayedColumns: string[] = ['name', 'isSpiffs', 'isOta', 'isCoredump', 'memorySizeMb'];
   allEntries: SchemeMemoryEntry[] = [];
   sortedData: MatTableDataSource<SchemeMemoryEntry> = new MatTableDataSource<SchemeMemoryEntry>([]);
   memorySizeFilterValues: number[] = [];
   selectedMemorySizeFilter = 'all';
   selectedSpiffsFilter = 'all';
   selectedOtaFilter = 'all';
+  selectedCoredumpFilter = 'all';
   selectedSchemeName = '';
   selectedSchemeData: PartitionEntry[] = [];
   isOverlayOpen = false;
@@ -46,6 +48,7 @@ export class Esp32SchemeListComponent implements OnInit {
         name,
         isSpiffs: this.esp32DataService.isSpiffsScheme(name),
         isOta: this.esp32DataService.isOtaScheme(name),
+        isCoredump: this.esp32DataService.isCoredumpScheme(name),
         memorySizeMb: this.esp32DataService.getMemorySizeOfScheme(name)
       }));
 
@@ -82,9 +85,12 @@ export class Esp32SchemeListComponent implements OnInit {
       const otaMatch = this.selectedOtaFilter === 'all'
         || (this.selectedOtaFilter === 'yes' && entry.isOta)
         || (this.selectedOtaFilter === 'no' && !entry.isOta);
+      const coredumpMatch = this.selectedCoredumpFilter === 'all'
+        || (this.selectedCoredumpFilter === 'yes' && entry.isCoredump)
+        || (this.selectedCoredumpFilter === 'no' && !entry.isCoredump);
       const sizeMatch = this.selectedMemorySizeFilter === 'all'
         || entry.memorySizeMb === Number(this.selectedMemorySizeFilter);
-      return spiffsMatch && otaMatch && sizeMatch;
+      return spiffsMatch && otaMatch && coredumpMatch && sizeMatch;
     });
   }
 
@@ -95,6 +101,11 @@ export class Esp32SchemeListComponent implements OnInit {
 
   applyOtaFilter(value: string) {
     this.selectedOtaFilter = value;
+    this.updateFilterQueryParams();
+  }
+
+  applyCoredumpFilter(value: string) {
+    this.selectedCoredumpFilter = value;
     this.updateFilterQueryParams();
   }
 
@@ -119,6 +130,8 @@ export class Esp32SchemeListComponent implements OnInit {
           return compareBoolean(a.isSpiffs, b.isSpiffs, isAsc);
         case 'isOta':
           return compareBoolean(a.isOta, b.isOta, isAsc);
+        case 'isCoredump':
+          return compareBoolean(a.isCoredump, b.isCoredump, isAsc);
         case 'memorySizeMb':
           return compareNullableNumber(a.memorySizeMb, b.memorySizeMb, isAsc);
         default:
@@ -169,13 +182,15 @@ export class Esp32SchemeListComponent implements OnInit {
     return {
       memory: this.selectedMemorySizeFilter === 'all' ? null : this.selectedMemorySizeFilter,
       spiffs: this.selectedSpiffsFilter === 'all' ? null : this.selectedSpiffsFilter,
-      ota: this.selectedOtaFilter === 'all' ? null : this.selectedOtaFilter
+      ota: this.selectedOtaFilter === 'all' ? null : this.selectedOtaFilter,
+      coredump: this.selectedCoredumpFilter === 'all' ? null : this.selectedCoredumpFilter
     };
   }
 
   private applyFiltersFromQueryParams(queryParams: Params) {
     this.selectedSpiffsFilter = this.parseBooleanLikeFilter(queryParams['spiffs']);
     this.selectedOtaFilter = this.parseBooleanLikeFilter(queryParams['ota']);
+    this.selectedCoredumpFilter = this.parseBooleanLikeFilter(queryParams['coredump']);
     this.selectedMemorySizeFilter = this.parseMemoryFilter(queryParams['memory']);
     this.sortedData = new MatTableDataSource<SchemeMemoryEntry>(this.getFilteredEntries());
   }

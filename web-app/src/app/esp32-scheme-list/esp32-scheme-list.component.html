@@ -31,6 +31,14 @@
         <mat-option value="no">No</mat-option>
       </mat-select>
     </mat-form-field>
+    <mat-form-field>
+      <mat-label>Coredump</mat-label>
+      <mat-select [value]="selectedCoredumpFilter" (selectionChange)="applyCoredumpFilter($event.value)">
+        <mat-option value="all">All</mat-option>
+        <mat-option value="yes">Yes</mat-option>
+        <mat-option value="no">No</mat-option>
+      </mat-select>
+    </mat-form-field>
   </section>
 
   <div class="mat-elevation-z8">
@@ -48,6 +56,11 @@
       <ng-container matColumnDef="isOta">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> OTA </th>
         <td mat-cell *matCellDef="let entry">{{ entry.isOta ? 'Yes' : 'No' }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="isCoredump">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Coredump </th>
+        <td mat-cell *matCellDef="let entry">{{ entry.isCoredump ? 'Yes' : 'No' }}</td>
       </ng-container>
 
       <ng-container matColumnDef="memorySizeMb">

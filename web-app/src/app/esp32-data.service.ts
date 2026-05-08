@@ -75,6 +75,14 @@ export class Esp32DataService {
     return entries.some(entry => entry.name === 'spiffs');
   }
 
+  isCoredumpScheme(schemeId: string): boolean {
+    const entries = this.defaultSchemes[schemeId];
+    if (!entries) {
+      return false;
+    }
+    return entries.some(entry => entry.subtype === 'coredump');
+  }
+
   isOtaScheme(schemeId: string): boolean {
     const entries = this.defaultSchemes[schemeId];
     if (!entries || entries.length === 0) {
