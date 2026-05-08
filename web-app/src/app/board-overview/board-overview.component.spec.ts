@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { BoardOverviewComponent, BoardInfo } from './board-overview.component';
 import { Sort } from '@angular/material/sort';
 import { MatCheckboxChange } from '@angular/material/checkbox';
-import { provideRouter } from '@angular/router';
+import { provideRouter, Router } from '@angular/router';
 
 const data_lolin: BoardInfo = {
   name: 'LOLIN(WeMos) D1 R1',
@@ -52,6 +52,7 @@ const data_lolin_na: BoardInfo = {
 describe('BoardOverviewComponent', () => {
   let component: BoardOverviewComponent;
   let fixture: ComponentFixture<BoardOverviewComponent>;
+  let router: Router;
   const testCoreName = 'esp8266';
 
   beforeEach(async () => {
@@ -64,6 +65,7 @@ describe('BoardOverviewComponent', () => {
     .compileComponents();
 
     createComponent();
+    router = TestBed.inject(Router);
   });
 
   function createComponent(dataSource: BoardInfo[] = [data_lolin, data_blynk]) {
@@ -266,5 +268,62 @@ describe('BoardOverviewComponent', () => {
     component.coreName = () => 'esp32';
     const link = component.get_pins_arduino_link('d1');
     expect(link).toBe('https://github.com/espressif/arduino-esp32/blob/3.1.2/variants/d1/pins_arduino.h');
+  });
+
+  it('should build MCU summary for current filtered view', () => {
+    createComponent([
+      { ...data_lolin, mcu: 'esp32s3' },
+      { ...data_blynk, mcu: 'esp32s3' },
+      { ...data_wifiduino, mcu: 'esp32c3' }
+    ]);
+    component.coreName = () => 'esp32';
+
+    const mockEvent: Event = ({
+      target: {
+          value: 'sparkfun'
+      }
+    } as unknown) as Event;
+    component.applyFilter(mockEvent);
+
+    expect(component.mcuSummary).toEqual([{ mcu: 'esp32s3', count: 1 }]);
+  });
+
+  it('should open and close MCU overview overlay', () => {
+    expect(component.isMcuOverlayOpen).toBe(false);
+    component.openMcuOverview();
+    expect(component.isMcuOverlayOpen).toBe(true);
+    component.closeMcuOverview();
+    expect(component.isMcuOverlayOpen).toBe(false);
+  });
+
+  it('should ignore N/A MCU entries in MCU summary', () => {
+    createComponent([
+      { ...data_lolin, mcu: 'esp32s3' },
+      { ...data_blynk, mcu: 'N/A' },
+      { ...data_wifiduino, mcu: 'esp32c3' }
+    ]);
+
+    expect(component.mcuSummary).toEqual([
+      { mcu: 'esp32c3', count: 1 },
+      { mcu: 'esp32s3', count: 1 }
+    ]);
+  });
+
+  it('should update query params when MCU overview is opened and closed', () => {
+    const navigateSpy = jest.spyOn(router, 'navigate').mockResolvedValue(true);
+
+    component.openMcuOverview();
+    expect(navigateSpy).toHaveBeenCalledWith([], {
+      relativeTo: expect.anything(),
+      queryParams: expect.objectContaining({ mcuOverview: 'true' }),
+      queryParamsHandling: 'merge'
+    });
+
+    component.closeMcuOverview();
+    expect(navigateSpy).toHaveBeenCalledWith([], {
+      relativeTo: expect.anything(),
+      queryParams: expect.objectContaining({ mcuOverview: null }),
+      queryParamsHandling: 'merge'
+    });
   });
 });

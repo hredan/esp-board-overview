@@ -35,6 +35,8 @@ export class BoardOverviewComponent implements OnInit {
   filterValue = '';
   coreList: Core[] = (coreList_input as Core[]);
   coreVersion = '';
+  isMcuOverlayOpen = false;
+  mcuSummary: McuSummaryEntry[] = [];
 
   ngOnInit() {
     this.activatedRoute.queryParams.subscribe((queryParams) => {
@@ -99,6 +101,7 @@ export class BoardOverviewComponent implements OnInit {
     
     this.sortedData.filter = this.filterValue.trim().toLowerCase();
     this.filteredBoardCount = this.sortedData.filteredData.length;
+    this.updateMcuSummary(this.sortedData.filteredData);
   }
 
   applyIgnoreNA(event: MatCheckboxChange) {
@@ -141,6 +144,8 @@ export class BoardOverviewComponent implements OnInit {
           return 0;
       }
     }));
+
+    this.updateMcuSummary(this.sortedData.data);
   }
 
   private updateFilterQueryParams() {
@@ -151,16 +156,28 @@ export class BoardOverviewComponent implements OnInit {
     });
   }
 
+  openMcuOverview() {
+    this.isMcuOverlayOpen = true;
+    this.updateFilterQueryParams();
+  }
+
+  closeMcuOverview() {
+    this.isMcuOverlayOpen = false;
+    this.updateFilterQueryParams();
+  }
+
   private buildFilterQueryParams(): Params {
     return {
       filter: this.filterValue.trim() === '' ? null : this.filterValue.trim(),
-      ignoreNaLed: this.checked ? 'true' : null
+      ignoreNaLed: this.checked ? 'true' : null,
+      mcuOverview: this.isMcuOverlayOpen ? 'true' : null
     };
   }
 
   private applyFiltersFromQueryParams(queryParams: Params) {
     this.filterValue = this.parseFilterValue(queryParams['filter']);
     this.checked = this.parseBooleanQueryParam(queryParams['ignoreNaLed']);
+    this.isMcuOverlayOpen = this.parseBooleanQueryParam(queryParams['mcuOverview']);
     this.updateTable();
   }
 
@@ -170,6 +187,21 @@ export class BoardOverviewComponent implements OnInit {
 
   private parseBooleanQueryParam(value: unknown): boolean {
     return value === 'true';
+  }
+
+  private updateMcuSummary(entries: BoardInfo[]) {
+    const mcuCounts = new Map<string, number>();
+    for (const entry of entries) {
+      const mcu = entry.mcu?.trim() || 'N/A';
+      if (mcu.toUpperCase() === 'N/A') {
+        continue;
+      }
+      mcuCounts.set(mcu, (mcuCounts.get(mcu) || 0) + 1);
+    }
+
+    this.mcuSummary = Array.from(mcuCounts.entries())
+      .map(([mcu, count]) => ({ mcu, count }))
+      .sort((a, b) => a.mcu.localeCompare(b.mcu));
   }
 }
 
@@ -187,6 +219,11 @@ export interface Core {
   installed_version: string;
   latest_version: string;
   core_name: string;
+}
+
+interface McuSummaryEntry {
+  mcu: string;
+  count: number;
 }
 
 function compare(a: string, b: string, isAsc: boolean) {

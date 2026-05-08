@@ -1,10 +1,16 @@
-<section>
-  <mat-form-field hintLabel="filtered:">
-    <mat-label>Filter</mat-label>
-    <input matInput (keyup)="applyFilter($event)" [value]="filterValue" placeholder="e.g. mini" #input>
-    <mat-hint align="end">{{filteredBoardCount}}/{{totalBoardCount}}</mat-hint>
-  </mat-form-field>
-  <mat-checkbox class="example-margin" (change)="applyIgnoreNA($event)" [checked]="checked">irgnore N/A LED entries</mat-checkbox>
+<section class="filter-toolbar">
+  <div class="filter-controls">
+    <mat-form-field hintLabel="filtered:">
+      <mat-label>Filter</mat-label>
+      <input matInput (keyup)="applyFilter($event)" [value]="filterValue" placeholder="e.g. mini" #input>
+      <mat-hint align="end">{{filteredBoardCount}}/{{totalBoardCount}}</mat-hint>
+    </mat-form-field>
+    <mat-checkbox class="example-margin" (change)="applyIgnoreNA($event)" [checked]="checked">irgnore N/A LED entries</mat-checkbox>
+  </div>
+
+  @if (coreName() === 'esp32') {
+    <button type="button" class="mcu-overview-button" (click)="openMcuOverview()">MCU Overview</button>
+  }
 </section>
 
 <div class="mat-elevation-z8">
@@ -52,3 +58,45 @@
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
 </div>
+
+@if (isMcuOverlayOpen) {
+  <div
+    class="mcu-overlay-backdrop"
+    role="button"
+    tabindex="0"
+    aria-label="Close MCU overview"
+    (click)="closeMcuOverview()"
+    (keydown.escape)="closeMcuOverview()"
+    (keydown.enter)="closeMcuOverview()"
+    (keydown.space)="closeMcuOverview()">
+    <div
+      class="mcu-overlay-content"
+      tabindex="0"
+      (click)="$event.stopPropagation()"
+      (keydown)="$event.stopPropagation()">
+      <div class="mcu-overlay-header">
+        <h3>MCU Overview</h3>
+        <button type="button" class="mcu-close-button" aria-label="Close MCU overview" (click)="closeMcuOverview()">&times;</button>
+      </div>
+
+      <p>Total boards in current view: {{ filteredBoardCount }}</p>
+
+      <table class="mcu-summary-table">
+        <thead>
+          <tr>
+            <th>MCU</th>
+            <th>Count</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (entry of mcuSummary; track entry.mcu) {
+            <tr>
+              <td>{{ entry.mcu }}</td>
+              <td>{{ entry.count }}</td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  </div>
+}
