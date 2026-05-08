@@ -5,7 +5,7 @@
   </div>
 
   <section class="filter-row">
-    <mat-form-field>
+    <mat-form-field hintLabel="filtered:">
       <mat-label>Memory Size</mat-label>
       <mat-select [value]="selectedMemorySizeFilter" (selectionChange)="applyMemorySizeFilter($event.value)">
         <mat-option value="all">All</mat-option>
@@ -13,6 +13,7 @@
           {{ size | number:'1.2-2' }} MB
         </mat-option>
       </mat-select>
+      <mat-hint align="end">{{ sortedData.data.length }}/{{ allEntries.length }}</mat-hint>
     </mat-form-field>
     <mat-form-field>
       <mat-label>SPIFFS</mat-label>
