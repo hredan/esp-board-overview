@@ -10,12 +10,8 @@ source /workspaces/esp-board-overview/.venv/bin/activate
 pip install --upgrade pip
 pip install -r /workspaces/esp-board-overview/requirements_test.txt
 
-# install google chrome
-# cd ~
-# wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-# sudo apt install ./google-chrome*.deb -y
-# sudo apt-get install -y ./google-chrome-stable_current_amd64.deb
-# export CHROME_BIN=/usr/bin/google-chrome
+# install angular cli
+npm install -g @angular/cli
 
 # install web-app packages
 cd /workspaces/esp-board-overview/web-app/

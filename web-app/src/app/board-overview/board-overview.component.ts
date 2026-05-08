@@ -1,4 +1,5 @@
-import { Component, input, OnInit } from '@angular/core';
+import { Component, inject, input, OnInit } from '@angular/core';
+import { ActivatedRoute, Params, Router, RouterLink } from '@angular/router';
 import {MatTableDataSource, MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatInputModule} from '@angular/material/input';
@@ -7,18 +8,26 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {Sort, MatSortModule} from '@angular/material/sort';
 import coreList_input from '../../../data/core_list.json';
 
+import { Esp32DataService } from '../esp32-data.service';
+
 @Component({
   selector: 'app-board-overview',
-  imports: [MatTableModule, MatInputModule, MatFormFieldModule, MatSortModule, MatPaginatorModule, MatCheckboxModule],
+  imports: [MatTableModule, MatInputModule, MatFormFieldModule, MatSortModule, MatPaginatorModule, MatCheckboxModule, RouterLink],
   templateUrl: './board-overview.component.html',
   styleUrl: './board-overview.component.css'
 })
 
 export class BoardOverviewComponent implements OnInit {
+  private activatedRoute = inject(ActivatedRoute);
+  private router = inject(Router);
+
   checked = false;
   coreName = input.required<string>();
   dataSource = input.required<BoardInfo[]>();
   //dataSource: BoardInfo[] = [];
+  esp32DataService: Esp32DataService = new Esp32DataService();
+  partitionsData = this.esp32DataService.partitionsData;
+  boardNamesPartitions: string[] = Object.keys(this.partitionsData);
   totalBoardCount = 0;
   filteredBoardCount = 0;
   displayedColumns: string[] = ['name', 'board','variant', 'led', 'mcu', 'flash_size'];
@@ -26,8 +35,14 @@ export class BoardOverviewComponent implements OnInit {
   filterValue = '';
   coreList: Core[] = (coreList_input as Core[]);
   coreVersion = '';
+  isMcuOverlayOpen = false;
+  mcuSummary: McuSummaryEntry[] = [];
 
   ngOnInit() {
+    this.activatedRoute.queryParams.subscribe((queryParams) => {
+      this.applyFiltersFromQueryParams(queryParams);
+    });
+
     this.totalBoardCount = this.dataSource().length;
     this.filteredBoardCount = this.dataSource().length;
     this.sortedData = new MatTableDataSource<BoardInfo>(this.dataSource());
@@ -36,6 +51,28 @@ export class BoardOverviewComponent implements OnInit {
         this.coreVersion = core.installed_version;
       }
     });
+
+    this.updateTable();
+  }
+
+  is_generate_partition_link(boardName: string): boolean {
+    if (this.boardNamesPartitions.includes(boardName) && this.coreName() === 'esp32') {
+      return true;
+    }
+    return false;
+  }
+
+  get_partition_route(boardName: string): string {
+    return `/esp32-partitions/${boardName}/${this.esp32DataService.getDefaultScheme(boardName)}`;
+  }
+
+  get_flash_size_element(flash_sizes: string[]): string {
+    if (flash_sizes.length === 0) {
+      return 'N/A';
+    }
+    else {
+      return flash_sizes.join(',');
+    }
   }
 
   get_pins_arduino_link(variant: string): string {
@@ -64,16 +101,19 @@ export class BoardOverviewComponent implements OnInit {
     
     this.sortedData.filter = this.filterValue.trim().toLowerCase();
     this.filteredBoardCount = this.sortedData.filteredData.length;
+    this.updateMcuSummary(this.sortedData.filteredData);
   }
 
   applyIgnoreNA(event: MatCheckboxChange) {
     this.checked = event.checked;
     this.updateTable();
+    this.updateFilterQueryParams();
   }
 
   applyFilter(event: Event) {
     this.filterValue = (event.target as HTMLInputElement).value;
     this.updateTable();
+    this.updateFilterQueryParams();
   }
 
   sortData(sort: Sort) {
@@ -104,6 +144,64 @@ export class BoardOverviewComponent implements OnInit {
           return 0;
       }
     }));
+
+    this.updateMcuSummary(this.sortedData.data);
+  }
+
+  private updateFilterQueryParams() {
+    this.router.navigate([], {
+      relativeTo: this.activatedRoute,
+      queryParams: this.buildFilterQueryParams(),
+      queryParamsHandling: 'merge'
+    });
+  }
+
+  openMcuOverview() {
+    this.isMcuOverlayOpen = true;
+    this.updateFilterQueryParams();
+  }
+
+  closeMcuOverview() {
+    this.isMcuOverlayOpen = false;
+    this.updateFilterQueryParams();
+  }
+
+  private buildFilterQueryParams(): Params {
+    return {
+      filter: this.filterValue.trim() === '' ? null : this.filterValue.trim(),
+      ignoreNaLed: this.checked ? 'true' : null,
+      mcuOverview: this.isMcuOverlayOpen ? 'true' : null
+    };
+  }
+
+  private applyFiltersFromQueryParams(queryParams: Params) {
+    this.filterValue = this.parseFilterValue(queryParams['filter']);
+    this.checked = this.parseBooleanQueryParam(queryParams['ignoreNaLed']);
+    this.isMcuOverlayOpen = this.parseBooleanQueryParam(queryParams['mcuOverview']);
+    this.updateTable();
+  }
+
+  private parseFilterValue(value: unknown): string {
+    return typeof value === 'string' ? value : '';
+  }
+
+  private parseBooleanQueryParam(value: unknown): boolean {
+    return value === 'true';
+  }
+
+  private updateMcuSummary(entries: BoardInfo[]) {
+    const mcuCounts = new Map<string, number>();
+    for (const entry of entries) {
+      const mcu = entry.mcu?.trim() || 'N/A';
+      if (mcu.toUpperCase() === 'N/A') {
+        continue;
+      }
+      mcuCounts.set(mcu, (mcuCounts.get(mcu) || 0) + 1);
+    }
+
+    this.mcuSummary = Array.from(mcuCounts.entries())
+      .map(([mcu, count]) => ({ mcu, count }))
+      .sort((a, b) => a.mcu.localeCompare(b.mcu));
   }
 }
 
@@ -121,6 +219,11 @@ export interface Core {
   installed_version: string;
   latest_version: string;
   core_name: string;
+}
+
+interface McuSummaryEntry {
+  mcu: string;
+  count: number;
 }
 
 function compare(a: string, b: string, isAsc: boolean) {

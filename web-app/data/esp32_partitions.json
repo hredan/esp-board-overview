@@ -15222,10 +15222,6 @@
     "xteink_x4": {
         "default": "Custom",
         "schemes": {
-            "custom": {
-                "full_name": "Custom",
-                "build": "partitions.csv"
-            },
             "fatflash": {
                 "full_name": "16M Flash (2MB APP/12.5MB FATFS)",
                 "build": "ffat"

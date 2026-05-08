@@ -7,21 +7,18 @@ import { EspCoreOverviewComponent } from "./esp-core-overview/esp-core-overview.
 import { Esp8266BoardOverviewComponent } from "./esp8266-board-overview/esp8266-board-overview.component";
 import { Esp32BoardOverviewComponent } from "./esp32-board-overview/esp32-board-overview.component";
 import { Esp32PartitionOverviewComponent } from "./esp32-partition-overview/esp32-partition-overview.component";
+import { Esp32SchemeListComponent } from './esp32-scheme-list/esp32-scheme-list.component';
 
 describe('AppComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports: [AppComponent],
       providers: [
         provideRouter([]),
         provideHttpClient(),
         provideHttpClientTesting()
       ],
-      
-    });
-
-    await TestBed.configureTestingModule({
-      imports: [AppComponent],
     }).compileComponents();
   });
 
@@ -64,9 +61,25 @@ describe('AppComponent', () => {
     app.onActivate(new Esp32BoardOverviewComponent());
     expect(app.activeLink).toEqual('ESP32');
     expect(app.title).toEqual('ESP32 Boards Arduino IDE');
+  });
 
-    app.onActivate(new Esp32PartitionOverviewComponent());
+  it('should update activeLink and title on route activation ESP32-Partitions', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+
+    const partitionComponent = TestBed.createComponent(Esp32PartitionOverviewComponent).componentInstance;
+    app.onActivate(partitionComponent);
     expect(app.activeLink).toEqual('ESP32-Partitions');
     expect(app.title).toEqual('ESP32 Partitions Overview');
+  });
+
+  it('should update activeLink and title on route activation ESP32-Schemes', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+
+    const schemeComponent = TestBed.createComponent(Esp32SchemeListComponent).componentInstance;
+    app.onActivate(schemeComponent);
+    expect(app.activeLink).toEqual('ESP32-Partitions');
+    expect(app.title).toEqual('ESP32 Partition Schemes');
   });
 });

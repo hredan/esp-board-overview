@@ -42,30 +42,25 @@ def load_scheme(scheme_name: str, version: str) -> list[dict[str, str]]:
         #print(f"Loaded partition scheme: {scheme_name}")
         return partition_scheme
 
+def get_default_partitions_list(core_version: str) -> list[str]:
+    """
+    Get a list of default partition schemes from the esp32 core version.
+    :param core_version: The version of the esp32 core to check.
+    :return: A list of default partition scheme names.
+    """
+    partition_files = os.listdir(f"{ESP_DATA_PATH}/esp32-core-{core_version}/tools/partitions")
+    default_schemes = [os.path.splitext(file)[0] for file in partition_files if file.endswith('.csv')]
+    return default_schemes
+
 if __name__ == "__main__":
     schemes = {}
     core_list = get_core_list()
     esp32_core = next((core for core in core_list if core["core_name"] == "esp32"), None)
     if esp32_core:
-        with open(f"{ESP_DATA_PATH}/esp32_partitions.json", 'r', encoding='utf-8') \
-            as file_board_partions:
-            board_partition = json.load(file_board_partions)
-
-        for board, scheme_data in board_partition.items():
-            if "schemes" in scheme_data:
-                for scheme, scheme_data in scheme_data["schemes"].items():
-                    scheme_file_name = scheme_data["build"]
-                    if scheme_file_name not in schemes:
-                        schemes[scheme_file_name] = load_scheme(
-                            scheme_file_name,
-                            esp32_core["installed_version"]
-                        )
-            else:
-                if "default" in scheme_data and scheme_data["default"] not in schemes:
-                    schemes[scheme_data["default"]] = load_scheme(
-                        scheme_data["default"],
-                        esp32_core["installed_version"]
-                    )
+        default_partitons_list = get_default_partitions_list(esp32_core["installed_version"])
+        default_partitons_list.sort()
+        for default_partition in default_partitons_list:
+            schemes[default_partition] = load_scheme(default_partition, esp32_core["installed_version"])
 
         PARTITION_SCHEMES_PATH = f"{ESP_DATA_PATH}/esp32_partition_schemes.json"
         with open(PARTITION_SCHEMES_PATH, 'w', encoding='utf-8') as file_out:
