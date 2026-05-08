@@ -106,7 +106,7 @@ describe('Esp32SchemeListComponent', () => {
     component.onRowSelect(firstEntry);
 
     expect(navigateSpy).toHaveBeenCalledWith(['/esp32-schemes', firstEntry.name], {
-      queryParams: { memory: null, ota: null, spiffs: null }
+      queryParams: { memory: null, ota: null, spiffs: null, coredump: null }
     });
   });
 
@@ -115,7 +115,7 @@ describe('Esp32SchemeListComponent', () => {
     component.closeOverlay();
 
     expect(navigateSpy).toHaveBeenCalledWith(['/esp32-schemes'], {
-      queryParams: { memory: null, ota: null, spiffs: null }
+      queryParams: { memory: null, ota: null, spiffs: null, coredump: null }
     });
   });
 
