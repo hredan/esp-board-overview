@@ -81,6 +81,6 @@ class CollectingCoreData:
         if self.core_name == "esp8266":
             for board in boards_to_export:
                 delattr(board, 'bootloader_addr')
-        
+
         with open(filename, "w", encoding='utf8') as file:
             file.write(boards_to_export.to_json())
