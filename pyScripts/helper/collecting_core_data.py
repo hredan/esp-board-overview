@@ -76,5 +76,11 @@ class CollectingCoreData:
         :param filename: The name of the JSON file to export to.
         :return: None
         """
+        # For ESP8266, remove bootloader_addr field before export
+        boards_to_export = self.boards
+        if self.core_name == "esp8266":
+            for board in boards_to_export:
+                delattr(board, 'bootloader_addr')
+        
         with open(filename, "w", encoding='utf8') as file:
-            file.write(self.boards.to_json())
+            file.write(boards_to_export.to_json())

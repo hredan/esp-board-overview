@@ -72,6 +72,13 @@ class CollectingBoardData:
             return self.__get_flash_size_esp8266(line)
         return self.__get_flash_size_esp32(line)
 
+    def __get_bootloader_addr(self, line:str) -> bool:
+        match_bootloader = re.match(self.name + r"\.build\.bootloader_addr=(.+)", line)
+        if match_bootloader:
+            self.board_data.set_bootloader_addr(match_bootloader.group(1))
+            return True
+        return False
+
     def collect_board_data(self, board_txt_line: str) -> str:
         """ Collecting board data """
         # collect board name and id
@@ -90,6 +97,8 @@ class CollectingBoardData:
         if self.__get_mcu(board_txt_line):
             return ""
         if self.__get_flash_size(board_txt_line):
+            return ""
+        if self.core_name == "esp32" and self.__get_bootloader_addr(board_txt_line):
             return ""
         return ""
 

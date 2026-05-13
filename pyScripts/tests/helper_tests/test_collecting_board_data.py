@@ -140,7 +140,8 @@ class TestBoardData:
             "led_builtin": "2",
             "mcu": "esp32",
             "flash_size": ["4MB"],
-            "name": "WEMOS D1 MINI ESP32"
+            "name": "WEMOS D1 MINI ESP32",
+            "bootloader_addr": "0x1000"
         }
         with open(str(file), 'r', encoding='utf8') as file:
             data: BoardList = json.loads(file.read())
@@ -162,7 +163,8 @@ class TestBoardData:
             "led_builtin": "N/A",
             "mcu": "N/A",
             "flash_size": [],
-            "name": "WEMOS D1 MINI ESP32"
+            "name": "WEMOS D1 MINI ESP32",
+            "bootloader_addr": "N/A"
         }
         with open(str(file), 'r', encoding='utf8') as file:
             data: BoardList = json.loads(file.read())
