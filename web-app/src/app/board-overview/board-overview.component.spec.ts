@@ -285,7 +285,7 @@ describe('BoardOverviewComponent', () => {
     } as unknown) as Event;
     component.applyFilter(mockEvent);
 
-    expect(component.mcuSummary).toEqual([{ mcu: 'esp32s3', count: 1 }]);
+    expect(component.mcuSummary).toEqual([{ mcu: 'esp32s3', bootloader_addr: '0x0', count: 1 }]);
   });
 
   it('should open and close MCU overview overlay', () => {
@@ -304,8 +304,8 @@ describe('BoardOverviewComponent', () => {
     ]);
 
     expect(component.mcuSummary).toEqual([
-      { mcu: 'esp32c3', count: 1 },
-      { mcu: 'esp32s3', count: 1 }
+      { mcu: 'esp32c3', bootloader_addr: '0x0', count: 1 },
+      { mcu: 'esp32s3', bootloader_addr: '0x0', count: 1 }
     ]);
   });
 

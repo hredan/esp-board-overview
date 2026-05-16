@@ -85,6 +85,7 @@
         <thead>
           <tr>
             <th>MCU</th>
+            <th>bootloader_addr</th>
             <th>Count</th>
           </tr>
         </thead>
@@ -92,6 +93,7 @@
           @for (entry of mcuSummary; track entry.mcu) {
             <tr>
               <td>{{ entry.mcu }}</td>
+              <td>{{ entry.bootloader_addr }}</td>
               <td>{{ entry.count }}</td>
             </tr>
           }
