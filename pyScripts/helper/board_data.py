@@ -10,6 +10,7 @@ class BoardData:
         self.flash_size: list[str] = []
         self.led_builtin: str = "N/A"
         self.board: str = ""
+        self.bootloader_addr: str = "N/A"
 
     def set_name(self, name: str):
         """Set the name of the board."""
@@ -39,6 +40,10 @@ class BoardData:
     def set_board_id(self, board_id: str):
         """Set the board ID of the board."""
         self.board = board_id
+
+    def set_bootloader_addr(self, bootloader_addr: str):
+        """Set the bootloader address of the board."""
+        self.bootloader_addr = bootloader_addr
 
     def to_json(self):
         """Convert the board data to JSON format."""

@@ -26,7 +26,8 @@ def test_to_json():
         "256KB"
     ],
     "led_builtin": "2",
-    "board": "12345"
+    "board": "12345",
+    "bootloader_addr": "N/A"
 }'''
 
     assert board.to_json() == expected_json  # Ensure __str__ works as expected
@@ -52,7 +53,8 @@ def test_board_list_to_json():
         "mcu": "MCU1",
         "flash_size": [],
         "led_builtin": "N/A",
-        "board": ""
+        "board": "",
+        "bootloader_addr": "N/A"
     },
     {
         "name": "Board2",
@@ -60,7 +62,8 @@ def test_board_list_to_json():
         "mcu": "MCU2",
         "flash_size": [],
         "led_builtin": "N/A",
-        "board": ""
+        "board": "",
+        "bootloader_addr": "N/A"
     }
 ]'''
 

@@ -7,6 +7,7 @@ import { MatCheckboxModule, MatCheckboxChange } from '@angular/material/checkbox
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {Sort, MatSortModule} from '@angular/material/sort';
 import coreList_input from '../../../data/core_list.json';
+import esp32_mcu_bootloader_addr_input from '../../../data/esp32_mcu_bootloader_addr.json';
 
 import { Esp32DataService } from '../esp32-data.service';
 
@@ -34,6 +35,7 @@ export class BoardOverviewComponent implements OnInit {
   sortedData: MatTableDataSource<BoardInfo> = new MatTableDataSource<BoardInfo>([]);
   filterValue = '';
   coreList: Core[] = (coreList_input as Core[]);
+  esp32McuBootloaderAddr: Record<string, string> = esp32_mcu_bootloader_addr_input as Record<string, string>;
   coreVersion = '';
   isMcuOverlayOpen = false;
   mcuSummary: McuSummaryEntry[] = [];
@@ -200,7 +202,11 @@ export class BoardOverviewComponent implements OnInit {
     }
 
     this.mcuSummary = Array.from(mcuCounts.entries())
-      .map(([mcu, count]) => ({ mcu, count }))
+      .map(([mcu, count]) => ({
+        mcu,
+        bootloader_addr: this.esp32McuBootloaderAddr[mcu] ?? 'N/A',
+        count
+      }))
       .sort((a, b) => a.mcu.localeCompare(b.mcu));
   }
 }
@@ -223,6 +229,7 @@ export interface Core {
 
 interface McuSummaryEntry {
   mcu: string;
+  bootloader_addr: string;
   count: number;
 }
 

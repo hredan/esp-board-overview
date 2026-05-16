@@ -10,3 +10,4 @@ cp /workspaces/esp-board-overview/esp_data/esp8266.json /workspaces/esp-board-ov
 cp /workspaces/esp-board-overview/esp_data/esp32.json /workspaces/esp-board-overview/web-app/data/
 cp /workspaces/esp-board-overview/esp_data/esp32_partitions.json /workspaces/esp-board-overview/web-app/data/
 cp /workspaces/esp-board-overview/esp_data/esp32_partition_schemes.json /workspaces/esp-board-overview/web-app/data/
+cp /workspaces/esp-board-overview/esp_data/esp32_mcu_bootloader_addr.json /workspaces/esp-board-overview/web-app/data/

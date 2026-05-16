@@ -50,6 +50,7 @@ d1_mini32.name=WEMOS D1 MINI ESP32
 d1_mini32.build.variant=d1_mini32
 d1_mini32.build.mcu=esp32
 d1_mini32.build.flash_size=4MB
+d1_mini32.build.bootloader_addr=0x1000
 d1_mini32.build.partitions=default
 d1_mini32.menu.PartitionScheme.default=Default
 d1_mini32.menu.PartitionScheme.default.build.partitions=default
@@ -87,6 +88,7 @@ d1_mini32.name=WEMOS D1 MINI ESP32
 d1_mini32.build.variant=d1_mini32
 d1_mini32.build.mcu=esp32
 d1_mini32.build.flash_size=4MB
+d1_mini32.build.bootloader_addr=0x1000
 d1_mini32.build.partitions=default
     """
     boards_txt_path = core_path / "boards.txt"
