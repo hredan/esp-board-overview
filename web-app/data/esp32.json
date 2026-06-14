@@ -2676,14 +2676,14 @@
         "board": "oroca_edubot"
     },
     {
-        "name": "Ozobot circuit kit",
-        "variant": "ozobot_circuit_kit",
+        "name": "Ozobot DRVKit",
+        "variant": "ozobot_drvkit",
         "mcu": "esp32s3",
         "flash_size": [
             "4MB"
         ],
         "led_builtin": "N/A",
-        "board": "ozobot_circuit_kit"
+        "board": "ozobot_drvkit"
     },
     {
         "name": "PandaByte x32 - ESP32",
@@ -2854,6 +2854,16 @@
         ],
         "led_builtin": "42",
         "board": "soldered_nula_deepsleep_esp32s3"
+    },
+    {
+        "name": "Soldered NULA Dual ESP32C5",
+        "variant": "soldered_nula_dual_esp32c5",
+        "mcu": "esp32c5",
+        "flash_size": [
+            "8MB"
+        ],
+        "led_builtin": "48",
+        "board": "soldered_nula_dual_esp32c5"
     },
     {
         "name": "Soldered NULA Mini ESP32C6",
@@ -3664,6 +3674,16 @@
         ],
         "led_builtin": "N/A",
         "board": "waveshare_esp32s3_touch_lcd_128"
+    },
+    {
+        "name": "Waveshare ESP32-P4-POE-ETH",
+        "variant": "waveshare_p4_poe_eth",
+        "mcu": "esp32p4",
+        "flash_size": [
+            "32MB"
+        ],
+        "led_builtin": "N/A",
+        "board": "waveshare_p4_poe_eth"
     },
     {
         "name": "WeAct Studio ESP32C3",

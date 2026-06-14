@@ -7,8 +7,8 @@
     },
     {
         "core": "esp32:esp32",
-        "installed_version": "3.3.8",
-        "latest_version": "3.3.8",
+        "installed_version": "3.3.10",
+        "latest_version": "3.3.10",
         "core_name": "esp32"
     }
 ]
