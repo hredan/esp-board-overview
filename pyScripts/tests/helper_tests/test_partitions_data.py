@@ -1,6 +1,7 @@
 """Unit tests for partitions_data.py"""
 from helper.partitions_data import PartitionData, Scheme, PartitionList
 
+
 def test_partition_data():
     """Test the PartitionData and Scheme classes."""
     partition = PartitionData()
@@ -9,6 +10,8 @@ def test_partition_data():
     scheme1 = Scheme()
     scheme1.set_full_name("DefaultScheme")
     scheme1.set_build("build1")
+    scheme1.set_offset("0x10000")
+    scheme1.set_size("0x20000")
 
     scheme2 = Scheme()
     scheme2.set_full_name("AlternativeScheme")
@@ -21,7 +24,10 @@ def test_partition_data():
     assert "DefaultScheme" in partition.schemes
     assert "AlternativeScheme" in partition.schemes
     assert partition.schemes["DefaultScheme"].full_name == "DefaultScheme"
+    assert partition.schemes["DefaultScheme"].offset == "0x10000"
+    assert partition.schemes["DefaultScheme"].size == "0x20000"
     assert partition.schemes["AlternativeScheme"].build == "build2"
+
 
 def test_partition_list():
     """Test the PartitionList class."""
@@ -39,6 +45,7 @@ def test_partition_list():
     assert "Board1" in partition_list
     assert "Board2" in partition_list
     assert partition_list["Board2"].default == "Scheme2"
+
 
 def test_partition_list_to_json():
     """Test the to_json method of PartitionList."""

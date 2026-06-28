@@ -2,6 +2,7 @@
 from pathlib import Path
 import pytest
 
+
 @pytest.fixture(name="setup_esp8266", scope="function")
 def fixture_setup_esp8266(tmp_path: Path):
     """Fixture to set up the test environment for CoreData."""
@@ -22,7 +23,10 @@ generic.menu.eesz.autoflash.build.flash_size=16M
 d1_mini.name=LOLIN(WEMOS) D1 R2 & mini
 d1_mini.build.variant=d1_mini
 d1_mini.build.mcu=esp8266
+d1_mini.menu.eesz.4M=4MB (FS:1MB OTA:~1019KB)
 d1_mini.menu.eesz.4M.build.flash_size=4M
+d1_mini.menu.eesz.4M.build.spiffs_start=0x300000
+d1_mini.menu.eesz.4M.build.spiffs_end=0x3FA000
     """
     boards_txt_path = core_path / "boards.txt"
     boards_txt_path.write_text(boards_txt_content)
@@ -36,6 +40,7 @@ d1_mini.menu.eesz.4M.build.flash_size=4M
     """
     (variant_path / "pins_arduino.h").write_text(pins_arduino_content)
     return core_path
+
 
 @pytest.fixture(name="setup_esp32_base", scope="function")
 def fixture_setup_esp32_base(tmp_path: Path):
@@ -61,6 +66,7 @@ d1_mini32.menu.PartitionScheme.no_ota.build.partitions=no_ota
     boards_txt_path.write_text(boards_txt_content)
     return core_path
 
+
 @pytest.fixture(name="setup_esp32")
 def fixture_setup_esp32(setup_esp32_base: pytest.Function):
     """Fixture to set up the test environment for CoreData."""
@@ -74,6 +80,7 @@ static const uint8_t LED_BUILTIN = 2;
     """
     (variant_path / "pins_arduino.h").write_text(pins_arduino_content)
     return core_path
+
 
 @pytest.fixture(name="setup_esp32_scheme_data")
 def fixture_setup_esp32_scheme_data(tmp_path: Path):
@@ -104,6 +111,7 @@ static const uint8_t LED_BUILTIN = 2;
     (variant_path / "pins_arduino.h").write_text(pins_arduino_content)
     return core_path
 
+
 @pytest.fixture(name="setup_esp32_scheme_data_with_csv")
 def fixture_setup_esp32_scheme_data_with_csv(setup_esp32_scheme_data: pytest.Function):
     """
@@ -118,6 +126,7 @@ def fixture_setup_esp32_scheme_data_with_csv(setup_esp32_scheme_data: pytest.Fun
     default_csv_content = ""
     (partitions_path / "default.csv").write_text(default_csv_content)
     return core_path
+
 
 @pytest.fixture(name="setup_esp32_without_variant_flash_size")
 def fixture_setup_esp32_without_variant_flash_size(tmp_path: Path):
@@ -134,6 +143,7 @@ d1_mini32.name=WEMOS D1 MINI ESP32
     boards_txt_path.write_text(boards_txt_content)
 
     return core_path
+
 
 @pytest.fixture(name="setup_esp8266_di_mini_base")
 def fixture_setup_esp8266_di_mini_base(tmp_path: Path):
@@ -153,6 +163,7 @@ d1_mini.menu.eesz.4M.build.flash_size=4M
     boards_txt_path.write_text(boards_txt_content)
     return core_path
 
+
 @pytest.fixture(name="setup_wrong_led_builtin_value")
 def fixture_setup_wrong_led_builtin_value(setup_esp8266_di_mini_base: pytest.Function):
     """Fixture to set up the test environment for CoreData with wrong LED_BUILTIN value."""
@@ -167,6 +178,7 @@ def fixture_setup_wrong_led_builtin_value(setup_esp8266_di_mini_base: pytest.Fun
     """
     (variant_path / "pins_arduino.h").write_text(pins_arduino_content)
     return core_path
+
 
 @pytest.fixture(name="setup_d1_mini_led_builtin_v1")
 def fixture_setup_d1_mini_led_builtin_v1(setup_esp8266_di_mini_base: pytest.Function):
@@ -183,6 +195,7 @@ def fixture_setup_d1_mini_led_builtin_v1(setup_esp8266_di_mini_base: pytest.Func
     (variant_path / "pins_arduino.h").write_text(pins_arduino_content)
     return core_path
 
+
 @pytest.fixture(name="setup_d1_mini_led_builtin_v2")
 def fixture_setup_d1_mini_led_builtin_v2(setup_esp8266_di_mini_base: pytest.Function):
     """Fixture to set up the test environment for CoreData with wrong LED_BUILTIN value."""
@@ -198,6 +211,7 @@ def fixture_setup_d1_mini_led_builtin_v2(setup_esp8266_di_mini_base: pytest.Func
     (variant_path / "pins_arduino.h").write_text(pins_arduino_content)
     return core_path
 
+
 @pytest.fixture(name="setup_d1_mini_led_builtin_v3")
 def fixture_setup_d1_mini_led_builtin_v3(setup_esp8266_di_mini_base: pytest.Function):
     """Fixture to set up the test environment for CoreData with wrong LED_BUILTIN value."""
@@ -212,6 +226,7 @@ static const uint8_t LED_BUILTIN = 2;
     """
     (variant_path / "pins_arduino.h").write_text(pins_arduino_content)
     return core_path
+
 
 @pytest.fixture(name="setup_missing_board_txt")
 def fixture_setup_missing_board_txt(tmp_path: Path):
