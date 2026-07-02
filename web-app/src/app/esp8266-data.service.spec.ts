@@ -139,4 +139,54 @@ describe('Esp8266DataService', () => {
       { boardId: 'nodemcu', schemeId: '4m1m' }
     ]);
   });
+
+  it('getMemorySizeOfScheme should return size in MB for valid partition data', () => {
+    service.partitionsData = {
+      d1: {
+        default: '4m1m',
+        schemes: {
+          '4m1m': { full_name: '4M (1M FS)', flash_id: 'eagle.flash.4m1m.ld' }
+        }
+      }
+    };
+    service.schemesData = {
+      'eagle.flash.4m1m': [
+        { name: 'boot', offset: '0x0', size: '0x1000' },
+        { name: 'app', offset: '0x3f0000', size: '0x10000' }
+      ]
+    };
+
+    expect(service.getMemorySizeOfScheme('d1', '4m1m')).toBe(4);
+  });
+
+  it('getMemorySizeOfScheme should return null when entries are missing', () => {
+    service.partitionsData = {
+      d1: {
+        default: '4m1m',
+        schemes: {
+          '4m1m': { full_name: '4M (1M FS)', flash_id: '' }
+        }
+      }
+    };
+
+    expect(service.getMemorySizeOfScheme('d1', '4m1m')).toBeNull();
+  });
+
+  it('getMemorySizeOfScheme should return null for invalid numeric values', () => {
+    service.partitionsData = {
+      d1: {
+        default: '4m1m',
+        schemes: {
+          '4m1m': { full_name: '4M (1M FS)', flash_id: 'eagle.flash.4m1m.ld' }
+        }
+      }
+    };
+    service.schemesData = {
+      'eagle.flash.4m1m': [
+        { name: 'app', offset: 'invalid', size: '0x1000' }
+      ]
+    };
+
+    expect(service.getMemorySizeOfScheme('d1', '4m1m')).toBeNull();
+  });
 });

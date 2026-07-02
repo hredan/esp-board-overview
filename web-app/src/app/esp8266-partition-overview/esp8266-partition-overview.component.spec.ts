@@ -37,6 +37,7 @@ describe('Esp8266PartitionOverviewComponent', () => {
       const key = `${board}-${scheme}` as keyof typeof schemeEntries;
       return schemeEntries[key] ?? [];
     }),
+    getMemorySizeOfScheme: jest.fn(() => 4),
     getBoardName: jest.fn((board: string) => board.toUpperCase())
   };
 

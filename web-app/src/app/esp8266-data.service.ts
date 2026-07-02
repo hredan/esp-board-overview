@@ -52,6 +52,22 @@ export class Esp8266DataService {
     return this.schemesData[schemeKey] ?? [];
   }
 
+  getMemorySizeOfScheme(board: string, schemeId: string): number | null {
+    const entries = this.getSchemeEntries(board, schemeId);
+    if (!entries || entries.length === 0) {
+      return null;
+    }
+
+    const lastEntry = entries[entries.length - 1];
+    const offset = this.parsePartitionValue(lastEntry.offset);
+    const size = this.parsePartitionValue(lastEntry.size);
+    if (offset === null || size === null) {
+      return null;
+    }
+
+    return (offset + size) / (1024 * 1024);
+  }
+
   getPartitionRoutes(): { boardId: string; schemeId: string }[] {
     const routes: { boardId: string; schemeId: string }[] = [];
     for (const board of Object.keys(this.partitionsData)) {
@@ -60,5 +76,11 @@ export class Esp8266DataService {
       }
     }
     return routes;
+  }
+
+  private parsePartitionValue(value: string): number | null {
+    const normalized = value.trim();
+    const asNumber = Number(normalized);
+    return Number.isNaN(asNumber) ? null : asNumber;
   }
 }

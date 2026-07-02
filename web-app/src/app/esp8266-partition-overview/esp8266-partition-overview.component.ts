@@ -63,4 +63,9 @@ export class Esp8266PartitionOverviewComponent {
   get selectedSchemeName(): string {
     return this.partitionsData[this.selectedBoard]?.schemes?.[this.selectedScheme]?.full_name ?? '';
   }
+
+  get selectedSchemeSize(): string {
+    const sizeMb = this.esp8266DataService.getMemorySizeOfScheme(this.selectedBoard, this.selectedScheme);
+    return sizeMb === null ? 'N/A' : `${sizeMb}MB`;
+  }
 }
