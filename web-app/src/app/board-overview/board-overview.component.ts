@@ -9,7 +9,8 @@ import {Sort, MatSortModule} from '@angular/material/sort';
 import coreList_input from '../../../data/core_list.json';
 import esp32_mcu_bootloader_addr_input from '../../../data/esp32_mcu_bootloader_addr.json';
 
-import { Esp32DataService } from '../esp32-data.service';
+import { Esp32DataService, BoardPartitionsInfo } from '../esp32-data.service';
+import { Esp8266DataService, Esp8266PartitionsData } from '../esp8266-data.service';
 
 @Component({
   selector: 'app-board-overview',
@@ -27,8 +28,9 @@ export class BoardOverviewComponent implements OnInit {
   dataSource = input.required<BoardInfo[]>();
   //dataSource: BoardInfo[] = [];
   esp32DataService: Esp32DataService = new Esp32DataService();
-  partitionsData = this.esp32DataService.partitionsData;
-  boardNamesPartitions: string[] = Object.keys(this.partitionsData);
+  esp8266DataService: Esp8266DataService = new Esp8266DataService();
+  partitionsData: BoardPartitionsInfo|Esp8266PartitionsData = {};
+  boardNamesPartitions: string[] = [];
   totalBoardCount = 0;
   filteredBoardCount = 0;
   displayedColumns: string[] = ['name', 'board','variant', 'led', 'mcu', 'flash_size'];
@@ -54,6 +56,19 @@ export class BoardOverviewComponent implements OnInit {
       }
     });
 
+    if (this.coreName() === 'esp32') {
+      this.partitionsData = this.esp32DataService.partitionsData;
+      this.boardNamesPartitions = Object.keys(this.partitionsData);
+    }
+    else if (this.coreName() === 'esp8266') {
+      this.partitionsData = this.esp8266DataService.partitionsData;
+      this.boardNamesPartitions = Object.keys(this.partitionsData);
+    }
+    else {
+      this.partitionsData = {};
+      this.boardNamesPartitions = [];
+    }
+
     this.updateTable();
   }
 
@@ -61,11 +76,20 @@ export class BoardOverviewComponent implements OnInit {
     if (this.boardNamesPartitions.includes(boardName) && this.coreName() === 'esp32') {
       return true;
     }
+    if (this.boardNamesPartitions.includes(boardName) && this.coreName() === 'esp8266') {
+      return true;
+    }
     return false;
   }
 
   get_partition_route(boardName: string): string {
-    return `/esp32-partitions/${boardName}/${this.esp32DataService.getDefaultScheme(boardName)}`;
+    if (this.boardNamesPartitions.includes(boardName) && this.coreName() === 'esp32') {
+      return `/esp32-partitions/${boardName}/${this.esp32DataService.getDefaultScheme(boardName)}`;
+    }
+    if (this.boardNamesPartitions.includes(boardName) && this.coreName() === 'esp8266') {
+      return `/esp8266-partitions/${boardName}/${this.esp8266DataService.getDefaultScheme(boardName)}`;
+    }
+    return '';
   }
 
   get_flash_size_element(flash_sizes: string[]): string {

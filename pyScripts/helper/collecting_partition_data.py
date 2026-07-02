@@ -6,25 +6,29 @@ import logging
 from helper.partitions_data import PartitionList, PartitionData, Scheme
 
 log_partition = logging.getLogger(__name__ + ".partition")
-#enable stdout logging for debugging
+# enable stdout logging for debugging
 if os.environ.get('LOG_STDOUT') == '1':
     log_partition.addHandler(logging.StreamHandler(sys.stdout))
+
+
 class CollectingPartitionData:
     """ Class for collecting partition data from boards.txt """
-    def __init__(self, core_name:str, core_path: str):
+
+    def __init__(self, core_name: str, core_path: str):
         self.core_name = core_name
         self.core_path = core_path
         self.board_id = ""
         self.partition_name = ""
         self.partition_list: PartitionList = PartitionList()
 
-    def __get_default_partition(self, line:str):
-        match_partition = re.match(self.board_id + r"\.build\.partitions=(.+)", line)
+    def __get_default_partition(self, line: str):
+        match_partition = re.match(
+            self.board_id + r"\.build\.partitions=(.+)", line)
         if match_partition:
             default_partition = match_partition.group(1)
             self.partition_list[self.board_id].set_default(default_partition)
 
-    def __get_partition_name(self, line:str):
+    def __get_partition_name(self, line: str):
         pattern = self.board_id + r"\.menu\.PartitionScheme\.([^\.]+)=(.+)"
         match_partition = re.match(pattern, line)
         if match_partition:
@@ -32,20 +36,57 @@ class CollectingPartitionData:
             partitions_full_name = match_partition.group(2)
             scheme: Scheme = Scheme()
             scheme.set_full_name(partitions_full_name)
-            self.partition_list[self.board_id].add_scheme(partition_name, scheme)
+            self.partition_list[self.board_id].add_scheme(
+                partition_name, scheme)
             self.partition_name = partition_name
 
-    def __get_partition_build(self, line:str):
+    def __get_partition_build(self, line: str):
         pattern = self.board_id + r"\.menu\.PartitionScheme\." \
             + self.partition_name + r"\.build\.partitions=(.+)"
         match_partition = re.match(pattern, line)
         if match_partition:
             partition_build = match_partition.group(1)
             if self.partition_list[self.board_id].schemes[self.partition_name].build == "":
-                self.partition_list[self.board_id].schemes[self.partition_name].set_build(partition_build)
+                self.partition_list[self.board_id].schemes[self.partition_name].set_build(
+                    partition_build)
             else:
                 log_partition.warning("%s has more than one build partition for %s",
                                       self.board_id, self.partition_name)
+
+    def __get_or_create_esp8266_scheme(self, scheme_name: str) -> Scheme:
+        if scheme_name not in self.partition_list[self.board_id].schemes:
+            scheme: Scheme = Scheme()
+            scheme.set_full_name(scheme_name)
+            self.partition_list[self.board_id].add_scheme(scheme_name, scheme)
+        return self.partition_list[self.board_id].schemes[scheme_name]
+
+    def __ignore_esp8266_scheme(self, scheme_name: str) -> bool:
+        return scheme_name == "autoflash"
+
+    def __get_partition_name_esp8266(self, line: str):
+        pattern = self.board_id + r"\.menu\.eesz\.([^\.]+)=(.+)"
+        match_partition = re.match(pattern, line)
+        if match_partition:
+            partition_name = match_partition.group(1)
+            if self.__ignore_esp8266_scheme(partition_name):
+                return
+            partition_full_name = match_partition.group(2)
+            scheme = self.__get_or_create_esp8266_scheme(partition_name)
+            scheme.set_full_name(partition_full_name)
+            if self.partition_list[self.board_id].default == "":
+                self.partition_list[self.board_id].set_default(partition_name)
+
+    def __get_partition_flash_id_esp8266(self, line: str):
+        pattern = self.board_id + \
+            r"\.menu\.eesz\.([^\.]+)\.build\.flash_ld=(.+)"
+        match_partition = re.match(pattern, line)
+        if match_partition:
+            partition_name = match_partition.group(1)
+            if self.__ignore_esp8266_scheme(partition_name):
+                return
+            flash_id = match_partition.group(2)
+            scheme = self.__get_or_create_esp8266_scheme(partition_name)
+            scheme.set_flash_id(flash_id)
 
     def __partition_scheme_exists(self, name: str) -> bool:
         """
@@ -76,13 +117,13 @@ class CollectingPartitionData:
                         boards_without_partition.append(board_name)
                     else:
                         log_partition.warning("Only default partition '%s' for '%s' exists",
-                                        default_partition, board_name)
+                                              default_partition, board_name)
             else:
                 scheme_without_build: list[str] = []
                 for scheme_name in partition_data.schemes.keys():
                     if partition_data.schemes[scheme_name].build == "":
                         log_partition.warning("No build name found for '%s' in scheme '%s'",
-                                            board_name, scheme_name)
+                                              board_name, scheme_name)
                         scheme_without_build.append(scheme_name)
                 if scheme_without_build:
                     for scheme_name in scheme_without_build:
@@ -99,7 +140,7 @@ class CollectingPartitionData:
         if self.core_name == "esp32":
             self.__check_esp32_partitions()
 
-    def add_partition(self, board_name:str):
+    def add_partition(self, board_name: str):
         """ Add partition data to the partition list """
         self.board_id = board_name
         self.partition_list.add_partition(board_name, PartitionData())
@@ -111,6 +152,9 @@ class CollectingPartitionData:
             self.__get_default_partition(line)
             self.__get_partition_name(line)
             self.__get_partition_build(line)
+        if self.core_name == "esp8266":
+            self.__get_partition_name_esp8266(line)
+            self.__get_partition_flash_id_esp8266(line)
 
     def get_partitions_data(self) -> PartitionList:
         """ Get collected partition data """

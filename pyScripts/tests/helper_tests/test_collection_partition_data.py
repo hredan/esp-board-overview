@@ -1,17 +1,21 @@
 """Test cases for the CoreData class."""
 import json
 from pathlib import Path
+from typing import Any
 import pytest
 
 from helper.collecting_core_data import CollectingCoreData
 
-from helper.partitions_data import PartitionList
-
 # wildcard import is only used for test fixtures
 # pylint: disable=unused-wildcard-import, wildcard-import
 from tests.helper_tests.collection_core_data_fixture import *
+
+SerializedPartitionList = dict[str, Any]
+
+
 class TestPartitionData:
     """Test cases for the CoreData partition data extraction."""
+
     def test_export_partitions_esp32(self, setup_esp32: pytest.Function, tmpdir: Path):
         """Test the export_json method of CoreData."""
         file = tmpdir / "esp32.json"
@@ -24,19 +28,19 @@ class TestPartitionData:
                 'default': 'default',
                 'schemes': {
                     "default": {
-                            "full_name": "Default",
-                            "build": "default"
-                        },
-                        "no_ota": {
-                            "full_name": "No OTA (Large APP)",
-                            "build": "no_ota"
-                        }
+                        "full_name": "Default",
+                        "build": "default"
+                    },
+                    "no_ota": {
+                        "full_name": "No OTA (Large APP)",
+                        "build": "no_ota"
+                    }
                 }
             }
         }
 
         with open(str(file), 'r', encoding='utf8') as file:
-            data: PartitionList = json.loads(file.read())
+            data: SerializedPartitionList = json.loads(file.read())
         assert isinstance(data, dict)
         assert data == expected_data
 
@@ -46,7 +50,8 @@ class TestPartitionData:
                                                     ):
         """Test the export_json method of CoreData."""
         file = tmpdir / "esp32.json"
-        core_data = CollectingCoreData("esp32", "3.2.0", str(setup_esp32_scheme_data_with_csv))
+        core_data = CollectingCoreData(
+            "esp32", "3.2.0", str(setup_esp32_scheme_data_with_csv))
         # clear the output buffer
         core_data.partitions_export_json(filename=str(file))
         # Check if the output contains the expected values
@@ -59,7 +64,7 @@ class TestPartitionData:
         }
 
         with open(str(file), 'r', encoding='utf8') as file:
-            data: PartitionList = json.loads(file.read())
+            data: SerializedPartitionList = json.loads(file.read())
         assert isinstance(data, dict)
         assert data == expected_data
 
@@ -69,7 +74,8 @@ class TestPartitionData:
                                          caplog: pytest.LogCaptureFixture):
         """Test the export_json method of CoreData."""
         file = tmpdir / "esp32.json"
-        core_data = CollectingCoreData("esp32", "3.2.0", str(setup_esp32_scheme_data))
+        core_data = CollectingCoreData(
+            "esp32", "3.2.0", str(setup_esp32_scheme_data))
         # clear the output buffer
         core_data.partitions_export_json(filename=str(file))
         # Check if the output contains the expected values
@@ -77,11 +83,11 @@ class TestPartitionData:
         expected_data = {}
 
         with open(str(file), 'r', encoding='utf8') as file:
-            data: PartitionList = json.loads(file.read())
+            data: SerializedPartitionList = json.loads(file.read())
         assert isinstance(data, dict)
         assert data == expected_data
 
-        #check log output
+        # check log output
         log_records = caplog.get_records("call")
         assert len(log_records) == 2
         assert log_records[0].levelname == "ERROR"
@@ -91,3 +97,20 @@ class TestPartitionData:
 
         assert log_records[1].levelname == "ERROR"
         assert "Removing 1 boards without partition: d1_mini32" in log_records[1].message
+
+    def test_export_partitions_esp8266_with_flash_id(self,
+                                                     setup_esp8266: pytest.Function,
+                                                     tmpdir: Path):
+        """Test ESP8266 partition export with flash_id."""
+        file = tmpdir / "esp8266.json"
+        core_data = CollectingCoreData("esp8266", "2.7.4", str(setup_esp8266))
+        core_data.partitions_export_json(filename=str(file))
+
+        with open(str(file), 'r', encoding='utf8') as in_file:
+            data: SerializedPartitionList = json.loads(in_file.read())
+
+        assert isinstance(data, dict)
+        assert data["d1_mini"]["default"] == "4M"
+        assert data["d1_mini"]["schemes"]["4M"]["full_name"] == "4MB (FS:1MB OTA:~1019KB)"
+        assert data["d1_mini"]["schemes"]["4M"]["flash_id"] == "eagle.flash.4m.ld"
+        assert "autoflash" not in data["d1_mini"]["schemes"]
