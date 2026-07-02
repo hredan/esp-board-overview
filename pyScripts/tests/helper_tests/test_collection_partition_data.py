@@ -1,6 +1,7 @@
 """Test cases for the CoreData class."""
 import json
 from pathlib import Path
+from typing import Any
 import pytest
 
 from helper.collecting_core_data import CollectingCoreData
@@ -106,7 +107,7 @@ class TestPartitionData:
         core_data.partitions_export_json(filename=str(file))
 
         with open(str(file), 'r', encoding='utf8') as in_file:
-            data: PartitionList = json.loads(in_file.read())
+            data: dict[str, Any] = json.loads(in_file.read())
 
         assert isinstance(data, dict)
         assert data["d1_mini"]["default"] == "4M"
