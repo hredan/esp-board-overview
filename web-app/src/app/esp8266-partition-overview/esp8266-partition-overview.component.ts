@@ -9,7 +9,7 @@ import { Esp8266PartitionViewComponent } from '../esp8266-partition-view/esp8266
 
 @Component({
   selector: 'app-esp8266-partition-overview',
-  imports: [MatSelectModule, MatFormFieldModule, MatOptionModule, Esp8266PartitionViewComponent, RouterLink],
+  imports: [MatSelectModule, MatFormFieldModule, MatOptionModule, Esp8266PartitionViewComponent],
   templateUrl: './esp8266-partition-overview.component.html',
   styleUrl: './esp8266-partition-overview.component.css'
 })

@@ -60,16 +60,11 @@ class CollectingPartitionData:
             self.partition_list[self.board_id].add_scheme(scheme_name, scheme)
         return self.partition_list[self.board_id].schemes[scheme_name]
 
-    def __ignore_esp8266_scheme(self, scheme_name: str) -> bool:
-        return scheme_name == "autoflash"
-
     def __get_partition_name_esp8266(self, line: str):
         pattern = self.board_id + r"\.menu\.eesz\.([^\.]+)=(.+)"
         match_partition = re.match(pattern, line)
         if match_partition:
             partition_name = match_partition.group(1)
-            if self.__ignore_esp8266_scheme(partition_name):
-                return
             partition_full_name = match_partition.group(2)
             scheme = self.__get_or_create_esp8266_scheme(partition_name)
             scheme.set_full_name(partition_full_name)
@@ -78,12 +73,10 @@ class CollectingPartitionData:
 
     def __get_partition_flash_id_esp8266(self, line: str):
         pattern = self.board_id + \
-            r"\.menu\.eesz\.([^\.]+)\.build\.flash_ld=(.+)"
+            r"\.menu\.eesz\.([^\.]+)\.build\.flash_size=(.+)"
         match_partition = re.match(pattern, line)
         if match_partition:
             partition_name = match_partition.group(1)
-            if self.__ignore_esp8266_scheme(partition_name):
-                return
             flash_id = match_partition.group(2)
             scheme = self.__get_or_create_esp8266_scheme(partition_name)
             scheme.set_flash_id(flash_id)

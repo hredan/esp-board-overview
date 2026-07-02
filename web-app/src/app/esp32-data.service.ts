@@ -145,7 +145,8 @@ export class Esp32DataService {
 
 interface BoardSchemeInfo {
   full_name: string;
-  build: string;
+  build?: string;
+  flash_id?: string;
 }
 
 type BoardPartitionScheme = Record<string, BoardSchemeInfo>;
@@ -156,7 +157,7 @@ interface BoardPartitions {
   schemes: BoardPartitionScheme;
 }
 
-type BoardPartitionsInfo = Record<string, BoardPartitions>;
+export type BoardPartitionsInfo = Record<string, BoardPartitions>;
 
 export interface PartitionEntry {
   name: string;

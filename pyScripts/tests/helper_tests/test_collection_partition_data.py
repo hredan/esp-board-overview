@@ -1,7 +1,6 @@
 """Test cases for the CoreData class."""
 import json
 from pathlib import Path
-from typing import Any
 import pytest
 
 from helper.collecting_core_data import CollectingCoreData
@@ -99,18 +98,17 @@ class TestPartitionData:
         assert "Removing 1 boards without partition: d1_mini32" in log_records[1].message
 
     def test_export_partitions_esp8266_with_flash_id(self,
-                                                     setup_esp8266: pytest.Function,
-                                                     tmpdir: Path):
+                                                      setup_esp8266: pytest.Function,
+                                                      tmpdir: Path):
         """Test ESP8266 partition export with flash_id."""
         file = tmpdir / "esp8266.json"
         core_data = CollectingCoreData("esp8266", "2.7.4", str(setup_esp8266))
         core_data.partitions_export_json(filename=str(file))
 
         with open(str(file), 'r', encoding='utf8') as in_file:
-            data: dict[str, Any] = json.loads(in_file.read())
+            data: PartitionList = json.loads(in_file.read())
 
         assert isinstance(data, dict)
         assert data["d1_mini"]["default"] == "4M"
         assert data["d1_mini"]["schemes"]["4M"]["full_name"] == "4MB (FS:1MB OTA:~1019KB)"
-        assert data["d1_mini"]["schemes"]["4M"]["flash_id"] == "eagle.flash.4m.ld"
-        assert "autoflash" not in data["d1_mini"]["schemes"]
+        assert data["d1_mini"]["schemes"]["4M"]["flash_id"] == "4M"

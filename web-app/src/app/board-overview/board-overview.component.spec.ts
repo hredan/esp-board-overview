@@ -249,11 +249,11 @@ describe('BoardOverviewComponent', () => {
     expect(component.is_generate_partition_link('d1')).toBe(true);
   });
 
-  it('is_generate_partition_link should return false for non-esp32 core or invalid board', () => {
+  it('is_generate_partition_link should return true for esp8266 core and valid board', () => {
     createComponent([data_lolin, data_blynk]);
     component.coreName = () => 'esp8266';
     component.boardNamesPartitions = ['d1'];
-    expect(component.is_generate_partition_link('d1')).toBe(false);
+    expect(component.is_generate_partition_link('d1')).toBe(true);
   });
 
   it('get_pins_arduino_link should return correct URL for esp8266 valid variant', () => {
