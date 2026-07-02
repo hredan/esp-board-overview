@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatOptionModule } from '@angular/material/core';
@@ -9,7 +9,7 @@ import { Esp8266PartitionViewComponent } from '../esp8266-partition-view/esp8266
 
 @Component({
   selector: 'app-esp8266-partition-overview',
-  imports: [MatSelectModule, MatFormFieldModule, MatOptionModule, Esp8266PartitionViewComponent],
+  imports: [MatSelectModule, MatFormFieldModule, MatOptionModule, Esp8266PartitionViewComponent, RouterLink],
   templateUrl: './esp8266-partition-overview.component.html',
   styleUrl: './esp8266-partition-overview.component.css'
 })

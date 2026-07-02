@@ -189,4 +189,60 @@ describe('Esp8266DataService', () => {
 
     expect(service.getMemorySizeOfScheme('d1', '4m1m')).toBeNull();
   });
+
+  it('isSpiffsScheme should return true when scheme contains a spiffs partition', () => {
+    service.schemesData = {
+      'eagle.flash.4m1m': [
+        { name: 'app', offset: '0x0', size: '0x1000' },
+        { name: 'spiffs', offset: '0x1000', size: '0x1000' }
+      ]
+    };
+
+    expect(service.isSpiffsScheme('eagle.flash.4m1m')).toBe(true);
+  });
+
+  it('isSpiffsScheme should return false when scheme has no spiffs partition', () => {
+    service.schemesData = {
+      'eagle.flash.4m1m': [
+        { name: 'app', offset: '0x0', size: '0x1000' }
+      ]
+    };
+
+    expect(service.isSpiffsScheme('eagle.flash.4m1m')).toBe(false);
+  });
+
+  it('getSchemeRoutes should return one route per scheme key', () => {
+    service.schemesData = {
+      'eagle.flash.4m1m': [{ name: 'a', offset: '0x0', size: '0x1000' }],
+      'eagle.flash.4m2m': [{ name: 'b', offset: '0x0', size: '0x2000' }]
+    };
+
+    expect(service.getSchemeRoutes()).toEqual([
+      { schemeId: 'eagle.flash.4m1m' },
+      { schemeId: 'eagle.flash.4m2m' }
+    ]);
+  });
+
+  it('getSchemeEntriesById should return entries by scheme key', () => {
+    service.schemesData = {
+      'eagle.flash.4m1m': [{ name: 'a', offset: '0x0', size: '0x1000' }]
+    };
+
+    expect(service.getSchemeEntriesById('eagle.flash.4m1m')).toEqual([
+      { name: 'a', offset: '0x0', size: '0x1000' }
+    ]);
+    expect(service.getSchemeEntriesById('missing')).toEqual([]);
+  });
+
+  it('getMemorySizeOfSchemeById should return scheme size by direct scheme id', () => {
+    service.schemesData = {
+      'eagle.flash.4m': [
+        { name: 'boot', offset: '0x0', size: '0x1000' },
+        { name: 'app', offset: '0x3f0000', size: '0x10000' }
+      ]
+    };
+
+    expect(service.getMemorySizeOfSchemeById('eagle.flash.4m')).toBe(4);
+    expect(service.getMemorySizeOfSchemeById('missing')).toBeNull();
+  });
 });

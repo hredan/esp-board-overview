@@ -6,6 +6,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { EspCoreOverviewComponent } from "./esp-core-overview/esp-core-overview.component";
 import { Esp8266BoardOverviewComponent } from "./esp8266-board-overview/esp8266-board-overview.component";
 import { Esp8266PartitionOverviewComponent } from "./esp8266-partition-overview/esp8266-partition-overview.component";
+import { Esp8266SchemeListComponent } from './esp8266-scheme-list/esp8266-scheme-list.component';
 import { Esp32BoardOverviewComponent } from "./esp32-board-overview/esp32-board-overview.component";
 import { Esp32PartitionOverviewComponent } from "./esp32-partition-overview/esp32-partition-overview.component";
 import { Esp32SchemeListComponent } from './esp32-scheme-list/esp32-scheme-list.component';
@@ -34,6 +35,9 @@ export class AppComponent {
     } else if (event instanceof Esp8266PartitionOverviewComponent) {
       this.activeLink = 'ESP8266-Partitions';
       this.title = 'ESP8266 Partitions Overview';
+    } else if (event instanceof Esp8266SchemeListComponent) {
+      this.activeLink = 'ESP8266-Partitions';
+      this.title = 'ESP8266 Partition Schemes';
     } else if (event instanceof Esp32BoardOverviewComponent) {
       this.activeLink = 'ESP32';
       this.title = 'ESP32 Boards Arduino IDE';

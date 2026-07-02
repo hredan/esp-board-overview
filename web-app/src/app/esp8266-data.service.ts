@@ -54,18 +54,28 @@ export class Esp8266DataService {
 
   getMemorySizeOfScheme(board: string, schemeId: string): number | null {
     const entries = this.getSchemeEntries(board, schemeId);
+    return this.calculateMemorySize(entries);
+  }
+
+  getSchemeRoutes(): { schemeId: string }[] {
+    return Object.keys(this.schemesData).map((schemeId) => ({ schemeId }));
+  }
+
+  getSchemeEntriesById(schemeId: string): Esp8266PartitionEntry[] {
+    return this.schemesData[schemeId] ?? [];
+  }
+
+  getMemorySizeOfSchemeById(schemeId: string): number | null {
+    return this.calculateMemorySize(this.getSchemeEntriesById(schemeId));
+  }
+
+  isSpiffsScheme(schemeId: string): boolean {
+    const entries = this.getSchemeEntriesById(schemeId);
     if (!entries || entries.length === 0) {
-      return null;
+      return false;
     }
 
-    const lastEntry = entries[entries.length - 1];
-    const offset = this.parsePartitionValue(lastEntry.offset);
-    const size = this.parsePartitionValue(lastEntry.size);
-    if (offset === null || size === null) {
-      return null;
-    }
-
-    return (offset + size) / (1024 * 1024);
+    return entries.some((entry) => entry.name.trim().toLowerCase() === 'spiffs');
   }
 
   getPartitionRoutes(): { boardId: string; schemeId: string }[] {
@@ -82,5 +92,20 @@ export class Esp8266DataService {
     const normalized = value.trim();
     const asNumber = Number(normalized);
     return Number.isNaN(asNumber) ? null : asNumber;
+  }
+
+  private calculateMemorySize(entries: Esp8266PartitionEntry[]): number | null {
+    if (!entries || entries.length === 0) {
+      return null;
+    }
+
+    const lastEntry = entries[entries.length - 1];
+    const offset = this.parsePartitionValue(lastEntry.offset);
+    const size = this.parsePartitionValue(lastEntry.size);
+    if (offset === null || size === null) {
+      return null;
+    }
+
+    return (offset + size) / (1024 * 1024);
   }
 }
