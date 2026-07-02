@@ -68,6 +68,17 @@ describe('Esp8266SchemeListComponent', () => {
     expect(names).toEqual(expected);
   });
 
+  it('should sort by name descending', () => {
+    component.sortedData.data = [
+      { name: 'a', isSpiffs: false, memorySizeMb: 2 },
+      { name: 'b', isSpiffs: true, memorySizeMb: 4 }
+    ];
+
+    component.sortData({ active: 'name', direction: 'desc' });
+
+    expect(component.sortedData.data.map((entry) => entry.name)).toEqual(['b', 'a']);
+  });
+
   it('should reset to name sort when sort state is empty', () => {
     component.sortedData.data = [
       { name: 'b', isSpiffs: false, memorySizeMb: 2 },
@@ -94,6 +105,29 @@ describe('Esp8266SchemeListComponent', () => {
     expect(component.sortedData.data[2].memorySizeMb).toBeNull();
   });
 
+  it('should sort by memory size descending', () => {
+    component.sortedData.data = [
+      { name: 'a', isSpiffs: false, memorySizeMb: 2 },
+      { name: 'b', isSpiffs: true, memorySizeMb: 4 }
+    ];
+
+    component.sortData({ active: 'memorySizeMb', direction: 'desc' });
+
+    expect(component.sortedData.data.map((entry) => entry.memorySizeMb)).toEqual([4, 2]);
+  });
+
+  it('should keep order stable when both memory sizes are null', () => {
+    component.sortedData.data = [
+      { name: 'first-null', isSpiffs: false, memorySizeMb: null },
+      { name: 'second-null', isSpiffs: true, memorySizeMb: null }
+    ];
+
+    const sortState: Sort = { active: 'memorySizeMb', direction: 'asc' };
+    component.sortData(sortState);
+
+    expect(component.sortedData.data.map((entry) => entry.name)).toEqual(['first-null', 'second-null']);
+  });
+
   it('should sort by SPIFFS ascending', () => {
     component.sortedData.data = [
       { name: 'with-spiffs', isSpiffs: true, memorySizeMb: 4 },
@@ -105,6 +139,53 @@ describe('Esp8266SchemeListComponent', () => {
 
     expect(component.sortedData.data[0].isSpiffs).toBe(false);
     expect(component.sortedData.data[1].isSpiffs).toBe(true);
+  });
+
+  it('should sort by SPIFFS descending', () => {
+    component.sortedData.data = [
+      { name: 'with-spiffs', isSpiffs: true, memorySizeMb: 4 },
+      { name: 'without-spiffs', isSpiffs: false, memorySizeMb: 4 }
+    ];
+
+    component.sortData({ active: 'isSpiffs', direction: 'desc' });
+
+    expect(component.sortedData.data[0].isSpiffs).toBe(true);
+    expect(component.sortedData.data[1].isSpiffs).toBe(false);
+  });
+
+  it('should leave order unchanged for unsupported sort field', () => {
+    component.sortedData.data = [
+      { name: 'b', isSpiffs: false, memorySizeMb: 2 },
+      { name: 'a', isSpiffs: true, memorySizeMb: 4 }
+    ];
+
+    component.sortData({ active: 'unsupported', direction: 'asc' });
+
+    expect(component.sortedData.data.map((entry) => entry.name)).toEqual(['b', 'a']);
+  });
+
+  it('should cover nullable comparator when first value is null', () => {
+    component.sortedData.data = [
+      { name: 'null-first', isSpiffs: false, memorySizeMb: null },
+      { name: 'size-second', isSpiffs: true, memorySizeMb: 4 }
+    ];
+
+    component.sortData({ active: 'memorySizeMb', direction: 'asc' });
+
+    expect(component.sortedData.data[0].name).toBe('size-second');
+    expect(component.sortedData.data[1].name).toBe('null-first');
+  });
+
+  it('should cover nullable comparator when second value is null', () => {
+    component.sortedData.data = [
+      { name: 'size-first', isSpiffs: false, memorySizeMb: 4 },
+      { name: 'null-second', isSpiffs: true, memorySizeMb: null }
+    ];
+
+    component.sortData({ active: 'memorySizeMb', direction: 'asc' });
+
+    expect(component.sortedData.data[0].name).toBe('size-first');
+    expect(component.sortedData.data[1].name).toBe('null-second');
   });
 
   it('should apply filters from query params', () => {
