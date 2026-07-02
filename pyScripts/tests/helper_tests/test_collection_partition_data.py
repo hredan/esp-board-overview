@@ -1,15 +1,16 @@
 """Test cases for the CoreData class."""
 import json
 from pathlib import Path
+from typing import Any
 import pytest
 
 from helper.collecting_core_data import CollectingCoreData
 
-from helper.partitions_data import PartitionList
-
 # wildcard import is only used for test fixtures
 # pylint: disable=unused-wildcard-import, wildcard-import
 from tests.helper_tests.collection_core_data_fixture import *
+
+SerializedPartitionList = dict[str, Any]
 
 
 class TestPartitionData:
@@ -39,7 +40,7 @@ class TestPartitionData:
         }
 
         with open(str(file), 'r', encoding='utf8') as file:
-            data: PartitionList = json.loads(file.read())
+            data: SerializedPartitionList = json.loads(file.read())
         assert isinstance(data, dict)
         assert data == expected_data
 
@@ -63,7 +64,7 @@ class TestPartitionData:
         }
 
         with open(str(file), 'r', encoding='utf8') as file:
-            data: PartitionList = json.loads(file.read())
+            data: SerializedPartitionList = json.loads(file.read())
         assert isinstance(data, dict)
         assert data == expected_data
 
@@ -82,7 +83,7 @@ class TestPartitionData:
         expected_data = {}
 
         with open(str(file), 'r', encoding='utf8') as file:
-            data: PartitionList = json.loads(file.read())
+            data: SerializedPartitionList = json.loads(file.read())
         assert isinstance(data, dict)
         assert data == expected_data
 
@@ -98,15 +99,15 @@ class TestPartitionData:
         assert "Removing 1 boards without partition: d1_mini32" in log_records[1].message
 
     def test_export_partitions_esp8266_with_flash_id(self,
-                                                      setup_esp8266: pytest.Function,
-                                                      tmpdir: Path):
+                                                     setup_esp8266: pytest.Function,
+                                                     tmpdir: Path):
         """Test ESP8266 partition export with flash_id."""
         file = tmpdir / "esp8266.json"
         core_data = CollectingCoreData("esp8266", "2.7.4", str(setup_esp8266))
         core_data.partitions_export_json(filename=str(file))
 
         with open(str(file), 'r', encoding='utf8') as in_file:
-            data: PartitionList = json.loads(in_file.read())
+            data: SerializedPartitionList = json.loads(in_file.read())
 
         assert isinstance(data, dict)
         assert data["d1_mini"]["default"] == "4M"

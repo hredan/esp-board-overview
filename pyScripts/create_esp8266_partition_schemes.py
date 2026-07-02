@@ -56,16 +56,16 @@ def parse_ld_file(ld_path: str) -> list[dict[str, str]]:
                 raw.append((int(match_kb.group(2), 16),
                            int(match_kb.group(3)) * 1024))
 
-    partitions: list[dict[str, str]] = []
+    partition_entries: list[dict[str, str]] = []
     for name, (offset_abs, size_bytes) in zip(names, raw):
         if size_bytes == 0:
             continue
-        partitions.append({
+        partition_entries.append({
             "name": name,
             "offset": hex(offset_abs - SKETCH_BASE),
             "size": hex(size_bytes),
         })
-    return partitions
+    return partition_entries
 
 
 def get_scheme_name(filename: str) -> str:
@@ -83,23 +83,23 @@ if __name__ == "__main__":
         raise SystemExit(1)
 
     version = esp8266_core["installed_version"]
-    ld_dir = f"{ESP_DATA_PATH}/esp8266-{version}/tools/sdk/ld"
+    LD_DIR = f"{ESP_DATA_PATH}/esp8266-{version}/tools/sdk/ld"
 
     ld_files = sorted(
-        f for f in os.listdir(ld_dir)
+        f for f in os.listdir(LD_DIR)
         if f.startswith("eagle.flash") and f.endswith(".ld")
     )
 
     schemes: dict[str, list[dict[str, str]]] = {}
     for ld_file in ld_files:
         scheme_name = get_scheme_name(ld_file)
-        partitions = parse_ld_file(os.path.join(ld_dir, ld_file))
-        if partitions:
-            schemes[scheme_name] = partitions
+        parsed_partitions = parse_ld_file(os.path.join(LD_DIR, ld_file))
+        if parsed_partitions:
+            schemes[scheme_name] = parsed_partitions
         else:
             print(f"No partitions found in {ld_file}")
 
-    out_path = f"{ESP_DATA_PATH}/esp8266_partition_schemes.json"
-    with open(out_path, "w", encoding="utf-8") as out_file:
+    OUT_PATH = f"{ESP_DATA_PATH}/esp8266_partition_schemes.json"
+    with open(OUT_PATH, "w", encoding="utf-8") as out_file:
         json.dump(schemes, out_file, ensure_ascii=False, indent=4)
-    print(f"Written {len(schemes)} schemes to {out_path}")
+    print(f"Written {len(schemes)} schemes to {OUT_PATH}")
