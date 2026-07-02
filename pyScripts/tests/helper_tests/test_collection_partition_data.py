@@ -112,4 +112,5 @@ class TestPartitionData:
         assert isinstance(data, dict)
         assert data["d1_mini"]["default"] == "4M"
         assert data["d1_mini"]["schemes"]["4M"]["full_name"] == "4MB (FS:1MB OTA:~1019KB)"
-        assert data["d1_mini"]["schemes"]["4M"]["flash_id"] == "4M"
+        assert data["d1_mini"]["schemes"]["4M"]["flash_id"] == "eagle.flash.4m.ld"
+        assert "autoflash" not in data["d1_mini"]["schemes"]
