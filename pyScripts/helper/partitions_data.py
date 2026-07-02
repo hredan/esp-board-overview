@@ -8,8 +8,7 @@ class Scheme:
     def __init__(self):
         self.full_name = ""
         self.build = ""
-        self.offset = ""
-        self.size = ""
+        self.flash_id = ""
 
     def set_full_name(self, name: str):
         """Set the name of the scheme."""
@@ -19,13 +18,9 @@ class Scheme:
         """Set the build of the scheme."""
         self.build = build
 
-    def set_offset(self, offset: str):
-        """Set the partition offset of the scheme."""
-        self.offset = offset
-
-    def set_size(self, size: str):
-        """Set the partition size of the scheme."""
-        self.size = size
+    def set_flash_id(self, flash_id: str):
+        """Set the flash id of the scheme."""
+        self.flash_id = flash_id
 
     def to_dict(self) -> dict[str, str]:
         """Convert the scheme to a serializable dictionary."""
@@ -34,10 +29,8 @@ class Scheme:
         }
         if self.build:
             data["build"] = self.build
-        if self.offset:
-            data["offset"] = self.offset
-        if self.size:
-            data["size"] = self.size
+        if self.flash_id:
+            data["flash_id"] = self.flash_id
         return data
 
 

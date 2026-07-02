@@ -24,7 +24,9 @@ d1_mini.name=LOLIN(WEMOS) D1 R2 & mini
 d1_mini.build.variant=d1_mini
 d1_mini.build.mcu=esp8266
 d1_mini.menu.eesz.4M=4MB (FS:1MB OTA:~1019KB)
-d1_mini.menu.eesz.4M.build.flash_size=4M
+d1_mini.menu.eesz.4M.build.flash_ld=eagle.flash.4m.ld
+d1_mini.menu.eesz.autoflash=Mapping defined by Hardware and Sketch
+d1_mini.menu.eesz.autoflash.build.flash_ld=eagle.flash.auto.ld
 d1_mini.menu.eesz.4M.build.spiffs_start=0x300000
 d1_mini.menu.eesz.4M.build.spiffs_end=0x3FA000
     """

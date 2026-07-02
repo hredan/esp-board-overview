@@ -97,10 +97,10 @@ class TestPartitionData:
         assert log_records[1].levelname == "ERROR"
         assert "Removing 1 boards without partition: d1_mini32" in log_records[1].message
 
-    def test_export_partitions_esp8266_with_offset_size(self,
-                                                        setup_esp8266: pytest.Function,
-                                                        tmpdir: Path):
-        """Test ESP8266 partition export with offset and computed size."""
+    def test_export_partitions_esp8266_with_flash_id(self,
+                                                     setup_esp8266: pytest.Function,
+                                                     tmpdir: Path):
+        """Test ESP8266 partition export with flash_id."""
         file = tmpdir / "esp8266.json"
         core_data = CollectingCoreData("esp8266", "2.7.4", str(setup_esp8266))
         core_data.partitions_export_json(filename=str(file))
@@ -111,5 +111,5 @@ class TestPartitionData:
         assert isinstance(data, dict)
         assert data["d1_mini"]["default"] == "4M"
         assert data["d1_mini"]["schemes"]["4M"]["full_name"] == "4MB (FS:1MB OTA:~1019KB)"
-        assert data["d1_mini"]["schemes"]["4M"]["offset"] == "0x300000"
-        assert data["d1_mini"]["schemes"]["4M"]["size"] == "0xfa000"
+        assert data["d1_mini"]["schemes"]["4M"]["flash_id"] == "eagle.flash.4m.ld"
+        assert "autoflash" not in data["d1_mini"]["schemes"]

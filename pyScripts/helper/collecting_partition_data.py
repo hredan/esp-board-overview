@@ -20,8 +20,6 @@ class CollectingPartitionData:
         self.board_id = ""
         self.partition_name = ""
         self.partition_list: PartitionList = PartitionList()
-        self.esp8266_partition_start: dict[str, str] = {}
-        self.esp8266_partition_end: dict[str, str] = {}
 
     def __get_default_partition(self, line: str):
         match_partition = re.match(
@@ -62,53 +60,33 @@ class CollectingPartitionData:
             self.partition_list[self.board_id].add_scheme(scheme_name, scheme)
         return self.partition_list[self.board_id].schemes[scheme_name]
 
-    def __calculate_esp8266_partition_size(self, scheme_name: str):
-        if scheme_name not in self.esp8266_partition_start or \
-           scheme_name not in self.esp8266_partition_end:
-            return
-        try:
-            start = int(self.esp8266_partition_start[scheme_name], 0)
-            end = int(self.esp8266_partition_end[scheme_name], 0)
-            if end > start:
-                self.partition_list[self.board_id].schemes[scheme_name].set_size(
-                    hex(end - start))
-        except ValueError:
-            log_partition.warning("Invalid ESP8266 partition range for %s:%s",
-                                  self.board_id, scheme_name)
+    def __ignore_esp8266_scheme(self, scheme_name: str) -> bool:
+        return scheme_name == "autoflash"
 
     def __get_partition_name_esp8266(self, line: str):
         pattern = self.board_id + r"\.menu\.eesz\.([^\.]+)=(.+)"
         match_partition = re.match(pattern, line)
         if match_partition:
             partition_name = match_partition.group(1)
+            if self.__ignore_esp8266_scheme(partition_name):
+                return
             partition_full_name = match_partition.group(2)
             scheme = self.__get_or_create_esp8266_scheme(partition_name)
             scheme.set_full_name(partition_full_name)
             if self.partition_list[self.board_id].default == "":
                 self.partition_list[self.board_id].set_default(partition_name)
 
-    def __get_partition_start_esp8266(self, line: str):
+    def __get_partition_flash_id_esp8266(self, line: str):
         pattern = self.board_id + \
-            r"\.menu\.eesz\.([^\.]+)\.build\.spiffs_start=(.+)"
+            r"\.menu\.eesz\.([^\.]+)\.build\.flash_ld=(.+)"
         match_partition = re.match(pattern, line)
         if match_partition:
             partition_name = match_partition.group(1)
-            partition_start = match_partition.group(2)
+            if self.__ignore_esp8266_scheme(partition_name):
+                return
+            flash_id = match_partition.group(2)
             scheme = self.__get_or_create_esp8266_scheme(partition_name)
-            scheme.set_offset(partition_start)
-            self.esp8266_partition_start[partition_name] = partition_start
-            self.__calculate_esp8266_partition_size(partition_name)
-
-    def __get_partition_end_esp8266(self, line: str):
-        pattern = self.board_id + \
-            r"\.menu\.eesz\.([^\.]+)\.build\.spiffs_end=(.+)"
-        match_partition = re.match(pattern, line)
-        if match_partition:
-            partition_name = match_partition.group(1)
-            partition_end = match_partition.group(2)
-            self.__get_or_create_esp8266_scheme(partition_name)
-            self.esp8266_partition_end[partition_name] = partition_end
-            self.__calculate_esp8266_partition_size(partition_name)
+            scheme.set_flash_id(flash_id)
 
     def __partition_scheme_exists(self, name: str) -> bool:
         """
@@ -165,8 +143,6 @@ class CollectingPartitionData:
     def add_partition(self, board_name: str):
         """ Add partition data to the partition list """
         self.board_id = board_name
-        self.esp8266_partition_start = {}
-        self.esp8266_partition_end = {}
         self.partition_list.add_partition(board_name, PartitionData())
 
     def collect_partition_data(self, line: str):
@@ -178,8 +154,7 @@ class CollectingPartitionData:
             self.__get_partition_build(line)
         if self.core_name == "esp8266":
             self.__get_partition_name_esp8266(line)
-            self.__get_partition_start_esp8266(line)
-            self.__get_partition_end_esp8266(line)
+            self.__get_partition_flash_id_esp8266(line)
 
     def get_partitions_data(self) -> PartitionList:
         """ Get collected partition data """

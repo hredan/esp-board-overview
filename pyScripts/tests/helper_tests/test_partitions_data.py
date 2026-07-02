@@ -10,8 +10,7 @@ def test_partition_data():
     scheme1 = Scheme()
     scheme1.set_full_name("DefaultScheme")
     scheme1.set_build("build1")
-    scheme1.set_offset("0x10000")
-    scheme1.set_size("0x20000")
+    scheme1.set_flash_id("4M")
 
     scheme2 = Scheme()
     scheme2.set_full_name("AlternativeScheme")
@@ -24,8 +23,7 @@ def test_partition_data():
     assert "DefaultScheme" in partition.schemes
     assert "AlternativeScheme" in partition.schemes
     assert partition.schemes["DefaultScheme"].full_name == "DefaultScheme"
-    assert partition.schemes["DefaultScheme"].offset == "0x10000"
-    assert partition.schemes["DefaultScheme"].size == "0x20000"
+    assert partition.schemes["DefaultScheme"].flash_id == "4M"
     assert partition.schemes["AlternativeScheme"].build == "build2"
 
 
