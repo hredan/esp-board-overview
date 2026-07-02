@@ -1,0 +1,55 @@
+<div>
+    <div class="form-controls-row">
+        <div class="form-fields">
+            <mat-form-field>
+                <mat-label>Select a board</mat-label>
+                <mat-select [(value)]="selectedBoard" (selectionChange)="onBoardChange($event.value)">
+                    @for (boardName of boardNames; track boardName) {
+                        <mat-option [value]="boardName">{{boardName}}</mat-option>
+                    }
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Select a scheme</mat-label>
+                <mat-select [(value)]="selectedScheme" (selectionChange)="onSchemeChange($event.value)">
+                    @for (scheme of schemes; track scheme) {
+                        <mat-option [value]="scheme">{{scheme}}</mat-option>
+                    }
+                </mat-select>
+            </mat-form-field>
+        </div>
+    </div>
+    <h2>{{selectedBoard}} - {{selectedScheme}}</h2>
+    <table>
+        <tbody>
+            <tr>
+                <td>Board ID:</td>
+                <td class="second_column">{{selectedBoard}}</td>
+            </tr>
+            <tr>
+                <td>Board Name:</td>
+                <td class="second_column">{{esp8266DataService.getBoardName(selectedBoard)}}</td>
+            </tr>
+            <tr>
+                <td>Scheme Default:</td>
+                <td class="second_column">{{partitionsData[selectedBoard]?.default}}</td>
+            </tr>
+            <tr>
+                <td>Scheme ID:</td>
+                <td class="second_column">{{selectedScheme}}</td>
+            </tr>
+            <tr>
+                <td>Scheme Name:</td>
+                <td class="second_column">{{selectedSchemeName}}</td>
+            </tr>
+            <tr>
+                <td>Flash LD:</td>
+                <td class="second_column">{{partitionsData[selectedBoard]?.schemes?.[selectedScheme]?.flash_id}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <app-esp8266-partition-view
+        [schemeName]="selectedSchemeName"
+        [selectedSchemeData]="selectedSchemeData"
+    ></app-esp8266-partition-view>
+</div>

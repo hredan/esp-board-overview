@@ -1,0 +1,834 @@
+{
+    "eagle.flash.16m14m": [
+        {
+            "name": "sketch",
+            "offset": "0x0",
+            "size": "0xfeff0"
+        },
+        {
+            "name": "empty",
+            "offset": "0xfeff0",
+            "size": "0x101010"
+        },
+        {
+            "name": "spiffs",
+            "offset": "0x200000",
+            "size": "0xdfa000"
+        },
+        {
+            "name": "eeprom",
+            "offset": "0xffb000",
+            "size": "0x1000"
+        },
+        {
+            "name": "rfcal",
+            "offset": "0xffc000",
+            "size": "0x1000"
+        },
+        {
+            "name": "wifi",
+            "offset": "0xffd000",
+            "size": "0x3000"
+        }
+    ],
+    "eagle.flash.16m15m": [
+        {
+            "name": "sketch",
+            "offset": "0x0",
+            "size": "0xfeff0"
+        },
+        {
+            "name": "empty",
+            "offset": "0xfeff0",
+            "size": "0x1010"
+        },
+        {
+            "name": "spiffs",
+            "offset": "0x100000",
+            "size": "0xefa000"
+        },
+        {
+            "name": "eeprom",
+            "offset": "0xffb000",
+            "size": "0x1000"
+        },
+        {
+            "name": "rfcal",
+            "offset": "0xffc000",
+            "size": "0x1000"
+        },
+        {
+            "name": "wifi",
+            "offset": "0xffd000",
+            "size": "0x3000"
+        }
+    ],
+    "eagle.flash.1m": [
+        {
+            "name": "sketch",
+            "offset": "0x0",
+            "size": "0xf9ff0"
+        },
+        {
+            "name": "empty",
+            "offset": "0xf9ff0",
+            "size": "0x1010"
+        },
+        {
+            "name": "spiffs",
+            "offset": "0xfb000",
+            "size": "0x0"
+        },
+        {
+            "name": "eeprom",
+            "offset": "0xfb000",
+            "size": "0x1000"
+        },
+        {
+            "name": "rfcal",
+            "offset": "0xfc000",
+            "size": "0x1000"
+        },
+        {
+            "name": "wifi",
+            "offset": "0xfd000",
+            "size": "0x3000"
+        }
+    ],
+    "eagle.flash.1m128": [
+        {
+            "name": "sketch",
+            "offset": "0x0",
+            "size": "0xd9ff0"
+        },
+        {
+            "name": "empty",
+            "offset": "0xd9ff0",
+            "size": "0x1010"
+        },
+        {
+            "name": "spiffs",
+            "offset": "0xdb000",
+            "size": "0x20000"
+        },
+        {
+            "name": "eeprom",
+            "offset": "0xfb000",
+            "size": "0x1000"
+        },
+        {
+            "name": "rfcal",
+            "offset": "0xfc000",
+            "size": "0x1000"
+        },
+        {
+            "name": "wifi",
+            "offset": "0xfd000",
+            "size": "0x3000"
+        }
+    ],
+    "eagle.flash.1m144": [
+        {
+            "name": "sketch",
+            "offset": "0x0",
+            "size": "0xd5ff0"
+        },
+        {
+            "name": "empty",
+            "offset": "0xd5ff0",
+            "size": "0x1010"
+        },
+        {
+            "name": "spiffs",
+            "offset": "0xd7000",
+            "size": "0x24000"
+        },
+        {
+            "name": "eeprom",
+            "offset": "0xfb000",
+            "size": "0x1000"
+        },
+        {
+            "name": "rfcal",
+            "offset": "0xfc000",
+            "size": "0x1000"
+        },
+        {
+            "name": "wifi",
+            "offset": "0xfd000",
+            "size": "0x3000"
+        }
+    ],
+    "eagle.flash.1m160": [
+        {
+            "name": "sketch",
+            "offset": "0x0",
+            "size": "0xd1ff0"
+        },
+        {
+            "name": "empty",
+            "offset": "0xd1ff0",
+            "size": "0x1010"
+        },
+        {
+            "name": "spiffs",
+            "offset": "0xd3000",
+            "size": "0x28000"
+        },
+        {
+            "name": "eeprom",
+            "offset": "0xfb000",
+            "size": "0x1000"
+        },
+        {
+            "name": "rfcal",
+            "offset": "0xfc000",
+            "size": "0x1000"
+        },
+        {
+            "name": "wifi",
+            "offset": "0xfd000",
+            "size": "0x3000"
+        }
+    ],
+    "eagle.flash.1m192": [
+        {
+            "name": "sketch",
+            "offset": "0x0",
+            "size": "0xc9ff0"
+        },
+        {
+            "name": "empty",
+            "offset": "0xc9ff0",
+            "size": "0x1010"
+        },
+        {
+            "name": "spiffs",
+            "offset": "0xcb000",
+            "size": "0x30000"
+        },
+        {
+            "name": "eeprom",
+            "offset": "0xfb000",
+            "size": "0x1000"
+        },
+        {
+            "name": "rfcal",
+            "offset": "0xfc000",
+            "size": "0x1000"
+        },
+        {
+            "name": "wifi",
+            "offset": "0xfd000",
+            "size": "0x3000"
+        }
+    ],
+    "eagle.flash.1m256": [
+        {
+            "name": "sketch",
+            "offset": "0x0",
+            "size": "0xb9ff0"
+        },
+        {
+            "name": "empty",
+            "offset": "0xb9ff0",
+            "size": "0x1010"
+        },
+        {
+            "name": "spiffs",
+            "offset": "0xbb000",
+            "size": "0x40000"
+        },
+        {
+            "name": "eeprom",
+            "offset": "0xfb000",
+            "size": "0x1000"
+        },
+        {
+            "name": "rfcal",
+            "offset": "0xfc000",
+            "size": "0x1000"
+        },
+        {
+            "name": "wifi",
+            "offset": "0xfd000",
+            "size": "0x3000"
+        }
+    ],
+    "eagle.flash.1m512": [
+        {
+            "name": "sketch",
+            "offset": "0x0",
+            "size": "0x79ff0"
+        },
+        {
+            "name": "empty",
+            "offset": "0x79ff0",
+            "size": "0x1010"
+        },
+        {
+            "name": "spiffs",
+            "offset": "0x7b000",
+            "size": "0x80000"
+        },
+        {
+            "name": "eeprom",
+            "offset": "0xfb000",
+            "size": "0x1000"
+        },
+        {
+            "name": "rfcal",
+            "offset": "0xfc000",
+            "size": "0x1000"
+        },
+        {
+            "name": "wifi",
+            "offset": "0xfd000",
+            "size": "0x3000"
+        }
+    ],
+    "eagle.flash.1m64": [
+        {
+            "name": "sketch",
+            "offset": "0x0",
+            "size": "0xe9ff0"
+        },
+        {
+            "name": "empty",
+            "offset": "0xe9ff0",
+            "size": "0x1010"
+        },
+        {
+            "name": "spiffs",
+            "offset": "0xeb000",
+            "size": "0x10000"
+        },
+        {
+            "name": "eeprom",
+            "offset": "0xfb000",
+            "size": "0x1000"
+        },
+        {
+            "name": "rfcal",
+            "offset": "0xfc000",
+            "size": "0x1000"
+        },
+        {
+            "name": "wifi",
+            "offset": "0xfd000",
+            "size": "0x3000"
+        }
+    ],
+    "eagle.flash.2m": [
+        {
+            "name": "sketch",
+            "offset": "0x0",
+            "size": "0xfeff0"
+        },
+        {
+            "name": "empty",
+            "offset": "0xfeff0",
+            "size": "0xfc010"
+        },
+        {
+            "name": "spiffs",
+            "offset": "0x1fb000",
+            "size": "0x0"
+        },
+        {
+            "name": "eeprom",
+            "offset": "0x1fb000",
+            "size": "0x1000"
+        },
+        {
+            "name": "rfcal",
+            "offset": "0x1fc000",
+            "size": "0x1000"
+        },
+        {
+            "name": "wifi",
+            "offset": "0x1fd000",
+            "size": "0x3000"
+        }
+    ],
+    "eagle.flash.2m128": [
+        {
+            "name": "sketch",
+            "offset": "0x0",
+            "size": "0xfeff0"
+        },
+        {
+            "name": "empty",
+            "offset": "0xfeff0",
+            "size": "0xe1010"
+        },
+        {
+            "name": "spiffs",
+            "offset": "0x1e0000",
+            "size": "0x1b000"
+        },
+        {
+            "name": "eeprom",
+            "offset": "0x1fb000",
+            "size": "0x1000"
+        },
+        {
+            "name": "rfcal",
+            "offset": "0x1fc000",
+            "size": "0x1000"
+        },
+        {
+            "name": "wifi",
+            "offset": "0x1fd000",
+            "size": "0x3000"
+        }
+    ],
+    "eagle.flash.2m1m": [
+        {
+            "name": "sketch",
+            "offset": "0x0",
+            "size": "0xfeff0"
+        },
+        {
+            "name": "empty",
+            "offset": "0xfeff0",
+            "size": "0x1010"
+        },
+        {
+            "name": "spiffs",
+            "offset": "0x100000",
+            "size": "0xfa000"
+        },
+        {
+            "name": "eeprom",
+            "offset": "0x1fb000",
+            "size": "0x1000"
+        },
+        {
+            "name": "rfcal",
+            "offset": "0x1fc000",
+            "size": "0x1000"
+        },
+        {
+            "name": "wifi",
+            "offset": "0x1fd000",
+            "size": "0x3000"
+        }
+    ],
+    "eagle.flash.2m256": [
+        {
+            "name": "sketch",
+            "offset": "0x0",
+            "size": "0xfeff0"
+        },
+        {
+            "name": "empty",
+            "offset": "0xfeff0",
+            "size": "0xc1010"
+        },
+        {
+            "name": "spiffs",
+            "offset": "0x1c0000",
+            "size": "0x3b000"
+        },
+        {
+            "name": "eeprom",
+            "offset": "0x1fb000",
+            "size": "0x1000"
+        },
+        {
+            "name": "rfcal",
+            "offset": "0x1fc000",
+            "size": "0x1000"
+        },
+        {
+            "name": "wifi",
+            "offset": "0x1fd000",
+            "size": "0x3000"
+        }
+    ],
+    "eagle.flash.2m512": [
+        {
+            "name": "sketch",
+            "offset": "0x0",
+            "size": "0xfeff0"
+        },
+        {
+            "name": "empty",
+            "offset": "0xfeff0",
+            "size": "0x81010"
+        },
+        {
+            "name": "spiffs",
+            "offset": "0x180000",
+            "size": "0x7a000"
+        },
+        {
+            "name": "eeprom",
+            "offset": "0x1fb000",
+            "size": "0x1000"
+        },
+        {
+            "name": "rfcal",
+            "offset": "0x1fc000",
+            "size": "0x1000"
+        },
+        {
+            "name": "wifi",
+            "offset": "0x1fd000",
+            "size": "0x3000"
+        }
+    ],
+    "eagle.flash.2m64": [
+        {
+            "name": "sketch",
+            "offset": "0x0",
+            "size": "0xfeff0"
+        },
+        {
+            "name": "empty",
+            "offset": "0xfeff0",
+            "size": "0xf1010"
+        },
+        {
+            "name": "spiffs",
+            "offset": "0x1f0000",
+            "size": "0xb000"
+        },
+        {
+            "name": "eeprom",
+            "offset": "0x1fb000",
+            "size": "0x1000"
+        },
+        {
+            "name": "rfcal",
+            "offset": "0x1fc000",
+            "size": "0x1000"
+        },
+        {
+            "name": "wifi",
+            "offset": "0x1fd000",
+            "size": "0x3000"
+        }
+    ],
+    "eagle.flash.4m": [
+        {
+            "name": "sketch",
+            "offset": "0x0",
+            "size": "0xfeff0"
+        },
+        {
+            "name": "empty",
+            "offset": "0xfeff0",
+            "size": "0x2fc010"
+        },
+        {
+            "name": "spiffs",
+            "offset": "0x3fb000",
+            "size": "0x0"
+        },
+        {
+            "name": "eeprom",
+            "offset": "0x3fb000",
+            "size": "0x1000"
+        },
+        {
+            "name": "rfcal",
+            "offset": "0x3fc000",
+            "size": "0x1000"
+        },
+        {
+            "name": "wifi",
+            "offset": "0x3fd000",
+            "size": "0x3000"
+        }
+    ],
+    "eagle.flash.4m1m": [
+        {
+            "name": "sketch",
+            "offset": "0x0",
+            "size": "0xfeff0"
+        },
+        {
+            "name": "empty",
+            "offset": "0xfeff0",
+            "size": "0x201010"
+        },
+        {
+            "name": "spiffs",
+            "offset": "0x300000",
+            "size": "0xfa000"
+        },
+        {
+            "name": "eeprom",
+            "offset": "0x3fb000",
+            "size": "0x1000"
+        },
+        {
+            "name": "rfcal",
+            "offset": "0x3fc000",
+            "size": "0x1000"
+        },
+        {
+            "name": "wifi",
+            "offset": "0x3fd000",
+            "size": "0x3000"
+        }
+    ],
+    "eagle.flash.4m2m": [
+        {
+            "name": "sketch",
+            "offset": "0x0",
+            "size": "0xfeff0"
+        },
+        {
+            "name": "empty",
+            "offset": "0xfeff0",
+            "size": "0x101010"
+        },
+        {
+            "name": "spiffs",
+            "offset": "0x200000",
+            "size": "0x1fa000"
+        },
+        {
+            "name": "eeprom",
+            "offset": "0x3fb000",
+            "size": "0x1000"
+        },
+        {
+            "name": "rfcal",
+            "offset": "0x3fc000",
+            "size": "0x1000"
+        },
+        {
+            "name": "wifi",
+            "offset": "0x3fd000",
+            "size": "0x3000"
+        }
+    ],
+    "eagle.flash.4m3m": [
+        {
+            "name": "sketch",
+            "offset": "0x0",
+            "size": "0xfeff0"
+        },
+        {
+            "name": "empty",
+            "offset": "0xfeff0",
+            "size": "0x1010"
+        },
+        {
+            "name": "spiffs",
+            "offset": "0x100000",
+            "size": "0x2fa000"
+        },
+        {
+            "name": "eeprom",
+            "offset": "0x3fb000",
+            "size": "0x1000"
+        },
+        {
+            "name": "rfcal",
+            "offset": "0x3fc000",
+            "size": "0x1000"
+        },
+        {
+            "name": "wifi",
+            "offset": "0x3fd000",
+            "size": "0x3000"
+        }
+    ],
+    "eagle.flash.512k": [
+        {
+            "name": "sketch",
+            "offset": "0x0",
+            "size": "0x79ff0"
+        },
+        {
+            "name": "empty",
+            "offset": "0x79ff0",
+            "size": "0x1010"
+        },
+        {
+            "name": "spiffs",
+            "offset": "0x7b000",
+            "size": "0x0"
+        },
+        {
+            "name": "eeprom",
+            "offset": "0x7b000",
+            "size": "0x1000"
+        },
+        {
+            "name": "rfcal",
+            "offset": "0x7c000",
+            "size": "0x1000"
+        },
+        {
+            "name": "wifi",
+            "offset": "0x7d000",
+            "size": "0x3000"
+        }
+    ],
+    "eagle.flash.512k128": [
+        {
+            "name": "sketch",
+            "offset": "0x0",
+            "size": "0x59ff0"
+        },
+        {
+            "name": "empty",
+            "offset": "0x59ff0",
+            "size": "0x1010"
+        },
+        {
+            "name": "spiffs",
+            "offset": "0x5b000",
+            "size": "0x20000"
+        },
+        {
+            "name": "eeprom",
+            "offset": "0x7b000",
+            "size": "0x1000"
+        },
+        {
+            "name": "rfcal",
+            "offset": "0x7c000",
+            "size": "0x1000"
+        },
+        {
+            "name": "wifi",
+            "offset": "0x7d000",
+            "size": "0x3000"
+        }
+    ],
+    "eagle.flash.512k32": [
+        {
+            "name": "sketch",
+            "offset": "0x0",
+            "size": "0x71ff0"
+        },
+        {
+            "name": "empty",
+            "offset": "0x71ff0",
+            "size": "0x1010"
+        },
+        {
+            "name": "spiffs",
+            "offset": "0x73000",
+            "size": "0x8000"
+        },
+        {
+            "name": "eeprom",
+            "offset": "0x7b000",
+            "size": "0x1000"
+        },
+        {
+            "name": "rfcal",
+            "offset": "0x7c000",
+            "size": "0x1000"
+        },
+        {
+            "name": "wifi",
+            "offset": "0x7d000",
+            "size": "0x3000"
+        }
+    ],
+    "eagle.flash.512k64": [
+        {
+            "name": "sketch",
+            "offset": "0x0",
+            "size": "0x69ff0"
+        },
+        {
+            "name": "empty",
+            "offset": "0x69ff0",
+            "size": "0x1010"
+        },
+        {
+            "name": "spiffs",
+            "offset": "0x6b000",
+            "size": "0x10000"
+        },
+        {
+            "name": "eeprom",
+            "offset": "0x7b000",
+            "size": "0x1000"
+        },
+        {
+            "name": "rfcal",
+            "offset": "0x7c000",
+            "size": "0x1000"
+        },
+        {
+            "name": "wifi",
+            "offset": "0x7d000",
+            "size": "0x3000"
+        }
+    ],
+    "eagle.flash.8m6m": [
+        {
+            "name": "sketch",
+            "offset": "0x0",
+            "size": "0xfeff0"
+        },
+        {
+            "name": "empty",
+            "offset": "0xfeff0",
+            "size": "0x101010"
+        },
+        {
+            "name": "spiffs",
+            "offset": "0x200000",
+            "size": "0x5fa000"
+        },
+        {
+            "name": "eeprom",
+            "offset": "0x7fb000",
+            "size": "0x1000"
+        },
+        {
+            "name": "rfcal",
+            "offset": "0x7fc000",
+            "size": "0x1000"
+        },
+        {
+            "name": "wifi",
+            "offset": "0x7fd000",
+            "size": "0x3000"
+        }
+    ],
+    "eagle.flash.8m7m": [
+        {
+            "name": "sketch",
+            "offset": "0x0",
+            "size": "0xfeff0"
+        },
+        {
+            "name": "empty",
+            "offset": "0xfeff0",
+            "size": "0x1010"
+        },
+        {
+            "name": "spiffs",
+            "offset": "0x100000",
+            "size": "0x6fa000"
+        },
+        {
+            "name": "eeprom",
+            "offset": "0x7fb000",
+            "size": "0x1000"
+        },
+        {
+            "name": "rfcal",
+            "offset": "0x7fc000",
+            "size": "0x1000"
+        },
+        {
+            "name": "wifi",
+            "offset": "0x7fd000",
+            "size": "0x3000"
+        }
+    ]
+}

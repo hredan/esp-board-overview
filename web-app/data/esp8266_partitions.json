@@ -1,0 +1,1084 @@
+{
+    "generic": {
+        "default": "1M64",
+        "schemes": {
+            "1M64": {
+                "full_name": "1MB (FS:64KB OTA:~470KB)",
+                "flash_id": "eagle.flash.1m64.ld"
+            },
+            "1M128": {
+                "full_name": "1MB (FS:128KB OTA:~438KB)",
+                "flash_id": "eagle.flash.1m128.ld"
+            },
+            "1M144": {
+                "full_name": "1MB (FS:144KB OTA:~430KB)",
+                "flash_id": "eagle.flash.1m144.ld"
+            },
+            "1M160": {
+                "full_name": "1MB (FS:160KB OTA:~422KB)",
+                "flash_id": "eagle.flash.1m160.ld"
+            },
+            "1M192": {
+                "full_name": "1MB (FS:192KB OTA:~406KB)",
+                "flash_id": "eagle.flash.1m192.ld"
+            },
+            "1M256": {
+                "full_name": "1MB (FS:256KB OTA:~374KB)",
+                "flash_id": "eagle.flash.1m256.ld"
+            },
+            "1M512": {
+                "full_name": "1MB (FS:512KB OTA:~246KB)",
+                "flash_id": "eagle.flash.1m512.ld"
+            },
+            "1M": {
+                "full_name": "1MB (FS:none OTA:~502KB)",
+                "flash_id": "eagle.flash.1m.ld"
+            },
+            "2M64": {
+                "full_name": "2MB (FS:64KB OTA:~992KB)",
+                "flash_id": "eagle.flash.2m64.ld"
+            },
+            "2M128": {
+                "full_name": "2MB (FS:128KB OTA:~960KB)",
+                "flash_id": "eagle.flash.2m128.ld"
+            },
+            "2M256": {
+                "full_name": "2MB (FS:256KB OTA:~896KB)",
+                "flash_id": "eagle.flash.2m256.ld"
+            },
+            "2M512": {
+                "full_name": "2MB (FS:512KB OTA:~768KB)",
+                "flash_id": "eagle.flash.2m512.ld"
+            },
+            "2M1M": {
+                "full_name": "2MB (FS:1MB OTA:~512KB)",
+                "flash_id": "eagle.flash.2m1m.ld"
+            },
+            "2M": {
+                "full_name": "2MB (FS:none OTA:~1019KB)",
+                "flash_id": "eagle.flash.2m.ld"
+            },
+            "4M2M": {
+                "full_name": "4MB (FS:2MB OTA:~1019KB)",
+                "flash_id": "eagle.flash.4m2m.ld"
+            },
+            "4M3M": {
+                "full_name": "4MB (FS:3MB OTA:~512KB)",
+                "flash_id": "eagle.flash.4m3m.ld"
+            },
+            "4M1M": {
+                "full_name": "4MB (FS:1MB OTA:~1019KB)",
+                "flash_id": "eagle.flash.4m1m.ld"
+            },
+            "4M": {
+                "full_name": "4MB (FS:none OTA:~1019KB)",
+                "flash_id": "eagle.flash.4m.ld"
+            },
+            "8M6M": {
+                "full_name": "8MB (FS:6MB OTA:~1019KB)",
+                "flash_id": "eagle.flash.8m6m.ld"
+            },
+            "8M7M": {
+                "full_name": "8MB (FS:7MB OTA:~512KB)",
+                "flash_id": "eagle.flash.8m7m.ld"
+            },
+            "8M": {
+                "full_name": "8MB (FS:none OTA:~1019KB)",
+                "flash_id": "eagle.flash.8m.ld"
+            },
+            "16M14M": {
+                "full_name": "16MB (FS:14MB OTA:~1019KB)",
+                "flash_id": "eagle.flash.16m14m.ld"
+            },
+            "16M15M": {
+                "full_name": "16MB (FS:15MB OTA:~512KB)",
+                "flash_id": "eagle.flash.16m15m.ld"
+            },
+            "16M": {
+                "full_name": "16MB (FS:none OTA:~1019KB)",
+                "flash_id": "eagle.flash.16m.ld"
+            },
+            "512K32": {
+                "full_name": "512KB (FS:32KB OTA:~230KB)",
+                "flash_id": "eagle.flash.512k32.ld"
+            },
+            "512K64": {
+                "full_name": "512KB (FS:64KB OTA:~214KB)",
+                "flash_id": "eagle.flash.512k64.ld"
+            },
+            "512K128": {
+                "full_name": "512KB (FS:128KB OTA:~182KB)",
+                "flash_id": "eagle.flash.512k128.ld"
+            },
+            "512K": {
+                "full_name": "512KB (FS:none OTA:~246KB)",
+                "flash_id": "eagle.flash.512k.ld"
+            }
+        }
+    },
+    "esp8285": {
+        "default": "1M64",
+        "schemes": {
+            "1M64": {
+                "full_name": "1MB (FS:64KB OTA:~470KB)",
+                "flash_id": "eagle.flash.1m64.ld"
+            },
+            "1M128": {
+                "full_name": "1MB (FS:128KB OTA:~438KB)",
+                "flash_id": "eagle.flash.1m128.ld"
+            },
+            "1M144": {
+                "full_name": "1MB (FS:144KB OTA:~430KB)",
+                "flash_id": "eagle.flash.1m144.ld"
+            },
+            "1M160": {
+                "full_name": "1MB (FS:160KB OTA:~422KB)",
+                "flash_id": "eagle.flash.1m160.ld"
+            },
+            "1M192": {
+                "full_name": "1MB (FS:192KB OTA:~406KB)",
+                "flash_id": "eagle.flash.1m192.ld"
+            },
+            "1M256": {
+                "full_name": "1MB (FS:256KB OTA:~374KB)",
+                "flash_id": "eagle.flash.1m256.ld"
+            },
+            "1M512": {
+                "full_name": "1MB (FS:512KB OTA:~246KB)",
+                "flash_id": "eagle.flash.1m512.ld"
+            },
+            "1M": {
+                "full_name": "1MB (FS:none OTA:~502KB)",
+                "flash_id": "eagle.flash.1m.ld"
+            },
+            "2M64": {
+                "full_name": "2MB (FS:64KB OTA:~992KB)",
+                "flash_id": "eagle.flash.2m64.ld"
+            },
+            "2M128": {
+                "full_name": "2MB (FS:128KB OTA:~960KB)",
+                "flash_id": "eagle.flash.2m128.ld"
+            },
+            "2M256": {
+                "full_name": "2MB (FS:256KB OTA:~896KB)",
+                "flash_id": "eagle.flash.2m256.ld"
+            },
+            "2M512": {
+                "full_name": "2MB (FS:512KB OTA:~768KB)",
+                "flash_id": "eagle.flash.2m512.ld"
+            },
+            "2M1M": {
+                "full_name": "2MB (FS:1MB OTA:~512KB)",
+                "flash_id": "eagle.flash.2m1m.ld"
+            },
+            "2M": {
+                "full_name": "2MB (FS:none OTA:~1019KB)",
+                "flash_id": "eagle.flash.2m.ld"
+            }
+        }
+    },
+    "gen4iod": {
+        "default": "2M64",
+        "schemes": {
+            "2M64": {
+                "full_name": "2MB (FS:64KB OTA:~992KB)",
+                "flash_id": "eagle.flash.2m64.ld"
+            },
+            "2M128": {
+                "full_name": "2MB (FS:128KB OTA:~960KB)",
+                "flash_id": "eagle.flash.2m128.ld"
+            },
+            "2M256": {
+                "full_name": "2MB (FS:256KB OTA:~896KB)",
+                "flash_id": "eagle.flash.2m256.ld"
+            },
+            "2M512": {
+                "full_name": "2MB (FS:512KB OTA:~768KB)",
+                "flash_id": "eagle.flash.2m512.ld"
+            },
+            "2M1M": {
+                "full_name": "2MB (FS:1MB OTA:~512KB)",
+                "flash_id": "eagle.flash.2m1m.ld"
+            },
+            "2M": {
+                "full_name": "2MB (FS:none OTA:~1019KB)",
+                "flash_id": "eagle.flash.2m.ld"
+            },
+            "512K32": {
+                "full_name": "512KB (FS:32KB OTA:~230KB)",
+                "flash_id": "eagle.flash.512k32.ld"
+            },
+            "512K64": {
+                "full_name": "512KB (FS:64KB OTA:~214KB)",
+                "flash_id": "eagle.flash.512k64.ld"
+            },
+            "512K128": {
+                "full_name": "512KB (FS:128KB OTA:~182KB)",
+                "flash_id": "eagle.flash.512k128.ld"
+            },
+            "512K": {
+                "full_name": "512KB (FS:none OTA:~246KB)",
+                "flash_id": "eagle.flash.512k.ld"
+            }
+        }
+    },
+    "huzzah": {
+        "default": "4M2M",
+        "schemes": {
+            "4M2M": {
+                "full_name": "4MB (FS:2MB OTA:~1019KB)",
+                "flash_id": "eagle.flash.4m2m.ld"
+            },
+            "4M3M": {
+                "full_name": "4MB (FS:3MB OTA:~512KB)",
+                "flash_id": "eagle.flash.4m3m.ld"
+            },
+            "4M1M": {
+                "full_name": "4MB (FS:1MB OTA:~1019KB)",
+                "flash_id": "eagle.flash.4m1m.ld"
+            },
+            "4M": {
+                "full_name": "4MB (FS:none OTA:~1019KB)",
+                "flash_id": "eagle.flash.4m.ld"
+            }
+        }
+    },
+    "wifi_slot": {
+        "default": "1M64",
+        "schemes": {
+            "1M64": {
+                "full_name": "1MB (FS:64KB OTA:~470KB)",
+                "flash_id": "eagle.flash.1m64.ld"
+            },
+            "1M128": {
+                "full_name": "1MB (FS:128KB OTA:~438KB)",
+                "flash_id": "eagle.flash.1m128.ld"
+            },
+            "1M144": {
+                "full_name": "1MB (FS:144KB OTA:~430KB)",
+                "flash_id": "eagle.flash.1m144.ld"
+            },
+            "1M160": {
+                "full_name": "1MB (FS:160KB OTA:~422KB)",
+                "flash_id": "eagle.flash.1m160.ld"
+            },
+            "1M192": {
+                "full_name": "1MB (FS:192KB OTA:~406KB)",
+                "flash_id": "eagle.flash.1m192.ld"
+            },
+            "1M256": {
+                "full_name": "1MB (FS:256KB OTA:~374KB)",
+                "flash_id": "eagle.flash.1m256.ld"
+            },
+            "1M512": {
+                "full_name": "1MB (FS:512KB OTA:~246KB)",
+                "flash_id": "eagle.flash.1m512.ld"
+            },
+            "1M": {
+                "full_name": "1MB (FS:none OTA:~502KB)",
+                "flash_id": "eagle.flash.1m.ld"
+            },
+            "2M64": {
+                "full_name": "2MB (FS:64KB OTA:~992KB)",
+                "flash_id": "eagle.flash.2m64.ld"
+            },
+            "2M128": {
+                "full_name": "2MB (FS:128KB OTA:~960KB)",
+                "flash_id": "eagle.flash.2m128.ld"
+            },
+            "2M256": {
+                "full_name": "2MB (FS:256KB OTA:~896KB)",
+                "flash_id": "eagle.flash.2m256.ld"
+            },
+            "2M512": {
+                "full_name": "2MB (FS:512KB OTA:~768KB)",
+                "flash_id": "eagle.flash.2m512.ld"
+            },
+            "2M1M": {
+                "full_name": "2MB (FS:1MB OTA:~512KB)",
+                "flash_id": "eagle.flash.2m1m.ld"
+            },
+            "2M": {
+                "full_name": "2MB (FS:none OTA:~1019KB)",
+                "flash_id": "eagle.flash.2m.ld"
+            }
+        }
+    },
+    "arduino-esp8266": {
+        "default": "4M2M",
+        "schemes": {
+            "4M2M": {
+                "full_name": "4MB (FS:2MB OTA:~1019KB)",
+                "flash_id": "eagle.flash.4m2m.ld"
+            },
+            "4M3M": {
+                "full_name": "4MB (FS:3MB OTA:~512KB)",
+                "flash_id": "eagle.flash.4m3m.ld"
+            },
+            "4M1M": {
+                "full_name": "4MB (FS:1MB OTA:~1019KB)",
+                "flash_id": "eagle.flash.4m1m.ld"
+            },
+            "4M": {
+                "full_name": "4MB (FS:none OTA:~1019KB)",
+                "flash_id": "eagle.flash.4m.ld"
+            }
+        }
+    },
+    "espmxdevkit": {
+        "default": "1M64",
+        "schemes": {
+            "1M64": {
+                "full_name": "1MB (FS:64KB OTA:~470KB)",
+                "flash_id": "eagle.flash.1m64.ld"
+            },
+            "1M128": {
+                "full_name": "1MB (FS:128KB OTA:~438KB)",
+                "flash_id": "eagle.flash.1m128.ld"
+            },
+            "1M144": {
+                "full_name": "1MB (FS:144KB OTA:~430KB)",
+                "flash_id": "eagle.flash.1m144.ld"
+            },
+            "1M160": {
+                "full_name": "1MB (FS:160KB OTA:~422KB)",
+                "flash_id": "eagle.flash.1m160.ld"
+            },
+            "1M192": {
+                "full_name": "1MB (FS:192KB OTA:~406KB)",
+                "flash_id": "eagle.flash.1m192.ld"
+            },
+            "1M256": {
+                "full_name": "1MB (FS:256KB OTA:~374KB)",
+                "flash_id": "eagle.flash.1m256.ld"
+            },
+            "1M512": {
+                "full_name": "1MB (FS:512KB OTA:~246KB)",
+                "flash_id": "eagle.flash.1m512.ld"
+            },
+            "1M": {
+                "full_name": "1MB (FS:none OTA:~502KB)",
+                "flash_id": "eagle.flash.1m.ld"
+            }
+        }
+    },
+    "oak": {
+        "default": "4M2M",
+        "schemes": {
+            "4M2M": {
+                "full_name": "4MB (FS:2MB OTA:~1019KB)",
+                "flash_id": "eagle.flash.4m2m.ld"
+            },
+            "4M3M": {
+                "full_name": "4MB (FS:3MB OTA:~512KB)",
+                "flash_id": "eagle.flash.4m3m.ld"
+            },
+            "4M1M": {
+                "full_name": "4MB (FS:1MB OTA:~1019KB)",
+                "flash_id": "eagle.flash.4m1m.ld"
+            },
+            "4M": {
+                "full_name": "4MB (FS:none OTA:~1019KB)",
+                "flash_id": "eagle.flash.4m.ld"
+            }
+        }
+    },
+    "espduino": {
+        "default": "4M2M",
+        "schemes": {
+            "4M2M": {
+                "full_name": "4MB (FS:2MB OTA:~1019KB)",
+                "flash_id": "eagle.flash.4m2m.ld"
+            },
+            "4M3M": {
+                "full_name": "4MB (FS:3MB OTA:~512KB)",
+                "flash_id": "eagle.flash.4m3m.ld"
+            },
+            "4M1M": {
+                "full_name": "4MB (FS:1MB OTA:~1019KB)",
+                "flash_id": "eagle.flash.4m1m.ld"
+            },
+            "4M": {
+                "full_name": "4MB (FS:none OTA:~1019KB)",
+                "flash_id": "eagle.flash.4m.ld"
+            }
+        }
+    },
+    "espectro": {
+        "default": "4M2M",
+        "schemes": {
+            "4M2M": {
+                "full_name": "4MB (FS:2MB OTA:~1019KB)",
+                "flash_id": "eagle.flash.4m2m.ld"
+            },
+            "4M3M": {
+                "full_name": "4MB (FS:3MB OTA:~512KB)",
+                "flash_id": "eagle.flash.4m3m.ld"
+            },
+            "4M1M": {
+                "full_name": "4MB (FS:1MB OTA:~1019KB)",
+                "flash_id": "eagle.flash.4m1m.ld"
+            },
+            "4M": {
+                "full_name": "4MB (FS:none OTA:~1019KB)",
+                "flash_id": "eagle.flash.4m.ld"
+            }
+        }
+    },
+    "espino": {
+        "default": "4M2M",
+        "schemes": {
+            "4M2M": {
+                "full_name": "4MB (FS:2MB OTA:~1019KB)",
+                "flash_id": "eagle.flash.4m2m.ld"
+            },
+            "4M3M": {
+                "full_name": "4MB (FS:3MB OTA:~512KB)",
+                "flash_id": "eagle.flash.4m3m.ld"
+            },
+            "4M1M": {
+                "full_name": "4MB (FS:1MB OTA:~1019KB)",
+                "flash_id": "eagle.flash.4m1m.ld"
+            },
+            "4M": {
+                "full_name": "4MB (FS:none OTA:~1019KB)",
+                "flash_id": "eagle.flash.4m.ld"
+            }
+        }
+    },
+    "espresso_lite_v1": {
+        "default": "4M2M",
+        "schemes": {
+            "4M2M": {
+                "full_name": "4MB (FS:2MB OTA:~1019KB)",
+                "flash_id": "eagle.flash.4m2m.ld"
+            },
+            "4M3M": {
+                "full_name": "4MB (FS:3MB OTA:~512KB)",
+                "flash_id": "eagle.flash.4m3m.ld"
+            },
+            "4M1M": {
+                "full_name": "4MB (FS:1MB OTA:~1019KB)",
+                "flash_id": "eagle.flash.4m1m.ld"
+            },
+            "4M": {
+                "full_name": "4MB (FS:none OTA:~1019KB)",
+                "flash_id": "eagle.flash.4m.ld"
+            }
+        }
+    },
+    "espresso_lite_v2": {
+        "default": "4M2M",
+        "schemes": {
+            "4M2M": {
+                "full_name": "4MB (FS:2MB OTA:~1019KB)",
+                "flash_id": "eagle.flash.4m2m.ld"
+            },
+            "4M3M": {
+                "full_name": "4MB (FS:3MB OTA:~512KB)",
+                "flash_id": "eagle.flash.4m3m.ld"
+            },
+            "4M1M": {
+                "full_name": "4MB (FS:1MB OTA:~1019KB)",
+                "flash_id": "eagle.flash.4m1m.ld"
+            },
+            "4M": {
+                "full_name": "4MB (FS:none OTA:~1019KB)",
+                "flash_id": "eagle.flash.4m.ld"
+            }
+        }
+    },
+    "sonoff": {
+        "default": "1M64",
+        "schemes": {
+            "1M64": {
+                "full_name": "1MB (FS:64KB OTA:~470KB)",
+                "flash_id": "eagle.flash.1m64.ld"
+            },
+            "1M128": {
+                "full_name": "1MB (FS:128KB OTA:~438KB)",
+                "flash_id": "eagle.flash.1m128.ld"
+            },
+            "1M144": {
+                "full_name": "1MB (FS:144KB OTA:~430KB)",
+                "flash_id": "eagle.flash.1m144.ld"
+            },
+            "1M160": {
+                "full_name": "1MB (FS:160KB OTA:~422KB)",
+                "flash_id": "eagle.flash.1m160.ld"
+            },
+            "1M192": {
+                "full_name": "1MB (FS:192KB OTA:~406KB)",
+                "flash_id": "eagle.flash.1m192.ld"
+            },
+            "1M256": {
+                "full_name": "1MB (FS:256KB OTA:~374KB)",
+                "flash_id": "eagle.flash.1m256.ld"
+            },
+            "1M512": {
+                "full_name": "1MB (FS:512KB OTA:~246KB)",
+                "flash_id": "eagle.flash.1m512.ld"
+            },
+            "1M": {
+                "full_name": "1MB (FS:none OTA:~502KB)",
+                "flash_id": "eagle.flash.1m.ld"
+            }
+        }
+    },
+    "inventone": {
+        "default": "4M2M",
+        "schemes": {
+            "4M2M": {
+                "full_name": "4MB (FS:2MB OTA:~1019KB)",
+                "flash_id": "eagle.flash.4m2m.ld"
+            },
+            "4M3M": {
+                "full_name": "4MB (FS:3MB OTA:~512KB)",
+                "flash_id": "eagle.flash.4m3m.ld"
+            },
+            "4M1M": {
+                "full_name": "4MB (FS:1MB OTA:~1019KB)",
+                "flash_id": "eagle.flash.4m1m.ld"
+            },
+            "4M": {
+                "full_name": "4MB (FS:none OTA:~1019KB)",
+                "flash_id": "eagle.flash.4m.ld"
+            }
+        }
+    },
+    "d1_wroom_02": {
+        "default": "2M64",
+        "schemes": {
+            "2M64": {
+                "full_name": "2MB (FS:64KB OTA:~992KB)",
+                "flash_id": "eagle.flash.2m64.ld"
+            },
+            "2M128": {
+                "full_name": "2MB (FS:128KB OTA:~960KB)",
+                "flash_id": "eagle.flash.2m128.ld"
+            },
+            "2M256": {
+                "full_name": "2MB (FS:256KB OTA:~896KB)",
+                "flash_id": "eagle.flash.2m256.ld"
+            },
+            "2M512": {
+                "full_name": "2MB (FS:512KB OTA:~768KB)",
+                "flash_id": "eagle.flash.2m512.ld"
+            },
+            "2M1M": {
+                "full_name": "2MB (FS:1MB OTA:~512KB)",
+                "flash_id": "eagle.flash.2m1m.ld"
+            },
+            "2M": {
+                "full_name": "2MB (FS:none OTA:~1019KB)",
+                "flash_id": "eagle.flash.2m.ld"
+            }
+        }
+    },
+    "d1_mini": {
+        "default": "4M2M",
+        "schemes": {
+            "4M2M": {
+                "full_name": "4MB (FS:2MB OTA:~1019KB)",
+                "flash_id": "eagle.flash.4m2m.ld"
+            },
+            "4M3M": {
+                "full_name": "4MB (FS:3MB OTA:~512KB)",
+                "flash_id": "eagle.flash.4m3m.ld"
+            },
+            "4M1M": {
+                "full_name": "4MB (FS:1MB OTA:~1019KB)",
+                "flash_id": "eagle.flash.4m1m.ld"
+            },
+            "4M": {
+                "full_name": "4MB (FS:none OTA:~1019KB)",
+                "flash_id": "eagle.flash.4m.ld"
+            }
+        }
+    },
+    "d1_mini_clone": {
+        "default": "4M2M",
+        "schemes": {
+            "4M2M": {
+                "full_name": "4MB (FS:2MB OTA:~1019KB)",
+                "flash_id": "eagle.flash.4m2m.ld"
+            },
+            "4M3M": {
+                "full_name": "4MB (FS:3MB OTA:~512KB)",
+                "flash_id": "eagle.flash.4m3m.ld"
+            },
+            "4M1M": {
+                "full_name": "4MB (FS:1MB OTA:~1019KB)",
+                "flash_id": "eagle.flash.4m1m.ld"
+            },
+            "4M": {
+                "full_name": "4MB (FS:none OTA:~1019KB)",
+                "flash_id": "eagle.flash.4m.ld"
+            }
+        }
+    },
+    "d1_mini_lite": {
+        "default": "1M64",
+        "schemes": {
+            "1M64": {
+                "full_name": "1MB (FS:64KB OTA:~470KB)",
+                "flash_id": "eagle.flash.1m64.ld"
+            },
+            "1M128": {
+                "full_name": "1MB (FS:128KB OTA:~438KB)",
+                "flash_id": "eagle.flash.1m128.ld"
+            },
+            "1M144": {
+                "full_name": "1MB (FS:144KB OTA:~430KB)",
+                "flash_id": "eagle.flash.1m144.ld"
+            },
+            "1M160": {
+                "full_name": "1MB (FS:160KB OTA:~422KB)",
+                "flash_id": "eagle.flash.1m160.ld"
+            },
+            "1M192": {
+                "full_name": "1MB (FS:192KB OTA:~406KB)",
+                "flash_id": "eagle.flash.1m192.ld"
+            },
+            "1M256": {
+                "full_name": "1MB (FS:256KB OTA:~374KB)",
+                "flash_id": "eagle.flash.1m256.ld"
+            },
+            "1M512": {
+                "full_name": "1MB (FS:512KB OTA:~246KB)",
+                "flash_id": "eagle.flash.1m512.ld"
+            },
+            "1M": {
+                "full_name": "1MB (FS:none OTA:~502KB)",
+                "flash_id": "eagle.flash.1m.ld"
+            }
+        }
+    },
+    "d1_mini_pro": {
+        "default": "16M14M",
+        "schemes": {
+            "16M14M": {
+                "full_name": "16MB (FS:14MB OTA:~1019KB)",
+                "flash_id": "eagle.flash.16m14m.ld"
+            },
+            "16M15M": {
+                "full_name": "16MB (FS:15MB OTA:~512KB)",
+                "flash_id": "eagle.flash.16m15m.ld"
+            },
+            "16M": {
+                "full_name": "16MB (FS:none OTA:~1019KB)",
+                "flash_id": "eagle.flash.16m.ld"
+            }
+        }
+    },
+    "d1": {
+        "default": "4M2M",
+        "schemes": {
+            "4M2M": {
+                "full_name": "4MB (FS:2MB OTA:~1019KB)",
+                "flash_id": "eagle.flash.4m2m.ld"
+            },
+            "4M3M": {
+                "full_name": "4MB (FS:3MB OTA:~512KB)",
+                "flash_id": "eagle.flash.4m3m.ld"
+            },
+            "4M1M": {
+                "full_name": "4MB (FS:1MB OTA:~1019KB)",
+                "flash_id": "eagle.flash.4m1m.ld"
+            },
+            "4M": {
+                "full_name": "4MB (FS:none OTA:~1019KB)",
+                "flash_id": "eagle.flash.4m.ld"
+            }
+        }
+    },
+    "agruminolemon": {
+        "default": "2M64",
+        "schemes": {
+            "2M64": {
+                "full_name": "2MB (FS:64KB OTA:~992KB)",
+                "flash_id": "eagle.flash.2m64.ld"
+            },
+            "2M128": {
+                "full_name": "2MB (FS:128KB OTA:~960KB)",
+                "flash_id": "eagle.flash.2m128.ld"
+            },
+            "2M256": {
+                "full_name": "2MB (FS:256KB OTA:~896KB)",
+                "flash_id": "eagle.flash.2m256.ld"
+            },
+            "2M512": {
+                "full_name": "2MB (FS:512KB OTA:~768KB)",
+                "flash_id": "eagle.flash.2m512.ld"
+            },
+            "2M1M": {
+                "full_name": "2MB (FS:1MB OTA:~512KB)",
+                "flash_id": "eagle.flash.2m1m.ld"
+            },
+            "2M": {
+                "full_name": "2MB (FS:none OTA:~1019KB)",
+                "flash_id": "eagle.flash.2m.ld"
+            }
+        }
+    },
+    "nodemcu": {
+        "default": "4M2M",
+        "schemes": {
+            "4M2M": {
+                "full_name": "4MB (FS:2MB OTA:~1019KB)",
+                "flash_id": "eagle.flash.4m2m.ld"
+            },
+            "4M3M": {
+                "full_name": "4MB (FS:3MB OTA:~512KB)",
+                "flash_id": "eagle.flash.4m3m.ld"
+            },
+            "4M1M": {
+                "full_name": "4MB (FS:1MB OTA:~1019KB)",
+                "flash_id": "eagle.flash.4m1m.ld"
+            },
+            "4M": {
+                "full_name": "4MB (FS:none OTA:~1019KB)",
+                "flash_id": "eagle.flash.4m.ld"
+            }
+        }
+    },
+    "nodemcuv2": {
+        "default": "4M2M",
+        "schemes": {
+            "4M2M": {
+                "full_name": "4MB (FS:2MB OTA:~1019KB)",
+                "flash_id": "eagle.flash.4m2m.ld"
+            },
+            "4M3M": {
+                "full_name": "4MB (FS:3MB OTA:~512KB)",
+                "flash_id": "eagle.flash.4m3m.ld"
+            },
+            "4M1M": {
+                "full_name": "4MB (FS:1MB OTA:~1019KB)",
+                "flash_id": "eagle.flash.4m1m.ld"
+            },
+            "4M": {
+                "full_name": "4MB (FS:none OTA:~1019KB)",
+                "flash_id": "eagle.flash.4m.ld"
+            }
+        }
+    },
+    "modwifi": {
+        "default": "2M64",
+        "schemes": {
+            "2M64": {
+                "full_name": "2MB (FS:64KB OTA:~992KB)",
+                "flash_id": "eagle.flash.2m64.ld"
+            },
+            "2M128": {
+                "full_name": "2MB (FS:128KB OTA:~960KB)",
+                "flash_id": "eagle.flash.2m128.ld"
+            },
+            "2M256": {
+                "full_name": "2MB (FS:256KB OTA:~896KB)",
+                "flash_id": "eagle.flash.2m256.ld"
+            },
+            "2M512": {
+                "full_name": "2MB (FS:512KB OTA:~768KB)",
+                "flash_id": "eagle.flash.2m512.ld"
+            },
+            "2M1M": {
+                "full_name": "2MB (FS:1MB OTA:~512KB)",
+                "flash_id": "eagle.flash.2m1m.ld"
+            },
+            "2M": {
+                "full_name": "2MB (FS:none OTA:~1019KB)",
+                "flash_id": "eagle.flash.2m.ld"
+            }
+        }
+    },
+    "phoenix_v1": {
+        "default": "4M2M",
+        "schemes": {
+            "4M2M": {
+                "full_name": "4MB (FS:2MB OTA:~1019KB)",
+                "flash_id": "eagle.flash.4m2m.ld"
+            },
+            "4M3M": {
+                "full_name": "4MB (FS:3MB OTA:~512KB)",
+                "flash_id": "eagle.flash.4m3m.ld"
+            },
+            "4M1M": {
+                "full_name": "4MB (FS:1MB OTA:~1019KB)",
+                "flash_id": "eagle.flash.4m1m.ld"
+            },
+            "4M": {
+                "full_name": "4MB (FS:none OTA:~1019KB)",
+                "flash_id": "eagle.flash.4m.ld"
+            }
+        }
+    },
+    "phoenix_v2": {
+        "default": "4M2M",
+        "schemes": {
+            "4M2M": {
+                "full_name": "4MB (FS:2MB OTA:~1019KB)",
+                "flash_id": "eagle.flash.4m2m.ld"
+            },
+            "4M3M": {
+                "full_name": "4MB (FS:3MB OTA:~512KB)",
+                "flash_id": "eagle.flash.4m3m.ld"
+            },
+            "4M1M": {
+                "full_name": "4MB (FS:1MB OTA:~1019KB)",
+                "flash_id": "eagle.flash.4m1m.ld"
+            },
+            "4M": {
+                "full_name": "4MB (FS:none OTA:~1019KB)",
+                "flash_id": "eagle.flash.4m.ld"
+            }
+        }
+    },
+    "eduinowifi": {
+        "default": "4M2M",
+        "schemes": {
+            "4M2M": {
+                "full_name": "4MB (FS:2MB OTA:~1019KB)",
+                "flash_id": "eagle.flash.4m2m.ld"
+            },
+            "4M3M": {
+                "full_name": "4MB (FS:3MB OTA:~512KB)",
+                "flash_id": "eagle.flash.4m3m.ld"
+            },
+            "4M1M": {
+                "full_name": "4MB (FS:1MB OTA:~1019KB)",
+                "flash_id": "eagle.flash.4m1m.ld"
+            },
+            "4M": {
+                "full_name": "4MB (FS:none OTA:~1019KB)",
+                "flash_id": "eagle.flash.4m.ld"
+            }
+        }
+    },
+    "wiolink": {
+        "default": "4M2M",
+        "schemes": {
+            "4M2M": {
+                "full_name": "4MB (FS:2MB OTA:~1019KB)",
+                "flash_id": "eagle.flash.4m2m.ld"
+            },
+            "4M3M": {
+                "full_name": "4MB (FS:3MB OTA:~512KB)",
+                "flash_id": "eagle.flash.4m3m.ld"
+            },
+            "4M1M": {
+                "full_name": "4MB (FS:1MB OTA:~1019KB)",
+                "flash_id": "eagle.flash.4m1m.ld"
+            },
+            "4M": {
+                "full_name": "4MB (FS:none OTA:~1019KB)",
+                "flash_id": "eagle.flash.4m.ld"
+            }
+        }
+    },
+    "blynk": {
+        "default": "4M2M",
+        "schemes": {
+            "4M2M": {
+                "full_name": "4MB (FS:2MB OTA:~1019KB)",
+                "flash_id": "eagle.flash.4m2m.ld"
+            },
+            "4M3M": {
+                "full_name": "4MB (FS:3MB OTA:~512KB)",
+                "flash_id": "eagle.flash.4m3m.ld"
+            },
+            "4M1M": {
+                "full_name": "4MB (FS:1MB OTA:~1019KB)",
+                "flash_id": "eagle.flash.4m1m.ld"
+            },
+            "4M": {
+                "full_name": "4MB (FS:none OTA:~1019KB)",
+                "flash_id": "eagle.flash.4m.ld"
+            }
+        }
+    },
+    "thing": {
+        "default": "512K32",
+        "schemes": {
+            "512K32": {
+                "full_name": "512KB (FS:32KB OTA:~230KB)",
+                "flash_id": "eagle.flash.512k32.ld"
+            },
+            "512K64": {
+                "full_name": "512KB (FS:64KB OTA:~214KB)",
+                "flash_id": "eagle.flash.512k64.ld"
+            },
+            "512K128": {
+                "full_name": "512KB (FS:128KB OTA:~182KB)",
+                "flash_id": "eagle.flash.512k128.ld"
+            },
+            "512K": {
+                "full_name": "512KB (FS:none OTA:~246KB)",
+                "flash_id": "eagle.flash.512k.ld"
+            }
+        }
+    },
+    "thingdev": {
+        "default": "512K32",
+        "schemes": {
+            "512K32": {
+                "full_name": "512KB (FS:32KB OTA:~230KB)",
+                "flash_id": "eagle.flash.512k32.ld"
+            },
+            "512K64": {
+                "full_name": "512KB (FS:64KB OTA:~214KB)",
+                "flash_id": "eagle.flash.512k64.ld"
+            },
+            "512K128": {
+                "full_name": "512KB (FS:128KB OTA:~182KB)",
+                "flash_id": "eagle.flash.512k128.ld"
+            },
+            "512K": {
+                "full_name": "512KB (FS:none OTA:~246KB)",
+                "flash_id": "eagle.flash.512k.ld"
+            }
+        }
+    },
+    "esp210": {
+        "default": "4M2M",
+        "schemes": {
+            "4M2M": {
+                "full_name": "4MB (FS:2MB OTA:~1019KB)",
+                "flash_id": "eagle.flash.4m2m.ld"
+            },
+            "4M3M": {
+                "full_name": "4MB (FS:3MB OTA:~512KB)",
+                "flash_id": "eagle.flash.4m3m.ld"
+            },
+            "4M1M": {
+                "full_name": "4MB (FS:1MB OTA:~1019KB)",
+                "flash_id": "eagle.flash.4m1m.ld"
+            },
+            "4M": {
+                "full_name": "4MB (FS:none OTA:~1019KB)",
+                "flash_id": "eagle.flash.4m.ld"
+            }
+        }
+    },
+    "espinotee": {
+        "default": "4M2M",
+        "schemes": {
+            "4M2M": {
+                "full_name": "4MB (FS:2MB OTA:~1019KB)",
+                "flash_id": "eagle.flash.4m2m.ld"
+            },
+            "4M3M": {
+                "full_name": "4MB (FS:3MB OTA:~512KB)",
+                "flash_id": "eagle.flash.4m3m.ld"
+            },
+            "4M1M": {
+                "full_name": "4MB (FS:1MB OTA:~1019KB)",
+                "flash_id": "eagle.flash.4m1m.ld"
+            },
+            "4M": {
+                "full_name": "4MB (FS:none OTA:~1019KB)",
+                "flash_id": "eagle.flash.4m.ld"
+            }
+        }
+    },
+    "wifi_kit_8": {
+        "default": "4M2M",
+        "schemes": {
+            "4M2M": {
+                "full_name": "4MB (FS:2MB OTA:~1019KB)",
+                "flash_id": "eagle.flash.4m2m.ld"
+            },
+            "4M3M": {
+                "full_name": "4MB (FS:3MB OTA:~512KB)",
+                "flash_id": "eagle.flash.4m3m.ld"
+            },
+            "4M1M": {
+                "full_name": "4MB (FS:1MB OTA:~1019KB)",
+                "flash_id": "eagle.flash.4m1m.ld"
+            },
+            "4M": {
+                "full_name": "4MB (FS:none OTA:~1019KB)",
+                "flash_id": "eagle.flash.4m.ld"
+            }
+        }
+    },
+    "wifiduino": {
+        "default": "4M2M",
+        "schemes": {
+            "4M2M": {
+                "full_name": "4MB (FS:2MB OTA:~1019KB)",
+                "flash_id": "eagle.flash.4m2m.ld"
+            },
+            "4M3M": {
+                "full_name": "4MB (FS:3MB OTA:~512KB)",
+                "flash_id": "eagle.flash.4m3m.ld"
+            },
+            "4M1M": {
+                "full_name": "4MB (FS:1MB OTA:~1019KB)",
+                "flash_id": "eagle.flash.4m1m.ld"
+            },
+            "4M": {
+                "full_name": "4MB (FS:none OTA:~1019KB)",
+                "flash_id": "eagle.flash.4m.ld"
+            }
+        }
+    },
+    "wifinfo": {
+        "default": "1M64",
+        "schemes": {
+            "1M64": {
+                "full_name": "1MB (FS:64KB OTA:~470KB)",
+                "flash_id": "eagle.flash.1m64.ld"
+            },
+            "1M128": {
+                "full_name": "1MB (FS:128KB OTA:~438KB)",
+                "flash_id": "eagle.flash.1m128.ld"
+            },
+            "1M144": {
+                "full_name": "1MB (FS:144KB OTA:~430KB)",
+                "flash_id": "eagle.flash.1m144.ld"
+            },
+            "1M160": {
+                "full_name": "1MB (FS:160KB OTA:~422KB)",
+                "flash_id": "eagle.flash.1m160.ld"
+            },
+            "1M192": {
+                "full_name": "1MB (FS:192KB OTA:~406KB)",
+                "flash_id": "eagle.flash.1m192.ld"
+            },
+            "1M256": {
+                "full_name": "1MB (FS:256KB OTA:~374KB)",
+                "flash_id": "eagle.flash.1m256.ld"
+            },
+            "1M512": {
+                "full_name": "1MB (FS:512KB OTA:~246KB)",
+                "flash_id": "eagle.flash.1m512.ld"
+            },
+            "1M": {
+                "full_name": "1MB (FS:none OTA:~502KB)",
+                "flash_id": "eagle.flash.1m.ld"
+            }
+        }
+    },
+    "cw01": {
+        "default": "4M2M",
+        "schemes": {
+            "4M2M": {
+                "full_name": "4MB (FS:2MB OTA:~1019KB)",
+                "flash_id": "eagle.flash.4m2m.ld"
+            },
+            "4M3M": {
+                "full_name": "4MB (FS:3MB OTA:~512KB)",
+                "flash_id": "eagle.flash.4m3m.ld"
+            },
+            "4M1M": {
+                "full_name": "4MB (FS:1MB OTA:~1019KB)",
+                "flash_id": "eagle.flash.4m1m.ld"
+            },
+            "4M": {
+                "full_name": "4MB (FS:none OTA:~1019KB)",
+                "flash_id": "eagle.flash.4m.ld"
+            }
+        }
+    }
+}
