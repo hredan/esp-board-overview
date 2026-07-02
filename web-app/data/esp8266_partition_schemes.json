@@ -75,11 +75,6 @@
             "size": "0x1010"
         },
         {
-            "name": "spiffs",
-            "offset": "0xfb000",
-            "size": "0x0"
-        },
-        {
             "name": "eeprom",
             "offset": "0xfb000",
             "size": "0x1000"
@@ -331,11 +326,6 @@
             "size": "0xfc010"
         },
         {
-            "name": "spiffs",
-            "offset": "0x1fb000",
-            "size": "0x0"
-        },
-        {
             "name": "eeprom",
             "offset": "0x1fb000",
             "size": "0x1000"
@@ -523,11 +513,6 @@
             "size": "0x2fc010"
         },
         {
-            "name": "spiffs",
-            "offset": "0x3fb000",
-            "size": "0x0"
-        },
-        {
             "name": "eeprom",
             "offset": "0x3fb000",
             "size": "0x1000"
@@ -649,11 +634,6 @@
             "name": "empty",
             "offset": "0x79ff0",
             "size": "0x1010"
-        },
-        {
-            "name": "spiffs",
-            "offset": "0x7b000",
-            "size": "0x0"
         },
         {
             "name": "eeprom",

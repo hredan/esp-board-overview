@@ -58,6 +58,8 @@ def parse_ld_file(ld_path: str) -> list[dict[str, str]]:
 
     partitions: list[dict[str, str]] = []
     for name, (offset_abs, size_bytes) in zip(names, raw):
+        if size_bytes == 0:
+            continue
         partitions.append({
             "name": name,
             "offset": hex(offset_abs - SKETCH_BASE),
