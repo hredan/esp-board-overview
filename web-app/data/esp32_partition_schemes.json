@@ -425,6 +425,80 @@
             "size": "0x10000"
         }
     ],
+    "es_developer_es32lab_8m_no_ota": [
+        {
+            "name": "nvs",
+            "type": "data",
+            "subtype": "nvs",
+            "offset": "0x9000",
+            "size": "0x5000"
+        },
+        {
+            "name": "factory",
+            "type": "app",
+            "subtype": "factory",
+            "offset": "0x10000",
+            "size": "0x300000"
+        },
+        {
+            "name": "spiffs",
+            "type": "data",
+            "subtype": "spiffs",
+            "offset": "0x310000",
+            "size": "0x4E0000"
+        },
+        {
+            "name": "coredump",
+            "type": "data",
+            "subtype": "coredump",
+            "offset": "0x7F0000",
+            "size": "0x10000"
+        }
+    ],
+    "es_developer_es32lab_8m_ota": [
+        {
+            "name": "nvs",
+            "type": "data",
+            "subtype": "nvs",
+            "offset": "0x9000",
+            "size": "0x5000"
+        },
+        {
+            "name": "otadata",
+            "type": "data",
+            "subtype": "ota",
+            "offset": "0xE000",
+            "size": "0x2000"
+        },
+        {
+            "name": "app0",
+            "type": "app",
+            "subtype": "ota_0",
+            "offset": "0x10000",
+            "size": "0x200000"
+        },
+        {
+            "name": "app1",
+            "type": "app",
+            "subtype": "ota_1",
+            "offset": "0x210000",
+            "size": "0x200000"
+        },
+        {
+            "name": "spiffs",
+            "type": "data",
+            "subtype": "spiffs",
+            "offset": "0x410000",
+            "size": "0x3E0000"
+        },
+        {
+            "name": "coredump",
+            "type": "data",
+            "subtype": "coredump",
+            "offset": "0x7F0000",
+            "size": "0x10000"
+        }
+    ],
     "esp_sr_16": [
         {
             "name": "nvs",
