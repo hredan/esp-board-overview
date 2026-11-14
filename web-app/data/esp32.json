@@ -770,6 +770,16 @@
         "board": "cyobot_v2_esp32s3"
     },
     {
+        "name": "Cytron Maker ESP32",
+        "variant": "cytron_maker_esp32",
+        "mcu": "esp32",
+        "flash_size": [
+            "8MB"
+        ],
+        "led_builtin": "2",
+        "board": "cytron_maker_esp32"
+    },
+    {
         "name": "Cytron Maker Feather AIoT S3",
         "variant": "cytron_maker_feather_aiot_s3",
         "mcu": "esp32s3",
@@ -1018,6 +1028,16 @@
         ],
         "led_builtin": "N/A",
         "board": "dpu_esp32"
+    },
+    {
+        "name": "Edge Dalton (ESP32C3)",
+        "variant": "edge_dalton",
+        "mcu": "esp32c3",
+        "flash_size": [
+            "4MB"
+        ],
+        "led_builtin": "10",
+        "board": "edge_dalton"
     },
     {
         "name": "Elecrow CrowPanel 7.0P",
@@ -2936,6 +2956,16 @@
         "board": "quantum"
     },
     {
+        "name": "Raiden S0-1",
+        "variant": "raiden_s01",
+        "mcu": "esp32s3",
+        "flash_size": [
+            "8MB"
+        ],
+        "led_builtin": "48",
+        "board": "raiden_s01"
+    },
+    {
         "name": "RAKwireless RAK3112",
         "variant": "rakwireless_rak3112",
         "mcu": "esp32s3",
@@ -3576,6 +3606,26 @@
         "board": "waveshare_esp32_c3_zero"
     },
     {
+        "name": "Waveshare ESP32-C5-LCD-1.47",
+        "variant": "waveshare_esp32_c5_lcd_1_47",
+        "mcu": "esp32c5",
+        "flash_size": [
+            "4MB"
+        ],
+        "led_builtin": "N/A",
+        "board": "waveshare_esp32_c5_lcd_1_47"
+    },
+    {
+        "name": "Waveshare ESP32-C5-Zero",
+        "variant": "waveshare_esp32_c5_zero",
+        "mcu": "esp32c5",
+        "flash_size": [
+            "4MB"
+        ],
+        "led_builtin": "67",
+        "board": "waveshare_esp32_c5_zero"
+    },
+    {
         "name": "Waveshare ESP32-C6-Zero",
         "variant": "waveshare_esp32_c6_zero",
         "mcu": "esp32c6",
@@ -3634,6 +3684,16 @@
         ],
         "led_builtin": "N/A",
         "board": "waveshare_esp32_s3_relay_6ch"
+    },
+    {
+        "name": "Waveshare ESP32-S3-RGB-Matrix",
+        "variant": "waveshare_esp32_s3_rgb_matrix",
+        "mcu": "esp32s3",
+        "flash_size": [
+            "32MB"
+        ],
+        "led_builtin": "N/A",
+        "board": "waveshare_esp32_s3_rgb_matrix"
     },
     {
         "name": "Waveshare ESP32-S3-Touch-AMOLED-1.43",
@@ -3786,6 +3846,16 @@
         "board": "waveshare_esp32_s3_touch_lcd_43B"
     },
     {
+        "name": "Waveshare ESP32-S3-Touch-LCD-4.3C",
+        "variant": "waveshare_esp32_s3_touch_lcd_43c",
+        "mcu": "esp32s3",
+        "flash_size": [
+            "16MB"
+        ],
+        "led_builtin": "N/A",
+        "board": "waveshare_esp32_s3_touch_lcd_43C"
+    },
+    {
         "name": "Waveshare ESP32-S3-Touch-LCD-5",
         "variant": "waveshare_esp32_s3_touch_lcd_5",
         "mcu": "esp32s3",
@@ -3814,6 +3884,16 @@
         ],
         "led_builtin": "N/A",
         "board": "waveshare_esp32_s3_touch_lcd_7"
+    },
+    {
+        "name": "Waveshare ESP32-S3-Touch-LCD-7C-BOX",
+        "variant": "waveshare_esp32_s3_touch_lcd_7c",
+        "mcu": "esp32s3",
+        "flash_size": [
+            "32MB"
+        ],
+        "led_builtin": "N/A",
+        "board": "waveshare_esp32_s3_touch_lcd_7c"
     },
     {
         "name": "Waveshare ESP32-S3-Zero",
